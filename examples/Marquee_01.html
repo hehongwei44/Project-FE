@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <title>文字列表无缝向上滚动JavaScript代码</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        body {
+            font-size: 12px;
+        }
+
+        #demo1 {
+            height: auto;
+            text-align: left;
+        }
+
+        #demo2 {
+            height: auto;
+            text-align: left;
+        }
+
+        #demo1 li {
+            list-style-type: none;
+            height: 22px;
+            text-align: left;
+            text-indent: 15px;
+        }
+
+        #demo2 li {
+            list-style-type: none;
+            height: 22px;
+            text-align: left;
+            text-indent: 15px;
+        }
+    </style>
+</head>
+<body>
+<div id="demo" style="overflow:hidden;height:200px;width:280px;border: 1px solid red;">
+    <ul id="demo1">
+        <li><a target="_blank">XP Menu 仿QQ菜单管理器左侧菜单</a></li>
+        <li><a target="_blank">多层嵌套的一个层展开</a></li>
+        <li><a target="_blank">《Java2核心技术卷2:高级特性》第7版</a></li>
+        <li><a target="_blank">CSS、HTML教程打包下载 (CHM)</a></li>
+        <li><a target="_blank">《C++ Primer》中文第四版 chm</a></li>
+        <li><a target="_blank">C++工资管理系统(Access)</a></li>
+        <li><a target="_blank">非常牛的左侧栏JS折叠菜单</a></li>
+        <li><a target="_blank">XP Menu 仿QQ菜单管理器左侧菜单</a></li>
+        <li><a target="_blank">多层嵌套的一个层展开</a></li>
+        <li><a target="_blank">《Java2核心技术卷2:高级特性》第7版</a></li>
+        <li><a target="_blank">CSS、HTML教程打包下载 (CHM)</a></li>
+        <li><a target="_blank">《C++ Primer》中文第四版 chm</a></li>
+        <li><a target="_blank">C++工资管理系统(Access)</a></li>
+        <li><a target="_blank">非常牛的左侧栏JS折叠菜单</a></li>
+    </ul>
+    <ul id="demo2"></ul>
+</div>
+<script>
+    /**
+     * 循环滚动的原理其实很简单，就是用
+     * 2个内容来轮流滚动。“内容1” 滚动完了就让 “内容
+     * 2” 开始滚动，然后又是“内容1”滚动。
+     *
+     * */
+    var speed = 100,
+        demo = document.getElementById("demo"),
+        demo2 = document.getElementById("demo2"),
+        demo1 = document.getElementById("demo1"),
+        myMar = null;
+
+    demo2.innerHTML = demo1.innerHTML;
+
+    function Marquee() {
+        if (demo2.offsetTop <= demo.scrollTop)
+            demo.scrollTop -= demo1.offsetHeight;
+        else
+            demo.scrollTop += 2;
+
+    }
+
+    MyMar = setInterval(Marquee, speed);
+
+    demo.onmouseover = function () {
+        clearInterval(MyMar);
+    }
+
+    demo.onmouseout = function () {
+        MyMar = setInterval(Marquee, speed);
+    }
+</script>
+</body>
+</html>
