@@ -2,3 +2,4 @@
 ==========
 
 Marquee_01.html:列表无限滚动示例。
+示例链接地址：<a href="http://jsfiddle.net/7EQ4s/" title="Marquee_01示例">Marquee_01示例</a>
