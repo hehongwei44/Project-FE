@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://open.web.meitu.com/wiki/ -->
+<html lang="cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<title>美图WEB开放平台 - 开发文档</title>
+	<meta name="description" content="美图WEB开放平台是国内首个图片处理工具类型的开放平台，为了助力各大网站发展，美图秀秀在线功能全部免费开放！包括美图秀秀完整版（集美化图片、人像美容及拼图功能为一体）、美图秀秀美化图片、美图秀秀拼图。开发者可以同时使用三款插件，也可以任意选择一款插件使用。">
+	<meta name="keywords" content="美图秀秀网页版,开放平台,开放api,开放接口,在线图片处理,图片处理接口,flash">
+	<link rel="stylesheet" href="http://open.web.meitu.com/css/style.css">
+<style type="text/css"></style><style id="clearly_highlighting_css" type="text/css">/* selection */ html.clearly_highlighting_enabled ::-moz-selection { background: rgba(246, 238, 150, 0.99); } html.clearly_highlighting_enabled ::selection { background: rgba(246, 238, 150, 0.99); } /* cursor */ html.clearly_highlighting_enabled {    /* cursor and hot-spot position -- requires a default cursor, after the URL one */    cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text; } /* highlight tag */ em.clearly_highlight_element {    font-style: inherit !important; font-weight: inherit !important;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");    background-repeat: repeat-x; background-position: top left; background-size: 100% 100%; } /* the delete-buttons are positioned relative to this */ em.clearly_highlight_element.clearly_highlight_first { position: relative; } /* delete buttons */ em.clearly_highlight_element a.clearly_highlight_delete_element {    display: none; cursor: pointer;    padding: 0; margin: 0; line-height: 0;    position: absolute; width: 34px; height: 34px; left: -17px; top: -17px;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png"); background-repeat: no-repeat; background-position: 0px 0px; } em.clearly_highlight_element a.clearly_highlight_delete_element:hover { background-position: -34px 0px; } /* retina */ @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {    em.clearly_highlight_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png"); }    em.clearly_highlight_element a.clearly_highlight_delete_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png"); background-size: 68px 34px; } } </style><style>#haloword-pron { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -34px; }#haloword-pron:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -34px; }#haloword-open { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -17px; }#haloword-open:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -17px; }#haloword-close { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px 0; }#haloword-close:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px 0; }#haloword-add { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -51px; }#haloword-add:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -51px; }#haloword-remove { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -68px; }#haloword-remove:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -68px; }</style><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style></head>
+<body class="p-wiki">
+<div class="headwrap">
+	<div class="header">
+		<h1 class="logo"><a href="http://open.web.meitu.com/"><img src="./美图WEB开放平台 - 开发文档_files/logo.png" alt="美图WEB开放平台"></a></h1>
+		<ul class="nav">
+			<li><a href="http://open.web.meitu.com/">首页</a></li>
+			<li><a href="http://open.web.meitu.com/products/">合作产品</a></li>
+			<li class="cur"><a href="./美图WEB开放平台 - 开发文档_files/美图WEB开放平台 - 开发文档.htm">开发文档</a></li>
+			<li><a href="http://bbs.web.meitu.com/forum.php?mod=forumdisplay&fid=2" target="_blank">开发论坛</a></li>
+			<li><a href="http://open.web.meitu.com/partners/">合作伙伴</a></li>
+			<li><a href="http://open.web.meitu.com/cases/">演示案例</a></li>
+		</ul>
+	</div>
+</div>
+<div class="mainwrap">
+	<div class="sidebar" style="position: fixed; top: 0px; bottom: 0px; left: 471.5px; overflow: auto;">
+		<ul class="tree">
+			<li>
+				<a href="http://open.web.meitu.com/wiki/#environment" class="">1 环境配置</a>
+				<ul>
+					<li><a href="http://open.web.meitu.com/wiki/#1_1">1.1 设置crossdomain.xml</a></li>
+					<li>
+						<a href="http://open.web.meitu.com/wiki/#1_2">1.2 调用方法</a>
+						<ul>
+							<li><a href="http://open.web.meitu.com/wiki/#1_2_1">1.2.1 引用JS代码</a></li>
+							<li><a href="http://open.web.meitu.com/wiki/#1_2_2" class="">1.2.2 演示案例</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="http://open.web.meitu.com/wiki/#api">2 API列表</a>
+				<ul>
+					<li>
+						<a href="http://open.web.meitu.com/wiki/#2_1">2.1 方法</a>
+						<ul>
+							<li><a href="http://open.web.meitu.com/wiki/#2_1_1" class="">2.1.1 嵌入SWF</a></li>
+							<li><a href="http://open.web.meitu.com/wiki/#2_1_2" class="">2.1.2 加载图片</a></li>
+							<li><a href="http://open.web.meitu.com/wiki/#2_1_3" class="">2.1.3 上传URL</a></li>
+							<li><a href="http://open.web.meitu.com/wiki/#2_1_4" class="">2.1.4 设置参数</a></li>
+							<li><a href="http://open.web.meitu.com/wiki/#2_1_5" class="">2.1.5 设置上传类型</a></li>
+							<li><a href="http://open.web.meitu.com/wiki/#2_1_6">2.1.6 设置表单名称</a></li>
+							<li><a href="http://open.web.meitu.com/wiki/#2_1_7">2.1.7 高级参数设置</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="http://open.web.meitu.com/wiki/#2_2">2.2 事件</a>
+						<ul>
+							<li><a href="http://open.web.meitu.com/wiki/#2_2_1" class="">2.2.1 初始化</a></li>
+							<li><a href="http://open.web.meitu.com/wiki/#2_2_2">2.2.2 图片上传前</a></li>
+							<li><a href="http://open.web.meitu.com/wiki/#2_2_3">2.2.3 上传响应</a></li>
+							<li><a href="http://open.web.meitu.com/wiki/#2_2_4">2.2.4 关闭编辑器</a></li>
+							<li><a href="http://open.web.meitu.com/wiki/#2_2_5">2.2.5 调试编辑器</a></li>
+                            <li><a href="http://open.web.meitu.com/wiki/#2_2_6" class="cur">2.2.6 高级事件</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="main">
+		<h1>API说明</h1>
+		<p class="indent">美图秀秀开放插件包含美图秀秀M1（完整版）、美图秀秀M2（美化图片）、美图秀秀M3（拼图）及美图秀秀M4（头像编辑器），我们已经对四个版本进行整合，提供一致的接口供您调用。</p>
+		<h2 id="environment">1、环境配置</h2>
+		<h3 id="1_1">1.1、设置crossdomain.xml</h3>
+		<p><a href="http://open.web.meitu.com/sources/crossdomain.rar" target="_blank">下载crossdomain.xml文件</a>，把解压出来的crossdomain.xml文件放在您保存图片或图片来源的服务器根目录下，<br>
+		比如： http://example.com.cn，那么crossdomain.xml的路径为：http://example.com.cn/crossdomain.xml。<br>需要注意的是crossdomain.xml<span style="color:#f00;">必须部署于站点根目录下</span>才有效，			crossdomain.xml的目的是授权来自美图域下的flash向您的站点上传图片或者从您的站点加载图片。<br><span style="color:#f00;">【备注】由于本地测试会被flash安全沙箱拦住，请自行搭建web服务器，在web 环境中测试。</span>
+		</p>
+		
+		<h3 id="1_2">1.2、调用方法</h3>
+		<h4 id="1_2_1">1.2.1、引用JS代码</h4>
+		<p>在你的网页代码head标签里或者body标签里加入代码。</p>
+		<code>
+<pre>&lt;script src="http://open.web.meitu.com/sources/xiuxiu.js" type="text/javascript"&gt;&lt;/script&gt;</pre>
+		</code>
+		<h4 id="1_2_2">1.2.2、使用演示(<a href="http://bbs.web.meitu.com/forum.php?mod=viewthread&tid=18684&extra=page%3D1" target="_blank">demo</a>)，快速上手</h4>
+		<br>
+		<h2 id="api">2、API列表</h2>
+		<h3 id="2_1">2.1、方法</h3>
+		<h4 id="2_1_1">2.1.1、 <b>嵌入SWF</b>（xiuxiu.embedSWF）</h4>
+		<p>功能描述：网页中嵌入美图秀秀的编辑器<br>
+			语法：</p>
+		<code>
+<pre>xiuxiu.embedSWF(container,editorType,width,height,id);</pre>
+		</code>
+		<table width="100%" border="1" cellpadding="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<th>参数</th>
+					<th>必选</th>
+					<th>字段类型</th>
+					<th>说明</th>
+				</tr>
+				<tr>
+					<td>container</td>
+					<td>是</td>
+					<td>string</td>
+					<td>要被flash替换的容器的id</td>
+				</tr>
+				<tr>
+					<td>editorType</td>
+					<td>否</td>
+					<td>int</td>
+					<td>要嵌入的编辑器类型（1为轻量编辑，2为轻量拼图，3为完整版，5为头像编辑器，默认值1）</td>
+				</tr>
+				<tr>
+					<td>width</td>
+					<td>否</td>
+					<td>string</td>
+					<td>编辑器宽度（可以为数字或者百分比，对轻量编辑和完整版有效）</td>
+				</tr>
+				<tr>
+					<td>height</td>
+					<td>否</td>
+					<td>string</td>
+					<td>编辑器高度（可以为数字或者百分比，对轻量编辑和完整版有效）</td>
+				</tr>
+				<tr>
+					<td>id</td>
+					<td>否</td>
+					<td>string</td>
+					<td>编辑器在页面中的id，默认值为" xiuxiuEditor"（当需要在同一个页面内嵌入一个以上编辑器<br>时需要以不同的id来区分，这时候就很有用，在接下去的几个接口中便可通过不同的id调用不<br>同编辑器的接口(<a href="http://open.web.meitu.com/demo/multi_editor.html" target="_blank">demo</a>)）</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>示例代码</p>
+		<code>
+<pre>xiuxiu.embedSWF("altContent", 3, 800, "100%","lite");</pre>
+		</code>
+		<h4 id="2_1_2">2.1.2、 <b>加载图片</b>（xiuxiu.loadPhoto）</h4>
+		<p>功能描述：编辑器载入图片<br>
+			语法：</p>
+		<code>
+<pre>xiuxiu.loadPhoto(images,base64,id);</pre>
+		</code>
+		<table width="100%" border="1" cellpadding="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<th>参数</th>
+					<th>必选</th>
+					<th>字段类型</th>
+					<th>说明</th>
+				</tr>
+				<tr>
+					<td>images</td>
+					<td>是</td>
+					<td>string或者array</td>
+					<td>在编辑器中载入图片，类型可以为字符串或数组，也就是说可以同时载入一张到多张图片<br>（需要注意的是，1.如果是数组，数组中元素必须是同一类型图片，要么都是base64<br>类型的，要么是url；2.如果是base64图片，需要去掉几个头字符，只保留纯图片数据，<br>例如去掉" data:image/jpeg;base64,"）</td>
+				</tr>
+				<tr>
+					<td>base64</td>
+					<td>否</td>
+					<td>boolean</td>
+					<td>是否是base64图片，默认值为false</td>
+				</tr>
+				<tr>
+					<td>id</td>
+					<td>否</td>
+					<td>string</td>
+					<td>编辑器在页面中的id，默认值为" xiuxiuEditor"</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>示例代码</p>
+		<code>
+<pre>单张图片：
+xiuxiu.loadPhoto("http://open.web.meitu.com/sources/images/1.jpg");
+单张base64的图片(<a href="http://open.web.meitu.com/demo/load_photo_base64.html" target="_blank">demo</a>)：
+xiuxiu.loadPhoto("/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja…", true); 
+多张图片(<a href="http://open.web.meitu.com/demo/load_photo_multi.html" target="_blank">demo</a>)：
+xiuxiu.loadPhoto(["http://open.web.meitu.com/sources/images/1.jpg"]);
+多张base64的图片：
+xiuxiu.loadPhoto(["/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja…"], true);
+</pre>
+		</code>
+		<h4 id="2_1_3">2.1.3、<b>上传URL</b>（xiuxiu.setUploadURL）</h4>
+		<p>功能描述：设置上传接口地址，接收图片的地址<br>
+			语法：</p>
+		<code>
+<pre>xiuxiu.setUploadURL (url,id);</pre>
+		</code>
+		<table width="100%" border="1" cellpadding="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<th>参数</th>
+					<th>必选</th>
+					<th>字段类型</th>
+					<th>说明</th>
+				</tr>
+				<tr>
+					<td>url</td>
+					<td>是</td>
+					<td>string</td>
+					<td>设置上传接口地址<span style="color:#f00">（必须为绝对路径）</span></td>
+				</tr>
+				<tr>
+					<td>id</td>
+					<td>否</td>
+					<td>string</td>
+					<td>编辑器在页面中的id，默认值为" xiuxiuEditor"</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>示例代码</p>
+		<code>
+<pre>xiuxiu.setUploadURL("http://web.upload.meitu.com/image_upload.php"); //修改为您自己的上传接收图片程序</pre>
+		</code>
+		<h4 id="2_1_4">2.1.4、<b>设置参数</b>（xiuxiu.setUploadArgs）</h4>
+		<p>功能描述：设置上传参数（如无需上传参数可不调用）<br>
+			语法：</p>
+		<code>
+<pre>xiuxiu.setUploadArgs (args,id);</pre>
+		</code>
+		<table width="100%" border="1" cellpadding="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<th>参数</th>
+					<th>必选</th>
+					<th>字段类型</th>
+					<th>说明</th>
+				</tr>
+				<tr>
+					<td>args</td>
+					<td>是</td>
+					<td>object</td>
+					<td>设置上传参数</td>
+				</tr>
+				<tr>
+					<td>id</td>
+					<td>否</td>
+					<td>string</td>
+					<td>编辑器在页面中的id，默认值为" xiuxiuEditor"</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>示例代码</p>
+		<code>
+<pre>xiuxiu.setUploadArgs({a:1, b:"lucky"});</pre>
+		</code>
+		<h4 id="2_1_5">2.1.5、<b>设置上传类型</b>（xiuxiu.setUploadType）</h4>
+		<p>功能描述：设置上传方式（以下流式和表单上传都是POST请求方式）<br>
+			语法：</p>
+		<code>
+<pre>xiuxiu.setUploadType (uploadType,id);</pre>
+		</code>
+		<table width="100%" border="1" cellpadding="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<th width="11%">参数</th>
+					<th width="4%">必选</th>
+					<th width="20%">字段类型</th>
+					<th width="50%">说明</th>
+					
+				</tr>
+				<tr>
+					<td>uploadType</td>
+					<td>是</td>
+					<td>int</td>
+					<td>
+						设置上传方式<br>
+						1、流式上传(<a href="http://open.web.meitu.com/demo/upload_octet_stream.html" target="_blank">demo</a>)<br>
+						Content-type:application/octet-stream；<br>
+						2、标准表单上传(<a href="http://open.web.meitu.com/demo/upload_multipart_form_data.html" target="_blank">demo</a>)<br>
+						Content-type:multipart/form-data；<br>
+                        3、为编码成Base64传给JS，详细可参看下文的xiuxiu.onSaveBase64Image事件(<a href="http://open.web.meitu.com/demo/save_base64.html" target="_blank">demo</a>)<br>
+						默认上传方式为流式上传，只有上传方式为表单上传才需调用此函数<br>
+						关于octet-stream上传方式的接收代码可参阅
+<a href="http://www.5iphp.com/php-input" target="_blank">http://www.5iphp.com/php-input</a><br>
+关于multipart/form-data 上传方式的接收代码可参阅
+<a href="http://www.w3school.com.cn/php/php_file_upload.asp" target="_blank">http://www.w3school.com.cn/php/php_file_upload.asp</a>
+<div style="line-height:23px;">php示例可参考 <a href="http://open.web.meitu.com/sources/image_upload_streaming.rar" target="_blank">流式上传</a> 或者 <a target="_blank" href="http://open.web.meitu.com/sources/image_upload_form.rar">标准表单上传</a>；<br>C#示例可参考 <a href="http://open.web.meitu.com/sources/csharp_upload_streaming.rar" target="_blank">流式上传</a> 或者 <a target="_blank" href="http://open.web.meitu.com/sources/csharp_upload_form.rar">标准表单上传</a>；<br>JSP示例可参考 <a href="http://open.web.meitu.com/sources/jsp_upload_streaming.rar" target="_blank">流式上传</a> 或者 <a target="_blank" href="http://open.web.meitu.com/sources/jsp_upload_form.rar">标准表单上传</a>。</div>
+
+					</td>
+				</tr>
+					<tr>
+					<td>id</td>
+					<td>否</td>
+					<td>string</td>
+					<td>编辑器在页面中的id，默认值为" xiuxiuEditor"</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>示例代码</p>
+		<code>
+<pre>xiuxiu.setUploadType(2);</pre>
+		</code>
+		<p>备注：美图秀秀提供两个上传接口供测试<br>
+			一个是octet-stream方式上传，地址为：http://imgkaka.meitu.com/xiuxiu_web_pic_save.php<br>
+			另一个是multipart/form-data方式上传，地址为：http://web.upload.meitu.com/image_upload.php<br>
+			表单名称为"upload_file"。</p>
+		<h4 id="2_1_6">2.1.6、<b>设置表单名称</b>（xiuxiu.setUploadDataFieldName）</h4>
+		<p>功能描述：设置在上载 POST 操作中位于文件数据之前的字段名<br>
+			也就是对应于设置html&lt;input type="file" name="Filedata" id="file" /&gt;中的name<br>
+			语法：</p>
+		<code>
+<pre>xiuxiu.setUploadDataFieldName (uploadDataFieldName,id);</pre>
+		</code>
+		<table width="100%" border="1" cellpadding="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<th>参数</th>
+					<th>必选</th>
+					<th>字段类型</th>
+					<th>说明</th>
+				</tr>
+				<tr>
+					<td>uploadDataFieldName</td>
+					<td>是</td>
+					<td>string</td>
+					<td>仅对表单上传有效（如果使用表单上传且字段名不为"Filedata"才需调用此函数）</td>
+				</tr>
+				<tr>
+					<td>id</td>
+					<td>否</td>
+					<td>string</td>
+					<td>编辑器在页面中的id，默认值为" xiuxiuEditor"</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>示例代码</p>
+		<code>
+<pre>xiuxiu.setUploadDataFieldName("Filedata");</pre>
+		</code>
+        
+        <p style="border-top:dashed 1px #acacac; padding:10px 0; margin-top:16px; font-size:14px;">如果以上事件还不能满足您的需求，请查看高级方法。<br><a id="2_1_7" class="advlink" href="http://open.web.meitu.com/wiki/#advVar" data-alttxt="点击隐藏高级方法" data-origintxt="点击显示高级方法">点击隐藏高级方法</a></p>
+        
+		<div id="advVar" class="advcon" style="display: block;">
+			<h4>2.1.7、<b>高级参数设置</b>（xiuxiu.setLaunchVars）</h4>
+			<p>功能描述（高级功能）：设置flash初始化参数来实现更多高级功能，请在xiuxiu.embedSWF之前调用此函数，否则无法生效。<br>
+				语法：</p>
+			<code>
+			<pre>xiuxiu.setLaunchVars(key, value);</pre>
+			</code>
+			<table width="100%" border="1" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr>
+						<th width="11%">参数</th>
+						<th width="10%">必选</th>
+						<th width="20%">字段类型</th>
+						<th width="33%">说明</th>
+					</tr>
+					<tr>
+						<td>key</td>
+						<td>是</td>
+						<td>string</td>
+						<td>参数名</td>
+					</tr>
+					<tr>
+						<td>value</td>
+						<td>是</td>
+						<td>String /Boolean/Number</td>
+						<td>参数值</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>示例代码</p>
+			<code>
+			<pre>xiuxiu.setLaunchVars("quality", 90);</pre>
+			</code>
+			<p>下表为可设置的属性列表</p>
+			<table width="100%" border="1" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr>
+						<th width="20%">参数</th>
+						<th width="16%">字段类型</th>
+						<th width="16%">可能的值</th>
+						<th width="64%">说明</th>
+					</tr>
+					<tr>
+						<td>cropPresets</td>
+						<td>string/array</td>
+						<td> </td>
+						<td>设置裁剪的比例或尺寸;具体有关此参数完整设置，请参阅<br><a href="http://open.web.meitu.com/wiki/crop_options.html" target="_blank">cropPresets详细参数设置</a>。</td>
+					</tr>
+					<tr>
+						<td>nav</td>
+						<td>string</td>
+						<td></td>
+						<td>自动导航到某个功能块，例如完整版需要导航到照片拼接(<a href="http://open.web.meitu.com/demo/set_launch_vars_nav.html" target="_blank">demo</a>)，可以
+			xiuxiu.setLaunchVars ("nav", "puzzle/puzzlePhoto");有关此参数完整设置，请参阅<br><a href="http://open.web.meitu.com/wiki/nav_options.html" target="_blank">nav详细参数设置</a>。
+			</td>
+					</tr>
+					
+					<tr>
+						<td>customMenu</td>
+						<td>array</td>
+						<td> </td>
+						<td>设定自定义菜单，根据你的需要自行组合功能(<a href="http://open.web.meitu.com/demo/set_launch_vars_custom_menu.html" target="_blank">demo</a>)。有关此参数完整介绍，请参阅
+<a href="http://open.web.meitu.com/wiki/custom_menu_options.html" target="_blank">customMenu详细参数设置</a>。（目前只对M1完整版有效）
+</td>
+					</tr>
+					
+					<tr>
+						<td>customMaterial</td>
+						<td>string</td>
+						<td> </td>
+						<td>自定义素材，根据你的网站的具体业务需求，在美图秀秀内展现跟您网站相关的素材(<a href="http://open.web.meitu.com/demo/set_launch_vars_custom_material.html" target="_blank">demo</a>)。有关此参数完整介绍，请参阅
+<a href="http://open.web.meitu.com/wiki/custom_material_options.html" target="_blank">customMaterial详细参数设置</a>。（目前只对M1完整版有效）
+</td>
+					</tr>
+			                
+			                <tr>
+						<td>localFileEnabled</td>
+						<td>int</td>
+						<td>0或者1</td>
+						<td>是否支持打开本地文件（目前只对轻量编辑器有效）</td>
+					</tr>
+			                
+			                 <tr>
+						<td>uploadBtnLabel</td>
+						<td>string</td>
+						<td></td>
+						<td>上传按钮的文本标签</td>
+					</tr>
+			                
+			                 <tr>
+						<td>titleVisible</td>
+						<td>int</td>
+						<td>0或者1</td>
+						<td>是否显示标题栏（仅对轻量编辑及轻量拼图有效）</td>
+					</tr>
+			                
+			                <tr>
+						<td>maxFinalWidth</td>
+						<td>int</td>
+						<td></td>
+						<td>设置生成的图片的最大宽度，图片在此宽度内按比例缩放，如无需设置最大宽度，可设为0（仅对轻量编辑、拼图、头像编辑有效）</td>
+					</tr>
+			                
+			                 <tr>
+						<td>maxFinalHeight</td>
+						<td>int</td>
+						<td></td>
+						<td>设置生成的图片的最大高度，图片在此高度内按比例缩放，如无需设置最大高度，可设为0（仅对轻量编辑、拼图、头像编辑有效）</td>
+					</tr>
+			                
+			                 <tr>
+						<td>quality</td>
+						<td>int</td>
+						<td>1到100（默认值为90）</td>
+						<td>设置生成图片的质量（仅对轻量编辑、拼图、头像编辑有效）</td>
+					</tr>
+			                
+			                <tr>
+						<td>preventBrowseDefault</td>
+						<td>int</td>
+						<td>0或者1</td>
+						<td>是否取消默认打开行为（当取消默认打开行为时，点击打开按钮则调度xiuxiu.onBrowse事件，可在此事件内弹出照片选择器。适用场景：当您的网站有相册系统时，需要点击打开图片按钮的时候，可以弹出自定义的照片选择器来从中选取照片(<a href="http://open.web.meitu.com/demo/custom_photo_selector.html" target="_blank">demo1,</a><a href="http://open.web.meitu.com/demo/custom_photo_selector_m1.html" target="_blank">demo2</a>)，需要注意的是，如果照片选择器被flash盖住，可以设置flash为透明模式，即xiuxiu.params.wmode = "transparent";）</td>
+					</tr>
+			                
+			                 <tr>
+						<td>preventUploadDefault</td>
+						<td>int</td>
+						<td>0或者1</td>
+						<td>是否取消默认上传行为（当取消默认上传行为时，点击上传按钮则调度xiuxiu.onUpload事件）</td>
+					</tr>
+			                
+				</tbody>
+			</table>
+            
+            
+        <h4>2.1.8、<b>高级参数设置--上传</b>（xiuxiu.upload）</h4>
+            <p>功能描述：上传，此方法极少用到，一般来说已经有了默认上传行为，就无需再外部调用进行上传（仅对轻量编辑器、轻量拼图、头像编辑器有效</p>
+        	<p>语法：</p>
+			<code>
+			<pre>xiuxiu.upload (url,uploadArgs,type,id);</pre>
+			</code>
+		  <table width="100%" border="1" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr>
+						<th width="11%">参数</th>
+						<th width="10%">必选</th>
+						<th width="20%">字段类型</th>
+						<th width="33%">说明</th>
+					</tr>
+					<tr>
+						<td>url</td>
+						<td>否</td>
+						<td>string</td>
+						<td>上传接口地址</td>
+					</tr>
+					<tr>
+						<td>uploadArgs</td>
+						<td>否</td>
+						<td>object</td>
+						<td>上传参数</td>
+					</tr>
+                    
+                    <tr>
+						<td>type</td>
+						<td>否</td>
+						<td>int</td>
+						<td>上传方式/（值为1或者3）</td>
+					</tr>
+                    
+                      <tr>
+						<td>id</td>
+						<td>否</td>
+						<td>string</td>
+						<td>编辑器在页面中的id，默认值为"xiuxiu.Editor"</td>
+					</tr>        
+				</tbody>
+			</table>
+        <p>适用场景：
+1.点击保存按钮时弹出自定义的文件浏览对话框，用户选择要保存的目录后，调用编辑器上传进口进行上传(<a href="http://open.web.meitu.com/demo/custom_photo_selector.html" target="_blank">demo</a>)。</p>
+<p>示例代码</p>
+<code>
+<pre>xiuxiu.setLaunchVars("preventUploadDefault", 1);
+xiuxiu.embedSWF("altContent2", 1, 700, 500, "lite");
+xiuxiu.setUploadURL("xxx");
+
+xiuxiu.onUpload = function (id)
+{
+    //这里弹出自定义文件浏览对话框
+}
+
+//用户选择要保存的目录后
+	xiuxiu.upload ();
+ </pre>
+ </code>
+
+
+
+
+            
+		</div>
+		<h3 id="2_2">2.2、事件</h3>
+		<h4 id="2_2_1">2.2.1、<b>初始化</b>（xiuxiu.onInit）</h4>
+		<code>
+<pre>xiuxiu.onInit = function(id) {}</pre>
+		</code>
+		<p>当编辑器初始化完成时调用，必须定义一个在调用事件处理函数时执行的函数。</p>
+		<table width="100%" border="1" cellpadding="0" cellspacing="0">
+			<tbody><tr>
+				<th>参数</th>
+				<th>说明</th>
+			</tr>
+			<tr>
+				<td>id</td>
+				<td>调度此事件的编辑器在页面中的id</td>
+			</tr>
+		</tbody></table>
+		<p>示例代码</p>
+		<code>
+<pre>xiuxiu.onInit = function (id)
+{
+	// your code here
+	alert("flash初始化完成");
+}</pre>
+		</code>
+		
+		
+		<h4 id="2_2_2">2.2.2、<b>图片上传前</b>（xiuxiu.onBeforeUpload）</h4>
+		<code>
+<pre>xiuxiu.onBeforeUpload = function(data, id) {}</pre>
+		</code>
+		<p>在图片上传前调用，提供上传前最后一个机会来改变上传数据甚至终止上传，如果需要终止上传，只要返回false，需要继续上传则返回true；同时data参数为object类型，包含要上传的图片的属性，如宽度、高度、文件名、字节数等。</p>
+		<p>参数<br>
+			data：要上传的图片的属性（object类型，下表为data包含的属性）</p>
+			<table width="100%" border="1" cellpadding="0" cellspacing="0">
+			<tbody><tr>
+				<th>属性</th>
+				<th>字段类型</th>
+				<th>说明</th>
+			</tr>
+			<tr>
+				<td>width</td>
+				<td>int</td>
+				<td>图片宽度</td>
+			</tr>
+			<tr>
+				<td>height</td>
+				<td>int</td>
+				<td>图片高度</td>
+			</tr>
+			<tr>
+				<td>type</td>
+				<td>string</td>
+				<td>格式（目前只有jpg、png、gif）三种</td>
+			</tr>
+			<tr>
+				<td>size</td>
+				<td>int</td>
+				<td>图片字节数</td>
+			</tr>
+			<tr>
+				<td>name</td>
+				<td>string</td>
+				<td>图片名称</td>
+			</tr>
+			<tr>
+				<td>numOperate</td>
+				<td>int</td>
+				<td>打开编辑器之后编辑的第几张图片</td>
+			</tr>
+			<tr>
+				<td>isNet</td>
+				<td>booleam</td>
+				<td>是否是网络图片</td>
+			</tr>
+			<tr>
+				<td>url</td>
+				<td>string</td>
+				<td>如果是网络图片，则为图片url，否则为空</td>
+			</tr>
+		</tbody></table>	
+		<p>参数<br>
+			id：调度此事件的编辑器在页面中的id</p>	
+		<p>适用场景：<br>
+1.论坛上传图片最大为2M，因此可在上传前检查图片大小，超过则进行提示不再上传。(<a href="http://open.web.meitu.com/demo/before_upload_bbs.html" target="_blank">demo</a>)</p>
+	<p>示例代码</p>
+		<code>
+<pre>xiuxiu.onBeforeUpload = function (data, id)
+{
+  var size = data.size;
+  if(size &gt; 2 * 1024 * 1024)
+  { 
+    alert("图片不能超过2M"); 
+    return false; 
+  }
+  return true; 
+}
+</pre>
+</code>
+<p>2.图片上传前重新更新上传参数(<a href="http://open.web.meitu.com/demo/before_upload_param.html" target="_blank">demo</a>)</p>		
+<p>示例代码</p>
+<code>
+<pre>xiuxiu.setUploadArgs({c:1, d:"test" }, id);
+xiuxiu.onBeforeUpload = function (data, id)
+{
+  xiuxiu.setUploadArgs({c:1111, d:"goodluck" }, id);
+  return true;
+}
+
+</pre>
+</code>		
+		<h4 id="2_2_3">2.2.3、<b>上传响应</b>（xiuxiu.onUploadResponse）</h4>
+		<code>
+<pre>xiuxiu.onUploadResponse= function(data,id) {}</pre>
+		</code>
+		<p>当上传图片后端响应时调用，必须定义一个在调用事件处理函数时执行的函数。</p>
+		<p>参数<br>
+			data：服务器端返回的数据<br>
+			id：调度此事件的编辑器在页面中的id
+			</p>
+		<p>示例代码</p>
+		<code>
+<pre>xiuxiu.onUploadResponse = function (data)
+{
+	alert("上传响应" + data);
+}</pre>
+		</code>
+		<h4 id="2_2_4">2.2.4、<b>关闭编辑器</b>（xiuxiu.onClose）</h4>
+		<code>
+<pre>xiuxiu.onClose = function(id) {}</pre>
+		</code>
+		<p>当在flash中点击关闭按钮时调用，必须定义一个在调用事件处理函数时执行的函数。</p>
+		<p>参数<br>
+			id：调度此事件的编辑器在页面中的id
+			</p>
+		<p>示例代码</p>
+		<code>
+<pre>xiuxiu.onClose = function (id)
+{
+	alert("编辑器关闭");
+}</pre>
+		</code>
+		<h4 id="2_2_5">2.2.5、<b>调试编辑器</b>（xiuxiu.onDebug）</h4>
+		<pre><code>
+xiuxiu.onDebug= function(data,id) {}
+		</code></pre>
+		<p>当发生错误时输出的调试信息，必须定义一个在调用事件处理函数时执行的函数。</p>
+		<p>参数<br>
+			data：调试信息<br>
+			id：调度此事件的编辑器在页面中的id</p>
+		<p>示例代码</p>
+		<code>
+<pre>xiuxiu.onDebug = function (data)
+{
+	alert("错误响应" + data);
+}</pre>
+		</code>
+		<p>错误代码及其意义</p>
+		<table width="100%" border="1" cellpadding="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<th>错误代码</th>
+					<th>描述</th>
+				</tr>
+				<tr>
+					<td>MT0001</td>
+					<td>上传接口不存在(404)</td>
+				</tr>
+				<tr>
+					<td>MT0002</td>
+					<td>您的服务器没有crossdomain.xml，<br>或者crossdomain.xml内未含有&lt;allow-access-from domain="*.meitu.com"/&gt;<br><a href="http://bbs.web.meitu.com/forum.php?mod=viewthread&tid=3&extra=page%3D1" target="_blank">查看crossdomain.xml如何设置</a></td>
+				</tr>
+				<tr>
+					<td>MT0003</td>
+					<td>上传接口未设置</td>
+				</tr>
+			</tbody>
+		</table>
+        
+        <p style="border-top:dashed 1px #acacac; padding:10px 0; margin-top:16px; font-size:14px;">如果以上事件还不能满足您的需求，请查看高级事件。<br><a id="2_2_6" class="advlink" href="http://open.web.meitu.com/wiki/#advEvt" data-alttxt="点击隐藏高级事件" data-origintxt="点击显示高级事件">点击隐藏高级事件</a></p>
+        <div id="advEvt" class="advcon" style="display: block;">
+        	<h4>2.2.6、<b>高级事件</b></h4>
+        		<h4>2.2.6.1、<b>点击打开图片按钮</b>（xiuxiu.onBrowse）</h4>
+        	    <code><pre>xiuxiu.onBrowse= function(channel, multipleSelection, canClose, id) {}</pre></code>
+        	    <p>当取消默认打开行为后，在flash中点击打开图片按钮时调用。必须定义一个在调用事件处理函数时执行的函数。
+        	当您的网站有相册系统时，需要点击打开图片按钮的时候，可以弹出自定义的照片选择器来从中选取照片，这时候这个事件就非常有用。需要注意的是必须取消默认打开行为，即xiuxiu.setLaunchVars("preventBrowseDefault", 1);(<a href="http://open.web.meitu.com/demo/custom_photo_selector.html" target="_blank">demo</a>)</p>
+        			<p>参数<br>
+        				channel：编辑器中调度此事件的来源<br>
+        				multipleSelection：是否可多选<br>
+        	    canClose：自定义文件浏览对话框能否关闭<br>
+        	    id：调度此事件的编辑器在页面中的id</p>
+        			<p>示例代码</p>
+        			<code>
+        	<pre>xiuxiu.onBrowse = function (channel, multipleSelection, canClose, id)
+        	{
+        		alert("打开自定义照片选择器");
+        	}</pre>
+        			</code>
+        	
+        	
+        	<h4>2.2.6.2、<b>保存为base64图片触发时</b>（xiuxiu.onSaveBase64Image）</h4>
+        	    <code><pre>xiuxiu.onSaveBase64Image= function(data, fileName, fileType, id) {}</pre></code>
+        	    <p>当文件不进行流式或者表单形式上传，而是进行Base64编码后传给JS使用时调用。必须定义一个在调用事件处理函数时执行的函数。
+        	当您的网站使用编辑器处理完照片后需要把这张图片传给其他程序来做后续处理，而又不想重复上传，这时候这个事件就非常有用。需要注意的是需要设置上传类型为3，即xiuxiu.setUploadType(3);(<a href="http://open.web.meitu.com/demo/save_base64.html" target="_blank">demo</a>)
+        	</p>
+        			<p>参数<br>
+        				data：Base64编码的图片<br>
+        				filename：文件名<br>
+        	    fileType：文件格式<br>
+        	    id：调度此事件的编辑器在页面中的id</p>
+        			<p>示例代码</p>
+        			<code>
+        	<pre>xiuxiu.onSaveBase64Image= function (data, fileName, fileType, id)
+        	{
+        		alert("保存Base64编码的图片");
+        	}</pre></code>
+        	
+        	<h4>2.2.6.3、<b>点击上传按钮</b>（xiuxiu.onUpload）</h4>
+        	    <code><pre>xiuxiu.onUpload = function(id) {}</pre></code>
+        	    <p>当取消默认上传行为后，在flash中点击上传按钮时调用。必须定义一个在调用事件处理函数时执行的函数。
+        	当需要在保存前中断，然后弹出文件浏览对话框让用户选择要保存的地方或者让用户做其他自定义操作，这时候这个事件就非常有用。需要注意的是必须取消默认上传行为，即xiuxiu.setLaunchVars("preventUploadDefault", 1);，用户操作完之后，调用xiuxiu.upload();继续上传(<a href="http://open.web.meitu.com/demo/custom_photo_selector.html" target="_blank">demo</a>)。
+        	</p>
+        	
+        	<h4>2.2.6.4、<b>批量上传过程中，当前图片上传响应时</b>（xiuxiu.onBatchUploadResponse）</h4>
+        	    <code><pre>xiuxiu.onBatchUploadResponse = function (data, index, id) {}</pre></code>
+        	    <p>批量上传过程中，每一张图片上传后都会调度此事件一次。<br>
+        	必要时你可以对此事件进行处理，根据参数data决定下面剩余的图片是否继续上传，<br>如需终止上传，则需返回一个object类型的返回值{"continue":false}，如需继续上传，则返回{"continue":true}，<br>如果上传成功（缩略图上打钩）则返回{"continue":true,"success":true},同理上传不成功返回{"continue":true,"success":false}(<a href="http://open.web.meitu.com/demo/batch.html" target="_blank">demo</a>)
+        	</p>
+        			<p>参数<br>
+        				data：服务器端返回的数据（字符型）<br>
+        				index：当前上传完成的图片的索引<br>
+        	    id：调度此事件的编辑器在页面中的id</p>
+        			<p>示例代码</p>
+        			<code>
+        	<pre>xiuxiu.onBatchUploadResponse = function (data, index, id)
+        	{
+        		var returnValue = {"continue":true};
+                        return returnValue;
+        	}</pre></code>
+        	
+        	<h4>2.2.6.5、<b>批量上传全部完成时</b>（xiuxiu.onBatchUploadComplete）</h4>
+        	    <code><pre>xiuxiu.onBatchUploadComplete= function(id) {}</pre></code>
+        	    <p>图片全部处理并上传完成时调度此事件。必要时你可以对此事件进行处理，进行页面跳转或关闭编辑器。
+        	</p>
+        			<p>参数<br>
+        	    id：调度此事件的编辑器在页面中的id</p>
+        			<p>示例代码</p>
+        			<code>
+        	<pre>xiuxiu.onBatchUploadComplete= function (id)
+        	{
+        		//图片全部上传完成，接下去自行处理
+        		alert("图片全部上传完成，接下去自行处理");
+        	}</pre></code>
+        	
+        </div>
+</div>
+</div>
+<div class="footer">
+	©2008-2013 美图秀秀网页版  闽B2-20040192
+</div>
+<script src="./api/jquery.js"></script>
+<script src="./api/common.js"></script>
+<style>.advcon{display: none;}</style>
+<script>
+$(function(){
+
+$('.advlink').each(function(){
+	var link = link = $(this);
+	if(!link.attr('data-origintxt')){
+		link.attr('data-origintxt',link.html());
+	}
+}).on('click',function(){
+	toggleAdvCon(this);
+	return false;
+});
+$('.sidebar a').on('click',function(){
+	var link = $(this.hash);
+	if(link.hasClass('advlink')){
+		toggleAdvCon(link[0],'open');
+	}
+});
+
+function toggleAdvCon(lnk,type){
+	var target = $(lnk.hash),
+		link = $(lnk);
+	if(type == 'open' || (type != 'close' && !link.data('opened'))){
+		target.show();
+		link.data('opened',true).html(link.attr('data-alttxt'));
+	}else{
+		target.hide();
+		link.data('opened',false).html(link.attr('data-origintxt'));
+	}
+	/*target.toggle();
+	if(link.data('opened')){
+		link.data('opened',false).html(link.attr('data-origintxt'));
+	}else{
+		link.data('opened',true).html(link.attr('data-alttxt'));
+	}*/
+}
+});
+</script>
+<div style="display:none"><script src="http://w.cnzz.com/c.php?id=30078996&l=3" language="JavaScript"></script></div>
+
+<div id="haloword-lookup" class="ui-widget-content ui-draggable"><div id="haloword-title"><span id="haloword-word"></span><a herf="#" id="haloword-pron" class="haloword-button" title="发音"></a><audio id="haloword-audio"></audio><div id="haloword-control-container"><a herf="#" id="haloword-add" class="haloword-button" title="加入单词表"></a><a herf="#" id="haloword-remove" class="haloword-button" title="移出单词表"></a><a href="http://open.web.meitu.com/wiki/#" id="haloword-open" class="haloword-button" title="查看单词详细释义" target="_blank"></a><a herf="#" id="haloword-close" class="haloword-button" title="关闭查询窗"></a></div><br style="clear: both;"></div><div id="haloword-content"></div></div></body></html>
