@@ -1,0 +1,1728 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052) -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>RequireJS API中文版 | mm框架</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="开源社区驱动的移动适配框架，将既有的桌面Web应用无缝迁移到手机端。">
+    <meta name="keywords" content="mobile, Mobilize, html5, BYOD, app, 移动化, 适配, 迁移, 开源, 企业应用">
+    <meta name="author" content="MakingMobile Team">
+    <meta http-equiv="X-Powered-By" content="DocPad v6.34.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="http://makingmobile.org/icons/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="http://makingmobile.org/icons/apple-touch-icon-114-precomposed.png"
+          sizes="114x114">
+    <link rel="apple-touch-icon-precomposed" href="http://makingmobile.org/icons/apple-touch-icon-72-precomposed.png"
+          sizes="72x72">
+    <link rel="apple-touch-icon-precomposed" href="http://makingmobile.org/icons/apple-touch-icon-57-precomposed.png">
+    <!--[if lt IE 9]>
+    <script async="async" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="http://makingmobile.org/vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="http://makingmobile.org/vendor/bootstrap/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="http://makingmobile.org/styles/style.css">
+    <link rel="stylesheet" href="http://makingmobile.org/styles/menu.css">
+    <link rel="stylesheet" href="http://makingmobile.org/styles/generic.css">
+    <link rel="stylesheet" href="http://makingmobile.org/styles/markdown.css">
+    <style type="text/css"></style>
+    <script type="text/javascript" async="" src="./RequireJS API中文版   mm框架_files/embed.js" charset="UTF-8"></script>
+    <style id="clearly_highlighting_css" type="text/css">/* selection */
+    html.clearly_highlighting_enabled ::-moz-selection {
+        background: rgba(246, 238, 150, 0.99);
+    }
+
+    html.clearly_highlighting_enabled ::selection {
+        background: rgba(246, 238, 150, 0.99);
+    }
+
+    /* cursor */
+    html.clearly_highlighting_enabled {
+        /* cursor and hot-spot position -- requires a default cursor, after the URL one */
+        cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text;
+    }
+
+    /* highlight tag */
+    em.clearly_highlight_element {
+        font-style: inherit !important;
+        font-weight: inherit !important;
+        background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");
+        background-repeat: repeat-x;
+        background-position: top left;
+        background-size: 100% 100%;
+    }
+
+    /* the delete-buttons are positioned relative to this */
+    em.clearly_highlight_element.clearly_highlight_first {
+        position: relative;
+    }
+
+    /* delete buttons */
+    em.clearly_highlight_element a.clearly_highlight_delete_element {
+        display: none;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+        line-height: 0;
+        position: absolute;
+        width: 34px;
+        height: 34px;
+        left: -17px;
+        top: -17px;
+        background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png");
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+    }
+
+    em.clearly_highlight_element a.clearly_highlight_delete_element:hover {
+        background-position: -34px 0px;
+    }
+
+    /* retina */
+    @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+        em.clearly_highlight_element {
+            background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png");
+        }
+
+        em.clearly_highlight_element a.clearly_highlight_delete_element {
+            background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png");
+            background-size: 68px 34px;
+        }
+    } </style>
+    <link type="text/css" rel="stylesheet" href="./RequireJS API中文版   mm框架_files/embed.default.css">
+    <style>#haloword-pron {
+        background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -34px;
+    }
+
+    #haloword-pron:hover {
+        background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -34px;
+    }
+
+    #haloword-open {
+        background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -17px;
+    }
+
+    #haloword-open:hover {
+        background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -17px;
+    }
+
+    #haloword-close {
+        background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px 0;
+    }
+
+    #haloword-close:hover {
+        background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px 0;
+    }
+
+    #haloword-add {
+        background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -51px;
+    }
+
+    #haloword-add:hover {
+        background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -51px;
+    }
+
+    #haloword-remove {
+        background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -68px;
+    }
+
+    #haloword-remove:hover {
+        background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -68px;
+    }</style>
+    <style>[touch-action="none"] {
+        -ms-touch-action: none;
+        touch-action: none;
+    }
+
+    [touch-action="pan-x"] {
+        -ms-touch-action: pan-x;
+        touch-action: pan-x;
+    }
+
+    [touch-action="pan-y"] {
+        -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    }
+
+    [touch-action="scroll"], [touch-action="pan-x pan-y"], [touch-action="pan-y pan-x"] {
+        -ms-touch-action: pan-x pan-y;
+        touch-action: pan-x pan-y;
+    }</style>
+</head>
+<body data-spy="scroll" data-target=".left-pageindex">
+<div class="body-container">
+<div id="gotop" style="display: hidden"></div>
+<div class="page-container">
+<div class="layout-main row-fluid">
+<div class="layout-left span3">
+
+</div>
+<div class="layout-right span9">
+<article class="page">
+<div class="head">
+    <h1 class="title">RequireJS API中文版
+    </h1>
+</div>
+<div class="content markdown-body">
+<blockquote>
+
+
+    <p>这是 <a href="https://github.com/jrburke/requirejs/wiki/Upgrading-to-RequireJS-2.0">RequireJS 2.0</a> 的API，对应的<a
+            href="http://requirejs.org/docs/api.html">官方文档</a>版本号是2.1.6</p>
+</blockquote>
+<p><br><br></p>
+<ul>
+    <li><a href="#usage">用法
+        ------------------------------------------------ §§ 1-1.2</a>
+        <ul>
+            <li><a href="#jsfiles">加载JavaScript文件
+                ------------------------------- § 1.1</a></li>
+            <li><a href="#define">定义模块
+                ----------------------------------------- § 1.2</a>
+                <ul>
+                    <li><a href="#defsimple">简单的值对
+                        ----------------------------------- § 1.2.1</a></li>
+                    <li><a href="#deffunc">函数式定义
+                        ----------------------------------- § 1.2.2</a></li>
+                    <li><a href="#defdep">存在依赖的函数式定义
+                        -------------------------- § 1.2.3</a></li>
+                    <li><a href="#funcmodule">将模块定义为一个函数
+                        -------------------------- § 1.2.4</a></li>
+                    <li><a href="#cjsmodule">简单包装CommonJS来定义模块
+                        -------------------- § 1.2.5</a></li>
+                    <li><a href="#modulename">定义一个命名模块
+                        ------------------------------ § 1.2.6</a></li>
+                    <li><a href="#modulenotes">其他注意事项
+                        --------------------------------- § 1.2.7</a></li>
+                    <li><a href="#circular">循环依赖
+                        ------------------------------------- § 1.2.8</a></li>
+                    <li><a href="#jsonp">JSONP服务依赖
+                        -------------------------------- § 1.2.9</a></li>
+                    <li><a href="#undef">undefine一个模块
+                        ----------------------------- § 1.2.10</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="#mechanics">机理
+        ------------------------------------------------ §§ 2</a></li>
+    <li><a href="#config">配置项
+        ---------------------------------------------- § 3</a></li>
+    <li><a href="#advanced">进阶应用
+        --------------------------------------------- §§ 4-4.6</a>
+        <ul>
+            <li><a href="#packages">从包中加载模块
+                ------------------------------------ § 4.1</a></li>
+            <li><a href="#multiversion">多版本支持
+                --------------------------------------- § 4.2</a></li>
+            <li><a href="#afterload">在页面加载之后加载代码
+                ---------------------------- § 4.3</a></li>
+            <li><a href="#webworker">对Web Worker的支持
+                ------------------------------ § 4.4</a></li>
+            <li><a href="#rhino">对Rhino的支持
+                ----------------------------------- § 4.5</a></li>
+            <li><a href="#errors">处理错误
+                ---------------------------------------- § 4.6</a>
+                <ul>
+                    <li><a href="#ieloadfail">在IE中捕获加载错
+                        ----------------------------- § 4.6.1</a></li>
+                    <li><a href="#errbacks">require([]) errbacks
+                        ----------------------- § 4.6.2</a></li>
+                    <li><a href="#pathsfallbacks">paths备错配置
+                        ------------------------------- § 4.6.3</a></li>
+                    <li><a href="#requirejsonerror">全局的
+                        requirejs.onError -------------------- § 4.6.4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="#plugins">加载器插件
+        ------------------------------------------- §§ 5-5.3</a>
+        <ul>
+            <li><a href="#text">指定文本文件依赖
+                ---------------------------------- § 5.1</a></li>
+            <li><a href="#pageload">页面加载事件及DOM Ready
+                --------------------------- § 5.2</a></li>
+            <li><a href="#i18n">define I18N bundle
+                ------------------------------ § 5.3</a></li>
+        </ul>
+    </li>
+</ul>
+<hr>
+<h1 id="pageindexid-0">
+    <center><span id="usage" style="color: grey">§ 1</span>用法</center>
+</h1>
+<h2 id="pageindexid-1"><span id="jsfiles" style="color: grey">§ 1.1</span><a
+        href="#jsfiles">加载JavaScript文件</a></h2>
+
+<p>RequireJS的目标是鼓励代码的模块化，它使用了不同于传统&lt;script&gt;标签的脚本加载步骤。可以用它来加速、优化代码，但其主要目的还是为了代码的模块化。它鼓励在使用脚本时以module ID替代URL地址。</p>
+
+<p>RequireJS以一个相对于<a href="#config-baseUrl">baseUrl</a>的地址来加载所有的代码。
+    页面顶层&lt;script&gt;标签含有一个特殊的属性data-main，require.js使用它来启动脚本加载过程，而baseUrl一般设置到与该属性相一致的目录。下列示例中展示了baseUrl的设置：</p>
+<pre><code>&lt;!-- 将baseUrl设置到"scripts"目录，并且加载module ID为'main'的一个脚本'--&gt;
+    &lt;script data-main="scripts/main.js" src="scripts/require.js"&gt;&lt;/script&gt;</code></pre>
+<p>baseUrl亦可通过<a href="#config">RequireJS config</a>手动设置。如果没有显式指定config及data-main，则默认的baseUrl为包含RequireJS的那个HTML页面的所属目录。
+</p>
+
+<p>RequireJS默认假定所有的依赖资源都是js脚本，因此无需在module ID上再加".js"后缀，RequireJS在进行module ID到path的解析时会自动补上后缀。你可以通过<a
+        href="#config-paths">paths config</a>设置一组脚本，这些有助于我们在使用脚本时码更少的字。
+</p>
+
+<p>有时候你想避开"baseUrl + paths"的解析过程，而是直接指定加载某一个目录下的脚本。此时可以这样做：如果一个module ID符合下述规则之一，其ID解析会避开常规的"baseUrl +
+    paths"配置，而是直接将其加载为一个相对于当前HTML文档的脚本：</p>
+<ul>
+    <li>以".js"结尾；</li>
+    <li>以"/"开头；</li>
+    <li>包含URL协议，如"http:"、"https:"</li>
+</ul>
+<p>一般来说，最好还是使用baseUrl及"paths" config去设置module ID。它会给你带来额外的灵活性，如便于脚本的重命名、重定位等。
+    同时，为了避免凌乱的配置，最好不要使用多级嵌套的目录层次来组织代码，而是要么将所有的脚本都放置到baseUrl中，要么分置为项目库/第三方库的一个扁平结构，如下：</p>
+<ul>
+    <li>www/
+        <ul>
+            <li>index.html</li>
+            <li>js/
+                <ul>
+                    <li>app/
+                        <ul>
+                            <li>sub.js</li>
+                        </ul>
+                    </li>
+                    <li>lib/
+                        <ul>
+                            <li>jquery.js</li>
+                            <li>canvas.js</li>
+                        </ul>
+                    </li>
+                    <li>app.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+<p>在index.html中：</p>
+<pre><code>&lt;script data-main="js/app.js" src="js/require.js"&gt;&lt;/script&gt;</code></pre>
+<p>在app.js中：</p>
+<pre><code>requirejs.config({
+    // 默认从js/lib加载所有的module ID
+    baseUrl: 'js/lib',
+    // 除非，module ID以"app"开头，则
+    // 从js/app目录加载。
+    // 注意，paths config是相对于baseUrl的，
+    // 而且不要包含".js"的后缀，因为一个path
+    // 有可能是个目录
+    paths: {
+    app: '../app'
+    }
+    });
+
+    // 启动main app
+    requirejs(['jquery', 'canvas', 'app/sub'],
+    function ($, canvas, sub) {
+    //自此，jQuery，canvas以及app/sub模块
+    //都已加载并可开始使用了。
+    });</code></pre>
+<p>注意在示例中，三方库如jQuery没有将版本号包含在他们的文件名中。我们建议将版本信息放置在单独的文件中来进行跟踪。使用诸如<a href="https://github.com/volojs/volo">volo</a>这类的工具，可以将package.json打上版本信息，并在磁盘上保持文件名为"jquery.js"。这有助于你保持配置的最小化，避免为每个库版本设置一条path。例如，将"jquery"配置为"jquery-1.7.2"。
+</p>
+
+<p>理想状况下，每个加载的脚本都是通过<a href="#define">define()</a>来定义的一个模块；但有些"浏览器全局变量注入"型的传统/遗留库并没有使用define()来定义它们的依赖关系，你必须为此使用<a
+        href="#config-shim">shim config</a>来指明它们的依赖关系。
+    如果你没有指明依赖关系，加载可能报错。这是因为基于速度的原因，RequireJS会异步地以无序的形式加载这些库。</p>
+
+<h2 id="pageindexid-2"><span id="define" style="color: grey">§ 1.2</span><a
+        href="#define">定义模块</a></h2>
+
+<p>模块不同于传统的脚本文件，它良好地定义了一个作用域来避免全局名称空间污染。它可以显式地列出其依赖关系，并以函数(定义此模块的那个函数)参数的形式将这些依赖进行注入，而无需引用全局变量。RequireJS的模块是<a
+        href="http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html">模块模式</a>的一个扩展，其好处是无需全局地引用其他模块。</p>
+
+<p>RequireJS的模块语法允许它尽快地加载多个模块，虽然加载的顺序不定，但依赖的顺序最终是正确的。同时因为无需创建全局变量，甚至可以做到<a
+        href="#multiversion">在同一个页面上同时加载同一模块的不同版本</a>。</p>
+
+<p>(如果你熟悉ConmmonJS，可参看CommonJS的注释信息以了解RequireJS模块到CommonJS模块的映射关系)。</p>
+
+<p>一个磁盘文件应该只定义 <strong>1</strong> 个模块。多个模块可以使用<a href="http://requirejs.org/docs/optimization.html">内置优化工具</a>将其组织打包。
+</p>
+
+<h3 id="pageindexid-3">
+    <center><span id="defsimple" style="color: grey">§ 1.2.1</span> <a
+            href="#defsimple">简单的值对</a></center>
+</h3>
+<p>如果一个模块仅含值对，没有任何依赖，则在define()中定义这些值对就好了：</p>
+<pre><code>//my/shirt.js:
+    define({
+    color: "black",
+    size: "unisize"
+    });</code></pre>
+<h3 id="pageindexid-4">
+    <center><span id="deffunc" style="color: grey">§ 1.2.2</span> <a
+            href="#deffunc">函数式定义</a></center>
+</h3>
+<p>如果一个模块没有任何依赖，但需要一个做setup工作的函数，则在define()中定义该函数，并将其传给define()：</p>
+<pre><code>//my/shirt.js现在在返回其模块定义之前做
+    //了一些setup工作
+    define(function () {
+    //Do setup work here
+
+    return {
+    color: "black",
+    size: "unisize"
+    }
+    });</code></pre>
+<h3 id="pageindexid-5">
+    <center><span id="defdep" style="color: grey">§ 1.2.3</span> <a
+            href="#defdep">存在依赖的函数式定义</a></center>
+</h3>
+<p>
+    如果模块存在依赖：则第一个参数是依赖的名称数组；第二个参数是函数，在模块的所有依赖加载完毕后，该函数会被调用来定义该模块，因此该模块应该返回一个定义了本模块的object。依赖关系会以参数的形式注入到该函数上，参数列表与依赖名称列表一一对应。</p>
+<pre><code>//my/shirt.js现在对同目录下的cart及inventory存在依赖
+    define(["./cart", "./inventory"], function(cart, inventory) {
+    //返回一个定义了该"my/shirt"模块的object
+    return {
+    color: "blue",
+    size: "large",
+    addToCart: function() {
+    inventory.decrement(this);
+    cart.add(this);
+    }
+    }
+    }
+    );</code></pre>
+<p>本示例创建了一个my/shirt模块，它依赖于my/cart及my/inventory。磁盘上各文件分布如下：</p>
+<ul>
+    <li>my/cart.js</li>
+    <li>my/inventory.js</li>
+    <li>my/shirt.js</li>
+</ul>
+<p>模块函数以参数"cart"及"inventory"使用这两个以"./cart"及"./inventory"名称指定的模块。在这两个模块加载完毕之前，模块函数不会被调用。</p>
+
+<p>严重不鼓励模块定义全局变量。遵循此处的定义模式，可以使得同一模块的不同版本并存于同一个页面上(参见 <strong>高级用法</strong> )。另外，函参的顺序应与依赖顺序保存一致。</p>
+
+<p>返回的object定义了"my/shirt"模块。这种定义模式下，"my/shirt"不作为一个全局变量而存在。</p>
+
+<h3 id="pageindexid-6">
+    <center><span id="funcmodule" style="color: grey">§ 1.2.4</span> <a
+            href="#funcmodule">将模块定义为一个函数</a></center>
+</h3>
+<p>对模块的返回值类型并没有强制为一定是个object，任何函数的返回值都是允许的。此处是一个返回了函数的模块定义：</p>
+<pre><code>//foo/title.js像之前一样使用了my/cart及my/inventory模块，
+    //但foo/bar.js位于不同于"my"模块的目录下，它在模块依赖名称
+    //中使用"my"来定位它们。依赖名称中的"my"可能映射到任意一个目录，
+    //但默认地，假定它邻接着"foo"目录。
+    define(["my/cart", "my/inventory"],
+    function(cart, inventory) {
+    //返回一个函数以定义"foo/title".
+    //它获取/设置window的title
+    return function(title) {
+    return title ? (window.title = title) :
+    inventory.storeName + ' ' + cart.name;
+    }
+    }
+    );</code></pre>
+<h3 id="pageindexid-7">
+    <center><span id="cjsmodule" style="color: grey">§ 1.2.5</span> <a
+            href="#cjsmodule">简单包装CommonJS来定义模块</a></center>
+</h3>
+<p>如果你现有一些以<a href="http://wiki.commonjs.org/wiki/Modules/1.1.1">CommonJS模块格式</a>编写的代码，而这些代码难于使用上述依赖名称数组参数的形式来重构，你可以考虑直接将这些依赖对应到一些本地变量中进行使用。你可以使用一个<a
+        href="http://requirejs.org/docs/commonjs.html">CommonJS的简单包装</a>来实现：</p>
+<pre><code>define(function(require, exports, module) {
+    var a = require('a'),
+    b = require('b');
+
+    //Return the module value
+    return function () {};
+    }
+    );</code></pre>
+<p>该包装方法依靠Function.prototype.toString()将函数内容赋予一个有意义的字串值，但在一些设备如PS3及一些老的Opera手机浏览器中不起作用。考虑在这些设备上使用<a
+        href="http://requirejs.org/docs/optimization.html">优化器</a>将依赖导出为数组形式。</p>
+
+<p>更多的信息可参看<a href="http://requirejs.org/docs/commonjs.html">CommonJS Notes</a>页面，以及"<a
+        href="http://requirejs.org/docs/whyamd.html">Why AMD</a>"页面的<a
+        href="http://requirejs.org/docs/whyamd.html#sugar">"Sugar"</a>段落。</p>
+
+<h3 id="pageindexid-8">
+    <center><span id="modulename" style="color: grey">§ 1.2.6</span> <a
+            href="#modulename">定义一个命名模块</a></center>
+</h3>
+<p>你可能会看到一些define()中包含了一个模块名称作为首个参数：</p>
+<pre><code> //显式地定义"foo/title"模块：
+    define("foo/title",
+    ["my/cart", "my/inventory"],
+    function(cart, inventory) {
+    //此处定义foo/title object
+    }
+    );</code></pre>
+<p>这些常由<a href="http://requirejs.org/docs/optimization.html">优化工具</a>生成。你也可以自己显式指定模块名称，但这使模块更不具备移植性——就是说若你将文件移动到其他目录下，你就得重命名。一般最好避免对模块硬编码，而是交给优化工具去生成。优化工具需要生成模块名以将多个模块打成一个包，加快到浏览器的载人速度。
+</p>
+
+<h3 id="pageindexid-9">
+    <center><span id="modulenotes" style="color: grey">§ 1.2.7</span> <a
+            href="#modulenotes">其他注意事项</a></center>
+</h3>
+<p><strong>一个文件一个模块:</strong> 每个Javascript文件应该只定义一个模块，这是模块名-至-文件名查找机制的自然要求。多个模块会被<a
+        href="http://requirejs.org/docs/optimization.html">优化工具</a>组织优化，但你在使用优化工具时应将多个模块放置到一个文件中。</p>
+
+<p><strong>define()中的相对模块名:</strong>
+    为了可以在define()内部使用诸如require("./relative/name")的调用以正确解析相对名称，记得将"require"本身作为一个依赖注入到模块中：</p>
+<pre><code>define(["require", "./relative/name"], function(require) {
+    var mod = require("./relative/name");
+    });</code></pre>
+<p>或者更好地，使用下述为<a href="http://requirejs.org/docs/commonjs.html">转换CommonJS模块</a>所设的更短的语法：</p>
+<pre><code>define(function(require) {
+    var mod = require("./relative/name");
+    });</code></pre>
+<p>该形式利用了Function.prototype.toString()去查找require()调用，然后将其与"require"一起加入到依赖数组中，这样代码可以正确地解析相对路径了。</p>
+
+<p>相对路径在一些场景下格外有用，例如：为了以便于将代码共享给其他人或项目，你在某个目录下创建了一些模块。你可以访问模块的相邻模块，无需知道该目录的名称。</p>
+
+<p><strong>生成相对于模块的URL地址:</strong> <span id="modulenotes-urls"></span>你可能需要生成一个相对于模块的URL地址。你可以将"require"作为一个依赖注入进来，然后调用require.toUrl()以生成该URL:
+</p>
+<pre><code>define(["require"], function(require) {
+    var cssUrl = require.toUrl("./style.css");
+    });</code></pre>
+<p><strong>控制台调试:</strong> 如果你需要处理一个已通过require(["module/name"], function(){})调用加载了的模块，可以使用模块名作为字符串参数的require()调用来获取它:
+</p>
+<pre><code>require("module/name").callSomeFunction()</code></pre>
+<p>注意这种形式仅在"module/name"已经由其异步形式的require(["module/name"])加载了后才有效。只能在define内部使用形如"./module/name"的相对路径。</p>
+
+<h3 id="pageindexid-10">
+    <center><span id="circular" style="color: grey">§ 1.2.8</span> <a
+            href="#circular">循环依赖</a></center>
+</h3>
+<p>如果你定义了一个循环依赖(a依赖b，b同时依赖a)，则在这种情形下当b的模块函数被调用的时候，它会得到一个undefined的a。b可以在模块已经定义好后用require()方法再获取(记得将require作为依赖注入进来)：</p>
+<pre><code>//b.js:
+    define(["require", "a"],
+    function(require, a) {
+    //"a"将是null，如果a/b间是循环依赖
+    return function(title) {
+    return require("a").doSomething();
+    }
+    }
+    );</code></pre>
+<p>
+    一般说来你无需使用require()去获取一个模块，而是应当使用注入到模块函数参数中的依赖。循环依赖比较罕见，它也是一个重构代码重新设计的警示灯。但不管怎样，有时候还是要用到循环依赖，这种情形下就使用上述的require()方式来解决。</p>
+
+<p>如果你熟悉CommonJS，你可以考虑使用<strong>exports</strong>为模块建立一个空object，该object可以立即被其他模块引用。在循环依赖的两头都如此操作之后，你就可以安全地持有其他模块了。这种方法仅在每个模块都是输出object作为模块值的时候有效，换成函数无效。
+</p>
+<pre><code>//b.js:
+    define(function(require, exports, module) {
+    //若"a"使用了exports，则此处我们就拥有了一个真正的object引用。
+    //但在b返回值之前我们无法使用a的任何属性。
+    var a = require("a");
+
+    exports.foo = function () {
+    return a.bar();
+    };
+    });</code></pre>
+<p>或者，如果你使用依赖注入数组的步骤，则可用注入特殊的"<a
+        href="https://github.com/jrburke/requirejs/wiki/Differences-between-the-simplified-CommonJS-wrapper-and-standard-AMD-define#wiki-magic">exports</a>"来解决：
+</p>
+<pre><code>//b.js:
+    define(['a', 'exports'], function(a, exports) {
+    //若"a"使用了exports，则此处我们就拥有了一个真正的object引用。
+    //但在b返回值之前我们无法使用a的任何属性。
+
+    exports.foo = function () {
+    return a.bar();
+    };
+    });</code></pre>
+<h3 id="pageindexid-11">
+    <center><span id="jsonp" style="color: grey">§ 1.2.9</span> <a
+            href="#jsonp">JSONP服务依赖</a></center>
+</h3>
+<p><a href="http://en.wikipedia.org/wiki/JSON#JSONP">JSONP</a>是在javascript中服务调用的一种方式。它仅需简单地通过一个script标签发起HTTP
+    GET请求，是实现跨域服务调用一种公认手段。</p>
+
+<p>为了在RequireJS中使用JSON服务，须要将callback参数的值指定为"define"。这意味着你可将获取到的JSONP URL的值看成是一个模块定义。</p>
+
+<p>下面是一个调用JSONP API端点的示例。该示例中，JSONP的callback参数为"callback"，因此"callback=define"告诉API将JSON响应包裹到一个"define()"中：</p>
+<pre><code>require(["http://example.com/api/data.json?callback=define"],
+    function (data) {
+    //data将作为此条JSONP data调用的API响应
+    console.log(data);
+    }
+    );</code></pre>
+<p>JSONP的这种用法应仅限于应用的初始化中。一旦JSONP服务超时，其他通过define()定义了的模块也可能得不得执行，错误处理不是十分健壮。</p>
+
+<p><strong>仅支持返回值类型为JSON object的JSONP服务</strong>，其他返回类型如数组、字串、数字等都不能支持。</p>
+
+<p>这种功能不该用于long-polling类的JSONP连接——那些用来处理实时流的API。这些API在接收响应后一般会做script的清理，而RequireJS则只能获取该JSONP
+    URL一次——后继使用require()或define()发起的的对同一URL的依赖(请求)只会得到一个缓存过的值。</p>
+
+<p>JSONP调用错误一般以服务超时的形式出现，因为简单加载一个script标签一般不会得到很
+    详细的网络错误信息。你可以override requirejs.onError()来过去错误。更多的信息请参看<a
+            href="#errors">错误处理</a>部分。</p>
+
+<h3 id="pageindexid-12">
+    <center><span id="undef" style="color: grey">§ 1.2.10</span> <a
+            href="#undef">undefine一个模块</a></center>
+</h3>
+<p>有一个全局函数requirejs.undef()用来undefine一个模块。它会重置loader的内部状态以使其忘记之前定义的一个模块。</p>
+
+<p>但是若有其他模块已将此模块作为依赖使用了，该模块就不会被清除，所以该功能仅在无其他模块持有该模块时的错误处理中，或者当未来需要加载该模块时有点用。参见<a
+        href="#errbacks">备错(errbacks)</a>段的示例。</p>
+
+<p>如果你打算在undefine时做一些复杂的依赖图分析，则半私有的<a href="https://github.com/jrburke/requirejs/wiki/Internal-API:-onResourceLoad">onResourceLoad
+    API</a>可能对你有用。</p>
+<hr>
+<h1 id="pageindexid-13">
+    <center><span id="mechanics" style="color: grey">§ 2</span> 机理</center>
+</h1>
+<p>RequireJS使用head.appendChild()将每一个依赖加载为一个script标签。</p>
+
+<p>RequireJS等待所有的依赖加载完毕，计算出模块定义函数正确调用顺序，然后依次调用它们。</p>
+
+<p>
+    在同步加载的服务端JavaScript环境中，可简单地重定义require.load()来使用RequireJS。build系统就是这么做的。该环境中的require.load实现可在build/jslib/requirePatch.js中找到。</p>
+
+<p>未来可能将该部分代码置入require/目录下作为一个可选模块，这样你可以在你的宿主环境中使用它来获得正确的加载顺序。</p>
+<hr>
+<h1 id="pageindexid-14">
+    <center><span id="config" style="color: grey">§ 3</span> 配置项</center>
+</h1>
+<p>当在顶层HTML页面(或不作为一个模块定义的顶层脚本文件)中，可将配置作为首项放入：</p>
+<pre><code>&lt;script src="scripts/require.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+    require.config({
+    baseUrl: "/another/path",
+    paths: {
+    "some": "some/v1.0"
+    },
+    waitSeconds: 15
+    });
+    require( ["some/module", "my/module", "a.js", "b.js"],
+    function(someModule, myModule) {
+    //该函数会在上述所有的依赖加载完毕后调用。
+    //注意该函数可在页面加载完毕前被调用。
+    //本回调函数是可选的。
+    }
+    );
+    &lt;/script&gt;</code></pre>
+<p>或者，你将配置作为全局变量"require"在require.js加载之前进行定义，它会被自动应用。下面的示例定义的依赖会在require.js一旦定义了require()之后即被加载：</p>
+<pre><code>&lt;script&gt;
+    var require = {
+    deps: ["some/module1", "my/module2", "a.js", "b.js"],
+    callback: function(module1, module2) {
+    //该函数会在上述所有的依赖加载完毕后调用。
+    //注意该函数可在页面加载完毕前被调用。
+    //本回调函数是可选的。
+    }
+    };
+    &lt;/script&gt;
+    &lt;script src="scripts/require.js"&gt;&lt;/script&gt;</code></pre>
+<blockquote>
+    <p><strong>注意</strong>：最好使用 var require = {} 的形式而不是 window.require = {}的形式。后者在IE中运行不正常。</p>
+</blockquote>
+<p>支持的配置项： </p>
+
+<p><a href="#config-baseUrl">baseUrl</a> <span
+        id="config-baseUrl"></span>：所有模块的查找根路径。所以上面的示例中，"my/module"的标签src值是"/another/path/my/module.js"。当加载纯.js文件(<a
+        href="#jsfiles">依赖字串以/开头，或者以.js结尾，或者含有协议</a>)，不会使用baseUrl。因此a.js及b.js都在包含上述代码段的HTML页面的同目录下加载。
+</p>
+
+<p>如未显式设置baseUrl，则默认值是加载require.js的HTML所处的位置。如果用了<strong>data-main</strong>属性，则该路径就变成baseUrl。 </p>
+
+<p>baseUrl可跟require.js页面处于不同的域下，RequireJS脚本的加载是跨域的。唯一的限制是使用text! plugins加载文本内容时，这些路径应跟页面同域，至少在开发时应这样。优化工具会将text!
+    plugin资源内联，因此在使用优化工具之后你可以使用跨域引用text! plugin资源的那些资源。 </p>
+
+<p><a href="#config-paths">paths</a> <span id="config-paths"></span>：path映射那些不直接放置于baseUrl下的模块名。设置path时起始位置是相对于baseUrl的，除非该path设置以"/"开头或含有URL协议（如http:）。在上述的配置下，"some/module"的script标签src值是"/another/path/some/v1.0/module.js"。
+</p>
+
+<p>用于模块名的path不应含有.js后缀，因为一个path有可能映射到一个目录。路径解析机制会自动在映射模块名到path时添加上.js后缀。在文本模版之类的场景中使用<a
+        href="#modulenotes-urls">require.toUrl()</a>时它也会添加合适的后缀。
+</p>
+
+<p>在浏览器中运行时，可指定路径的备选(<a href="#pathsfallbacks">fallbacks</a>)，以实现诸如首先指定了从CDN中加载，一旦CDN加载失败则从本地位置中加载这类的机制。
+</p>
+
+<p><a href="#config-shim">shim</a><span id="config-shim"></span>:
+    为那些没有使用define()来声明依赖关系、设置模块的"浏览器全局变量注入"型脚本做依赖和导出配置。 </p>
+
+<p>下面有个示例，它需要 RequireJS 2.1.0+，并且假定backbone.js、underscore.js 、jquery.js都装于baseUrl目录下。如果没有，则你可能需要为它们设置paths config：</p>
+<pre><code>requirejs.config({
+    shim: {
+    'backbone': {
+    //下述依赖脚本应在backbone.js之前加载
+    deps: ['underscore', 'jquery'],
+    //一旦加载，使用全局变量'Backbone'作为模块值
+    exports: 'Backbone'
+    },
+    'underscore': {
+    exports: '_'
+    },
+    'foo': {
+    deps: ['bar'],
+    exports: 'Foo',
+    init: function (bar) {
+    //使用该函数允许你调用库所支持的noConflict方法，或其他的清理工作。
+    //但是这些库的一些插件们可能依然需要一个全局引用，函数中的"this"提供这个全局引用。
+    //依赖会以函数参数的形式被注入。
+    //如果本函数具备返回值, 则该值会被用做模块的export值，而不是使用上述'exports'中的字串。
+    return this.Foo.noConflict();
+    }
+    }
+    }
+    });
+
+    //然后，在一个单独的文件中，如'MyModel.js'，定义一个模块，
+    //指定'backbone'作为依赖。RequireJS会使用shim配置去合理
+    //地加载'backbone'并给予该模块一个本地的引用。全局的Backbone引用一并
+    //存在于页面上。
+    define(['backbone'], function (Backbone) {
+    return Backbone.Model.extend({});
+    });</code></pre>
+<p>RequireJS 2.0.*中，shim配置中的"exports"属性可以是一个函数而不是字串。这种情况下它就起到上述示例中的"init"属性的功能。 RequireJS
+    2.1.0+中加入了"init"承接库加载后的初始工作，以使exports作为字串值被enforceDefine所使用。</p>
+
+<p>那些仅作为jQuery或Backbone的插件存在而不导出任何模块变量的"模块"们，shim配置可简单设置为依赖数组：</p>
+<pre><code>requirejs.config({
+    shim: {
+    'jquery.colorize': ['jquery'],
+    'jquery.scroll': ['jquery'],
+    'backbone.layoutmanager': ['backbone']
+    }
+    });</code></pre>
+<p>
+    但请注意，若你想在IE中使用404加载检测以启用path备选(fallbacks)或备错(errbacks)，则需要给定一个字串值的exports以使loader能够检查出脚本是否实际加载了(init中的返回值不会用于enforceDefine检查中)：</p>
+<pre><code>requirejs.config({
+    shim: {
+    'jquery.colorize': {
+    deps: ['jquery'],
+    exports: 'jQuery.fn.colorize'
+    },
+    'jquery.scroll': {
+    deps: ['jquery'],
+    exports: 'jQuery.fn.scroll'
+    },
+    'backbone.layoutmanager': {
+    deps: ['backbone']
+    exports: 'Backbone.LayoutManager'
+    }
+    }
+    });</code></pre>
+<blockquote>
+    <p><strong>"shim"配置的重要注意事项:</strong></p>
+    <ul>
+        <li><p>shim配置仅设置了代码的依赖关系，想要实际加载shim指定的或涉及的模块，仍然需要一个常规的require/define调用。设置shim本身不会触发代码的加载。</p>
+        </li>
+        <li><p>
+            请仅使用其他"shim"模块作为shim脚本的依赖，或那些没有依赖关系，并且在调用define()之前定义了全局变量(如jQuery或lodash)的AMD库。否则，如果你使用了一个AMD模块作为一个shim配置模块的依赖，在build之后，AMD模块可能在shim托管代码执行之前都不会被执行，这会导致错误。终极的解决方案是将所有shim托管代码都升级为含有可选的AMD
+            define()调用。 </p>
+        </li>
+    </ul>
+    <p><strong>"shim"配置的优化器重要注意事项:</strong></p>
+    <ul>
+        <li><p>您应当使用 <a href="http://requirejs.org/docs/optimization.html#mainConfigFile">mainConfigFile</a>
+            build配置项来指定含有shim配置的文件位置，否则优化器不会知晓shim配置。另一个手段是将shim配置复制到build profile中。</p>
+        </li>
+        <li><p>
+            不要在一个build中混用CDN加载和shim配置。示例场景，如：你从CDN加载jQuery的同时使用shim配置加载依赖于jQuery的原版Backbone。不要这么做。您应该在build中将jQuery内联而不是从CDN加载，否则build中内联的Backbone会在CDN加载jQuery之前运行。这是因为shim配置仅延时加载到所有的依赖已加载，而不会做任何define的自动装裹(auto-wrapping)。在build之后，所有依赖都已内联，shim配置不能延时执行非define()的代码。define()的模块可以在build之后与CDN加载代码一并工作，因为它们已将自己的代码合理地用define装裹了，在所有的依赖都已加载之前不会执行。因此记住：shim配置仅是个处理非模块(non-modular)代码、遗留代码的将就手段，如可以应尽量使用define()的模块。</p>
+        </li>
+        <li><p>对于本地的多文件build，上述的CDN加载建议仍然适用。任何shim过的脚本，它们的依赖<strong>必须</strong>加载于该脚本执行之前。这意味着要么直接在含有shim脚本的build层build它的依赖，要么先使用require([],
+            function (){})调用来加载它的依赖，然后对含有shim脚本的build层发出一个嵌套的require([])调用。</p>
+        </li>
+        <li><p>如果您使用了uglifyjs来压缩代码，<strong>不要</strong>将uglify的toplevel选项置为true，或在命令行中<strong>不要</strong>使用 -mt。
+            该选项会破坏shim用于找到exports的全局名称。</p>
+        </li>
+    </ul>
+</blockquote>
+<p><a href="#map-config">map</a>: 对于给定的模块前缀，使用一个不同的模块ID来加载该模块。<br>该手段对于某些大型项目很重要：如有两类模块需要使用不同版本的"foo"，但它们之间仍需要一定的协同。<br>在那些<a
+        href="#multiversion">基于上下文的多版本</a>实现中很难做到这一点。而且，<a
+        href="#config-paths">paths配置</a>仅用于为模块ID设置root
+    paths，而不是为了将一个模块ID映射到另一个。<br>map示例：</p>
+<pre><code>requirejs.config({
+    map: {
+    'some/newmodule': {
+    'foo': 'foo1.2'
+    },
+    'some/oldmodule': {
+    'foo': 'foo1.0'
+    }
+    }
+    });</code></pre>
+<p>如果各模块在磁盘上分布如下： </p>
+<ul>
+    <li>foo1.0.js</li>
+    <li>foo1.2.js</li>
+    <li>some/
+        <ul>
+            <li>newmodule.js</li>
+            <li>oldmodule.js</li>
+        </ul>
+    </li>
+</ul>
+<p>当“some/newmodule”调用了“require('foo')”，它将获取到foo1.2.js文件；而当“some/oldmodule”调用“`require('foo')”时它将获取到foo1.0.js。 </p>
+
+<p>该特性仅适用于那些调用了define()并将其注册为匿名模块的真正AMD模块脚本。并且，请在map配置中仅使用<strong>绝对模块ID</strong>，“../some/thing”之类的相对ID不能工作。<br>另外在map中支持“*”，意思是“对于所有的模块加载，使用本map配置”。如果还有更细化的map配置，会优先于“*”配置。示例：
+</p>
+<pre><code>requirejs.config({
+    map: {
+    '*': {
+    'foo': 'foo1.2'
+    },
+    'some/oldmodule': {
+    'foo': 'foo1.0'
+    }
+    }
+    });</code></pre>
+<p>意思是除了“some/oldmodule”外的所有模块，当要用“foo”时，使用“foo1.2”来替代。对于“some/oldmodule”自己，则使用“foo1.0”。 </p>
+
+<p><a href="#config-moduleconfig">config</a>：<span
+        id="config-moduleconfig"></span>常常需要将配置信息传给一个模块。这些配置往往是application级别的信息，需要一个手段将它们向下传递给模块。在RequireJS中，基于requirejs.config()的<strong>config</strong>配置项来实现。要获取这些信息的模块可以加载特殊的依赖“module”，并调用<strong>module.config()</strong>。示例：
+</p>
+<pre><code>requirejs.config({
+    config: {
+    'bar': {
+    size: 'large'
+    },
+    'baz': {
+    color: 'blue'
+    }
+    }
+    });
+
+    //bar.js用了最简单的CJS装裹:
+    //http://requirejs.org/docs/whyamd.html#sugar
+    define(function (require, exports, module) {
+    //其值是'large'
+    var size = module.config().size;
+    });
+
+    //baz.js使用了一个依赖数组，
+    //并要求一个特殊的依赖“module”：
+    //https://github.com/jrburke/requirejs/wiki/Differences-between-the-simplified-CommonJS-wrapper-and-standard-AMD-define#wiki-magic
+    define(['module'], function (module) {
+    //Will be the value 'blue'
+    var color = module.config().color;
+    });</code></pre>
+<p>若要将config传给包，将目标设置为包的主模块而不是包ID:</p>
+<pre><code>requirejs.config({
+    //将API key传递给包的主模块：
+    config: {
+    'pixie/index': {
+    apiKey: 'XJKDLNS'
+    }
+    },
+    //设置“pixie”包的主模块为pixie目录下的index.js
+    packages: [
+    {
+    name: 'pixie',
+    main: 'index'
+    }
+    ]
+    });</code></pre>
+<p><a href="#config-packages">packages</a><span
+        id="config-packages"></span>：从CommonJS包(package)中加载模块。参见<a
+        href="#packages">从包中加载模块</a>。 </p>
+
+<p><a href="#config-waitSeconds">waitSeconds</a><span
+        id="config-waitSeconds"></span>：在放弃加载一个脚本之前等待的秒数。设为0禁用等待超时。默认为7秒。 </p>
+
+<p><a href="#config-context">context</a><span
+        id="config-context"></span>：命名一个加载上下文。这允许require.js在同一页面上加载模块的多个版本，如果每个顶层require调用都指定了一个唯一的上下文字符串。想要正确地使用，请参考<a
+        href="#multiversion">多版本支持</a>一节。 </p>
+
+<p><a href="#config-deps">deps</a><span id="config-deps"></span>：指定要加载的一个依赖数组。当将require设置为一个config
+    object在加载require.js之前使用时很有用。一旦require.js被定义，这些依赖就已加载。使用deps就像调用require([])，但它在loader处理配置完毕之后就立即生效。它并<strong>不阻塞</strong>其他的require()调用，它仅是指定某些模块作为config块的一部分而异步加载的手段而已。
+</p>
+
+<p><a href="#config-callback">callback</a><span
+        id="config-callback"></span>：在deps加载完毕后执行的函数。当将require设置为一个config
+    object在加载require.js之前使用时很有用，其作为配置的deps数组加载完毕后为require指定的函数。 </p>
+
+<p><a href="#config-enforceDefine">enforceDefine</a><span
+        id="config-enforceDefine"></span>：如果设置为true，则当一个脚本不是通过define()定义且不具备可供检查的shim导出字串值时，就会抛出错误。参考<a
+        href="##ieloadfail">在IE中捕获加载错误</a>一节。 </p>
+
+<p><a href="#config-xhtml">xhtml</a><span id="config-xhtml"></span>：如果设置为true，则使用document.createElementNS()去创建script元素。
+</p>
+
+<p><a href="#config-urlArgs">urlArgs</a><span
+        id="config-urlArgs"></span>：RequireJS获取资源时附加在URL后面的额外的query参数。作为浏览器或服务器未正确配置时的“cache bust”手段很有用。使用cache
+    bust配置的一个示例： </p>
+<pre><code>urlArgs: "bust=" + (new Date()).getTime()</code></pre>
+<p>在开发中这很有用，但请记得在部署到生成环境之前移除它。 </p>
+
+<p><a href="#config-baseUrl">scriptType</a><span
+        id="config-baseUrl"></span>：指定RequireJS将script标签插入document时所用的type=""值。默认为“text/javascript”。想要启用Firefox的JavaScript
+    1.8特性，可使用值“text/javascript;version=1.8”。</p>
+<hr>
+<h1 id="pageindexid-15">
+    <center><span id="advanced" style="color: grey">§ 4</span> 进阶应用</center>
+</h1>
+<h2 id="pageindexid-16"><span id="packages" style="color: grey">§ 4.1</span><a
+        href="#packages">从包中加载模块</a></h2>
+
+<p>RequireJS支持从CommonJS包结构中加载模块，但需要一些额外的配置。具体地，支持如下的CommonJS包特性：</p>
+<ul>
+    <li>一个包可以关联一个模块名/前缀。</li>
+    <li>package config可为特定的包指定下述属性：
+        <ul>
+            <li><strong>name</strong>：包名（用于模块名/前缀映射）</li>
+            <li><strong>location</strong>： 磁盘上的位置。位置是相对于配置中的baseUrl值，除非它们包含协议或以“/”开头</li>
+            <li><strong>main</strong>：当以“包名”发起require调用后，所应用的一个包内的模块。默认为“main”，除非在此处做了另外设定。该值是相对于包目录的。</li>
+        </ul>
+    </li>
+</ul>
+<blockquote>
+    <p><strong>重要事项</strong>： </p>
+    <ul>
+        <li>虽然包可以有CommonJS的目录结构，但模块本身应为RequireJS可理解的模块格式。例外是：如果你在用r.js
+            Node适配器，模块可以是传统的CommonJS模块格式。你可以使用CommonJS转换工具来将传统的CommonJS模块转换为RequireJS所用的异步模块格式。
+        </li>
+        <li>一个项目上下文中仅能使用包的一个版本。你可以使用RequireJS的<a
+                href="#multiversion">多版本支持</a>来加载两个不同的模块上下文；但若你想在同一个上下文中使用依赖了不同版本的包C的包A和B，就会有问题。未来可能会解决此问题。
+        </li>
+    </ul>
+</blockquote>
+<p>如果你使用了类似于<a href="http://requirejs.org/docs/start.html">入门指导</a>中的项目布局，你的web项目应大致以如下的布局开始（基于Node/Rhino的项目也是类似的，只不过使用scripts目录中的内容作为项目的顶层目录）:
+</p>
+<ul>
+    <li>project-directory/
+        <ul>
+            <li>project.html</li>
+            <li>scripts/
+                <ul>
+                    <li>require.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+<p>而下面的示例中使用了两个包，<strong>cart</strong>及<strong>store</strong>：</p>
+<ul>
+    <li>project-directory/
+        <ul>
+            <li>project.html</li>
+            <li>cart/
+                <ul>
+                    <li>main.js</li>
+                </ul>
+            </li>
+            <li>store/
+                <ul>
+                    <li>main.js</li>
+                    <li>util.js</li>
+                </ul>
+            </li>
+            <li>main.js</li>
+            <li>require.js</li>
+        </ul>
+    </li>
+</ul>
+<p><strong>project.html</strong>会有如下的一个script标签：</p>
+<pre><code>&lt;script data-main="scripts/main" src="scripts/require.js"&gt;&lt;/script&gt;</code></pre>
+<p>这会指示require.js去加载scripts/main.js。main.js使用“packages”配置项来设置相对于require.js的各个包，此例中是源码包“cart”及“store”：</p>
+<pre><code>//main.js的内容
+    //传递一个config object到require
+    require.config({
+    "packages": ["cart", "store"]
+    });
+
+    require(["cart", "store", "store/util"],
+    function (cart, store, util) {
+    //正常地使用模块
+    });</code></pre>
+<p>对“cart”的依赖请求会从<strong>scripts/cart/main.js</strong>中加载，因为“main”是RequireJS默认的包主模块。对“store/util”的依赖请求会从<strong>scripts/store/util.js</strong>加载。
+</p>
+
+<p>如果“store”包不采用“main.js”约定，如下面的结构：</p>
+<ul>
+    <li>project-directory/
+        <ul>
+            <li>project.html</li>
+            <li>scripts/
+                <ul>
+                    <li>cart/
+                        <ul>
+                            <li>main.js</li>
+                        </ul>
+                    </li>
+                    <li>store/
+                        <ul>
+                            <li>store.js</li>
+                            <li>util.js</li>
+                        </ul>
+                    </li>
+                    <li>main.js</li>
+                    <li>package.json</li>
+                    <li>require.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+<p>则RequireJS的配置应如下：</p>
+<pre><code>require.config({
+    packages: [
+    "cart",
+    {
+    name: "store",
+    main: "store"
+    }
+    ]
+    });</code></pre>
+<p>减少麻烦期间，强烈建议包结构遵从“main.js”约定。</p>
+
+<h2 id="pageindexid-17"><span id="multiversion" style="color: grey">§ 4.2</span><a
+        href="#multiversion">多版本支持</a></h2>
+
+<p>如<a href="#config">配置项</a>一节中所述，可以在同一页面上以不同的“上下文”配置项加载同一模块的不同版本。require.config()返回了一个使用该上下文配置的require函数。下面是一个加载不同版本（alpha及beta）模块的示例（取自test文件中）：
+</p>
+<pre><code>&lt;script src="../require.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+    var reqOne = require.config({
+    context: "version1",
+    baseUrl: "version1"
+    });
+
+    reqOne(["require", "alpha", "beta",],
+    function(require, alpha, beta) {
+    log("alpha version is: " + alpha.version); //prints 1
+    log("beta version is: " + beta.version); //prints 1
+
+    setTimeout(function() {
+    require(["omega"],
+    function(omega) {
+    log("version1 omega loaded with version: " +
+    omega.version); //prints 1
+    }
+    );
+    }, 100);
+    });
+
+    var reqTwo = require.config({
+    context: "version2",
+    baseUrl: "version2"
+    });
+
+    reqTwo(["require", "alpha", "beta"],
+    function(require, alpha, beta) {
+    log("alpha version is: " + alpha.version); //prints 2
+    log("beta version is: " + beta.version); //prints 2
+
+    setTimeout(function() {
+    require(["omega"],
+    function(omega) {
+    log("version2 omega loaded with version: " +
+    omega.version); //prints 2
+    }
+    );
+    }, 100);
+    });
+    &lt;/script&gt;</code></pre>
+<p>注意“require”被指定为模块的一个依赖，这就允许传递给函数回调的require()使用正确的上下文来加载多版本的模块。如果“require”没有指定为一个依赖，则很可能会出现错误。</p>
+
+<h2 id="pageindexid-18"><span id="afterload" style="color: grey">§ 4.3</span><a
+        href="#afterload">在页面加载之后加载代码</a></h2>
+
+<p>上述多版本示例中也展示了如何在嵌套的require()中迟后加载代码。</p>
+
+<h2 id="pageindexid-19"><span id="webworker" style="color: grey">§ 4.4</span><a
+        href="#webworker">对Web Worker的支持</a></h2>
+
+<p>从版本0.12开始，RequireJS可在Web Worker中运行。可以通过在web
+    worker中调用importScripts()来加载require.js（或包含require()定义的JS文件），然后调用require就好了。 </p>
+
+<p>你可能需要设置<strong>baseUrl</strong><a href="#config">配置项</a>来确保require()可找到待加载脚本。<br>你可以在<a
+        href="https://github.com/jrburke/requirejs/blob/master/tests/workers.js">unit test</a>使用的一个文件中找到一个例子。</p>
+
+<h2 id="pageindexid-20"><span id="rhino" style="color: grey">§ 4.5</span><a
+        href="#rhino">对Rhino的支持</a></h2>
+
+<p>RequireJS可通过<a href="http://requirejs.org/docs/download.html#rjs">r.js适配器</a>用在Rhino中。参见r.js的README。</p>
+
+<h2 id="pageindexid-21"><span id="errors" style="color: grey">§ 4.6</span><a
+        href="#errors">处理错误</a></h2>
+
+<p>
+    通常的错误都是404（未找到）错误，网络超时或加载的脚本含有错误。RequireJS有些工具来处理它们：require特定的错误回调（errback），一个“paths”数组配置，以及一个全局的requirejs.onError事件。 </p>
+
+<p>传入errback及requirejs.onError中的error object通常包含两个定制的属性：</p>
+<ul>
+    <li>requireType：含有类别信息的字串值，如“timeout”，“nodefine”， “scripterror”</li>
+    <li>requireModules： 超时的模块名/URL数组。</li>
+</ul>
+<p>如果你得到了requireModules错，可能意味着依赖于requireModules数组中的模块的其他模块未定义。</p>
+
+<h3 id="pageindexid-22">
+    <center><span id="ieloadfail" style="color: grey">§ 4.6.1</span> <a
+            href="#ieloadfail">在IE中捕获加载错</a></center>
+</h3>
+<p>Internet Explorer有一系列问题导致检测errbacks/paths fallbacks中的加载错
+    比较困难：</p>
+<ul>
+    <li>IE 6-8中的script.onerror无效。没有办法判断是否加载一个脚本会导致404错；更甚地，在404中依然会触发state为complete的onreadystatechange事件。</li>
+    <li>IE
+        9+中script.onerror有效，但有一个bug：在执行脚本之后它并不触发script.onload事件句柄。因此它无法支持匿名AMD模块的标准方法。所以script.onreadystatechange事件仍被使用。但是，state为complete的onreadystatechange事件会在script.onerror函数触发之前触发。
+    </li>
+</ul>
+<p>因此IE环境下很难两全其美：匿名AMD（AMD模块机制的核心优势）和可靠的错误检测。<br>但如果你的项目里使用了define()来定义所有模块，或者为其他非define()的脚本使用<a
+        href="#config-shim">shim</a>配置指定了导出字串，则如果你将<a
+        href="#config-enforceDefine">enforceDefine</a>配置项设为true，loader就可以通过检查define()调用或shim全局导出值来确认脚本的加载无误。<br>因此如果你打算支持Internet
+    Explorer，捕获加载错，并使用了define()或shim，则记得将<strong>enforceDefine</strong>设置为true。参见下节的示例。</p>
+<blockquote>
+    <p>注意：如果你设置了enforceDefine: true，而且你使用data-main=""来加载你的主JS模块，则该主JS模块<strong>必须调用define()</strong>而不是require()来加载其所需的代码。主JS模块仍然可调用require/requirejs来设置config值，但对于模块加载必须使用define()。
+    </p>
+</blockquote>
+<p>如果你使用了<a href="https://github.com/jrburke/almond">almond</a>而不是require.js来build你的代码，记得在build配置项中使用<a
+        href="https://github.com/jrburke/r.js/blob/master/build/example.build.js#L289">insertRequire</a>来在主模块中插入一个require调用
+    —— 这跟data-main的初始化require()调用起到相同的目的。</p>
+
+<h3 id="pageindexid-23">
+    <center><span id="errbacks" style="color: grey">§ 4.6.2</span> <a
+            href="#errbacks">require([]) errbacks</a></center>
+</h3>
+<p>当与<a href="#undef">requirejs.undef()</a>一同使用errback时，允许你检测模块的一个加载错，然后undefine该模块，并重置配置到另一个地址来进行重试。<br>一个常见的应用场景是先用库的一个CDN版本，如果其加载出错，则切换到本地版本：
+</p>
+<pre><code>requirejs.config({
+    enforceDefine: true,
+    paths: {
+    jquery: 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min'
+    }
+    });
+
+    //Later
+    require(['jquery'], function ($) {
+    //使用$
+    }, function (err) {
+    //errback
+    //error含有出错的模块列表
+    var failedId = err.requireModules &amp;&amp; err.requireModules[0],
+    if (failedId === 'jquery') {
+    //undef是全局的requirejs object上的一个函数。
+    //用它来清空jQuery的信息。 任何依赖于jQuery或处于加载中的模块都不再
+    //加载，它们会等待有效的jQuery加载完毕。
+    requirejs.undef(failedId);
+
+    //将jQuery设置到本地版本上
+    requirejs.config({
+    paths: {
+    jquery: 'local/jquery'
+    }
+    });
+
+    //重试。注意上述含有“使用$”一句的require回调会在新的
+    //jQuery加载成功后被调用。
+    require(['jquery'], function () {});
+    } else {
+    //其他错。考虑报错给用户。
+    }
+    });</code></pre>
+<p>使用“requirejs.undef()”，如果你配置到不同的位置并重新尝试加载同一模块，则loader会将依赖于该模块的那些模块记录下来并在该模块重新加载成功后去加载它们。</p>
+<blockquote>
+    <p><strong>注意</strong>：errback仅适用于回调风格的require调用，而不是define()调用。define()仅用于声明模块。</p>
+</blockquote>
+<h3 id="pageindexid-24">
+    <center><span id="pathsfallbacks" style="color: grey">§ 4.6.3</span> <a
+            href="#pathsfallbacks">paths备错配置</a></center>
+</h3>
+<p>上述模式（检错，undef()模块，修改paths，重加载）是一个常见的需求，因此有一个快捷设置方式。paths配置项允许数组值：</p>
+<pre><code>requirejs.config({
+    //为了在IE中正确检错，强制define/shim导出检测
+    enforceDefine: true,
+    paths: {
+    jquery: [
+    'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min',
+    //若CDN加载错，则从如下位置重试加载
+    'lib/jquery'
+    ]
+    }
+    });
+
+    //后面
+    require(['jquery'], function ($) {
+    });</code></pre>
+<p>上述代码先尝试加载CDN版本，如果出错，则退回到本地的lib/jquery.js。 </p>
+<blockquote>
+    <p><strong>注意</strong>：paths备错仅在模块ID精确匹配时工作。这不同于常规的paths配置，常规配置可匹配模块ID的任意前缀部分。备错主要用于非常的错误恢复，而不是常规的path查找解析，因为那在浏览器中是低效的。
+    </p>
+</blockquote>
+<h3 id="pageindexid-25">
+    <center><span id="requirejsonerror" style="color: grey">§ 4.6.4</span> <a
+            href="#requirejsonerror">全局的 requirejs.onError</a>
+    </center>
+</h3>
+<p>为了捕获在局域的errback中未捕获的异常，你可以重载requirejs.onError()：</p>
+<pre><code>requirejs.onError = function (err) {
+    console.log(err.requireType);
+    if (err.requireType === 'timeout') {
+    console.log('modules: ' + err.requireModules);
+    }
+
+    throw err;
+    };</code></pre>
+<h1 id="pageindexid-26">
+    <center><span id="plugins" style="color: grey">§ 5</span>加载器插件</center>
+</h1>
+<p>RequireJS支持<a href="http://requirejs.org/docs/plugins.html">加载器插件</a>。使用它们能够加载一些对于脚本正常工作很重要的非JS文件。RequireJS的<a
+        href="https://github.com/jrburke/requirejs/wiki/">wiki</a>有一个插件的列表。本节讨论一些由RequireJS一并维护的特定插件：</p>
+
+<h2 id="pageindexid-27"><span id="text" style="color: grey">§ 5.1</span><a
+        href="#text">指定文本文件依赖</a></h2>
+
+<p>如果都能用HTML标签而不是基于脚本操作DOM来构建HTML，是很不错的。但没有好的办法在JavaScript文件中嵌入HTML。所能做的仅是在js中使用HTML字串，但这一般很难维护，特别是多行HTML的情况下。<br>RequireJS有个text.js插件可以帮助解决这个问题。如果一个依赖使用了text!前缀，它就会被自动加载。参见text.js的<a
+        href="https://github.com/requirejs/text">README文件</a>。</p>
+
+<h2 id="pageindexid-28"><span id="pageload" style="color: grey">§ 5.2</span><a
+        href="#pageload">页面加载事件及DOM Ready</a></h2>
+
+<p>RequireJS加载模块速度很快，很有可能在页面DOM Ready之前脚本已经加载完毕。需要与DOM交互的工作应等待DOM Ready。现代的浏览器通过DOMContentLoaded事件来知会。<br>但是，不是所有的浏览器都支持DOMContentLoaded。domReady模块实现了一个跨浏览器的方法来判定何时DOM已经ready。<a
+        href="http://requirejs.org/docs/download.html#domReady">下载</a>并在你的项目中如此用它：</p>
+<pre><code>require(['domReady'], function (domReady) {
+    domReady(function () {
+    //一旦DOM准备就绪，本回调就执行。
+    //在此函数中查询及处理DOM是安全的。
+    });
+    });</code></pre>
+<p>基于DOM Ready是个常规需求，像上述API中的嵌套调用方式，理想情况下应避免。domReady模块也实现了<a href="http://requirejs.org/docs/plugins.html">Loader
+    Plugin API</a>，因此你可以使用loader plugin语法（注意domReady依赖的!前缀）来强制require()回调函数在执行之前等待DOM Ready。当用作loader
+    plugin时，domReady会返回当前的document：</p>
+<pre><code>require(['domReady!'], function (doc) {
+    //本函数会在DOM ready时调用。
+    //注意'domReady!'的值为当前的document
+    });</code></pre>
+<blockquote>
+    <p><strong>注意</strong>：如果document需要一段时间来加载（也许是因为页面较大，或加载了较大的js脚本阻塞了DOM计算），使用domReady作为loader
+        plugin可能会导致RequireJS“超时”错。如果这是个问题，则考虑增加<a
+                href="#config-waitSeconds">waitSeconds</a>配置项的值，或在require()使用domReady()调用（将其当做是一个模块）。
+    </p>
+</blockquote>
+<h2 id="pageindexid-29"><span id="i18n" style="color: grey">§ 5.3</span><a
+        href="#i18n">define I18N bundle</a></h2>
+
+<p>一旦你的web
+    app达到一定的规模和流行度，提供本地化的接口和信息是十分有用的，但实现一个扩展良好的本地化方案又是很繁贅的。RequireJS允许你先仅配置一个含有本地化信息的基本模块，而不需要将所有的本地化信息都预先创建起来。后面可以将这些本地化相关的变化以值对的形式慢慢加入到本地化文件中。<br>i18n.js插件提供i18n
+    bundle支持。在模块或依赖使用了i18n!前缀的形式（详见下）时它会自动加载。<a href="http://requirejs.org/docs/download.html#i18n">下载</a>该插件并将其放置于你app主JS文件的同目录下。<br>将一个文件放置于一个名叫“nls”的目录内来定义一个bundle——i18n插件当看到一个模块名字含有“nls”时会认为它是一个i18n
+    bundle。名称中的“nls”标记告诉i18n插件本地化目录（它们应当是nls目录的直接子目录）的查找位置。如果你想要为你的“my”模块集提供颜色名的bundle，应像下面这样创建目录结构：</p>
+<ul>
+    <li>my/nls/colors.js</li>
+</ul>
+<p>该文件的内容应该是：</p>
+<pre><code>//my/nls/colors.js文件内容：
+    define({
+    "root": {
+    "red": "red",
+    "blue": "blue",
+    "green": "green"
+    }
+    });</code></pre>
+<p>以一个含有“root”属性的object直接量来定义该模块。这就是为日后启用本地化所需的全部工作。你可以在另一个模块中，如my/lamps.js中使用上述模块：</p>
+<pre><code>//my/lamps.js内容
+    define(["i18n!my/nls/colors"], function(colors) {
+    return {
+    testMessage: "The name for red in this locale is: " + colors.red
+    }
+    });</code></pre>
+<p>my/lamps模块具备一个“testMessage”属性，它使用了colors.red来显示红色的本地化值。<br>日后，当你想要为文件再增加一个特定的翻译，如fr-fr，可以改变my/nls/colors内容如下：</p>
+<pre><code>//my/nls/colors.js内容
+    define({
+    "root": {
+    "red": "red",
+    "blue": "blue",
+    "green": "green"
+    },
+    "fr-fr": true
+    });</code></pre>
+<p>然后再定义一个my/nls/fr-fr/colors.js文件，含有如下内容：</p>
+<pre><code>//my/nls/fr-fr/colors.js的内容
+    define({
+    "red": "rouge",
+    "blue": "bleu",
+    "green": "vert"
+    });</code></pre>
+<p>
+    RequireJS会使用浏览器的navigator.language或navigator.userLanguage属性来判定my/nls/colors的本地化值，因此你的app不需要更改。如果你想指定一个本地化方式，你可使用模块配置将该方式传递给插件：</p>
+<pre><code>requirejs.config({
+    config: {
+    //为i18n做配置
+    //module ID
+    i18n: {
+    locale: 'fr-fr'
+    }
+    }
+    });</code></pre>
+<p><strong>注意</strong> RequireJS总是使用小写版本的locale值来避免大小写问题，因此磁盘上i18n的所有目录和文件都应使用小写的本地化值。
+    RequireJS有足够智能去选取合适的本地化bundle，使其尽量接近my/nls/colors提供的那一个。例如，如果locale值时“en-us”，则会使用“root”
+    bundle。如果locale值是“fr-fr-paris”，则会使用“fr-fr” bundle。<br>RequireJS也会将bundle合理组合，例如，若french bundle如下定义（忽略red的值）：</p>
+<pre><code>//my/nls/fr-fr/colors.js内容：
+    define({
+    "blue": "bleu",
+    "green": "vert"
+    });</code></pre>
+<p>则会应用“root”下的red值。所有的locale组件是如此。如果如下的所有bundle都已定义，则RequireJS会按照如下的优先级顺序（最顶的最优先）应用值：</p>
+<ul>
+    <li>my/nls/fr-fr-paris/colors.js</li>
+    <li>my/nls/fr-fr/colors.js</li>
+    <li>my/nls/fr/colors.js</li>
+    <li>my/nls/colors.js</li>
+</ul>
+<p>如果你不在模块的顶层中包含root bundle，你可像一个常规的locale bundle那样定义它。这种情形下顶层模块应如下：</p>
+<pre><code>//my/nls/colors.js内容：
+    define({
+    "root": true,
+    "fr-fr": true,
+    "fr-fr-paris": true
+    });</code></pre>
+<p>root bundle应看起来如下：</p>
+<pre><code>//my/nls/root/colors.js内容：
+    define({
+    "red": "red",
+    "blue": "blue",
+    "green": "green"
+    });</code></pre>
+</div>
+<div class="commit"><!-- Duoshuo Comment BEGIN -->
+    <div class="ds-thread" id="ds-thread">
+        <div id="ds-reset">
+            <div class="ds-meta"><a href="javascript:void(0)" class="ds-like-thread-button ds-rounded"><span
+                    class="ds-icon ds-icon-heart"></span> <span class="ds-thread-like-text">喜欢</span><span
+                    class="ds-thread-cancel-like">取消喜欢</span></a><span class="ds-like-panel"><span class="ds-highlight">1</span> 人喜欢</span>
+            </div>
+            <div class="ds-comments-info">
+                <div class="ds-sort"><a class="ds-order-desc">最新</a><a class="ds-order-asc ds-current">最早</a><a
+                        class="ds-order-hot">最热</a></div>
+                <ul class="ds-comments-tabs">
+                    <li class="ds-tab"><a class="ds-comments-tab-duoshuo ds-current" href="javascript:void(0);"><span
+                            class="ds-highlight">11</span>条评论</a></li>
+                    <li class="ds-tab"><a class="ds-comments-tab-weibo" href="javascript:void(0);"><span
+                            class="ds-highlight">12</span>条新浪微博</a></li>
+                    <li class="ds-tab"><a class="ds-comments-tab-qqt" href="javascript:void(0);"><span
+                            class="ds-highlight">1</span>条腾讯微博</a></li>
+                </ul>
+            </div>
+            <ul class="ds-comments">
+                <li class="ds-post" data-post-id="1234801036015697931">
+                    <div class="ds-post-self" data-post-id="1234801036015697931" data-thread-id="1234801036015697978"
+                         data-root-id="0" data-source="duoshuo">
+                        <div class="ds-avatar"><img
+                                src="./RequireJS API中文版   mm框架_files/12a2119a6e45d0d297af619038680b76" alt="pom"></div>
+                        <div class="ds-comment-body">
+                            <div class="ds-comment-header"><span class="ds-user-name" data-qqt-account="">pom</span>
+                            </div>
+                            <p>经过百折千回~让我google到版本较新~翻译较好requirejs~ 真心很棒。<br>
+                                楼主不怕辛苦把RequireJS Optimizer 也翻译得了。~娃哈哈~ 这样就更好了~期待哦！</p>
+
+                            <div class="ds-comment-footer ds-comment-actions"><span class="ds-time"
+                                                                                    datetime="2013-07-02T17:26:04+08:00"
+                                                                                    title="2013年7月2日 下午5:26:04">2013年7月2日</span><a
+                                    class="ds-post-reply" href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost"
+                                                                                href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-report"></span>举报</a></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="ds-post" data-post-id="1234801036015697933">
+                    <div class="ds-post-self" data-post-id="1234801036015697933" data-thread-id="1234801036015697978"
+                         data-root-id="0" data-source="duoshuo">
+                        <div class="ds-avatar"><img src="./RequireJS API中文版   mm框架_files/28814.jpg" alt="orz"></div>
+                        <div class="ds-comment-body">
+                            <div class="ds-comment-header"><span class="ds-user-name" data-qqt-account="">orz</span>
+                            </div>
+                            <p>楼主加油啊，backbone的也翻译了吧！</p>
+
+                            <div class="ds-comment-footer ds-comment-actions"><span class="ds-time"
+                                                                                    datetime="2013-08-16T22:22:07+08:00"
+                                                                                    title="2013年8月16日 下午10:22:07">2013年8月16日</span><a
+                                    class="ds-post-reply" href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost"
+                                                                                href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-report"></span>举报</a></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="ds-post" data-post-id="1234801036015697934">
+                    <div class="ds-post-self" data-post-id="1234801036015697934" data-thread-id="1234801036015697978"
+                         data-root-id="0" data-source="duoshuo">
+                        <div class="ds-avatar"><img src="./RequireJS API中文版   mm框架_files/28814.jpg" alt="123"></div>
+                        <div class="ds-comment-body">
+                            <div class="ds-comment-header"><span class="ds-user-name" data-qqt-account="">123</span>
+                            </div>
+                            <p><img src="./RequireJS API中文版   mm框架_files/bba_org.gif" alt="[抱抱]" title="[抱抱]"
+                                    class="ds-smiley"></p>
+
+                            <div class="ds-comment-footer ds-comment-actions"><span class="ds-time"
+                                                                                    datetime="2013-09-03T11:03:00+08:00"
+                                                                                    title="2013年9月3日 上午11:03:00">2013年9月3日</span><a
+                                    class="ds-post-reply" href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost"
+                                                                                href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-report"></span>举报</a></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="ds-post" data-post-id="1234801036015697951">
+                    <div class="ds-post-self" data-post-id="1234801036015697951" data-thread-id="1234801036015697978"
+                         data-root-id="0" data-source="duoshuo">
+                        <div class="ds-avatar" data-user-id="4665251"><img src="./RequireJS API中文版   mm框架_files/100"
+                                                                           alt="Ρerfect"></div>
+                        <div class="ds-comment-body">
+                            <div class="ds-comment-header"><span class="ds-user-name" data-user-id="4665251"
+                                                                 data-qqt-account="">Ρerfect</span></div>
+                            <p><img src="./RequireJS API中文版   mm框架_files/mb_org.gif" alt="[太开心]" title="[太开心]"
+                                    class="ds-smiley"> 不错。赞啊。贡献</p>
+
+                            <div class="ds-comment-footer ds-comment-actions"><span class="ds-time"
+                                                                                    datetime="2013-12-23T13:28:13+08:00"
+                                                                                    title="2013年12月23日 下午1:28:13">2013年12月23日</span><a
+                                    class="ds-post-reply" href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost"
+                                                                                href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-report"></span>举报</a></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="ds-post" data-post-id="1234801036015697952">
+                    <div class="ds-post-self" data-post-id="1234801036015697952" data-thread-id="1234801036015697978"
+                         data-root-id="0" data-source="duoshuo">
+                        <div class="ds-avatar"><img src="./RequireJS API中文版   mm框架_files/28814.jpg" alt="抱抱"></div>
+                        <div class="ds-comment-body">
+                            <div class="ds-comment-header"><span class="ds-user-name" data-qqt-account="">抱抱</span>
+                            </div>
+                            <p><img src="./RequireJS API中文版   mm框架_files/good_org.gif" alt="[good]" title="[good]"
+                                    class="ds-smiley"> <img src="./RequireJS API中文版   mm框架_files/good_org.gif"
+                                                            alt="[good]" title="[good]" class="ds-smiley"> <img
+                                    src="./RequireJS API中文版   mm框架_files/good_org.gif" alt="[good]" title="[good]"
+                                    class="ds-smiley"> <img src="./RequireJS API中文版   mm框架_files/good_org.gif"
+                                                            alt="[good]" title="[good]" class="ds-smiley"> <img
+                                    src="./RequireJS API中文版   mm框架_files/good_org.gif" alt="[good]" title="[good]"
+                                    class="ds-smiley"></p>
+
+                            <div class="ds-comment-footer ds-comment-actions"><span class="ds-time"
+                                                                                    datetime="2014-02-21T18:05:33+08:00"
+                                                                                    title="2014年2月21日 下午6:05:33">2月21日</span><a
+                                    class="ds-post-reply" href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost"
+                                                                                href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-report"></span>举报</a></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="ds-post" data-post-id="1234801036015697953">
+                    <div class="ds-post-self" data-post-id="1234801036015697953" data-thread-id="1234801036015697978"
+                         data-root-id="0" data-source="duoshuo">
+                        <div class="ds-avatar" data-user-id="2127045"><a rel="nofollow author" target="_blank"
+                                                                         href="http://www.welkin.me/"
+                                                                         onclick="this.href=&#39;http://makingmobile.duoshuo.com/user-url/?user_id=2127045&#39;;"
+                                                                         title="王瑜熹"><img
+                                src="./RequireJS API中文版   mm框架_files/1" alt="王瑜熹"></a></div>
+                        <div class="ds-comment-body">
+                            <div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account=""
+                                                              href="http://www.welkin.me/"
+                                                              onclick="this.href=&#39;http://makingmobile.duoshuo.com/user-url/?user_id=2127045&#39;;"
+                                                              rel="nofollow" target="_blank"
+                                                              data-user-id="2127045">王瑜熹</a></div>
+                            <p>赞楼主，帮到我很多</p>
+
+                            <div class="ds-comment-footer ds-comment-actions"><span class="ds-time"
+                                                                                    datetime="2014-02-26T21:53:21+08:00"
+                                                                                    title="2014年2月26日 下午9:53:21">2月26日</span><a
+                                    class="ds-post-reply" href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost"
+                                                                                href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-report"></span>举报</a></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="ds-post" data-post-id="1234801036015697955">
+                    <div class="ds-post-self" data-post-id="1234801036015697955" data-thread-id="1234801036015697978"
+                         data-root-id="0" data-source="duoshuo">
+                        <div class="ds-avatar"><img src="./RequireJS API中文版   mm框架_files/28814.jpg" alt="哈哈"></div>
+                        <div class="ds-comment-body">
+                            <div class="ds-comment-header"><span class="ds-user-name" data-qqt-account="">哈哈</span>
+                            </div>
+                            <p>楼主好棒 <img src="./RequireJS API中文版   mm框架_files/geili_org.gif" alt="[给力]" title="[给力]"
+                                         class="ds-smiley"></p>
+
+                            <div class="ds-comment-footer ds-comment-actions"><span class="ds-time"
+                                                                                    datetime="2014-03-05T17:11:31+08:00"
+                                                                                    title="2014年3月5日 下午5:11:31">3月5日</span><a
+                                    class="ds-post-reply" href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost"
+                                                                                href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-report"></span>举报</a></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="ds-post" data-post-id="1234801036015697956">
+                    <div class="ds-post-self" data-post-id="1234801036015697956" data-thread-id="1234801036015697978"
+                         data-root-id="0" data-source="duoshuo">
+                        <div class="ds-avatar" data-user-id="774627"><a rel="nofollow author" target="_blank"
+                                                                        href="http://t.qq.com/wtyang"
+                                                                        onclick="this.href=&#39;http://makingmobile.duoshuo.com/user-url/?user_id=774627&#39;;"
+                                                                        title="王天阳"><img
+                                src="./RequireJS API中文版   mm框架_files/50" alt="王天阳"></a></div>
+                        <div class="ds-comment-body">
+                            <div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account=""
+                                                              href="http://t.qq.com/wtyang"
+                                                              onclick="this.href=&#39;http://makingmobile.duoshuo.com/user-url/?user_id=774627&#39;;"
+                                                              rel="nofollow" target="_blank"
+                                                              data-user-id="774627">王天阳</a></div>
+                            <p>这么牛掰的东西不分享都对不起楼主</p>
+
+                            <div class="ds-comment-footer ds-comment-actions"><span class="ds-time"
+                                                                                    datetime="2014-03-27T18:09:27+08:00"
+                                                                                    title="2014年3月27日 下午6:09:27">3月27日</span><a
+                                    class="ds-post-reply" href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost"
+                                                                                href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-report"></span>举报</a></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="ds-post" data-post-id="1234801036015697957">
+                    <div class="ds-post-self" data-post-id="1234801036015697957" data-thread-id="1234801036015697978"
+                         data-root-id="0" data-source="duoshuo">
+                        <div class="ds-avatar" data-user-id="6435989"><a rel="nofollow author" target="_blank"
+                                                                         href="http://t.qq.com/aslan_huang"
+                                                                         onclick="this.href=&#39;http://makingmobile.duoshuo.com/user-url/?user_id=6435989&#39;;"
+                                                                         title="Aslan"><img
+                                src="./RequireJS API中文版   mm框架_files/50(1)" alt="Aslan"></a></div>
+                        <div class="ds-comment-body">
+                            <div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account=""
+                                                              href="http://t.qq.com/aslan_huang"
+                                                              onclick="this.href=&#39;http://makingmobile.duoshuo.com/user-url/?user_id=6435989&#39;;"
+                                                              rel="nofollow" target="_blank" data-user-id="6435989">Aslan</a>
+                            </div>
+                            <p>gogogo,真心给力.</p>
+
+                            <div class="ds-comment-footer ds-comment-actions"><span class="ds-time"
+                                                                                    datetime="2014-04-21T10:45:46+08:00"
+                                                                                    title="2014年4月21日 上午10:45:46">4月21日</span><a
+                                    class="ds-post-reply" href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost"
+                                                                                href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-report"></span>举报</a></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="ds-post" data-post-id="1234801036015697959">
+                    <div class="ds-post-self" data-post-id="1234801036015697959" data-thread-id="1234801036015697978"
+                         data-root-id="0" data-source="duoshuo">
+                        <div class="ds-avatar" data-user-id="4174207"><a rel="nofollow author" target="_blank"
+                                                                         href="http://weibo.com/2233573317"
+                                                                         onclick="this.href=&#39;http://makingmobile.duoshuo.com/user-url/?user_id=4174207&#39;;"
+                                                                         title="痞子蔡的救赎"><img
+                                src="./RequireJS API中文版   mm框架_files/1(1)" alt="痞子蔡的救赎"></a></div>
+                        <div class="ds-comment-body">
+                            <div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account=""
+                                                              href="http://weibo.com/2233573317"
+                                                              onclick="this.href=&#39;http://makingmobile.duoshuo.com/user-url/?user_id=4174207&#39;;"
+                                                              rel="nofollow" target="_blank" data-user-id="4174207">痞子蔡的救赎</a>
+                            </div>
+                            <p>干货</p>
+
+                            <div class="ds-comment-footer ds-comment-actions"><span class="ds-time"
+                                                                                    datetime="2014-05-12T11:07:26+08:00"
+                                                                                    title="2014年5月12日 上午11:07:26">5月12日</span><a
+                                    class="ds-post-reply" href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost"
+                                                                                href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-report"></span>举报</a></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="ds-post" data-post-id="1234801036015697962">
+                    <div class="ds-post-self" data-post-id="1234801036015697962" data-thread-id="1234801036015697978"
+                         data-root-id="0" data-source="duoshuo">
+                        <div class="ds-avatar" data-user-id="6543247"><a rel="nofollow author" target="_blank"
+                                                                         href="http://frontend-fucker.github.io/"
+                                                                         onclick="this.href=&#39;http://makingmobile.duoshuo.com/user-url/?user_id=6543247&#39;;"
+                                                                         title="yu."><img
+                                src="./RequireJS API中文版   mm框架_files/100(1)" alt="yu."></a></div>
+                        <div class="ds-comment-body">
+                            <div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account=""
+                                                              href="http://frontend-fucker.github.io/"
+                                                              onclick="this.href=&#39;http://makingmobile.duoshuo.com/user-url/?user_id=6543247&#39;;"
+                                                              rel="nofollow" target="_blank"
+                                                              data-user-id="6543247">yu.</a></div>
+                            <p>坐等RequireJS Optimizer翻译</p>
+
+                            <div class="ds-comment-footer ds-comment-actions"><span class="ds-time"
+                                                                                    datetime="2014-05-22T14:22:40+08:00"
+                                                                                    title="2014年5月22日 下午2:22:40">5月22日</span><a
+                                    class="ds-post-reply" href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost"
+                                                                                href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report"
+                                                                                  href="javascript:void(0);"><span
+                                    class="ds-icon ds-icon-report"></span>举报</a></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="ds-paginator" style="display: none;">
+                <div class="ds-border"></div>
+                <a data-page="1" href="javascript:void(0);" class="ds-current">1</a></div>
+            <a name="respond"></a>
+
+            <div class="ds-toolbar">
+                <div class="ds-account-control"><span class="ds-icon ds-icon-settings"></span> <span>帐号管理</span>
+                    <ul>
+                        <li><a class="ds-bind-more" href="javascript:void(0);" style="border-top: none">绑定更多</a></li>
+                        <li><a target="_blank" href="http://duoshuo.com/settings/">设置</a></li>
+                        <li><a rel="nofollow" href="http://makingmobile.duoshuo.com/logout/"
+                               style="border-bottom: none">登出</a></li>
+                    </ul>
+                </div>
+                <div class="ds-visitor"><a class="ds-visitor-name" href="http://weibo.com/2664145013" target="_blank">两仪式</a><a
+                        class="ds-unread-comments-count" href="javascript:void(0);" title="你没有新回复"
+                        style="display: none;">0</a></div>
+            </div>
+            <div class="ds-replybox"><a class="ds-avatar" href="http://duoshuo.com/settings/avatar/" target="_blank"
+                                        title="设置头像"><img src="./RequireJS API中文版   mm框架_files/1(2)" alt="两仪式"></a>
+
+                <form method="post"><input type="hidden" name="thread_id" value="1234801036015697978">
+                    <input type="hidden" name="parent_id" value="">
+                    <input type="hidden" name="nonce" value="538d374bc5105">
+
+                    <div class="ds-textarea-wrapper ds-rounded-top"><textarea name="message" title="Ctrl+Enter快捷提交"
+                                                                              placeholder="说点什么吧…"></textarea>
+                        <pre class="ds-hidden-text"></pre>
+                    </div>
+                    <div class="ds-post-toolbar">
+                        <div class="ds-post-options ds-gradient-bg"><span class="ds-sync"><input id="ds-sync-checkbox"
+                                                                                                 type="checkbox"
+                                                                                                 name="repost"
+                                                                                                 checked="checked"
+                                                                                                 value="qqt,qzone"> <label
+                                for="ds-sync-checkbox">分享到:</label><a href="javascript:void(0)"
+                                                                      class="ds-service-icon-grey ds-weibo"
+                                                                      data-service="weibo" title="新浪微博"></a><a
+                                href="javascript:void(0)" class="ds-service-icon ds-qqt" data-service="qqt"
+                                title="腾讯微博"></a><a href="javascript:void(0)" class="ds-service-icon ds-qzone"
+                                                    data-service="qzone" title="QQ空间"></a><a href="javascript:void(0)"
+                                                                                             class="ds-service-icon-grey ds-netease"
+                                                                                             data-service="netease"
+                                                                                             title="网易微博"></a></span>
+                        </div>
+                        <button class="ds-post-button" type="submit">发布</button>
+                        <div class="ds-toolbar-buttons"><a class="ds-toolbar-button ds-add-emote" title="插入表情"></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <p class="ds-powered-by"><a href="http://duoshuo.com/" target="_blank" rel="nofollow">Powered by 多说</a></p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name: "makingmobile"};
+        (function () {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';
+            ds.async = true;
+            ds.src = 'http://static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- Duoshuo Comment END --></div>
+</article>
+</div>
+</div>
+</div>
+<footer id="gobottom" class="footer">
+    <div class="container"><p>Site hosting by <a href="http://pages.github.com/">Github Pages</a>, Powered by <a
+            href="http://twitter.github.io/bootstrap/">Bootstrap</a> &amp; <a href="http://docpad.org/">Docpad</a>.</p>
+
+        <p>© 2013 MakingMobile Team , All rights reserved. Code licensed under <a
+                href="http://www.gnu.org/copyleft/gpl.html">GNU GPL license v3</a>, documentation under <a
+                href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</p></div>
+</footer>
+<script defer="defer" src="./RequireJS API中文版   mm框架_files/jquery.min.js"></script>
+<script defer="defer" src="./RequireJS API中文版   mm框架_files/modernizr.min.js"></script>
+<script defer="defer" src="./RequireJS API中文版   mm框架_files/bootstrap.min.js"></script>
+<script defer="defer" src="./RequireJS API中文版   mm框架_files/script.js"></script>
+<script defer="defer" src="./RequireJS API中文版   mm框架_files/generic.js"></script>
+</div>
+<div id="ds-notify" style="top: 24px; right: 24px; display: none;">
+    <div id="ds-reset"><a class="ds-logo" href="http://duoshuo.com/" target="_blank" title="多说"></a>
+        <ul class="ds-notify-unread">
+            <li style="display:none;"><a data-type="unread-comments" href="javascript:void(0);">你有undefined条新回复</a></li>
+            <li style="display:none;"><a data-type="unread-notifications"
+                                         href="javascript:void(0);">你有undefined条系统消息</a></li>
+        </ul>
+    </div>
+</div>
+<div id="haloword-lookup" class="ui-widget-content ui-draggable">
+    <div id="haloword-title"><span id="haloword-word"></span><a herf="#" id="haloword-pron" class="haloword-button"
+                                                                title="发音"></a>
+        <audio id="haloword-audio"></audio>
+        <div id="haloword-control-container"><a herf="#" id="haloword-add" class="haloword-button" title="加入单词表"></a><a
+                herf="#" id="haloword-remove" class="haloword-button" title="移出单词表"></a><a
+                href="#" id="haloword-open" class="haloword-button"
+                title="查看单词详细释义" target="_blank"></a><a herf="#" id="haloword-close" class="haloword-button"
+                                                        title="关闭查询窗"></a></div>
+        <br style="clear: both;"></div>
+    <div id="haloword-content"></div>
+</div>
+<script id="hiddenlpsubmitdiv" style="display: none;"></script>
+<script>try {
+    for (var lastpass_iter = 0; lastpass_iter < document.forms.length; lastpass_iter++) {
+        var lastpass_f = document.forms[lastpass_iter];
+        if (typeof(lastpass_f.lpsubmitorig2) == "undefined") {
+            lastpass_f.lpsubmitorig2 = lastpass_f.submit;
+            lastpass_f.submit = function () {
+                var form = this;
+                var customEvent = document.createEvent("Event");
+                customEvent.initEvent("lpCustomEvent", true, true);
+                var d = document.getElementById("hiddenlpsubmitdiv");
+                if (d) {
+                    for (var i = 0; i < document.forms.length; i++) {
+                        if (document.forms[i] == form) {
+                            d.innerText = i;
+                        }
+                    }
+                    d.dispatchEvent(customEvent);
+                }
+                form.lpsubmitorig2();
+            }
+        }
+    }
+} catch (e) {
+}</script>
+</body>
+</html>
