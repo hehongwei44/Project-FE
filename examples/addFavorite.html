@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>收藏本站</title>
+</head>
+<body>
+<a href="javascript:;" title="收藏本站" id="fav" onclick="addFavorite(this)">收藏本站</a>
+</body>
+</html>
+<script type="text/javascript">
+   var addFavorite = function(obj){
+       if (document.all){
+           try{
+               window.external.addFavorite(window.location.href,document.title);
+           }catch(e){
+               alert( "该浏览器不支持该收藏功能\n\n请使用Ctrl+D[window]或cmd+D[Mac]进行添加" );
+           }
+       }else if (window.sidebar){
+           obj.setAttribute("rel", "sidebar");
+           obj.setAttribute("title", document.title);
+           obj.setAttribute("href", window.location.href);
+       }else{
+           alert( "该浏览器不支持该收藏功能\n\n请使用Ctrl+D[window]或cmd+D[Mac]进行添加" );
+       }
+   }
+</script>
