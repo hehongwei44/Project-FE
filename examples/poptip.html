@@ -1,0 +1,102 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>实例: CSS常用浮出层的写法 -- 大前端</title>
+    <style>
+        @charset "utf-8";
+        body,h1,h2,h3,h4,p,ul,li,ol,dl,dt,dd,input,textarea,figure,form{margin:0;padding:0}
+        body,input,textarea{font-size:12px;font-family:microsoft yahei}
+        body{text-align:center;color:#33383D;background:#eee}
+        ul,ol{list-style:none}
+        img{border:0}
+        button,input {line-height:normal;*overflow:visible}
+        input,textarea{outline:none}
+        a{color:#3B8DD1;text-decoration:none}
+        a:hover{color:#8CAC52}
+        .demo-header{position:relative;height:32px;background-color:#4A4A4A;line-height:32px;text-align: left;}
+        .demo-name{background-color: #428BCA;color: #fff;display: inline-block;padding: 0 20px;}
+        .demo-title{height:0;overflow:hidden;
+        }
+        .demo-container{clear: both;padding:30px 20px;text-align:left;margin:0 auto;line-height: 18px;}
+        .demo h2{font-size: 15px;padding-bottom: 6px;margin-bottom: 20px;border-bottom: solid 1px #ddd;}
+    </style>
+</head>
+<body>
+<h1 class="demo-title">实例: CSS常用浮出层的写法 -- 大前端</h1>
+<p><a href="http://www.daqianduan.com/4518.html">原文链接地址</a></p>
+<div class="demo-container demo"><style type="text/css">
+    .demo{width: 450px;position:relative;}
+    /* poptip */
+    .poptip{position: absolute;top: 20px;left:20px;padding: 6px 10px 5px;*padding: 7px 10px 4px;line-height: 16px;color: #DB7C22;font-size: 12px;background-color: #FFFCEF;border: solid 1px #FFBB76;border-radius: 2px;box-shadow: 0 0 3px #ddd;}
+    .poptip-arrow{position: absolute;overflow: hidden;font-style: normal;font-family: simsun;font-size: 12px;text-shadow:0 0 2px #ccc;}
+
+    .poptip-arrow em,.poptip-arrow i{position: absolute;left:0;top:0;font-style: normal;}
+    .poptip-arrow em{color: #FFBB76;}
+    .poptip-arrow i{color: #FFFCEF;text-shadow:none;}
+
+    .poptip-arrow-top,.poptip-arrow-bottom{height: 6px;width: 12px;left:12px;margin-left:-6px;}
+    .poptip-arrow-left,.poptip-arrow-right{height: 12px;width: 6px;top: 12px;margin-top:-6px;}
+
+    .poptip-arrow-top{top: -6px;}
+    .poptip-arrow-top em{top: -1px;}
+    .poptip-arrow-top i{top: 0px;}
+
+    .poptip-arrow-bottom{bottom: -6px;}
+    .poptip-arrow-bottom em{top: -8px;}
+    .poptip-arrow-bottom i{top: -9px;}
+
+    .poptip-arrow-left{left:-6px;}
+    .poptip-arrow-left em{left:1px;}
+    .poptip-arrow-left i{left:2px;}
+
+    .poptip-arrow-right{right:-6px;}
+    .poptip-arrow-right em{left:-6px;}
+    .poptip-arrow-right i{left:-7px;}
+
+</style>
+    <div class="demo">
+        <div class="poptip">
+            <span class="poptip-arrow poptip-arrow-top"><em>◆</em><i>◆</i></span>
+            <span class="poptip-arrow poptip-arrow-right"><em>◆</em><i>◆</i></span>
+            <span class="poptip-arrow poptip-arrow-bottom"><em>◆</em><i>◆</i></span>
+            <span class="poptip-arrow poptip-arrow-left"><em>◆</em><i>◆</i></span>
+            Hi，知道吗？ 大前端D7主题很快就疯抢了！
+        </div>
+        <div class="poptip" style="top:80px;">
+            <span class="poptip-arrow poptip-arrow-top"><em>◆</em><i>◆</i></span>
+            Hi，知道吗？ <br>大前端D7主题很快就疯抢了！
+        </div>
+        <div class="poptip" style="top:160px;">
+            <span class="poptip-arrow poptip-arrow-right"><em>◆</em><i>◆</i></span>
+            Hi，知道吗？ <br>大前端D7主题很快就疯抢了！
+        </div>
+        <div class="poptip" style="top:240px;">
+            <span class="poptip-arrow poptip-arrow-bottom"><em>◆</em><i>◆</i></span>
+            Hi，知道吗？ <br>大前端D7主题很快就疯抢了！
+        </div>
+        <div class="poptip" style="top:320px;">
+            <span class="poptip-arrow poptip-arrow-left"><em>◆</em><i>◆</i></span>
+            Hi，知道吗？ <br>大前端D7主题很快就疯抢了！
+        </div>
+
+        <div class="poptip" style="top:80px;left:250px;">
+            <span class="poptip-arrow poptip-arrow-top" style="left:50%;"><em>◆</em><i>◆</i></span>
+            Hi，知道吗？ <br>大前端D7主题很快就疯抢了！
+        </div>
+        <div class="poptip" style="top:160px;left:250px;">
+            <span class="poptip-arrow poptip-arrow-right" style="top:50%;"><em>◆</em><i>◆</i></span>
+            Hi，知道吗？ <br>大前端D7主题很快就疯抢了！
+        </div>
+        <div class="poptip" style="top:240px;left:250px;">
+            <span class="poptip-arrow poptip-arrow-bottom" style="left:50%;"><em>◆</em><i>◆</i></span>
+            Hi，知道吗？ <br>大前端D7主题很快就疯抢了！
+        </div>
+        <div class="poptip" style="top:320px;left:250px;">
+            <span class="poptip-arrow poptip-arrow-left" style="top:50%;"><em>◆</em><i>◆</i></span>
+            Hi，知道吗？ <br>大前端D7主题很快就疯抢了！
+        </div>
+    </div></div>
+</body>
+</html>
