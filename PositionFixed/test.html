@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>IE6 fixed定位解决方案</title>
+		<!--引入脚本-->
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="js/jquery-positionFixed.js" charset="UTF-8"></script>
+		<script type="text/javascript" charset="UTF-8">
+			$(function(){
+				$("#fixed").PositionFixed({
+                    left : "max",
+                    top : "max"
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+        <div class="fixed" id="fixed" style="width: 60px; height:60px; background:#C0C0C0; border:solid 1px #000;"></div>
+  		<div style="height:1400px;" title="请拖动滚动条"></div>
+	</body>
+</html>
