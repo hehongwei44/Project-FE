@@ -11,7 +11,7 @@
             always_visible: false,
 
             //  days of the week; Sunday to Saturday
-            days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+            days: ['日', '一', '二', '三', '四', '五', '六'],
 
             //  by default, the abbreviated name of a day consists of the first 2 letters from the day's full name;
             //  while this is common for most languages, there are also exceptions for languages like Thai, Loa, Myanmar,
@@ -148,7 +148,7 @@
             lang_clear_date: 'Clear date',
 
             //  months names
-            months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            months: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
 
             //  by default, the abbreviated name of a month consists of the first 3 letters from the month's full name;
             //  while this is common for most languages, there are also exceptions for languages like Thai, Loa, Myanmar,
@@ -219,7 +219,7 @@
             //  caption for the button; setting it to FALSE will disable the button
             //
             //  default is "Today"
-            show_select_today: 'Today',
+            show_select_today: '今天',
 
             //  should an extra column be shown, showing the number of each week?
             //  anything other than FALSE will enable this feature, and use the given value as column title
