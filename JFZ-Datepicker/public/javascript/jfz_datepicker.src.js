@@ -1,23 +1,8 @@
-/**
- *  Zebra_DatePicker
- *
- *  Zebra_DatePicker is a small, compact and highly configurable date picker plugin for jQuery
- *
- *  Visit {@link http://stefangabos.ro/jquery/zebra-datepicker/} for more information.
- *
- *  For more resources visit {@link http://stefangabos.ro/}
- *
- *  @author     Stefan Gabos <contact@stefangabos.ro>
- *  @version    1.8.9 (last revision: May 21, 2014)
- *  @copyright  (c) 2011 - 2014 Stefan Gabos
- *  @license    http://www.gnu.org/licenses/lgpl-3.0.txt GNU LESSER GENERAL PUBLIC LICENSE
- *  @package    Zebra_DatePicker
- */
 ;(function($) {
 
     'use strict';
 
-    $.Zebra_DatePicker = function(element, options) {
+    $.DatePicker = function(element, options) {
 
         var defaults = {
 
@@ -2934,7 +2919,7 @@
                 $(this).data('Zebra_DatePicker').destroy();
 
             // create an instance of the plugin
-            var plugin = new $.Zebra_DatePicker(this, options);
+            var plugin = new $.DatePicker(this, options);
 
             // save a reference to the newly created object
             $(this).data('Zebra_DatePicker', plugin);
