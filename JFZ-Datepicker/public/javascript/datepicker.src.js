@@ -2907,7 +2907,7 @@
 
     };
 
-    $.fn.Zebra_DatePicker = function(options) {
+    $.fn.DatePicker = function(options) {
 
         // iterate through all the elements to which we need to attach the date picker to
         return this.each(function() {
