@@ -1410,8 +1410,8 @@
                     // this will be computed relative to the icon's top-right corner (if the calendar icon exists), or
                     // relative to the element's top-right corner otherwise, to which the offsets given at initialization
                     // are added/subtracted
-                    left = (undefined !== icon ? icon.offset().left + icon.outerWidth(true) : $element.offset().left + $element.outerWidth(true)) + plugin.settings.offset[0],
-                    top = (undefined !== icon ? icon.offset().top : $element.offset().top) - datepicker_height + plugin.settings.offset[1],
+                    left = $element.offset().left,
+                    top = $element.offset().top + $element.outerHeight(true),
 
                     // get browser window's width and height
                     window_width = $(window).width(),
