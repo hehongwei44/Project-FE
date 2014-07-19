@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>JPEG-Webcam网络摄像头</title>
+        <script charset="UTF-8" type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+        <script charset="UTF-8" type="text/javascript" src="js/webcam.js"></script>
+        <script charset="UTF-8" type="text/javascript">
+            jQuery(function() {
+                /*初始化配置*/
+                webcam.set_swf_url('flash/webcam.swf');
+                webcam.set_api_url('server/test.php');
+                webcam.set_stealth(true);
+                // JPEG quality (1 - 100)
+                webcam.set_quality(90);
+                // play shutter click sound
+                webcam.set_shutter_sound(true, 'audio/shutter.mp3');
+                //write the movie to the page at 320x240
+                $("#swf").append(webcam.get_html(320, 240));
+            });
+			 webcam.set_hook('onComplete', 'my_callback_function');
+                function my_callback_function(response) {
+                    alert("Success! PHP returned: " + response);
+                    $("#snap").attr("src", response);
+                }
+        </script>
+    </head>
+
+    <body>
+        <div id="swf"></div>
+        <div>
+            <input type=button value="配置" onClick="webcam.configure()">
+            <input type=button value="照相" onClick="webcam.snap()">
+        </div>
+        <div>
+            <img alt="拍照图片" id="snap">
+        </div>
+    </body>
+</html>
