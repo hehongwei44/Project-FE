@@ -1,0 +1,17 @@
+﻿@charset "utf-8";
+
+body{margin:0px;}
+img {border: none;vertical-align: middle;}
+img { -ms-interpolation-mode: bicubic; }
+/* common
+-----------------------------------------------*/
+/*__ maincontent _*/
+#maincontent {background:#000;height:528px;overflow:hidden;position:relative;}
+#maincontent div.pict {cursor: default !important;}
+#maincontent div.main {position: static;text-align: center;display: block;cursor: pointer !important}
+#maincontent .element {display: none;position: absolute !important;}
+#maincontent .left {top :200px;left: 0;cursor: pointer;}
+#maincontent .right {top: 200px;right: 0;cursor: pointer;}
+#maincontent .main .guardian {display: none;height: 0;}
+#maincontent .navi {z-index: 9999999;}
+div#maincontent div.main{display:none;}div#maincontent div.element{position:absolute !important;}
