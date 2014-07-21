@@ -1,0 +1,77 @@
+.jslct {
+    color: #666;
+    font-family: Verdana;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    font-size: 12px;
+    position: relative;
+    line-height: 12px;
+    vertical-align: middle;
+    cursor: default;
+    border: 1px solid #ccc;
+    background: url(arrow.gif) right center no-repeat;
+    z-index: 0;
+}
+.jslct_hover {
+    border: 1px solid #333
+}
+.jslct div.jslct_t {
+    padding: 4px 25px 4px 4px;
+    border-bottom: 1px solid #fff;
+    position: relative;
+    z-index: 2;
+    *display: block !important;
+    *display: inline;
+    zoom: 1;
+}
+.jslct em {
+    font-style: normal;
+    margin: 0px;
+    padding-bottom: 1px;
+    line-height: 12px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.jslct dl, .jslct dl dd {
+    padding: 0;
+    margin: 0;
+    list-style: none
+}
+.jslct dl {
+    background: #fff;
+    position: absolute;
+    top: 21px;
+    left: -1px;
+    border: 1px solid #ccc;
+    cursor: default;
+    line-height: 22px;
+    padding: 4px 4px 4px 4px;
+    z-index: 1;
+    display: none;
+}
+.jslct_hover dl {
+    border: 1px solid #333 !important;
+}
+.jslct dl dd {
+    padding: 0px 4px 2px 4px;
+    *padding: 2px 4px 0 4px;
+    border-top: 1px dotted #ccc !important;
+    border-top: 1px dotted #efefef;
+    white-space: nowrap;
+    background: #fff;
+    cursor: pointer;
+    *border-left: 1px solid #fff;
+}
+.jslct dl dd.hover {
+    background: #666;
+    color: #fff;
+}
+.jslct .jslcted {
+    background: #efefef;
+}
+.jslct dl dd.noborder {
+    border: none !important;
+}

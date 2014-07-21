@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>select美化插件</title>
+        <meta name="description" content="" />
+        <meta name="author" content="HeHongWei" />
+        <!--引入样式-->
+        <link href="jquery.jselect.css" rel="stylesheet" type="text/css"/>
+        <style>
+            select {
+                width: auto;
+            }
+            .logo h1, .footer h1 {
+                height: 1px;
+                overflow: hidden;
+                padding: 0;
+                margin: 0;
+                line-height: 20px;
+                font-size: 12px;
+                display: block
+            }
+            .wrap {
+                margin-left: 30px;
+                margin-top: 20px;
+                font-size: 12px;
+            }
+        </style>
+        <!--引入脚本-->
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="jquery.jselect.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $(".jj").jselect();
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <select class="jj"  name="slct">
+                <option value="0">web启点</option>
+                <option value="1" selected="selected">请选择..</option>
+                <option value="2">这个没设置宽度，于是自适应。请选择请选择请选择请选选择</option>
+                <option value="3">web7d.com.cn</option>
+                <option value="4">web7d.com.cn</option>
+            </select>
+            <br />
+            <br />
+            <select class="jj" name="slct"  style="width:150px" >
+                <option value="2">web启点</option>
+                <option value="2" selected="selected">这个设置了width:150px择择请选择请选择择</option>
+                <option value="2">这个设置了width:150px择择请选择请选择择请选择请选择择请选</option>
+                <option value="2">sdf</option>
+                <option value="2">sdf</option>
+            </select>
+            <em>选择框固定宽度</em>
+            <br />
+            <br />
+            <select class="jj" name="slct">
+                <option value="2">选择框未固定宽度，随内容字数多少而变</option>
+                <option value="2">请选择请选择请选择请选择请选择请选择请选择请选择</option>
+                <option value="2" selected="selected">请选择..</option>
+                <option value="2">请选择请选择请选择请选择请选择请选择请选择请选择</option>
+                <option value="2">web启点</option>
+                <option value="2">web启点</option>
+                <option value="2">web7d.com.cn</option>
+            </select><em>选择框未固定宽度，随内容字数多少而变</em>
+
+            <p>
+                <select class="jj" name="slct">
+                    <option value="2">web启点</option>
+                    <option value="2" selected="selected">请选择..</option>
+                    <option value="2">请选择请选择请选择请选择请选择请选择请选择请选择</option>
+                    <option value="2">web7d.com.cn</option>
+                    <option value="2">web启点</option>
+                </select>
+            </p>
+        </div>
+    </body>
+</html>
