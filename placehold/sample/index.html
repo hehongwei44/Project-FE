@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>In-Field Labels jQuery Plugin</title>
+    <link rel="stylesheet" href="css/layout.css" type="text/css" media="all" charset="utf-8"/>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="../src/jquery.infieldlabel.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript" charset="utf-8">
+        $(function () {
+            $(".holder-lbl").inFieldLabels();
+        });
+    </script>
+    <!--[if lte IE 6]>
+    <style type="text/css" media="screen">
+        form label {
+            background: #fff;
+        }
+    </style>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="body"><h2>占位符模拟demo</h2></div>
+    <form action="index.html" method="get" accept-charset="utf-8">
+        <fieldset>
+            <legend>表单</legend>
+            <p class="holder-cnt">
+                <label for="name" class="holder-lbl">请输入姓名</label><br/>
+                <input type="text" name="name" value="" id="name" placeholder="">
+            </p>
+
+            <p class="holder-cnt">
+                <label for="email" class="holder-lbl">电子邮件</label><br/>
+                <input type="text" name="email" value="" id="email" placeholder="">
+            </p>
+
+            <p class="holder-cnt">
+                <label for="website" class="holder-lbl">网站</label><br/>
+                <input type="text" name="website" value="" id="website" placeholder="">
+            </p>
+
+            <p class="holder-cnt">
+                <label for="comment" class="holder-lbl">评论</label><br/>
+                <textarea cols="30" rows="10" name="comment" id="comment" placeholder=""></textarea>
+            </p>
+        </fieldset>
+        <p><input type="submit" value="提交 &rarr;"></p>
+    </form>
+
+    <form action="index.html" method="get" accept-charset="utf-8">
+        <fieldset>
+            <legend>表单</legend>
+            <p class="holder-cnt">
+                <label for="username" class="holder-lbl">请输入用户名</label><br/>
+                <input type="text" name="username" value="" id="username" placeholder="">
+            </p>
+
+            <p class="holder-cnt">
+                <label for="password" class="holder-lbl">请输入密码</label><br/>
+                <input type="password" name="password" value="" id="password" placeholder="">
+            </p>
+        </fieldset>
+        <p><input type="submit" value="提交 &rarr;"></p>
+    </form>
+    <div class="body">
+        <h2>用法介绍</h2>
+
+        <p><strong>HTML结构</strong>:
+			<pre>
+&lt;p class='holder-cnt'&gt;
+  &lt;label for=&quot;field_id&quot;&gt;Label Text&lt;/label&gt;&lt;br /&gt;
+  &lt;input type=&quot;text&quot; name=&quot;field_id&quot; value=&quot;&quot;
+	id=&quot;field_id&quot;&gt;
+&lt;/p&gt;</pre>
+        </p>
+        <p><strong>CSS结构</strong>:<br/>
+            如图所示，
+		<pre>
+form .holder-cnt { position: relative;
+        margin: 10px 0;}
+form .holder-cnt label { position: absolute;
+        top: 0; left: 0;
+        cursor:	text;}
+        </pre>
+        </p>
+        <p><strong>Javascript调用</strong>:<br/>
+		<pre>
+$(document).ready(function(){
+  $(".holder-lbl").inFieldLabels();
+});</pre>
+
+        </p>
+        <h2>可选项</h2>
+
+        <p>传递参数有两种实现方式</p>
+
+        <p>在调用插件时，设置$.inFieldLabels.defaultOptions.optionName
+			<pre>
+$.inFieldLabels.defaultOptions.optionName = "";</pre>
+        </p>
+        <p>在调用时，当成参数传递
+			<pre>
+$("label").inFieldLabels({ optionName:value });</pre>
+        </p>
+        <p><tt>fadeOpacity:</tt> <strong>值的范围：0.1~1.0</strong><br/>当表单域获取焦点时，label中文本最终的透明度，默认值为 <tt>0.5</tt></p>
+
+        <p><tt>fadeDuration:</tt> <strong>单位为毫秒数</strong><br/>动画的延迟时间，默认值 <tt>300</tt></p>
+
+        <p><tt>pollDuration:</tt> <strong>毫秒数</strong><br/>
+            如果设置的值大于0的话，代码会在指定的时间简称该label相对的表单域的值.</p>
+
+        <p><tt>className:</tt> 在label上添加的类名，默认值为 <tt>false</tt></p>
+
+        <p><tt>enabledInputTypes:</tt> <strong>被运行的类型的数组</strong><br/>限制input的输入类型. 默认值 <tt>[ "text", "search", "tel", "url", "email",
+                "password", "textarea" ]</tt></p>
+
+    </div>
+</body>
+</html>
