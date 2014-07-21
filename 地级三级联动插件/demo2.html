@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>jQuery 三级地市级联菜单_http://www.codefans.net</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style>
+	#test select{
+		width:100px;
+		margin-left:20px;
+	}
+  </style>
+  
+  <script src="jquery-1.2.6.js" type="text/javascript"></script>
+  <script src="jquery.provincesCity.js" type="text/javascript"></script>
+  <script src="provincesdata.js" type="text/javascript"></script>
+  <script>
+	//调用插件
+	$(function(){
+		$("#test").ProvinceCity();
+	});
+  </script>
+</head>
+<body>
+	<div id="test"></div>
+</body>
+</html>
