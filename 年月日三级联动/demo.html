@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>年月日三级联动--测试</title>
+        <meta name="author" content="HeHongWei" />
+        <style>
+            body {
+                margin: 0px;
+                padding: 50px;
+                font-size: 12px;
+            }
+            select {
+                width: 100px;
+                height: 25px;
+                padding: 2px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>jQuery插件--年月日三级联动</h1>
+        <label for="year">出生日期:</label>
+        <select id="year">
+            <option value="" selected="selected">--请选择年--</option>
+        </select>
+        <select id="month">
+            <option value="" selected="selected">--请选择月--</option>
+        </select>
+        <select id="day">
+            <option value="" selected="selected">--请选择日--</option>
+        </select>
+    </body>
+    <script type="text/javascript" charset="UTF-8" src="jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="jquery.dateLink.js"></script>
+    <script type="text/javascript" charset="UTF-8">
+        jQuery(function($) {
+            $.dateLink({
+                "id_year" : "#year",
+                "id_month" : "#month",
+                "id_day" : "#day",
+                "flooryear" : 50,
+                "ceilyear" : 0
+            });
+        });
+    </script>
+</html>
