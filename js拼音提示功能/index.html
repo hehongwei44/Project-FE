@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>jquery 输入框提示特效、汉字拼音智能输入提示、火车预定智能输入提示</title>
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+            body {
+                font-family: Arial, Helvetica, sans-serif, "宋体";
+                font-size: 12px;
+                text-align: center;
+            }
+            h1 {
+                margin: 0;
+                padding: 20px 0;
+                font-size: 16px;
+            }
+            ol {
+                padding-left: 20px;
+                line-height: 130%;
+            }
+            #box {
+                width: 600px;
+                text-align: left;
+                margin: 0 auto;
+                padding-top: 80px;
+            }
+            #suggest, #suggest2 {
+                width: 200px;
+            }
+            .gray {
+                color: gray;
+            }
+            .ac_results {
+                background: #fff;
+                border: 1px solid #7f9db9;
+                position: absolute;
+                z-index: 10000;
+                display: none;
+            }
+            .ac_results ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            .ac_results li a {
+                white-space: nowrap;
+                text-decoration: none;
+                display: block;
+                color: #05a;
+                padding: 1px 3px;
+            }
+            .ac_results li {
+                border: 1px solid #fff;
+            }
+            .ac_over, .ac_results li a:hover {
+                background: #c8e3fc;
+            }
+            .ac_results li a span {
+                float: right;
+            }
+            .ac_result_tip {
+                border-bottom: 1px dashed #666;
+                padding: 3px;
+            }
+        </style>
+        <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+        <script type="text/javascript" src="js/jquery.suggest.js"></script>
+        <script type="text/javascript" src="js/jquery.dimensions.js"></script>
+        <script type="text/javascript" src="js/aircity.js"></script>
+        <script type="text/javascript">
+            jQuery(function() {
+                $("#arrcity").suggest(citys, {
+                    hot_list : commoncitys,
+                    dataContainer : '#arrcity_3word',
+                    onSelect : function() {
+                        $("#city2").click();
+                    },
+                    attachObject : '#suggest'
+                });
+
+                $("#city2").suggest(citys, {
+                    hot_list : commoncitys,
+                    attachObject : "#suggest2"
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <div id="box">
+            <ol>
+                <li>
+                    点击输入框，自动列出热门出行城市；
+                </li>
+                <li>
+                    支持中文/拼音/3字码 输入的智能提示；
+                </li>
+                <li>
+                    支持键盘方向键选择、回车键确定；
+                </li>
+                <li>
+                    支持选择后自定义callback函数；
+                </li>
+                <li>
+                    支持IE6、IE7、IE8、Firefox
+                </li>
+            </ol>
+            <h1>自动完成提示特效拼音加文字</h1>
+            <input type="hidden" name="arrcity_3word" id="arrcity_3word" value="" />
+            <label for="arrcity">出发城市：</label>
+            <input type="text" name="arrcity" id="arrcity" />
+            <div id='suggest' class="ac_results"></div>
+            <label for="city2">目的城市：</label>
+            <input type="text" name="city2" id="city2" />
+            <div id='suggest2' class="ac_results"></div>
+        </div>
+    </body>
+</html>
