@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>复选框美化jQuery代码</title>
+
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="jquery.tzCheckbox/jquery.tzCheckbox.css" />
+
+    </head>
+    <body style="text-align:center">
+        <script src="js/jquery.min.js"></script>
+        <script src="jquery.tzCheckbox/jquery.tzCheckbox.js"></script>
+        <script src="js/script.js"></script>
+        <div id="page">
+
+            <form method="get" action="./">
+                <ul>
+                    <li>
+                        <label for="ch_effects">Display effects: </label>
+                        <input type="checkbox" id="ch_effects" name="ch_effects" data-on="Show effects" data-off="Hide effects" />
+                    </li>
+                    <li>
+                        <label for="ch_location">Enable location tracking: </label>
+                        <input type="checkbox" id="ch_location" name="ch_location" checked />
+                    </li>
+                    <li>
+                        <label for="ch_showsearch">Include me in search results: </label>
+                        <input type="checkbox" id="ch_showsearch" name="ch_showsearch" />
+                    </li>
+                    <li>
+                        <label for="ch_emails">Email notifications: </label>
+                        <input type="checkbox" id="ch_emails" name="ch_emails" data-on="ON" data-off="OFF" />
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+        <div style="height:90px; width:728px; padding-top:10px; margin:0px auto; "></div>
+    </body>
+</html>
