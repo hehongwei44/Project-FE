@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>测试</title>
+</head>
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="width:600px;height:400px;"></div>
+<script type="text/javascript" src="lib/echarts-plain.js"></script>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts图表
+    var myChart = echarts.init(document.getElementById('main'));
+
+    option = {
+       /* tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },*/
+        /*
+        legend: {
+            orient : 'vertical',
+            x : 'right',
+            y : 'center',
+            itemGap : 20,
+            data:['已退出金额','未退出金额']
+         },*/
+        series : [
+            {
+               /* name : "dsaf",*/
+                type:'pie',
+                radius : ['50%', '60%'],
+                itemStyle : {
+                    normal : {
+                        borderWidth : 4,
+                        label : {
+                            show : false
+                        },
+                        labelLine : {
+                            show : false
+                        }
+                    },
+                    emphasis : {
+                        label : {
+                            show : true,
+                            position : 'center',
+                            formatter : "{b}"+ "\n"+ "占比{d}%",
+                            textStyle : {
+                                fontSize : '20',
+                                fontWeight : 'bold'
+                            }
+                        }
+                    }
+                },
+                data:[
+                    {value:400.00, name:'已退出金额'},
+                    {value:600.00, name:'未退出金额'}
+                ]
+            }
+        ]
+    };
+    // 为echarts对象加载数据
+    myChart.setOption(option);
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>测试</title>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width:1000px;height:400px;"></div>
+    <script type="text/javascript" src="lib/echarts-plain.js"></script>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts图表
+        var myChart = echarts.init(document.getElementById('main'));
+
+        option = {
+            tooltip : {
+                trigger: 'item',
+                formatter : "累计收益"+'<br/>'+"<b style='color: #F60;'>{c}</b>&nbsp;&nbsp;元"
+            },
+            grid : {
+                borderWidth : 0,
+                backgroundColor : "#FFF",
+                borderColor : "#FFF"
+            },
+            xAxis : [
+                {
+                    splitLine : {show: false},
+                    axisTick : {show: false},
+                    splitArea: {show: false},
+                    type : 'category',
+                    boundaryGap : false,
+                    data : ['2010-2-3','2010-2-3','2010-2-3','2010-2-3','2010-2-3','2010-2-3','2010-2-3']
+                }
+            ],
+            yAxis : [
+                {
+                    splitLine : {show: false},
+                    axisTick : {show: false},
+                    splitArea: {show: false},
+                    type : 'value',
+                    axisLabel : {
+                        formatter: '{value} 元'
+                    }
+
+                }
+            ],
+            series : [
+                {
+                    name:'累计收益',
+                    type:'line',
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                shadowColor : 'rgba(0,0,0,0.4)',
+                                shadowBlur: 5,
+                                shadowOffsetX: 3,
+                                shadowOffsetY: 3
+                            }
+                        }
+                    },
+                    data:[50.08, 69.08, 59.08, 46.08, 74.08, 36.08, 40.06]
+                }
+            ]
+        };
+        // 为echarts对象加载数据
+        myChart.setOption(option);
+    </script>
+</body>
+</html>
