@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>密码强度插件--示例</title>
+        <meta charset="utf-8" />
+        <script type="text/javascript" src='js/jquery-1.4.4.min.js'></script>
+        <script type="text/javascript" src='js/password_strength.js'></script>
+        <link rel="stylesheet" type="text/css" href="css/password_strength.css">
+        <style>
+            body {
+                background-color: #efefef;
+            }
+            a, a:LINK, a:VISITED {
+                color: #27558e;
+            }
+            #page_wrapper {
+                border: 2px dashed #999;
+                margin: auto;
+                padding: 10px 30px 60px 30px;
+                position: relative;
+                background: #fff;
+                width: 800px;
+            }
+            .code {
+                clear: both;
+            }
+            label.lbl_header {
+                font-weight: bold;
+                clear: both;
+                display: block;
+                margin-top: 25px;
+                border: 1px solid #999;
+                padding: 2px;
+                background: #efefef;
+            }
+            h2 div {
+                font-size: 12px;
+                font-family: arial, helvetica, san-serif;
+                color: #999;
+            }
+            .html {
+                color: #999;
+            }
+            label {
+                font-size: 14px;
+                font-weight: bold;
+                color: #666;
+                font-family: arail, helvetica, san-serif;
+            }
+            input {
+                height: 28px;
+                width: 200px;
+                border: 1px solid #ccc;
+                font-size: 16px;
+                font-weight: bold;
+                color: #666;
+                padding: 7px 0 0 4px;
+            }
+        </style>
+        <script>
+            /*
+             * 该插件有三个默认参数,分别是weakpass、goodpass、strongpass.
+             * 他们分别指向的是"密码为弱","密码为中","密码为强的"样式
+             * 密码小于6位数时,不提示。
+             * */
+            $(document).ready(function() {
+                $("#password_test").passStrength();
+            });
+        </script>
+    </head>
+    <body>
+        <div id="page_wrapper">
+            <label>请输入密码:</label>
+            <br/>
+            <input type="password" name="pass_word" class="password_test" id="password_test" style="float:left;"/>
+        </div>
+    </body>
+</html>
