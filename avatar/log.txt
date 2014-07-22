@@ -1,0 +1,66 @@
+﻿图片大小: 47895：执行日期：20090525111130
+{"data":{"urls":["http:\/\/sns.com\/avatar_test\/avatar_big\/1243251139_big.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090525111130
+图片大小: 5885：执行日期：20090525111130
+{"data":{"urls":["http:\/\/sns.com\/avatar_test\/avatar_small\/1243251139_small.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090525111130
+图片大小: 32325：执行日期：20090525111106
+{"data":{"urls":["http:\/\/sns.com\/avatar_test\/avatar_big\/1243251218_big.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090525111106
+图片大小: 5426：执行日期：20090525111106
+{"data":{"urls":["http:\/\/sns.com\/avatar_test\/avatar_small\/1243251218_small.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090525111106
+图片大小: 32440：执行日期：20090525111137
+{"data":{"urls":["http:\/\/sns.com\/avatar_test\/avatar_big\/1243251304_big.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090525111137
+图片大小: 4523：执行日期：20090525111137
+{"data":{"urls":["http:\/\/sns.com\/avatar_test\/avatar_small\/1243251304_small.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090525111137
+图片大小: 43803：执行日期：20090525121245
+{"data":{"urls":["http:\/\/sns.com\/avatar_test\/avatar_big\/1243255103_big.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090525121245
+图片大小: 3918：执行日期：20090525121245
+{"data":{"urls":["http:\/\/sns.com\/avatar_test\/avatar_small\/1243255103_small.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090525121245
+图片大小: 47917：执行日期：20090526030306
+{"data":{"urls":["http:\/\/sns.com\/avatar_test\/avatar_big\/1243307200_big.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526030306
+图片大小: 5863：执行日期：20090526030306
+{"data":{"urls":["http:\/\/sns.com\/avatar_test\/avatar_small\/1243307200_small.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526030306
+图片大小: 47917：执行日期：20090526060624
+{"data":{"urls":["http:\/\/sns.com\/avatar_test\/avatar_big\/1243319767_big.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526060624
+图片大小: 5910：执行日期：20090526060624
+{"data":{"urls":["http:\/\/sns.com\/avatar_test\/avatar_small\/1243319767_small.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526060624
+图片大小: 41182：执行日期：20090526080839
+{"data":{"urls":["http:\/\/sns.com\/avatar_test\/avatar_origin\/1243325079.jpg"],"photoId":1243325079},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526080839
+图片大小: 26689：执行日期：20090526080839
+{"data":{"urls":["http:\/\/sns.com\/avatar_test\/avatar_big\/1243325079_big.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526080839
+图片大小: 3010：执行日期：20090526080839
+{"data":{"urls":["http:\/\/sns.com\/avatar_test\/avatar_small\/1243325079_small.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526080839
+图片大小: 10942：执行日期：20090526080858
+{"data":{"urls":["http:\/\/sns.com\/avatar_test\/avatar_big\/1243325979_big.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526080858
+图片大小: 2380：执行日期：20090526080858
+{"data":{"urls":["http:\/\/sns.com\/avatar_test\/avatar_small\/1243325979_small.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526080858
+图片大小: 10942：执行日期：20090526090901
+{"data":{"urls":["\/avatar_test\/avatar_big\/1243328870_big.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526090901
+图片大小: 1840：执行日期：20090526090901
+{"data":{"urls":["\/avatar_test\/avatar_small\/1243328870_small.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526090901
+图片大小: 47307：执行日期：20090526090913
+{"data":{"urls":["\/avatar_test\/avatar_origin\/1243328893.jpg"],"photoId":1243328893},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526090913
+图片大小: 29604：执行日期：20090526090913
+{"data":{"urls":["\/avatar_test\/avatar_big\/1243328893_big.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526090913
+图片大小: 3302：执行日期：20090526090913
+{"data":{"urls":["\/avatar_test\/avatar_small\/1243328893_small.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526090913
+图片大小: 41348：执行日期：20090526090927
+{"data":{"urls":["\/avatar_test\/avatar_big\/1243328900_big.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526090927
+图片大小: 4724：执行日期：20090526090927
+{"data":{"urls":["\/avatar_test\/avatar_small\/1243328900_small.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526090927
+图片大小: 33537：执行日期：20090526090919
+{"data":{"urls":["\/avatar_test\/avatar_big\/1243329194_big.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526090919
+图片大小: 3992：执行日期：20090526090919
+{"data":{"urls":["\/avatar_test\/avatar_small\/1243329194_small.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526090919
+图片大小: 61214：执行日期：20090526090956
+{"data":{"urls":["\/avatar_test\/avatar_big\/1243329232_big.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526090956
+图片大小: 5550：执行日期：20090526090956
+{"data":{"urls":["\/avatar_test\/avatar_small\/1243329232_small.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526090956
+图片大小: 44549：执行日期：20090526121239
+{"data":{"urls":["\/avatar_test\/avatar_origin\/1243341939.jpg"],"photoId":1243341939},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526121239
+图片大小: 32335：执行日期：20090526121239
+{"data":{"urls":["\/avatar_test\/avatar_big\/1243341939_big.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526121239
+图片大小: 3474：执行日期：20090526121239
+{"data":{"urls":["\/avatar_test\/avatar_small\/1243341939_small.jpg"]},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20090526121239
+图片大小: 111321：执行日期：20140721160427
+{"data":{"urls":["\/avatar_test\/avatar_origin\/1405953207.jpg"],"photoId":1405953207},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20140721160427
+图片大小: 109820：执行日期：20140721160456
+{"data":{"urls":["\/avatar_test\/avatar_origin\/1405953716.jpg"],"photoId":1405953716},"status":1,"statusText":"\u4e0a\u4f20\u6210\u529f!"}：执行日期：20140721160456
