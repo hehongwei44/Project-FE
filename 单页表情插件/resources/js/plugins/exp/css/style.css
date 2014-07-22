@@ -1,0 +1,63 @@
+/*---------------------------------------------------------------------------------------------
+@Filename:				style.css
+@Description:			表情插件的配套css文件
+@Version:				1.0.0
+@author:                simon
+==STRUCTURE:========================================= 
+
+==NOTES:============================================= 
+2012-1-11:
+    初始生成。
+--------------------------------------------------------------------------------------------*/
+
+/** 清除内外边距 **/
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,/* structural elements 结构元素 */
+dl,dt,dd,ul,ol,li,/* list elements 列表元素 */
+pre,/* text formatting elements 文本格式元素 */
+form,fieldset,legend,button,input,textarea,/* form elements 表单元素 */
+th,td /* table elements 表格元素 */{margin:0;padding:0;}
+
+/** 设置默认字体 **/
+body,
+button,input,select,textarea /* for ie */{font:12px/1.5 tahoma,arial,\5b8b\4f53,sans-serif;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+address,cite,dfn,em,var{font-style:normal;} /* 将斜体扶正 */
+code,kbd,pre,samp{font-family:courier new,courier,monospace;} /* 统一等宽字体 */
+small{font-size:12px;} /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/** 重置列表元素 **/
+ul,ol{list-style:none;}
+
+/** 重置文本格式元素 **/
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+sup{vertical-align:text-top;} /* 重置，减少对行高的影响 */
+sub{vertical-align:text-bottom;}
+
+
+.exp-layer{display:none;position:absolute;left:200px;top:200px;z-index:10;width:394px;border-radius:4px;padding:4px;background:url("../img/layer_bg.png");}
+.exp-layer .holder{position:relative;z-index:30;border:1px solid #c3c3c3;border-radius:4px;background:#fff;}
+.exp-layer .exp-tri{position:absolute;left:30px;top:-7px;z-index:40;width:16px;height:12px;background:url("../img/layer_arrow.png");}
+.exp-layer .exp-close{display:block;position:absolute;right:14px;top:5px;z-index:20;width:20px;height:20px;background:url("../img/ico.png") 5px -250px no-repeat;}
+.exp-layer .exp-close:hover{background-position:0 -1954px;}
+.exp-layer .exp-tab{padding:4px 4px 0 6px;background:#F0F0F0;}
+.exp-layer .exp-tab a{display:block;float:left;height:25px;margin:0 3px;padding:0 10px;border:1px solid #E8E8E8;border-bottom:0;border-radius:4px 4px 0 0;background:#fff;font-size:12px;font-weight:400;text-overflow:clip;color:#666;text-decoration:none;line-height:25px;}
+.exp-layer .exp-sub-tab{position:relative;margin:10px 0px 0px 16px;padding-right:60px;overflow:hidden;}
+.exp-layer .exp-sub-tab a{display:block;float:left;height:23px;padding:0 7px;color:#9ABBC8;font-size:12px;font-weight:400;text-decoration:none;line-height:23px;}
+.exp-layer .exp-sub-tab a.slct{background:none repeat scroll 0 0 #F0F0F0;border-radius:3px 3px 3px 3px;cursor:default;position:relative;text-decoration:none;z-index:2;}
+.exp-layer .exp-sub-tab span{float: left; margin: 0 5px; color:#9ABBC8;}
+.exp-layer .sub-tab-pagination{position:absolute;right:10px;top:0px;height:100%;}
+.exp-layer .sub-tab-pagination a{display:none;width:17px;height:17px;margin:0 2px;padding:0;background:url("../img/ico.png") no-repeat;cursor:pointer;display:inline;line-height:17px;}
+.exp-layer .sub-tab-pagination .pre{background-position:0 -1290px;} 
+.exp-layer .sub-tab-pagination .next{background-position:0 -1176px;}
+.exp-layer .sub-tab-pagination a.pre-disable{background-position:0 -1367px;cursor:default;}
+.exp-layer .sub-tab-pagination a.next-disalbe{background-position:0 -1253px;cursor:default;}
+.exp-layer .exp-detail{margin:10px;}
+.exp-detail li{display:block;float:left;width:26px;height:22px;margin:-1px 0 0 -1px;border:1px solid #e8e8e8;padding:4px 2px;text-align:center;cursor:pointer;}
+.exp-detail li:hover{position:relative;border:1px solid #0095cd;background:#fff9ec;z-index:50;}
+
+
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;} 
+* html .clearfix             { zoom: 1; } /* IE6 */ 
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
