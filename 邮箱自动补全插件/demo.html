@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>邮箱自动补全插件</title>
+        <meta charset="utf-8" />
+        <!--链接样式-->
+        <link rel="stylesheet" type="text/css" href="jquery.mailAutoComplete.css" />
+        <!--链接脚本-->
+        <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="jquery.mailAutoComplete.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $("#mail").mailAutoComplete();
+            });
+        </script>
+    </head>
+    <body>
+        <div id="mail_container" style="padding-left:20px;">
+            <br/>
+            <label for="mail">请输入邮箱:</label>
+            <input type="text" id="mail" style="width:200px;"/>
+        </div>
+    </body>
+</html>

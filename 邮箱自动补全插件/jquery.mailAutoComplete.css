@@ -1,0 +1,29 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.mailListBox {
+    border: 1px solid #D6E0EB;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 1px 2px 5px #888888;
+    background: white;
+    font: 12px/20px Arial;
+}
+.mailListFocus {
+    background: #4DCDFF;
+}
+.mailListHlignt {
+    color: #000;
+}
+.mailListBox li a {
+    text-decoration: none;
+    padding: 0 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    color: #919191;
+    display: block;
+}
+.mailListBox li a:hover {
+    background: #4DCDFF;
+}
