@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>Lava Lamp Menu Demo</title>
+    <link rel="stylesheet" href="lavalamp_test.css" type="text/css" media="screen">
+    <script type="text/javascript" src="jquery-1.2.3.min.js"></script>
+    <script type="text/javascript" src="jquery.easing.min.js"></script>
+    <script type="text/javascript" src="jquery.lavalamp.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#1, #2, #3").lavaLamp({
+                fx: "backout",
+                speed: 700,
+                click: function(event, menuItem) {
+                    return false;
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+<h3>With Image</h3>
+<ul class="lavaLampWithImage" id="1">
+    <li class="current"><a href="#">Home</a></li>
+    <li><a href="#">Plant a tree</a></li>
+    <li><a href="#">Travel</a></li>
+    <li><a href="#">Ride an elephant</a></li>
+</ul>
+
+<br><br><br>
+
+<h3>No Image</h3>
+<ul class="lavaLampNoImage" id="2">
+    <li class="current"><a href="#">Home</a></li>
+    <li><a href="#">Plant a tree</a></li>
+    <li><a href="#">Travel</a></li>
+    <li><a href="#">Ride an elephant</a></li>
+</ul>
+
+<br><br><br>
+
+<h3>Bottom Style</h3>
+<ul class="lavaLampBottomStyle" id="3">
+    <li class="current"><a href="#">Home</a></li>
+    <li><a href="#">Plant a tree</a></li>
+    <li><a href="#">Travel</a></li>
+    <li><a href="#">Ride an elephant</a></li>
+</ul>
+
+</body></html>
+
+
+
+
+
+
