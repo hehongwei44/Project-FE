@@ -161,66 +161,83 @@
         <td>是</td>
     </tr>                
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>26</td>
+        <td>/webcam</td>
+        <td>头像采集插件</td>
+        <td>否</td>
     </tr> 
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>27</td>
+        <td>/xiuxiu</td>
+        <td>头像采集、上传、和编辑flash插件</td>
+        <td>是</td>
+    </tr>
+    <tr>
+        <td>28</td>
+        <td>/仿微博头像弹出插件</td>
+        <td>仿微博头像弹出插件</td>
+        <td>否</td>
+    </tr>
+    <tr>
+        <td>29</td>
+        <td>/仿微软官网导航菜单</td>
+        <td>原生的导航菜单插件</td>
+        <td>否</td>
+    </tr>
+    <tr>
+        <td>30</td>
+        <td>/单页表情插件</td>
+        <td>单页表情插件</td>
+        <td>否</td>
+    </tr>
+    <tr>
+        <td>31</td>
+        <td>/地级三级联动插件</td>
+        <td>地级三级联动插件</td>
+        <td>否</td>
+    </tr>
+    <tr>
+        <td>32</td>
+        <td>/密码强度插件</td>
+        <td>密码强度插件</td>
+        <td>是</td>
+    </tr>
+    <tr>
+        <td>33</td>
+        <td>/年月日三级联动</td>
+        <td>年月日三级联动</td>
+        <td>否</td>
+    </tr>
+    <tr>
+        <td>34</td>
+        <td>/新浪表情插件</td>
+        <td>新浪表情插件</td>
+        <td>否</td>
+    </tr>
+    <tr>
+        <td>35</td>
+        <td>/满屏幕图片切换效果插件</td>
+        <td>专场动画效果</td>
+        <td>否</td>
+    </tr>      
+    <tr>
+        <td>36</td>
+        <td>/转盘抽奖插件</td>
+        <td>转盘抽奖插件</td>
+        <td>是</td>
+    </tr>         
+    <tr>
+        <td>37</td>
+        <td>/邮箱自动补全插件</td>
+        <td>邮箱自动补全插件</td>
+        <td>否</td>
     </tr>
     <tr>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>                                        
-                               
+    </tr>                                                                             
 </table>
 
 
