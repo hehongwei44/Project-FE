@@ -41,10 +41,10 @@
         <td>否</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>6</td>
+        <td>/Zeroclip-board</td>
+        <td>一款支持浏览器flash复制，粘贴的插件</td>
+        <td>是</td>
     </tr>
     <tr>
         <td></td>
