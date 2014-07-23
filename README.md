@@ -65,46 +65,46 @@
         <td>是</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>10</td>
+        <td>/fullAvatarEditor头像编辑器</td>
+        <td>头像采集、上传、和编辑flash插件</td>
+        <td>否</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>11</td>
+        <td>/jquery-qrcode</td>
+        <td>js生成二维码插件</td>
+        <td>否</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>12</td>
+        <td>/jquery.nicescroll</td>
+        <td>js模拟滚动条插件</td>
+        <td>是</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>13</td>
+        <td>/jquery图片延迟加载插件</td>
+        <td>jquery图片延迟加载插件</td>
+        <td>否</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>14</td>
+        <td>/jquery插件模版</td>
+        <td>叫你如何通过模块写jq插件</td>
+        <td>是</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>15</td>
+        <td>/jslider</td>
+        <td>jquery在指定范围内拖动插件</td>
+        <td>否</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>16</td>
+        <td>/js拼音提示功能</td>
+        <td>一款汉字拼音智能输入提示插件</td>
+        <td>否</td>
     </tr>
     <tr>
         <td></td>
