@@ -50,13 +50,13 @@
         <td>7</td>
         <td>/avatar</td>
         <td>头像采集、上传、和编辑flash插件</td>
-        <td></td>
+        <td>否</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>8</td>
+        <td>/echarts</td>
+        <td>一些p2p项目中echarts示例</td>
+        <td>是</td>
     </tr>
     <tr>
         <td></td>
