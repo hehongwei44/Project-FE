@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>判断浏览器是否安装flash插件</title>
+		<script type="text/javascript">
+			/**
+			 * @author hehongwei
+			 * @decorla 對IE6-9 FF做了測試
+			 */
+			var isIE = (navigator.appName == "Microsoft Internet Explorer");
+			var flash_url = 'http://get.adobe.com/cn/flashplayer/';
+
+			if(isIE){
+			    try{
+			        var swf1 = new ActiveXObject('ShockwaveFlash.ShockwaveFlash');
+			    }
+			    catch(e){
+			    	doFlash();
+			    }
+			}else {
+			    try{
+			        var swf2 = navigator.plugins['Shockwave Flash'];
+			        if(swf2 == undefined){
+						doFlash();	
+			        }
+			    }
+			    catch(e){
+			        doFlash();
+			    }
+			}
+
+			function doFlash(){
+				var rs = confirm("系统检测到没有安装flash插件或版本较低,单击[确定]按钮下载最新版");
+				if(rs === true){
+					window.location = flash_url;		
+				}
+			}
+
+		</script>		
+
+	</head>
+
+	<body>
+	</body>
+</html>
