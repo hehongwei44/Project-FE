@@ -17,6 +17,24 @@
         <td>是</td>
     </tr>
     <tr>
+        <td>2</td>
+        <td>/JSelect美化插件</td>
+        <td>select模拟插件</td>
+        <td>否</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
         <td></td>
         <td></td>
         <td></td>
