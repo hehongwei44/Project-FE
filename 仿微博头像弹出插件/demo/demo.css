@@ -1,0 +1,11 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+h3{color:#555;font-weight:normal;margin:10px 0px; }body{text-align:center;margin-top:30px;}
+h1,h3{font-family: microsoft yahei}
+table{width:600px;margin:0px auto;background: #ff6600;color:#fff}
+ul,ol{
+    list-style:none;
+}
+a{color:blue;margin:0px 3px }
+#result{width:560px;margin:30px auto;padding:20px;}
+table td{cursor:pointer;text-align: left;padding:5px;width: 100px;}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,\5b8b\4f53,sans-serif;}

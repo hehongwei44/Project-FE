@@ -1,0 +1,12 @@
+.jspopup {position: absolute;display: none;z-index: 1000;border-collapse: collapse;}
+.jspopup td.corner {height: 15px;width: 19px;}
+.popuptc{ width:362px; margin:10px 2px;}
+.popuptc_wai{ width:360px; border:1px solid #c6c6c6;  border-bottom:0; }
+.popuptc_wai_up{ width:360px; border:1px solid #c6c6c6;background:#fff;box-shadow: 0 0 5px #999;-webkit-box-shadow: 0 0 5px #999;-moz-box-shadow: 0 0 5px #999;
+ }
+.popuptc_wai_up.start{height:40px;line-height: 40px;text-align:center;background:white url('./poploading.gif') no-repeat 110px 12px;}
+.popuptc .point{background: url("./layer_arrow.gif") 0px -21px no-repeat;height:9px;font-size:1px;width:16px;top: 9px;left: 17px;z-index: 1000000;position: absolute;}
+.jspopup.rs .popuptc .point{background-position: 0px -11px;top: 193px;left:325px;}
+.jspopup.lx .popuptc .point{background-position: 0px -3px;top: 12px;height:9px;}
+.jspopup.rx .popuptc .point{background-position: 0px -3px;top: 12px;left:325px;height:9px;}
+.jspopup.ls .popuptc .point{background-position: 0px -11px;top: 193px;}
