@@ -23,10 +23,22 @@
         <td>否</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>3</td>
+        <td>/PositionFixed</td>
+        <td>修复IE不支持position为fixede定位的插件</td>
+        <td>是</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>/QQ表情插件</td>
+        <td>一款集成qq表情的插件</td>
+        <td>否</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>/SWFUpload</td>
+        <td>一款经典的flash上传插件</td>
+        <td>否</td>
     </tr>
     <tr>
         <td></td>
