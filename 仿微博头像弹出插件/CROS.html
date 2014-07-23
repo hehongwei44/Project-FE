@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>ajax跨域测试--获取地理信息</title>
+
+	</head>
+
+	<body>
+	</body>
+	<script type="text/javascript">
+		function handleResponse(response) {
+			//alert('您的IP地址是: ' + response.txt);
+			alert("您的IP地址是: " + response.ip + ",\n您所在的地区为: " + response.city + "," + response.region_name);
+		}
+
+		var script = document.createElement('script');
+		script.src = 'http://freegeoip.net/json/?callback=handleResponse';
+		//script.src = 'http://www.jinfuzi.cn/test2/returnResult?callback=handleResponse';
+		document.body.appendChild(script);
+	</script>
+</html>

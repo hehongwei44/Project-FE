@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>demo</title>
+	</head>
+
+	<body>
+		<!--core-->
+		<div  style="margin: 0;padding: 0;width: 420px;height: 176px;background: url('http://www.jinfuzi.com/kf/bgmsgincon.png') no-repeat;position: relative;margin-bottom: 15px;">
+			<a href="http://www.jinfuzi.com/topic-38.html"  title="如何办理股票开户" target="_blank" style="margin: 0;padding: 0;width: 120px;height: 20px;position: absolute;left: 15px;top: 40px;"></a>
+			<a href="http://www.jinfuzi.com/topic-358.html"  title="需要持什么证件" target="_blank" style="margin: 0;padding: 0;width: 120px;height: 20px;position: absolute;left: 15px;top: 61px;"></a>
+			<a href="http://www.jinfuzi.com/topic-10.html"  title="股票开户流程怎样" target="_blank" style="margin: 0;padding: 0;width: 120px;height: 20px;position: absolute;left: 15px;top: 82px;"></a>
+			<a href="http://www.jinfuzi.com/"  title="金斧子首页" target="_blank" style="margin: 0;padding: 0;width: 120px;height: 40px;position: absolute;left: 15px;top: 120px;"></a>
+			<div id="order" style="margin: 0;padding: 0;position: absolute;left: 153px;top: 24px;">
+				<ul style="margin: 0;padding: 0;list-style: none;">
+					<li style="margin: 0;padding: 0;list-style: none;margin-bottom: 11px;">
+						<span  style="margin: 0;padding: 0;text-align: right;font-size: 14px;"> <span  style="margin: 0;padding: 0;font-style: italic;color: #F00;">*</span>您的姓名： </span>
+						<input id="username" type="text" name=""  style="margin: 0;padding: 0;border: 1px #BDBDBD solid;border-right-color: #D5D5D5;border-bottom-color: #D5D5D5;width: 145px;height: 20px;line-height: 20px;padding: 0 5px;"/>
+					</li>
+					<li style="margin: 0;padding: 0;list-style: none;margin-bottom: 11px;">
+						<span style="margin: 0;padding: 0;text-align: right;display: inline-block;width: 77px;font-size: 14px;"> <span  style="margin: 0;padding: 0;font-style: italic;color: #F00;"></span>QQ号码： </span>
+						<input id="userqq" type="text" name="" style="margin: 0;padding: 0;border: 1px #BDBDBD solid;border-right-color: #D5D5D5;border-bottom-color: #D5D5D5;width: 145px;height: 20px;line-height: 20px;padding: 0 5px;" />
+					</li>
+					<li style="margin: 0;padding: 0;list-style: none;margin-bottom: 11px;">
+						<span style="margin: 0;padding: 0;text-align: right;font-size: 14px;"> <span  style="margin: 0;padding: 0;font-style: italic;color: #F00;">*</span>手机号码： </span>
+						<input id="userphone" type="text" name="" style="margin: 0;padding: 0;border: 1px #BDBDBD solid;border-right-color: #D5D5D5;border-bottom-color: #D5D5D5;width: 145px;height: 20px;line-height: 20px;padding: 0 5px;" />
+					</li>
+					<li  style="margin: 0;padding: 0;list-style: none;margin-bottom: 11px;padding: 0 0 0 133px;">
+						<a href="javascript:;"  title="" 
+						style="margin: 0;padding: 0;width: 108px;height: 32px;line-height: 32px;text-align: center;color: #FFF;display: inline-block;background: url('http://www.jinfuzi.com/kf/btnyuebg.png') no-repeat;font-size: 14px;font-weight: bold;text-decoration: none;"
+						onclick = "javascript:
+						var id_name  = document.getElementById('username');
+						var id_phone = document.getElementById('userphone');
+						var name     = id_name.value;
+						var phone    = id_phone.value;
+						var qq       = document.getElementById('userqq').value;
+						if(name == ''){
+							alert('该选项是必填选项,请填写您的姓名');
+							id_name.focus();
+						}else if(phone == ''){
+							alert('该选项是必填选项,请填写您的手机号码');
+							id_phone.focus();									
+						}else if(phone != '' && !/^(13[0-9]|15[0|3|6|7|8|9]|18[8|9])\\d{8}$/.test(phone)){
+							alert('手机号码的格式不正确,请确认');	
+							id_phone.focus();	
+						}else{
+							
+							var script2 = document.createElement('script');
+							script2.src = 'http://www.jinfuzi.com/script/53kf.js';
+							document.body.appendChild(script2);
+							
+							var script = document.createElement('script');
+							script.src = 'http://www.jinfuzi.com/services/reserve/reserve?callback=handleResponse&name='+name+'&phone='+phone+'&qq='+qq+'';
+							document.body.appendChild(script);
+						}
+						
+						function trim(str){
+							return str.replace(/(^\s*)|(\s*$)/g, '');
+						}
+						">预约咨询</a>
+					</li>
+				</ul>
+			</div>
+			<div id="succ" style="margin: 0;padding: 0;display:none;position: absolute;left: 165px;top: 54px;">
+				<span style="margin: 0;padding: 0;float: left;width: 43px;height: 43px;overflow: hidden;background: url('http://www.jinfuzi.com/kf/icontpok.png') no-repeat;margin-right: 8px;"></span>
+				<span style="margin: 0;padding: 0;color: #F60;font-size: 14px;font-weight: bold;line-height: 22px;width: 180px;float: left;">您的信息已成功提交
+					<br />
+					客户经理会及时和你联系</span>
+			</div>
+		</div>
+	
+		<!--core-->
+	</body>
+</html>
