@@ -1,2 +1,38 @@
 ##各个示例的介绍
-dd
+<table>
+    <tr>
+        <th>编号</th>
+        <th>位置</th>
+        <th>概述</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>/Marquee_01.html</td>
+        <td>跑马灯页面特效</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>/addFavorite.html</td>
+        <td>浏览器收藏功能</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>/setHome.html</td>
+        <td>设为首页功能</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>/poptip.html</td>
+        <td>使用css模拟三角形</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>/issetUPFlash.html</td>
+        <td>判断代理是否安装flash</td>
+    </tr>            
+    <tr>
+        <td>6</td>
+        <td>/gotoBack.html</td>
+        <td>返回顶部特效</td>
+    </tr>
+</table>
