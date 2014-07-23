@@ -113,46 +113,46 @@
         <td>否</td>
     </tr>                            
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>18</td>
+        <td>/placehold</td>
+        <td>一款模拟占位符插件</td>
+        <td>否</td>
     </tr>               
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>19</td>
+        <td>qrcodejs</td>
+        <td>一款js二维码生成插件</td>
+        <td>否</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>20</td>
+        <td>raido美化插件</td>
+        <td>一款模拟元素radio插件</td>
+        <td>否</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>21</td>
+        <td>/requireJS中文API文档</td>
+        <td>requireJS中文API文档</td>
+        <td>是</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>22</td>
+        <td>/reset.css</td>
+        <td>金斧子采用的重置样式</td>
+        <td>是</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>23</td>
+        <td>/scripts</td>
+        <td>一些原生的模块化脚本，包含表单验证等功能</td>
+        <td>否</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>24</td>
+        <td>/select美化插件</td>
+        <td>select美化插件</td>
+        <td>否</td>
     </tr>                    
     <tr>
         <td></td>
