@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>Zebra_Cookie examples</title>
+
+        <link rel="stylesheet" href="public/css/reset.css" type="text/css">
+        <link rel="stylesheet" href="public/css/style.css" type="text/css">
+        <link rel="stylesheet" href="libraries/syntaxhighlighter/public/css/shCoreDefault.css" type="text/css">
+
+        <script type="text/javascript" src="public/javascript/jquery-1.7.2.js"></script>
+        <script type="text/javascript" src="../public/javascript/zebra_cookie.js"></script>
+        <script type="text/javascript" src="public/javascript/core.js"></script>
+
+        <script type="text/javascript" src="libraries/syntaxhighlighter/public/javascript/shCore.js"></script>
+        <script type="text/javascript" src="libraries/syntaxhighlighter/public/javascript/shBrushJScript.js"></script>
+        <script type="text/javascript" src="libraries/syntaxhighlighter/public/javascript/shBrushXml.js"></script>
+        <script type="text/javascript" src="libraries/syntaxhighlighter/public/javascript/shBrushCSS.js"></script>
+
+        <script type="text/javascript">
+            SyntaxHighlighter.defaults['toolbar'] = false;
+            SyntaxHighlighter.all();
+        </script>
+
+    </head>
+
+    <body>
+
+        <div class="main-wrapper">
+
+            <h2>Zebra_Cookie examples</h2>
+
+            <h4>Installation</h4>
+
+            <p>Load the latest version of jQuery either from a local source, or from a CDN</p>
+
+            <pre class="brush:html">
+            &lt;script type="text/javascript" src="path/to/jQuery.js"&gt;&lt;/script&gt;
+            </pre>
+
+            <p>Load the Zebra_Cookie plugin</p>
+
+            <pre class="brush:html">
+            &lt;script type="text/javascript" src="path/to/zebra_cookie.js"&gt;&lt;/script&gt;
+            </pre>
+
+            <div class="hr"></div>
+
+            <h4>Usage</h4>
+
+            <pre class="brush:javascript">
+            // inside the DOM-ready function
+            // a "cookie" object will be available in jQuery&rsquo;s namespace
+            // the object exposes 3 methods that you can use to write, read and delete cookies
+            $(document).ready(function() {
+
+                // create a session cookie (expires when the browser closes)
+                $.cookie.write('cookie_name', 'cookie_value');
+
+                // create a cookie that expires in 1 day
+                $.cookie.write('cookie_name', 'cookie_value', 24 * 60 * 60);
+
+                // read a cookie&rsquo;s value
+                // following the examples above, this should return "cookie_value"
+                $.cookie.read('cookie_name');
+
+                // the "read" method returns null if the cookie doesn&rsquo;t exist
+                $.cookie.read('non_existing_cookie_name');
+
+                // delete the cookie
+                $.cookie.destroy('cookie_name');
+
+            });
+            </pre>
+
+        </div>
+
+    </body>
+
+</html>
