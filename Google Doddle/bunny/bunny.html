@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style>
+    #doodle {
+      position: relative;
+      margin-top: 35px;
+      height: 182px;
+      width: 468px; 
+      overflow: hidden;
+    }
+    #doodle img{
+      position:absolute;
+      border:none;
+      height:364px;
+      left:0;
+      top:0;
+      width:468px
+    }
+	</style>
+  </head>
+  <body>
+  <center>
+    <div id="doodle" title="世界地球日">
+      <img src="image/a.jpg" id="_a">
+      <img src="image/b.jpg" id="_b">
+      <img src="image/b.jpg" id="_c">
+    </div>
+  </center>
+  <script>
+    (function() {
+        var divMain, imgA, imgB, imgC,
+            timer={}, topMargin,  flag,
+            
+        //设置透明度
+        setOpacityFn = function(dom, val) {
+          if (dom) {
+            dom.style.display = val > 0 ? 'block' : 'none';
+            dom.style.filter = val < 100 ? 'alpha(opacity:' + val + ')' : ''; //IE
+            val = (val < 100 ? val : 100) / 100;
+            dom.style.opacity = val;  //W3C
+            dom.style.MozOpacity = val; //Fx
+          }
+        },
+        
+        //清除定时器
+        clearTimerFn = function() {
+          window.clearTimeout(timer.show);
+          window.clearTimeout(timer.grow);
+        },
+        
+        //入口函数
+        mainFn = function() {
+          clearTimerFn();
+          //初始化变量，获得dom引用等
+          divMain = document.getElementById('doodle');
+          imgA = document.getElementById('_a');
+          imgB = document.getElementById('_b');
+          imgC = document.getElementById('_c');
+          topMargin = 0;
+          flag = !1;
+          if (divMain && imgA && imgB && imgC) { //占位用img
+            var img = document.createElement('img');
+            img.style.visibility = 'hidden';
+            img.onload = imgOnloadFn;
+            img.src = 'image/b.jpg';
+            divMain.appendChild(img);  //执行onload事件
+          }
+        }, 
+        imgOnloadFn = function() {
+          clearTimerFn();
+          imgB.style.height = imgC.style.height = '2912px';
+          imgB.src = imgC.src = 'image/b.jpg';
+          setOpacityFn(imgB, 0);
+          setOpacityFn(imgC, 0);
+          imgB.style.display = imgC.style.display = '';
+          flowerGrowFn();
+        },
+        
+        //花朵成长过程的每个图都是渐渐展现
+        flowerShowFn = function(dom, val) {
+          if (dom) {
+            setOpacityFn(dom, val);
+            if (val < 99)
+              //每50ms透明度增加11，半秒内完全显示出来
+              timer.show = window.setTimeout(function() {
+                flowerShowFn(dom, val + 11);
+              }, 50);
+          }
+        }, 
+        //花朵生长过程
+        flowerGrowFn = function() {
+          var a = flag ? imgB : imgC, 
+              b = flag ? imgC : imgB;
+          a.style.zIndex = 4;
+          b.style.zIndex = 3;
+          window.clearTimeout(timer.show);
+          flowerShowFn(a, 0);
+          a.style.top = -topMargin + 'px';
+          topMargin = Math.floor(topMargin + 182);
+          //生长过程计时器
+          timer.gow = topMargin < 2912 
+                   ? window.setTimeout(flowerGrowFn, 500) 
+                   : window.setTimeout(flowerFullbloomFn, 500);
+          flag = !flag;
+        }, 
+        
+        //完全开放,哦也~
+        flowerFullbloomFn = function() {
+          window.clearTimeout(timer.show);
+          imgA.style.top = '-182px';
+          imgA.style.zIndex = 5;
+          flowerShowFn(imgA, 0);
+        };
+        
+        mainFn();
+    })();
+    </script>
+  </body>
+</html>
