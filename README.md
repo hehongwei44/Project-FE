@@ -238,20 +238,25 @@
         <td>模拟滚动条插件,兼容性较差</td>
         <td>否</td>
     </tr> 
-        <tr>
+    <tr>
         <td>39</td>
         <td>/Cookie</td>
         <td>cookie模拟插件</td>
         <td>否</td>
     </tr> 
     </tr> 
-        <tr>
+    <tr>
         <td>40</td>
         <td>/Pin</td>
         <td>多功能元素固定插件</td>
         <td>否</td>
     </tr> 
-
+	<tr>
+		<td>41</td>
+		<td>/Google Doddle</td>
+		<td>谷歌涂鸦的例子</td>
+		<td>否</td>
+	</tr>
 </table>
 ps:带字段"是"表示项目中使用到的，要求掌握使用，带"否"的表示可能将来会使用，建议大家研究研究。
 
