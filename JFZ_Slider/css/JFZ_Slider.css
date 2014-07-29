@@ -1,0 +1,54 @@
+/*轮播样式*/
+.JFZ_Slider{
+	border: 1px solid #AAA;
+	width: 586px;
+	height: 150px;
+	overflow: hidden;
+	position: relative;
+	
+}
+.JFZ_Slider ul {
+	position: absolute;
+}
+.JFZ_Slider ul li {
+	width: 586px;
+	height: 150px;
+	display: none;
+}
+
+.JFZ_Slider .num {
+	position: absolute;
+	right:5px;
+	bottom:5px;
+}
+
+.JFZ_Slider .num li{
+	display:inline-block;
+	float: left;
+	color: #FF7300;
+	text-align: center;
+	line-height: 16px;
+	width: 16px;
+	height: 16px;
+	font-family: Arial;
+	font-size: 12px;
+	cursor: pointer;
+	overflow: hidden;
+	margin: 3px 1px;
+	border: 1px solid #FF7300;
+	background-color: #fff;
+	*display:inline;
+	*zoom:1;
+}
+
+.JFZ_Slider .num li.on{
+	color: #fff;
+	line-height: 21px;
+	width: 21px;
+	height: 21px;
+	font-size: 16px;
+	margin: 0 1px;
+	border: 0;
+	background-color: #FF7300;
+	font-weight: bold;
+}

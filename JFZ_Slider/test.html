@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>模仿淘宝的图片轮播</title>
+		<link type="text/css" rel="stylesheet" href="css/cssreset.css"/>
+		<!--引用开始-->
+		<link type="text/css" rel="stylesheet" href="css/JFZ_Slider.css"/>
+		<script type="text/javascript" src="js/jquery-1.7.2.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="js/JFZ_Slider.js" charset="UTF-8"></script>
+		<script type="text/javascript">
+			jQuery(function(){
+				$("div.JFZ_Slider").jfz_slider();
+			});
+		</script>
+		<!--引用介绍-->
+	</head>
+
+	<body>
+		<div class="container" style="margin: 100px auto;width:960px;">
+			<h1 style="font-size: 16px;margin-bottom:20px; ">模仿淘宝的图片轮播效果</h1>
+			<!--调用模板-->
+			<div class="JFZ_Slider">
+				 <ul class="slider_cnt">
+					<li><a href=""><img src="images/ads/1.gif" alt=""/></a></li>
+					<li><a href=""><img src="images/ads/2.gif" alt=""/></a></li>
+					<li><a href=""><img src="images/ads/3.gif" alt=""/></a></li>
+					<li><a href=""><img src="images/ads/4.gif" alt=""/></a></li>
+					<li><a href=""><img src="images/ads/5.gif" alt=""/></a></li>
+				  </ul>
+			</div>
+			<!--调用模板-->
+			<div>測試是否溢出</div>
+		</div>
+	</body>
+</html>
