@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>金斧子对话框示例</title>
+		<!--加载对话框的样式和脚本-->
+		<link rel="stylesheet" href="css/JFZ_dialog.css" type="text/css">
+		<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+		<script type="text/javascript" src="js/JFZ_dialog.src.js"></script>
+		<script type="text/javascript" src="js/JFZ_Drag.js"></script>
+		<!--加载对话框的样式和脚本-->
+		<script type="text/javascript">
+			$(function() {
+
+				$("#test").bind('click', function(e) {
+					new $.JFZ_Dialog({
+						source : {
+							'ajax' : 'test.html'
+						},
+						width : 800,
+						title : 'ajax测试'
+					});
+
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<h1  id="test">单击测试</h1>
+	</body>
+</html>

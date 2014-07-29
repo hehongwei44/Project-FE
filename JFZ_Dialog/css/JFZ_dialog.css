@@ -1,0 +1,192 @@
+.JFZDialog *,
+.JFZDialog *:after,
+.JFZDialog *:before  { -moz-box-sizing: content-box !important; -webkit-box-sizing: content-box !important; box-sizing: content-box !important }
+
+.JFZDialog {
+    width: 350px;
+    z-index: 1001;
+}
+
+.JFZDialog,
+.JFZDialog .JFZDialog_Title,
+.JFZDialog .JFZDialog_Body,
+.JFZDialog .JFZDialog_Buttons a {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Tahoma, Arial, sans-serif;
+    font-size: 14px;
+    text-align: left;
+}
+
+.JFZDialog .JFZDialog_Title,
+.JFZDialog .JFZDialog_BodyOuter,
+.JFZDialog .JFZDialog_Buttons {
+    border-color: #A3A6A8;
+    border-width: 7px;
+}
+
+.JFZDialog .JFZDialog_Title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #F6F5F5;
+/*    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);*/
+    padding: 12px 15px 10px 15px;
+    line-height: 1;
+/*    background: url('hdbg.png') repeat-x #2479b2 ;*/
+    background: #2479b2 ;
+}
+
+
+.JFZDialog .JFZDialog_BodyOuter {
+    background: #E7EDEF;
+}
+
+.JFZDialog .JFZDialog_Body {
+    color: #44484A;
+    padding: 20px;
+    border-top-color: #000;
+    border-bottom-color: #FFF;
+}
+
+.JFZDialog .JFZDialog_Buttons {
+    background: #f6f6f6;
+    padding: 3px;
+}
+
+.JFZDialog .JFZDialog_Buttons a {
+    font-weight: bold;
+    color: #FFF;
+    text-shadow: 1px 0px 2px #222;
+    padding: 10px 15px;
+}
+
+.JFZDialog .JFZDialog_Buttons a:hover {
+    background: #224467;
+    color: #FFF
+}
+/*遮罩层的样式*/
+.JFZDialogOverlay {
+    background: #000;
+    z-index: 1000;
+}
+
+.JFZDialog {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.JFZDialog .JFZDialog_Title {
+    border-left-style: solid;
+    border-top-style: solid;
+    border-right-style: solid;
+   /* -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;*/
+}
+.JFZDialog .JFZDialog_Title_Close{
+	display:block;
+	height:22px;
+	width:22px;
+	position: absolute;
+	right: 17px;
+	top: 13px;
+	cursor:pointer;
+	background: url('close.png') no-repeat;
+}
+
+.JFZDialog .JFZDialog_BodyOuter {
+    border-left-style: solid;
+    border-right-style: solid;
+}
+
+.JFZDialog .JFZDialog_NoTitle {
+    border-top-style: solid;
+    -webkit-border-top-left-radius: 10px;
+    -moz-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.JFZDialog .JFZDialog_NoButtons {
+    border-bottom-style: solid;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.JFZDialog .JFZDialog_Body {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-style: groove;
+    overflow: auto;
+}
+
+.JFZDialog .JFZDialog_NoTitle .JFZDialog_Body {
+    border-top: none;
+}
+
+.JFZDialog .JFZDialog_NoButtons .JFZDialog_Body {
+    border-bottom: none;
+}
+
+.JFZDialog .JFZDialog_Icon {
+    background-repeat: no-repeat;
+    background-position: 20px 20px;
+    padding-left: 88px;
+    min-height: 48px;
+	/*    _height: 85px;*/
+}
+
+.JFZDialog .JFZDialog_Confirmation  { background-image: url('confirmation.png') }
+.JFZDialog .JFZDialog_Error         { background-image: url('error.png') }
+.JFZDialog .JFZDialog_Information   { background-image: url('information.png') }
+.JFZDialog .JFZDialog_Question      { background-image: url('question.png') }
+.JFZDialog .JFZDialog_Warning       { background-image: url('warning.png') }
+
+.JFZDialog .JFZDialog_Buttons {
+    border-left-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    /*-webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;*/
+}
+
+.JFZDialog .JFZDialog_Buttons a {
+    white-space: nowrap;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    float: right;
+    margin-right: 5px;
+    min-width: 60px;
+    _width: 60px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+    background-color: #006DCC;
+    *background-color: #0044CC;
+    background-image: -moz-linear-gradient(top, #0088CC, #0044CC);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088CC), to(#0044CC));
+    background-image: -webkit-linear-gradient(top, #0088CC, #0044CC);
+    background-image: -o-linear-gradient(top, #0088CC, #0044CC);
+    background-image: linear-gradient(to bottom, #0088CC, #0044CC);
+    background-repeat: repeat-x;
+    border-color: #0044CC #0044CC #002A80;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0088CC', endColorstr='#FF0044CC', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.JFZDialog .JFZDialog_Preloader {
+    height: 32px;
+    background: url('preloader.gif') no-repeat center center;
+}
