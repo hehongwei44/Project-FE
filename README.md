@@ -263,6 +263,24 @@
 		<td>jquery跑马灯插件</td>
 		<td>否</td>
 	</tr>
+    <tr>
+        <td>43</td>
+        <td>/JFZ_Dialog</td>
+        <td>对话框插件</td>
+        <td>是</td>
+    </tr>
+    <tr>
+        <td>44</td>
+        <td>/JFZ_Slider</td>
+        <td>简易轮播1</td>
+        <td>是</td>
+    </tr>
+    <tr>
+        <td>45</td>
+        <td>/JFZ_Slider_02</td>
+        <td>jquery轮播插件</td>
+        <td>是</td>
+    </tr>
 </table>
 ps:带字段"是"表示项目中使用到的，要求掌握使用，带"否"的表示可能将来会使用，建议大家研究研究。
 
