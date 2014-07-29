@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>自适应轮播插件</title>
+	  	<link rel="stylesheet" href="css/jfzSlider-1.2.3.css">
+	  	<link rel="stylesheet" href="css/style.css"> 
+	  	<!--[if IE]>
+		     <style type="text/css">
+		         .timer { display: none !important; }
+		         div.caption { background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);zoom: 1; }
+		    </style>
+		<![endif]-->
+		<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+		<script type="text/javascript" src="js/jquery.plugin.slider.js"></script>	
+		<script type="text/javascript">
+			$(window).load(function() {
+				$('#featured').jfz_animation_slider({
+					animation: 'horizontal-push',
+					bullets: true
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+	<div class="container">
+		<div id="featured"> 
+			<a href=""><img src="images/ad/captions.jpg" /></a>
+			<a href=""><img src="images/ad/coffee.jpg" /></a>
+			<a href=""><img src="images/ad/features.jpg" /></a>
+			<a href=""><img src="images/ad/overflow.jpg" /></a>
+		</div>
+	</div>	
+	</body>
+</html>
