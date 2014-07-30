@@ -1,0 +1,10 @@
+﻿BODY {FONT-SIZE: 9pt; }
+A:link {	COLOR: #444444; TEXT-DECORATION: none}
+A:visited {	COLOR: #444444; TEXT-DECORATION: none}
+A:active {	COLOR: #444444; TEXT-DECORATION: none}
+A:hover {	COLOR: #3a85c7; TEXT-DECORATION: underline}
+.price {	FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #eb5d07; LINE-HEIGHT: 120%; FONT-FAMILY: "verdana"; TEXT-DECORATION: none}
+.priceB {	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #eb5d07; LINE-HEIGHT: 120%; FONT-FAMILY: "verdana"; TEXT-DECORATION: none}
+.priceR {	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #0f8ef0; LINE-HEIGHT: 120%; FONT-FAMILY: "verdana"; TEXT-DECORATION: none}
+.pdtitle {	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #ce674b; FONT-FAMILY: "verdana"}
+

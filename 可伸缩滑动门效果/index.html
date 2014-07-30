@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>左右可伸缩滑动门效果</title>
+    </head>
+    <LINK href="css/Newstyle.css" type=text/css rel=STYLESHEET>
+    <SCRIPT language=JavaScript src="js/jquery-1.2.1.pack.js"></SCRIPT>
+    <BODY>
+        <div align="center" style="text-align:left">
+            <br />
+            <br />
+            <br />
+            <br />
+            <TABLE align="center" cellPadding=0 cellSpacing=0>
+                <TBODY>
+                    <TR>
+                        <TD style="PADDING-RIGHT: 10px" vAlign=top width=566>
+                        <SCRIPT>
+                            var x = 'right';
+                            $(document).ready(function() {
+
+                                $("#LeftTodayBook").mouseover(function() {
+                                    if(x == 'left') {
+                                        x = null;
+                                        $("#RightTodayBook").animate({
+                                            "left" : "+=210px"
+                                        }, "fast", null, function() {
+                                            x = 'right';
+                                            todayBookImg.src = "images/b_tbLeft.gif";
+                                        });
+                                    }
+
+                                });
+
+                                $("#RightTodayBook").mouseover(function() {
+
+                                    if(x == 'right') {
+                                        x = null;
+                                        $("#RightTodayBook").animate({
+                                            "left" : "-=210px"
+                                        }, "fast", null, function() {
+                                            x = 'left';
+                                            todayBookImg.src = "images/b_tbRight.gif";
+                                        });
+                                    }
+                                });
+
+                                $("#todayBookImg").click(function() {
+                                    if(x == 'left') {
+                                        x = null;
+                                        $("#RightTodayBook").animate({
+                                            "left" : "+=210px"
+                                        }, "fast", null, function() {
+                                            x = 'right';
+                                            todayBookImg.src = "images/b_tbLeft.gif";
+                                        });
+                                    }
+
+                                });
+
+                            });
+                        </SCRIPT>
+                        <DIV id=TodayBookContainer
+                        style="Z-INDEX: 1; LEFT: 0px; BACKGROUND-IMAGE: url(images/bg_tb.gif); OVERFLOW: hidden; WIDTH: 566px; POSITION: relative; TOP: 0px; HEIGHT: 249px">
+                            <DIV id=LeftTodayBook
+                            style="LEFT: 0px; POSITION: absolute; TOP: 0px">
+                                <TABLE id=Table1 height=249 cellSpacing=0
+                                cellPadding=0>
+                                    <TBODY>
+                                        <TR>
+                                            <TD vAlign=top width=369>
+                                            <TABLE id=Table2
+                                            style="MARGIN-TOP: 10px; MARGIN-LEFT: 10px"
+                                            cellSpacing=0 cellPadding=0>
+                                                <TBODY>
+                                                    <TR>
+                                                        <TD><a
+                                                        href="#" target="_blank"><img
+                                                        src="images/t081029_1.jpg" alt=""
+                                                        width=138
+                                                        height=132 border="0"></a></TD>
+                                                        <TD
+                                                        style="PADDING-RIGHT: 10px; PADDING-LEFT: 25px; PADDING-BOTTOM: 0px; PADDING-TOP: 15px"
+                                                        vAlign=top rowSpan=2><SPAN class=bodytitle>听杨绛谈往事</SPAN>
+                                                        <BR>
+                                                        <SPAN class=Read>北京女孩、阿季回南、启明小鬼、振华女生、东吴高材生、清华借读生到研究生、留学牛津、在巴黎、振华分校校长、酷哉此别离、上得厅堂，下得厨房、上得厅堂，下得厨房、上得厅堂，下得厨房、妻子·情人·朋友……本书记录了中国社会科学院外国文学研究员，作家、评论家、翻译家、剧作家——杨绛女士的一生。 </SPAN></TD>
+                                                    </TR>
+                                                    <TR>
+                                                        <TD
+                                                        style="PADDING-RIGHT: 0px; PADDING-LEFT: 6px; PADDING-BOTTOM: 0px; PADDING-TOP: 10px"><A
+                                                        class=pdname
+                                                        href="#">听杨绛谈往事</A>
+                                                        <BR>
+                                                        本书记录了杨绛女士精彩的一生
+                                                        <BR>
+                                                        <SPAN
+                                                        class=priceB>22,5</SPAN>
+                                                        <BR>
+                                                        <SPAN
+                                                        class=price>(10%<IMG
+                                                            src="images/i_dc.gif">+10%<IMG
+                                                            src="images/i_p.gif">)</SPAN>
+                                                        <BR>
+                                                        <SPAN
+                                                        class=couponB></SPAN></TD>
+                                                    </TR>
+                                                </TBODY>
+                                            </TABLE></TD>
+                                        </TR>
+                                    </TBODY>
+                                </TABLE>
+                            </DIV>
+                            <DIV id=RightTodayBook
+                            style="LEFT: 376px; WIDTH: 410px; POSITION: absolute; TOP: 0px">
+                                <TABLE id=Table1 height=249 cellSpacing=0
+                                cellPadding=0>
+                                    <TBODY>
+                                        <TR>
+                                            <TD><IMG id=todayBookImg style="CURSOR: hand"
+                                            height=249
+                                            src="images/b_tbLeft.gif"
+                                            width=17></TD>
+                                            <TD vAlign=top width=379
+                                            background="images/bg_tbup.gif">
+                                            <TABLE id=Table2
+                                            style="MARGIN-TOP: 10px; MARGIN-LEFT: 10px"
+                                            cellSpacing=0 cellPadding=0>
+                                                <TBODY>
+                                                    <TR>
+                                                        <TD><A
+                                                        href="#" target="_blank"><IMG
+                                                        src="images/t081029_2.jpg" alt=""
+                                                        width=138
+                                                        height=132 border="0"></A></TD>
+                                                        <TD
+                                                        style="PADDING-RIGHT: 10px; PADDING-LEFT: 25px; PADDING-BOTTOM: 0px; PADDING-TOP: 15px"
+                                                        vAlign=top rowSpan=2><SPAN class=bodytitle>鲤·嫉妒</SPAN>
+                                                        <BR>
+                                                        <SPAN
+                                                        class=Read>诺贝尔文学奖得主帕慕克首次为一本中国图书题词，他说：“嫉妒是一种黑暗的情绪”。继《鲤·孤独》之后，张悦然又推出《鲤》系列主题书的第二本——《鲤·嫉妒》。在以80后一代的孤独体验为主题的《鲤·孤独》中，而到了《鲤·嫉妒》，诺贝尔奖得主帕慕克的加盟，更是体现出张悦然的号召力和国际化的视野。 </SPAN></TD>
+                                                    </TR>
+                                                    <TR>
+                                                        <TD
+                                                        style="PADDING-RIGHT: 0px; PADDING-LEFT: 6px; PADDING-BOTTOM: 0px; PADDING-TOP: 10px"><A
+                                                        class=pdname
+                                                        href="#">鲤·嫉妒</A>
+                                                        <BR>
+                                                        这是一本探讨人性深处中“嫉妒”情绪的图书
+                                                        <BR>
+                                                        <SPAN class=priceB>34,2</SPAN>
+                                                        <BR>
+                                                        <SPAN class=price>(10%<IMG
+                                                            src="images/i_dc.gif">+10%<IMG
+                                                            src="images/i_p.gif">)</SPAN>
+                                                        <BR>
+                                                        <SPAN
+                                                        class=couponB></SPAN></TD>
+                                                    </TR>
+                                                </TBODY>
+                                            </TABLE></TD>
+                                        </TR>
+                                    </TBODY>
+                                </TABLE>
+                            </DIV>
+                        </DIV></TD>
+                        <TD vAlign=top width=187></TD>
+                    </TR>
+                </TBODY>
+            </TABLE>
+
+
+        </div>
+    </body>
+</html>
