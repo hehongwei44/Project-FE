@@ -1,0 +1,87 @@
+<!DOCTYPE >
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>jStack图片相册插件</title>
+        <style type="text/css" media="screen">
+            #imageWraper1 {
+                margin: 0px auto;
+                width: 700px;
+                height: 450px;
+                border: 1px dashed;
+            }
+
+            #imageBox {
+                margin: 10px auto;
+                width: 450px;
+            }
+
+            #imageBox a {
+                outline: none;
+                display: none;
+            }
+
+            #imageBox img {
+                border: 0px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div id="imageBox">
+            <a href="#/"><img src="img/img1.png"></a>
+            <a href="#"><img src="img/img2.png"></a>
+            <a href="#"><img src="img/img3.png"></a>
+            <a href="#"><img src="img/img4.png"></a>
+            <a href="#"><img src="img/img5.png"></a>
+            <a href="#/"><img src="img/img1.png"></a>
+            <a href="#"><img src="img/img2.png"></a>
+            <a href="#"><img src="img/img3.png"></a>
+            <a href="#"><img src="img/img4.png"></a>
+            <a href="#"><img src="img/img5.png"></a>
+        </div>
+
+        <div class="jStackBtn">
+            <input type="button" id="prev" value="&lt;" />
+            <input type="button" id="next" value="&gt;" />
+            <input type="button" id="shuffle" value="shuffle" />
+        </div>
+        <div style="clear:both"></div>
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/jStack.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            var options = {
+                isClickAnimation : true,
+                isPositionRandom : true,
+                durationOut : 300,
+                durationIn : 200,
+                easingOut : "easeInOutBack",
+                easingIn : "easeOutBounce",
+                moveLeft : 250,
+                moveTop : 150,
+                opacityOut : 0.6,
+                opacityIn : 1,
+                delay : 10,
+                direction : "next",
+                callback : function() {
+                }
+            };
+            $(window).bind("load", function() {
+                // jStack
+                var jstack = $("#imageBox").jStack(options);
+                $("#next").click(function() {
+                    jstack.next();
+                });
+                $("#prev").click(function() {
+                    jstack.prev();
+                });
+                $("#shuffle").click(function() {
+                    jstack.shuffle();
+                });
+            });
+
+        </script>
+    </body>
+</html>
