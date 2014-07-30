@@ -318,10 +318,10 @@
         <td>否</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>51</td>
+        <td>/jquery.artZoom插件</td>
+        <td>jquery.artZoom插件</td>
+        <td>否</td>
     </tr>
      <tr>
         <td></td>
