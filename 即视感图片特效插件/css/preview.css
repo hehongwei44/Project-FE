@@ -1,0 +1,531 @@
+    /*
+
+     Theme Name: Ken Burns Slider
+     Description: custom jQuery slide plugin for codecanyon.net
+     Theme Owner: pixelentity
+     File: Preview css file
+     Designers/Developers : Fabio Cairo aka bitfade & Donagh O'Keeffe aka iamdok 
+     Web:   http://www.iamdok.com
+            http://bitfade.com
+            http://themeforest.net/user/pixelentity
+        
+     */
+    
+    
+    /* clear fix hack */
+    .clearfix:after
+    {
+        content: ".";
+        display:block;
+        height:0;
+        visibility:hidden;
+        clear:both;
+    }
+    
+
+    /* GENERIC STYLES */
+
+    body
+    {
+        text-align: left;
+        font-family: helvetica, arial, sans-serif;
+        line-height: 18px;
+        color:#555555;
+        
+    }
+    
+    h1{
+        color: #ffffff;
+        font-size:9px;
+        word-spacing:2px;
+        font-weight:normal;
+        font-family: helvetica, arial, sans-serif;
+        margin-top:40px;
+    }
+	
+	h2{
+		color: #ffffff;
+		font-size:14px;
+        font-weight:bold;
+        font-family: 'Droid Sans', arial, serif;
+	}
+    
+    a:hover{
+        color:#809931;
+    }
+    
+    a:focus, a:active , input:focus, input:active{
+    outline: 0px;
+    -moz-outline-style: none;
+    } 
+    
+    ul{
+        list-style:none;
+        margin:0 0;
+    }
+    
+    /* END GENERIC STYLES */
+	#buyNow{
+		position:absolute;
+		top:0;
+		right:0;
+		width:78px;
+		height:74px;
+		z-index:10000;
+	}
+	
+	#buyNow a{
+		display:block;
+		width:78px;
+		height:74px;
+	}
+	
+	#buyNow a:hover{
+		/*cursor:pointer;*/
+	}
+	
+	#annotation{
+		position:relative;
+		overflow:visible;
+	}
+	
+	#wrapper{
+		position:relative;
+        padding-top:130px;
+        width:920px;
+        height:575px;
+        overflow:visible;
+    }
+	
+	h1.title{
+		position:absolute;
+		top:0;
+		left:375px;
+		text-indent:-9999px;
+		margin-top:16px;
+		width:170px;
+		height:70px;
+	}
+	
+	#menuWrapper{
+		position:relative;
+		overflow:hidden;
+		clear:both;
+	}
+	
+	#menuWrapper h2{
+		position:absolute;
+		text-indent:-9999px;
+		left:360px;
+		top:75px;
+		width:170px;
+		height:70px;
+	}
+	
+	#menu{
+		padding-top:150px;
+		text-indent:-9999px;
+		margin-bottom:100px;
+		overflow:hidden;
+		margin-left:0;
+	}
+	
+	#menu>li{
+		position:relative;
+		float:left;
+		margin-left:10px;
+		width:153px;
+		padding:10px;
+		-moz-border-radius: 6px; 
+        -webkit-border-radius: 6px; 
+        border-radius: 6px;
+		overflow:visible;
+	}
+	
+	#menu a{
+		text-decoration:none;
+	}
+	
+	#menu li a{
+		width:173px;
+		height:327px;
+		position:absolute;
+		top:0;
+		left:0;
+		display:block;
+		text-decoration:none;
+	}
+	
+	#menu a:hover{
+		text-decoration:none;
+	}
+	
+	#menu li.first{
+		margin-left:7px;
+	}
+	
+	#menu li.first a{
+		background: url("../img/menu1w.png") no-repeat 10px 10px;
+		margin-left:0;	
+	}
+	
+	#menu li.second a{
+		background: url("../img/menu5w.png") no-repeat 10px 10px;
+	}
+	
+	#menu li.third a{
+		background: url("../img/menu2w.png") no-repeat 10px 10px;
+	}
+	
+	#menu li.fourth a{
+		background: url("../img/menu3w.png") no-repeat 10px 10px;
+	}
+	
+	#menu li.fifth a{
+		background: url("../img/menu1aw_new.png") no-repeat 10px 10px;
+	}
+	
+	#menu li.fifth li.new{
+		color:#ffd321;
+		font-weight:bold;
+	}
+	
+	#menu li.selected:hover{
+		cursor:default;
+	}
+	
+	#menu>li:hover{
+		cursor:pointer;
+	}
+	
+	#menu .selected span.current{
+		position:absolute;
+		width:155px;
+		height:48px;
+		background:url("../img/selected_blk.png") no-repeat 0 0;
+		top:-42px;
+		left:10px;
+	}
+	
+	#menu ul{
+		margin-top:105px;
+		height:220px;
+		text-indent:0;
+	}
+	
+	#menu ul li{
+		color:#fff;
+		background:url("../img/bullet.png") no-repeat 0 50%;
+		font-size:13px;
+		line-height:22px;
+		font-weight:normal;
+		font-family: 'Droid Sans',arial, serif !important;
+		margin-left:10px;
+		padding-left:10px;
+	}
+	
+	#menu ul li.subtitle{
+		background:none;
+		font-size:14px;
+		font-weight:bold !important;
+		padding-left:0;
+		margin-bottom:15px;
+	}
+	
+	/*----------------------------------------------------------------------*/
+	
+	/*PREVIEW 1*/
+    
+    #preview1{
+		background:#9b8c80 url("../img/bg_tile.jpg") repeat-x;
+        height:100%;
+    }
+	
+	#preview1 #annotation{
+		background: url("../img/blank.png") no-repeat center top;
+	}
+	
+	#preview1 h1.title{
+		background:url("../img/title1.png") no-repeat;
+	}
+	
+	#preview1 #menuWrapper h2{
+		background:url("../img/menu_title1.png") no-repeat;
+	}
+	
+	#preview1 a {
+		text-decoration: none;
+	}
+	
+	/*font replacement for full width slider caption*/
+	#preview1 .peKenBurns .peKb_slides .peKb_caption h1{
+		font-weight:bold !important;
+		font-size:16px !important;
+		font-family: 'Droid Sans', arial, serif !important;
+	}
+	
+	/*menu item colors*/
+	#preview1 #menu>li{
+		background-color:#6d635b;
+	}
+	
+	#preview1 #menu>li.selected{
+		background-color:#4a433e;
+	}
+	
+	#preview1 #menu>li:hover{
+		background-color:#4a433e;
+	}
+	
+	
+	/*----------------------------------------------------------------------*/
+	
+	/*PREVIEW 2*/
+	
+    #preview2{
+		background:#d6d6d6 url("../img/bg_tile_02.jpg") repeat-x;
+        height:100%;
+    }
+	
+	#preview2 #annotation{
+		background: url("../img/blank.png") no-repeat center top;
+	}
+	
+	#preview2 h1.title{
+		background:url("../img/title2.png") no-repeat;
+	}
+	
+	#preview2 #menuWrapper h2{
+		background:url("../img/menu_title2.png") no-repeat;
+	}
+	
+	#preview2 .peKenBurns .peKb_slides .peKb_caption h1{
+		font-weight:bold !important;
+		font-size:16px !important;
+		font-family: 'Droid Sans', arial, serif !important;
+	}
+	
+	#preview2 a {
+		text-decoration: none;
+	}
+	
+	/*menu item colors*/
+	#preview2 #menu>li{
+		background-color:#888888;
+	}
+	
+	#preview2 #menu>li.selected{
+		background-color:#555555;
+	}
+	
+	#preview2 #menu>li:hover{
+		background-color:#555555;
+	}
+	
+	/* set border size to 0px */
+	#preview2 .peKenBurns .peKb_slides {
+		padding: 0px;
+		-moz-border-radius: 0px; 
+		-webkit-border-radius: 0px; 
+		border-radius: 0px;
+	}
+	
+	/* set controls margins to 0px */
+	#preview2 .peKenBurns .peKb_controlsInner .peKb_holder{
+		margin: 0px;
+	}
+	
+	#preview2 .peKenBurns{
+		margin-bottom:50px;
+	}
+    
+    /*----------------------------------------------------------------------*/
+	
+	/*PREVIEW 3*/
+	
+    #preview3{
+        background:#9b8c80 url("../img/bg_tile.jpg") repeat-x;  
+        height:100%;
+    }
+	
+	#preview3 #annotation{
+		background: url("../img/blank.png") no-repeat center top;
+	}
+	
+	#preview3 h1.title{
+		background:url("../img/title3.png") no-repeat;
+	}
+	
+	#preview3 #menuWrapper h2{
+		background:url("../img/menu_title3.png") no-repeat;
+	}
+	
+	#preview3 a {
+		text-decoration: none;
+	}
+	
+	/*menu item colors*/
+	#preview3 #menu>li{
+		background-color:#6d635b;
+	}
+	
+	#preview3 #menu>li.selected{
+		background-color:#4a433e;
+	}
+	
+	#preview3 #menu>li:hover{
+		background-color:#4a433e;
+	}
+	
+	
+    #preview3 #wrapper div.second{
+        margin-left:60px;
+    }
+    
+    #preview3 .peKenBurns{
+       float:left;
+    }
+    
+    /*----------------------------------------------------------------------*/
+	
+	/*PREVIEW 4*/
+	
+    #preview4{
+        background:#676767 url("../img/bg_tile_dark_01.jpg") repeat-x;  
+        height:100%;
+    }
+	
+	#preview4 #annotation{
+		background: url("../img/blank.png") no-repeat center top;
+	}
+	
+	#preview4 .peKenBurns .peKb_slides .peKb_caption h1{
+		font-weight:normal !important;
+		font-size:14px !important;
+		font-family: 'Droid Sans', arial, serif !important;
+	}
+	
+	#preview4 h1.title{
+		background: url("../img/title4.png") no-repeat;
+	}
+	
+	#preview4 #menuWrapper h2{
+		background:url("../img/menu_title4.png") no-repeat;
+	}
+	
+	#preview4 a {
+		text-decoration: none;
+	}
+	
+	
+	
+	/*menu item colors*/
+	#preview4 #menu>li{
+		background-color:#222222;
+	}
+	
+	#preview4 #menu>li.selected{
+		background-color:#111111;
+	}
+	
+	#preview4 #menu>li:hover{
+		background-color:#111111;
+	}
+	
+	
+	/*custom styles for grid slider*/
+	
+	#preview4 .peKenBurns .peKb_slides {
+		padding: 8px;
+		-moz-border-radius: 5px; 
+		-webkit-border-radius: 5px; 
+		border-radius: 6px; 
+	}
+		
+	#preview4 .peKenBurns .peKb_slides .peKb_caption {
+		margin: 0px 5px 5px 5px;
+	}
+	
+	#preview4 .peKenBurns .peKb_slides .peKb_caption h1 {
+		font-weight:normal;
+		font-size: 12px;
+		padding-left:5px;
+	}
+	
+	#preview4 .peKenBurns .peKb_slides .peKb_caption .peKb_real {
+		padding: 5px;
+	}
+	
+	#preview4 #wrapper div.slider {
+		width:300px;
+		height:240px;
+		overflow:hidden;
+		float:left;
+		margin-left:10px;
+		margin-top:-26px;
+	}
+	
+	/*reduce the height of the image div to match height with shadow*/
+	#preview4 #wrapper div.noShadow .peKenBurns{
+		height:204px;
+	}
+    
+	#preview4 #wrapper div.edge{
+		margin-left:0;
+	}
+	
+	#preview4 #wrapper div.top{
+		margin-top:0;
+	}
+    
+	
+	/*----------------------------------------------------------------------*/
+	
+	/*PREVIEW 5*/
+	
+    #preview5{
+		background:#f6f6f6 url("../img/bg_tile_neutral_light1.jpg") repeat-x;
+        height:100%;
+    }
+	
+	#preview5 h1.title{
+		background:url("../img/title5.png") no-repeat;
+	}
+	
+	#preview5 #menuWrapper h2{
+		background:url("../img/menu_title5.png") no-repeat;
+	}
+	
+	#preview5 a {
+		text-decoration: none;
+	}
+	
+	#preview5 .peKenBurns .peKb_slides .peKb_caption h1{
+		font-weight:bold !important;
+		font-size:16px !important;
+		font-family: 'Droid Sans', arial, serif !important;
+	}
+	
+	/*menu item colors*/
+	#preview5 #menu>li{
+		background-color:#666666;
+	}
+	
+	#preview5 #menu>li.selected{
+		background-color:#333333;
+	}
+	
+	#preview5 #menu>li:hover{
+		background-color:#333333;
+	}
+	
+    #preview5 .peKenBurns{
+		margin-left:108px;
+	}
+    
+    
+    
+    
+    
+    
+    

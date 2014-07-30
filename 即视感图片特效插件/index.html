@@ -1,0 +1,96 @@
+﻿<!DOCTYPE HTML>
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>jquery图片焦点图插件_带有提示缩略图_可以放视频等</title>
+        <!-- main stylesheets -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/text.css" />
+        <link rel="stylesheet" href="css/960.css" />
+        <link rel="stylesheet" href="css/preview.css" />
+        <link rel="stylesheet" href="js/pe.kenburns/themes/default/skin.min.css" />
+
+        <!-- import jQuery -->
+        <script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
+
+        <script type="text/javascript" src="js/pe.kenburns/jquery.pixelentity.kenburnsSlider.min.js"></script>
+
+        <!--specify size of slider-->
+        <style>
+            .peKenBurns {
+                width: 920px;
+                height: 400px;
+            }
+        </style>
+
+        <script>
+            jQuery(function($) {
+                $(".peKenBurns").peKenburnsSlider({
+                    externalFont : true
+                })
+            })
+
+        </script>
+
+    </head>
+
+    <body id="preview1" class="clearfix">
+        <div id="annotation">
+            <div id="wrapper" class="container_16">
+
+                <!--start peKenBurns slider-->
+                <div class="peKenBurns peNoJs" data-autopause="image" data-thumb="enabled" data-mode="kb" data-controls="always" data-shadow="enabled" data-logo="enabled">
+
+                    <div class="peKb_active" data-delay="5" data-thumb="img/thumbs/kb_01.jpg">
+                        <a href="#" ><img src="img/kb_01.jpg" alt="Banner Image 1" /></a>
+                        <h1>HI &amp; WELCOME TO THE "ESTRO" SLIDER BY PIXELENTITY</h1>
+                    </div>
+
+                    <!-- lazy loading active -->
+                    <div data-delay="5" data-thumb="img/thumbs/kb_00.jpg">
+                        <a class="video hd autoplay loop skiptonext" href="http://www.kaiwo123.com/"><img src="img/blank.png" data-src="img/kb_00.jpg" alt="Banner Image 1" /></a>
+                        <h1>A KICK-ASS JQUERY PLUGIN WITH KEN BURNS &amp; 2-WAY SWIPE TRANSITIONS</h1>
+                    </div>
+
+                    <!-- lazy loading active -->
+                    <div data-delay="5" data-thumb="img/thumbs/kb_02.jpg">
+                        <img src="img/blank.png" data-src="img/kb_02.jpg" alt="Banner Image 1" />
+                        <h1>FINE TUNED, SLEEK &amp; SMOOTH, THIS SLIDER WILL IMPRESS YOUR VISITORS</h1>
+                    </div>
+
+                    <!-- lazy loading active -->
+                    <div data-delay="5" data-thumb="img/thumbs/kb_03.jpg">
+                        <img src="img/blank.png" data-src="img/kb_03.jpg" alt="Banner Image 1" />
+                        <h1>SUPPORTS ANIMATED CAPTIONS, YOUTUBE &amp; VIMEO VIDEO, SINGLE PAGE MULTI-USE</h1>
+                    </div>
+
+                    <!-- lazy loading active -->
+                    <div data-delay="5" data-thumb="img/thumbs/kb_04.jpg">
+                        <a class="video hd autoplay loop skiptonext" href="http://www.kaiwo123.com/"><img src="img/blank.png" data-src="img/kb_04.jpg" alt="Banner Image 1" /></a>
+                        <h1>CHOOSE FROM MULTIPLE SKINS TO SUIT YOUR OWN STYLE</h1>
+                    </div>
+
+                    <!-- lazy loading active -->
+                    <div data-delay="5" data-thumb="img/thumbs/kb_05.jpg">
+                        <img src="img/blank.png" data-src="img/kb_05.jpg" alt="Banner Image 1" />
+                        <h1>BONUS MINIMAL THUMBNAIL MODE WITH KEN BURNS ROLLOVER EFFECT </h1>
+                    </div>
+
+                    <!-- lazy loading active -->
+                    <div data-delay="5" data-thumb="img/thumbs/kb_06.jpg">
+                        <img src="img/blank.png" data-src="img/kb_06.jpg" alt="Banner Image 1" />
+                        <h1>GORGEOUS ANIMATED TIMER INTEGRATED INTO THE CURRENT SLIDE BUTTON</h1>
+                    </div>
+                </div>
+                <!--end peKenBurns slider -->
+            </div>
+            <!--end wrapper-->
+        </div>
+        <!--end annotation-->
+    </body>
+</html>
