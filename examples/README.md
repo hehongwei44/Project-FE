@@ -35,4 +35,9 @@
         <td>/gotoBack.html</td>
         <td>返回顶部特效</td>
     </tr>
+    <tr>
+        <td>7</td>
+        <td>/example.html</td>
+        <td>仿微博信息展示效果</td>
+    </tr>
 </table>
