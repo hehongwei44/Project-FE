@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* Animated Flip Down Clock Style */
+
+body{
+	
+}
+
+#wrapper{
+	position:absolute;
+	top: 100px;
+	left:400px;
+}
+
+#front{
+	position:absolute;
+	top:0px;
+}
+
+
+
+#upperHalf, #upperHalfBack{
+	vertical-align:bottom;
+}
+
+#lowerHalf, #lowerHalfBack{
+	vertical-align:top;
+}
+
+
+
+
+#upperHalf img{
+	position:relative;
+	height:64px;
+	vertical-align:bottom;
+	visibility:visible;
+}
+
+#lowerHalf img{
+	position:relative;
+	height:64px;
+	vertical-align:top;
+	visibility:visible;
+}
+
+	
+#lowerHalfBack img{
+	position:relative;
+	vertical-align:top;
+}
+
+#upperHalfBack img{
+	position:relative;
+	vertical-align:bottom;
+}
+
+#hoursUp, #hoursDown, #hoursUpBack, #hoursDownBack{
+	width:125px;
+}
+
+#minutesUpLeft, #minutesUpRight, #minutesDownLeft, #minutesDownRight,
+#minutesUpLeftBack, #minutesUpRightBack, #minutesDownLeftBack, #minutesDownRightBack,
+#secondsUpLeft, #secondsUpRight, #secondsDownLeft, #secondsDownRight,
+#secondsUpLeftBack, #secondsUpRightBack, #secondsDownLeftBack, #secondsDownRightBack{
+	width:64px;
+}
+	
+
+
+	
+
