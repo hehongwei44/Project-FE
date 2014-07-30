@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>QQ相册展示_qq新闻图片相册展示特效</title>
+<SCRIPT src="speed_v1.9-min.js"></SCRIPT>
+<LINK rel="stylesheet" type="text/css" href="hdPic_new_v1.0.2.css" media=screen />
+</head>
+
+<body>
+<SCRIPT>function ResumeError() {return true;}window.onerror = ResumeError;</SCRIPT>
+
+<DIV class="main">
+<DIV id="C-Main-Article-QQ" class="mod-left">
+  <DIV class=bd>
+<DIV class=Line></DIV>
+<DIV id=Cnt-Main-Article-QQ>
+
+<STYLE>#contTxt P {
+	FONT-SIZE: 14px
+}
+</STYLE>
+
+<DIV style="BACKGROUND: url(ajax-loader.gif) no-repeat center center" id="photo-warp">
+<DIV style="VISIBILITY: hidden" id="photo-warp-inner" class="photo-warp-inner">
+<DIV id="mainArea" class="mainArea">
+	<DIV id=preArrow title=上一张 ?></DIV>
+	<DIV id=nextArrow title=下一张 ?></DIV>
+	<DIV id=gotolast></DIV>
+	<DIV id=gotolast_inner>	<P>已经浏览到最后一张，您可以</P><A id=rePlay 	href="#">重新欣赏</A><A id=urlgoto 	href="#">进入图片站</A> </DIV>
+	<A id=bigHref 	href="javascript:void(0);"><IMG 	style="MARGIN: 0px auto; VISIBILITY: hidden; CURSOR: pointer" id=Display 	title=点击浏览下一张 src="ajax-loader.gif" 	onErr="ajax-loader.gif"></A> 
+	<DIV style="DISPLAY: none" id=loading></DIV>
+	<DIV style="DISPLAY: none" id=picTips class="picTips picTips_png">
+		
+		<DIV id=titleArea class=titleArea></DIV>
+	</DIV>
+	<DIV id=buttonArea class=buttonArea title=隐藏图片注释 	href="javascript:void(0);">隐藏</DIV>
+	<DIV style="DISPLAY: none" id=openTips class=openTips 	title=打开图片注释>查看图注</DIV>
+</DIV>
+<DIV class=blank></DIV>
+<DIV class=photoList-wrap><A id=Up class=photo-Up onfocus=this.blur() title=向前 
+href="javascript:void(0)"></A>
+<DIV id=photo-List class=photo-List>
+<UL id=smallPhoto></UL>
+<DIV id=noDiv></DIV></DIV><A id=Down class=photo-Down onfocus=this.blur() 
+title=向后 href="javascript:void(0)"></A></DIV>
+<DIV id=scrollbar><A id=scrollbar-in title=拖动工具条以快速查看图片 
+href="javascript:void(0)"></A></DIV></DIV></DIV>
+<DIV id=flashCff></DIV>
+<DIV id=contTxt></DIV>
+<DIV id=PGViframe></DIV>
+<SCRIPT> 
+//JS版本
+var GroupjsUrl = "hdPic_new_pack_v1.1.8.js";//小图缓动版本1.1.6
+</SCRIPT>
+<!--[if !IE]>|xGv00|2041e640eb9e7c59ec31c7864b4ba592<![endif]-->
+<SCRIPT>
+var isLoadData = false;
+var photoJson = [{showtit:'两辆车运来20万1元纸币（图片来自网络）',showtxt:'',smallpic:'36256058.jpg','bigpic':'36256054.jpg'},{showtit:'堆积成山的纸币。（图片来自网络）',showtxt:'',smallpic:'36256058.jpg','bigpic':'36256054.jpg'},{showtit:'饭店工作人员清点钱数。（图片来自网络）',showtxt:'',smallpic:'36256058.jpg','bigpic':'36256054.jpg'},{showtit:'堆积成山的纸币。（图片来自网络）',showtxt:'',smallpic:'36256058.jpg','bigpic':'36256054.jpg'},{showtit:'饭店工作人员清点钱数。（图片来自网络）',showtxt:'',smallpic:'36256058.jpg','bigpic':'36256054.jpg'},{showtit:'饭店工作人员清点钱数。（图片来自网络）',showtxt:'',smallpic:'36256058.jpg','bigpic':'36256054.jpg'},{showtit:'“怕你们数不完耽误我回家”。（图片来自网络）',showtxt:'',smallpic:'36256058.jpg','bigpic':'36256054.jpg'},{showtit:'堆积成山的纸币。（图片来自网络）',showtxt:'',smallpic:'36256058.jpg','bigpic':'36256054.jpg'},{showtit:'传说中的“煤老板”。（图片来自网络）',showtxt:'',smallpic:'36256058.jpg','bigpic':'36256054.jpg'},{showtit:'饭店工作人员清点钱数。（图片来自网络）',showtxt:'',smallpic:'36256058.jpg','bigpic':'36256054.jpg'}];
+isLoadData = true;
+</SCRIPT>
+
+<SCRIPT>
+function GroupLoadJs(file,callback) {
+    var head = document.getElementsByTagName('head')[0];
+    var js = document.createElement('script');
+    js.setAttribute('type','text/javascript');
+    js.setAttribute('src',file);
+    head.appendChild(js);
+    js.onload = js.onreadystatechange = function() {
+        if (js.readyState && js.readyState != 'loaded' && js.readyState != 'complete') return;
+        js.onreadystatechange = js.onload = null;
+        if (callback) callback();
+    }
+    return false;
+}
+GroupLoadJs(GroupjsUrl,function(){
+  if(isLoadData){
+  picShow.Picsite="";
+  picShow.lastUrl="http://www.kaiwo123.com/";//下一组图片地址
+                  picShow.defatLink = "http://www.kaiwo123.com/";
+                  picShow.SiteName = "news";
+  picShow.Loader();
+  picShow.$("photo-warp-inner").style.visibility = "visible";
+  }
+})
+window.onload = function(){
+  picShow.setTit();
+  picShow.viewJump(0);
+}</SCRIPT>
+<!--link-->
+</DIV>
+
+</DIV>
+
+
+
+
+</DIV>
+</DIV>
+</body>
+</html>

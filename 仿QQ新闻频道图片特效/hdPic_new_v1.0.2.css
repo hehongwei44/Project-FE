@@ -1,0 +1,354 @@
+﻿BODY {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DIV {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DT {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DD {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+OL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+LI {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H1 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H2 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H4 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H5 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H6 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+PRE {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+FORM {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+FIELDSET {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+INPUT {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+TEXTAREA {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+BLOCKQUOTE {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+TH {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+TD {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+TABLE {
+	BORDER-SPACING: 0; BORDER-COLLAPSE: collapse
+}
+FIELDSET {
+	BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+IMG {
+	BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+ADDRESS {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+CAPTION {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+CITE {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+CODE {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+DFN {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+EM {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+STRONG {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+TH {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+VAR {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+OL {
+	LIST-STYLE-TYPE: none
+}
+UL {
+	LIST-STYLE-TYPE: none
+}
+CAPTION {
+	TEXT-ALIGN: left
+}
+TH {
+	TEXT-ALIGN: left
+}
+H1 {
+	FONT-SIZE: 100%; FONT-WEIGHT: normal
+}
+H2 {
+	FONT-SIZE: 100%; FONT-WEIGHT: normal
+}
+H3 {
+	FONT-SIZE: 100%; FONT-WEIGHT: normal
+}
+H4 {
+	FONT-SIZE: 100%; FONT-WEIGHT: normal
+}
+H5 {
+	FONT-SIZE: 100%; FONT-WEIGHT: normal
+}
+H6 {
+	FONT-SIZE: 100%; FONT-WEIGHT: normal
+}
+Q:before {
+	CONTENT: ''
+}
+Q:after {
+	CONTENT: ''
+}
+ABBR {
+	BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+ACRONYM {
+	BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+BODY {
+	OVERFLOW-X: hidden; FONT: 12px/1.75 "宋体",arial,sans-serif
+}
+FIELDSET {
+	DISPLAY: inline
+}
+BUTTON {
+	LINE-HEIGHT: 1.2; VERTICAL-ALIGN: middle; CURSOR: pointer
+}
+STRONG {
+	FONT-WEIGHT: 800
+}
+IMG {
+	BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+ .main {
+	WIDTH: 650px; BACKGROUND: #fff; FLOAT: left; BORDER-TOP: #003795 2px solid
+}
+#photo-warp A {
+	TEXT-DECORATION: none
+}
+#photo-warp A:hover {
+	TEXT-DECORATION: underline
+}
+#photo-warp {
+	BORDER-BOTTOM: #ede9e9 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #ede9e9 1px solid; MARGIN: 0px auto; WIDTH: 608px; ZOOM: 1; BACKGROUND: #ffffff; FONT-SIZE: 12px; OVERFLOW: hidden; BORDER-TOP: #ede9e9 1px solid; BORDER-RIGHT: #ede9e9 1px solid
+}
+.photo-warp-inner {
+	MARGIN: 0px auto; WIDTH: 604px
+}
+.photo-warp-inner .leftArrow {
+	WIDTH: 27px; FLOAT: left
+}
+.photo-warp-inner .mainArea {
+	MARGIN-LEFT: 6px
+}
+.photo-warp-inner .rightArrow {
+	FLOAT: right
+}
+.photo-warp-inner .leftArrow .noClick {
+	MARGIN-TOP: 19px; WIDTH: 25px; DISPLAY: block; BACKGROUND: none transparent scroll repeat 0% 0%; HEIGHT: 380px; CURSOR: text
+}
+.photo-warp-inner .rightArrow .noClick {
+	MARGIN-TOP: 19px; WIDTH: 25px; DISPLAY: block; BACKGROUND: none transparent scroll repeat 0% 0%; HEIGHT: 380px; CURSOR: text
+}
+.photo-warp-inner .leftArrow .Click {
+	MARGIN-TOP: 19px; WIDTH: 25px; DISPLAY: block; BACKGROUND: url(lLink.png) no-repeat center center; HEIGHT: 380px
+}
+.photo-warp-inner .leftArrow .Click:hover {
+	MARGIN-TOP: 19px; WIDTH: 25px; DISPLAY: block; BACKGROUND: url(lHover.png) #fff no-repeat center center; HEIGHT: 380px
+}
+.photo-warp-inner .rightArrow .Click {
+	MARGIN-TOP: 19px; WIDTH: 25px; DISPLAY: block; BACKGROUND: url(rLink.png) no-repeat center center; HEIGHT: 380px
+}
+.photo-warp-inner .rightArrow .Click:hover {
+	MARGIN-TOP: 19px; WIDTH: 25px; DISPLAY: block; BACKGROUND: url(rHover.png) #fff no-repeat center center; HEIGHT: 380px
+}
+.photo-warp-inner .mainArea {
+	POSITION: relative; TEXT-ALIGN: center; MARGIN: 19px auto 0px; WIDTH: 570px; ZOOM: 1; OVERFLOW: hidden
+}
+.photo-warp-inner .picTips {
+	Z-INDEX: 300; POSITION: absolute; WIDTH: 570px; BOTTOM: 4px; ZOOM: 1; OVERFLOW: hidden; LEFT: 0px; _bottom: 4px
+}
+.photo-warp-inner .picTips_png {
+	BACKGROUND: url(touming3.png); _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='touming3.png'); _background: none
+}
+#Cnt-Main-Article-QQ .picTips P {
+	LINE-HEIGHT: 14px
+}
+.photo-warp-inner .titleArea {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 4px; MARGIN-TOP: 11px; WIDTH: 484px; FLOAT: left; COLOR: #e3e3e3; MARGIN-LEFT: 10px; _display: inline
+}
+.photo-warp-inner .titleArea .bigTit {
+	COLOR: #e3e3e3; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+#Cnt-Main-Article-QQ P.phot-desp {
+	MARGIN: 0px auto
+}
+#Cnt-Main-Article-QQ P.phot-tit {
+	MARGIN: 0px auto
+}
+.photo-warp-inner .buttonArea {
+	Z-INDEX: 303; POSITION: absolute; PADDING-LEFT: 15px; WIDTH: 25px; BOTTOM: 9px; BACKGROUND: url(btnDown3.png) no-repeat 1px 7px; FLOAT: right; HEIGHT: 15px; COLOR: #e3e3e3; CURSOR: pointer; RIGHT: 4px; PADDING-TOP: 0px
+}
+.photo-warp-inner .openTips {
+	Z-INDEX: 301; BORDER-BOTTOM: #7a7a7a 1px solid; POSITION: absolute; TEXT-ALIGN: center; BORDER-LEFT: #7a7a7a 1px solid; LINE-HEIGHT: 16px; PADDING-LEFT: 1px; WIDTH: 49px; BOTTOM: 9px; BACKGROUND: #3e3e3e; HEIGHT: 14px; COLOR: #fff; BORDER-TOP: #7a7a7a 1px solid; CURSOR: pointer; RIGHT: 2px; BORDER-RIGHT: #7a7a7a 1px solid; PADDING-TOP: 2px
+}
+.photo-warp-inner #loading {
+	Z-INDEX: 999; POSITION: absolute; LINE-HEIGHT: 100px; WIDTH: 100px; HEIGHT: 100px; COLOR: #fff; FONT-SIZE: 12px; TOP: 150px; LEFT: 225px
+}
+.photoList-wrap {
+	MARGIN: 0px auto 7px; WIDTH: 574px; BACKGROUND: url(ft-bg.png) repeat-x 50% top; HEIGHT: 85px; CLEAR: both; OVERFLOW: hidden
+}
+.photo-Up-noclick {
+	MARGIN-TOP: 20px; WIDTH: 13px; BACKGROUND: url(split_v1_0.png) no-repeat 0px -56px; FLOAT: left; HEIGHT: 43px; MARGIN-LEFT: 5px; CURSOR: text; _display: inline
+}
+.photo-Up {
+	MARGIN-TOP: 20px; WIDTH: 13px; BACKGROUND: url(split_v1_0.png) no-repeat -16px -56px; FLOAT: left; HEIGHT: 43px; MARGIN-LEFT: 5px; _display: inline
+}
+.photo-Up:hover {
+	MARGIN-TOP: 20px; WIDTH: 13px; BACKGROUND: url(split_v1_0.png) no-repeat -82px -56px; FLOAT: left; HEIGHT: 43px; MARGIN-LEFT: 5px; _display: inline
+}
+.photo-Down-noclick {
+	MARGIN-TOP: 20px; WIDTH: 13px; BACKGROUND: url(split_v1_0.png) no-repeat -33px -56px; FLOAT: right; HEIGHT: 43px; CURSOR: text; MARGIN-RIGHT: 5px; _display: inline
+}
+.photo-Down {
+	MARGIN-TOP: 20px; WIDTH: 13px; BACKGROUND: url(split_v1_0.png) no-repeat -50px -56px; FLOAT: right; HEIGHT: 43px; MARGIN-RIGHT: 5px; _display: inline
+}
+.photo-Down:hover {
+	MARGIN-TOP: 20px; WIDTH: 13px; BACKGROUND: url(split_v1_0.png) no-repeat -66px -56px; FLOAT: right; HEIGHT: 43px; MARGIN-RIGHT: 5px; _display: inline
+}
+#photo-List {
+	POSITION: relative; MARGIN-TOP: 7px; WIDTH: 528px; ZOOM: 1; DISPLAY: inline; FLOAT: left; HEIGHT: 78px; MARGIN-LEFT: 6px; OVERFLOW: hidden
+}
+#smallPhoto {
+	POSITION: absolute; DISPLAY: block; TOP: 0px; LEFT: 0px
+}
+#photo-List LI {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 88px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 78px; PADDING-TOP: 0px
+}
+#photo-List LI DIV {
+	TEXT-ALIGN: center; MARGIN: 0px auto; WIDTH: 84px; DISPLAY: block; BACKGROUND: #eaeaea; HEIGHT: 78px; OVERFLOW: hidden; PADDING-TOP: 1px
+}
+#photo-List LI SPAN.imgs {
+	TEXT-ALIGN: center; LINE-HEIGHT: 60px; MARGIN: 0px auto; WIDTH: 82px; DISPLAY: block; BACKGROUND: #f3f3f4; HEIGHT: 60px
+}
+#photo-List LI IMG {
+	MARGIN-TOP: 1px; HEIGHT: 58px; CURSOR: pointer
+}
+#photo-List LI SPAN.titles {
+	LINE-HEIGHT: 16px; MARGIN-TOP: 1px; WIDTH: 100%; DISPLAY: block; FONT-FAMILY: "Arial"; BACKGROUND: #eaeaea; HEIGHT: 16px; COLOR: #797979; FONT-SIZE: 9px; CURSOR: pointer
+}
+#photo-List LI.photo-Select DIV {
+	TEXT-ALIGN: center; MARGIN: 0px auto; WIDTH: 84px; DISPLAY: block; BACKGROUND: #898989; HEIGHT: 78px; OVERFLOW: hidden; PADDING-TOP: 1px
+}
+#photo-List LI.photo-Select SPAN.titles {
+	BACKGROUND: #898989; COLOR: #fff; FONT-SIZE: 12px; CURSOR: pointer
+}
+#photo-List LI EM {
+	DISPLAY: none
+}
+#photo-List LI.photo-Select EM {
+	DISPLAY: inline-block
+}
+#photo-List LI A.lasturl {
+	BORDER-BOTTOM: #eaeaea 1px solid; BORDER-LEFT: #eaeaea 1px solid; PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; BACKGROUND: #f2f2f2; BORDER-TOP: #eaeaea 1px solid; BORDER-RIGHT: #eaeaea 1px solid; PADDING-TOP: 3px
+}
+.photo-warp-inner .blank {
+	LINE-HEIGHT: 1px; WIDTH: 100%; HEIGHT: 5px; CLEAR: both; FONT-SIZE: 1px
+}
+#MorePic {
+	LINE-HEIGHT: 22px; WIDTH: 610px; MARGIN-BOTTOM: 10px; BACKGROUND: #f5f8fd; HEIGHT: 22px
+}
+#MorePic A:link {
+	LINE-HEIGHT: 22px; PADDING-LEFT: 12px; BACKGROUND: url(more.png) no-repeat left center; FLOAT: right; COLOR: #8896b1; FONT-SIZE: 12px; MARGIN-RIGHT: 10px; _display: inline
+}
+#MorePic A:visited {
+	LINE-HEIGHT: 22px; PADDING-LEFT: 12px; BACKGROUND: url(more.png) no-repeat left center; FLOAT: right; COLOR: #8896b1; FONT-SIZE: 12px; MARGIN-RIGHT: 10px; _display: inline
+}
+#Main-Article-QQ #C-Main-Article-QQ .bd {
+	OVERFLOW: visible
+}
+#C-Main-Article-QQ .bd {
+	WIDTH: 608px
+}
+#Cnt-Main-Article-QQ {
+	PADDING-TOP: 18px
+}
+#C-Main-Article-QQ .Line {
+	DISPLAY: none
+}
+#contTxt P {
+	TEXT-INDENT: 2em
+}
+#gotolast {
+	Z-INDEX: 555; BORDER-BOTTOM: #fff 1px solid; POSITION: absolute; FILTER: alpha(opacity=70); BORDER-LEFT: #fff 1px solid; WIDTH: 230px; DISPLAY: none; BACKGROUND: #000; HEIGHT: 74px; BORDER-TOP: #fff 1px solid; TOP: 0px; BORDER-RIGHT: #fff 1px solid; -moz-opacity: 0.7; opacity: 0.7
+}
+#gotolast_inner {
+	Z-INDEX: 556; POSITION: absolute; LINE-HEIGHT: 22px; WIDTH: 230px; DISPLAY: none; HEIGHT: 74px; COLOR: #fff; TOP: 0px
+}
+#gotolast_inner P {
+	LINE-HEIGHT: 33px; MARGIN: 0px auto
+}
+#gotolast_inner A:link {
+	BORDER-BOTTOM: #fff 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #fff 1px solid; WIDTH: 85px; DISPLAY: block; FLOAT: left; COLOR: #fff; MARGIN-LEFT: 22px; BORDER-TOP: #fff 1px solid; BORDER-RIGHT: #fff 1px solid; _display: inline
+}
+#gotolast_inner A:visited {
+	BORDER-BOTTOM: #fff 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #fff 1px solid; WIDTH: 85px; DISPLAY: block; FLOAT: left; COLOR: #fff; MARGIN-LEFT: 22px; BORDER-TOP: #fff 1px solid; BORDER-RIGHT: #fff 1px solid; _display: inline
+}
+#gotolast_inner A:hover {
+	BORDER-BOTTOM: #e9e9e9 1px solid; BORDER-LEFT: #e9e9e9 1px solid; COLOR: #e9e9e9; BORDER-TOP: #e9e9e9 1px solid; BORDER-RIGHT: #e9e9e9 1px solid
+}
+#mainArea #preArrow {
+	Z-INDEX: 2; POSITION: absolute; FILTER: Alpha(Opacity=0); WIDTH: 50%; BACKGROUND: #fff; HEIGHT: 100%; TOP: 0px; LEFT: 0px; opacity: 0
+}
+#mainArea #nextArrow {
+	Z-INDEX: 2; POSITION: absolute; FILTER: Alpha(Opacity=0); WIDTH: 50%; BACKGROUND: #fff; HEIGHT: 100%; TOP: 0px; RIGHT: 0px; opacity: 0
+}
+#scrollbar {
+	POSITION: relative; MARGIN: 10px auto; WIDTH: 570px; BACKGROUND: url(scrollBgline.png) repeat-x; HEIGHT: 13px
+}
+#scrollbar A {
+	POSITION: absolute; WIDTH: 142px; DISPLAY: block; BACKGROUND: url(scrollBg.png) no-repeat; HEIGHT: 13px; OVERFLOW: hidden; CURSOR: e-resize; LEFT: 0px
+}
+#noDiv {
+	POSITION: absolute; FILTER: alpha(opacity=0); WIDTH: 528px; DISPLAY: none; BACKGROUND: #fff; HEIGHT: 78px; OVERFLOW: hidden; TOP: 0px; LEFT: 0px; opacity: 0
+}
