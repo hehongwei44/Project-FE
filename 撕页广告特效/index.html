@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>jQuery+css带阴影的撕页广告效果_书角广告特效</title>
+
+
+<SCRIPT src="http://www.kaiwo123.com/inc/jquery.js" type=text/javascript></SCRIPT>
+<SCRIPT type=text/javascript> 
+$(document).ready(function(){
+
+//Page Flip on hover
+
+	$("#pageflip").hover(function() {
+		$("#pageflip img , .msg_block").stop()
+			.animate({
+				width: '307px', 
+				height: '319px'
+			}, 500); 
+		} , function() {
+		$("#pageflip img").stop() 
+			.animate({
+				width: '50px', 
+				height: '52px'
+			}, 220);
+		$(".msg_block").stop() 
+			.animate({
+				width: '50px', 
+				height: '50px'
+			}, 200);
+	});
+
+	
+});
+</SCRIPT>
+
+<STYLE type=text/css>
+IMG {BEHAVIOR: url(iepngfix.htc)}
+#pageflip {RIGHT: 0px; FLOAT: right; POSITION: relative; TOP: 0px}
+#pageflip IMG {Z-INDEX: 99; RIGHT: 0px; WIDTH: 50px; POSITION: absolute; TOP: 0px; HEIGHT: 52px; ms-interpolation-mode: bicubic}
+#pageflip .msg_block {RIGHT: 0px; BACKGROUND: url(images/subscribe.png) no-repeat right top; OVERFLOW: hidden; WIDTH: 50px; POSITION: absolute; TOP: 0px; HEIGHT: 50px}
+</STYLE>
+</head>
+<body id=home>
+<div id=pageflip><A href="http://www.kaiwo123.com" target="_blank"><IMG alt="懒人图库" src="images/page_flip.png" border="0"></A> 
+<div class=msg_block></div></div>
+<center>
+<p align="center">来源：网络　代码整理：<a href="http://www.kaiwo123.com/" target="_blank">看我的特效网</a></p>
+<p align="center">* 尊重他人劳动成果，转载请自觉注明出处！注：此代码仅供学习交流，请勿用于商业用途。</p>
+
+</center>
+</body>
+</html>
+

@@ -1,0 +1,63 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.atfriend_cnt {
+    display: none;
+    position: relative;
+}
+.atfriend_cnt .friend_list {
+    width: 174px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #666;
+    box-shadow: 1px 2px 3px rgba(0,0,0,.1);
+    border-radius: 3px;
+}
+.atfriend_cnt .friend_list ul {
+    list-style-type: none;
+}
+.atfriend_cnt .friend_list li {
+    padding: 0 1px;
+    line-height: 26px;
+    font-size: 12px;
+    _height: 100%;
+    _width: 100%;
+}
+.atfriend_cnt .friend_list li a {
+    display: block;
+    text-decoration: none;
+    padding-left: 5px;
+}
+.atfriend_cnt .friend_list li a:hover {
+}
+.atfriend_cnt .arrow_box {
+    position: relative;
+}
+.atfriend_cnt .arrow_shadow {
+    border-width: 6px;
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent #DDD;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    left: 9px;
+    top: -12px;
+}
+.atfriend_cnt .arrow_bg {
+    border-width: 6px;
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent #fff;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    left: 9px;
+    top: -11px;
+}
+.atfriend_cnt .highlight {
+    background-color: #ddd;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>模仿腾讯微博@好友的功能</title>
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+            .container {
+                padding-top: 80px;
+                padding-left: 50px;
+                font-family: "微软雅黑";
+                font-size: 12px;
+            }
+            h1 {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            .send_container {
+                width: 578px;
+                height: 96px;
+                border: 1px solid #D0D0D0;
+                line-height: 1.231;
+                word-wrap: break-word;
+                word-break: break-all;
+                -moz-border-radius: 6px;
+                -webkit-border-radius: 6px;
+                border-radius: 6px;
+                transition: border linear .2s, box-shadow linear .2s;
+                -moz-transition: border linear .2s, -moz-box-shadow linear .2s;
+                -webkit-transition: border linear .2s, -webkit-box-shadow linear .2s;
+            }
+            .send_container .send_box {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                background-color: white;
+                -moz-border-radius: 6px 6px 0 0;
+                -webkit-border-radius: 6px 6px 0 0;
+                border-radius: 6px 6px 6px 6px;
+                box-shadow: 0 1px 3px rgba(0,0,0,.1) inset;
+            }
+            .send_container .message_area {
+                width: 97.9%;
+                height: 66px;
+                padding: 3px 1%;
+                margin: -1px auto 0;
+                overflow-y: hidden;
+                font: normal 14px/21px Tahoma, Arial;
+                border: 0 !important;
+                border-radius: 8px 8px 0 0;
+                -moz-border-radius: 8px 8px 0 0;
+                -webkit-border-radius: 8px 8px 0 0;
+                background: transparent;
+                outline: none;
+                resize: none;
+            }
+            .focus {
+                border: 1px solid #7BD6F6;
+                box-shadow: 0 0 10px rgba(123,214,246,.6);
+                -moz-box-shadow: 0 0 10px rgba(123,214,246,.6);
+                -webkit-box-shadow: 0 0 10px rgba(123,214,246,.6);
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="css/jquery.atfriend.css"/>
+        <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+        <script type="text/javascript" src="js/jquery.atfriend.js"></script>
+        <script type="text/javascript">
+            jQuery(function($) {
+                $("#message_area").atfriend();
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>模仿腾讯微博@好友的功能</h1>
+            <div class="send_container">
+                <div class="send_box">
+                    <textarea id="message_area" class="message_area"></textarea>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
