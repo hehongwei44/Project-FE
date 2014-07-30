@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+.datepicker {
+    border-collapse: collapse;
+}
+.datepicker thead {
+    border: 1px solid #ddd;
+}
+.datepicker th {
+    background: #eee;
+    font-family: "Microsoft Yahei", Verdana, Arial, Helvetica, sans-serif;
+}
+.datepicker th span {
+    font-weight: bold;
+}
+.datepicker thead th {
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+.datepicker tr.controls th {
+    padding: 5px 5px;
+}
+.datepicker tr.controls strong {
+    margin-top: 4px;
+}
+.datepicker tr.days th {
+    border: 1px solid #DDD;
+    border-bottom: none;
+    padding: 2px 8px;
+    background-color: #EEE;
+    color: #3F3F3F;
+    font-weight: bold;
+}
+.datepicker select {
+    height: 26px;
+    font-size: 14px;
+    display: block;
+}
+
+.datepicker tbody td {
+    width: 34px;
+    height: 24px;
+    border: 1px solid #ccc;
+    font: 11px/22px Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: #fff;
+}
+.datepicker tbody td.date {
+    cursor: pointer;
+}
+.datepicker tbody td.date.over {
+    background-color: #EEE;
+}
+
+.datepicker tbody .now {
+    background-color: #F54C0A;
+}
+.datepicker .controls .month_wrap {
+    float: left;
+    height: 26px;
+    width: 26px;
+    background: url("../images/calendar.gif") no-repeat;
+    vertical-align: middle;
+}
+.datepicker .controls .prevMonth {
+    background-position: left top;
+    margin-right: 5px;
+}
+.datepicker .controls .nextMonth {
+    background-position: -27px top;
+    margin-left: 5px;
+}
+.datepicker .controls .today {
+    background-position: -54px top;
+    margin-left: 5px;
+}
+
+.datepicker tbody sup {
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    float: left;
+    margin: 4px 0px 0px 4px;
+    color: white;
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+.datepicker tbody .rest {
+    background-color: #2BE942;
+    color: white;
+}
+.datepicker tbody .sign {
+    background-color: #019DB9;
+    color: white;
+}
+
