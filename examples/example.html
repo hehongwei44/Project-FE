@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>jquery微博信息渐显循环显示效果</title>
+        <script type="text/jscript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+        <script type="text/jscript">
+$(document).ready(function(e) {
+var in_out_time = 800 //渐显时间
+var scroll_Interval_time = 2000 //滚动间隔时间
+var scroll_time = 1000 //滚动动画时间
+
+addli()
+
+function addli(){
+$("#scroll_List").css("top",0);
+$("#scroll_List li:last").clone().prependTo("#scroll_List");
+$("#scroll_List li:first").css("opacity",0);
+$("#scroll_List li:first").animate({opacity:1},in_out_time);
+setTimeout(delLi_last,scroll_Interval_time)
+}
+
+function delLi_last(){
+$("#scroll_List li:last").detach();
+$("#scroll_List").animate({top:100},scroll_time,addli)
+}
+
+});
+        </script>
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+            }
+
+            .centerBox {
+                left: 50%;
+                width: 212px;
+                margin-left: -151px;
+                top: 50%;
+                height: 312px;
+                margin-top: -156px;
+                position: absolute;
+            }
+
+            .main {
+                width: 210px;
+                height: 310px;
+                float: left;
+                border: 1px solid #ccc;
+            }
+
+            .main strong {
+                width: 200px;
+                height: 300px;
+                float: left;
+                overflow: hidden;
+                margin: 5px;
+                display: inline;
+                position: relative;
+            }
+
+            .main strong ul {
+                width: 200px;
+                position: absolute;
+            }
+
+            .main strong ul li {
+                width: 200px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+                color: #FFF;
+                font-family: "simhei";
+                font-size: 20px;
+            }
+
+            .main strong ul .li_1 {
+                background: #900;
+            }
+
+            .main strong ul .li_2 {
+                background: #9C0;
+            }
+
+            .main strong ul .li_3 {
+                background: #036;
+            }
+
+            .main strong ul .li_4 {
+                background: #C60;
+            }
+
+            .main strong ul .li_5 {
+                background: #636;
+            }
+
+            .main strong ul .li_6 {
+                background: #999;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <div class="centerBox">
+            <div class="main">
+                <strong>
+                <ul id="scroll_List">
+                    <li class="li_1">
+                        文本1111dddddddddddddddddd
+                    </li>
+                    <li class="li_2">
+                        文本2ssssssssssssssssssss
+                    </li>
+                    <li class="li_3">
+                        文本3cccccccccccccccccccccc
+                    </li>
+                    <li class="li_4">
+                        文本4cccccccc3333333333333
+                    </li>
+                </ul> </strong>
+            </div>
+        </div>
+
+       
+    </body>
+</html>
