@@ -324,18 +324,42 @@
         <td>否</td>
     </tr>
      <tr>
+        <td>52</td>
+        <td>/重叠相册插件</td>
+        <td>重叠相册插件</td>
+        <td>否</td>
+    </tr>
+     <tr>
+        <td>53</td>
+        <td>/向下翻时间钟表特效</td>
+        <td>向下翻时间钟表特效</td>
+        <td>否</td>
+    </tr>
+     <tr>
+        <td>54</td>
+        <td>/在线客服插件</td>
+        <td>在线客服插件</td>
+        <td>否</td>
+    </tr>
+    <tr>
+        <td>55</td>
+        <td>/撕页广告特效</td>
+        <td>撕页广告特效</td>
+        <td>否</td>
+    </tr>
+    <tr>
+        <td>56</td>
+        <td>/@定位插件</td>
+        <td>@定位插件</td>
+        <td>否</td>
+    </tr>
+    <tr>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
-     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-     <tr>
+    <tr>
         <td></td>
         <td></td>
         <td></td>
