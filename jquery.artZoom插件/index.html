@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>artZoom demo</title>
+        <style type="text/css">
+            .artZoom {
+                padding: 3px;
+                background: #FFF;
+                border: 1px solid #EBEBEB;
+            }
+            body {
+                font-size: 75%;
+                font-family: '微软雅黑';
+                padding-bottom: 200px;
+            }
+            img {
+                border: 0 none;
+            }
+            #demo {
+                width: 540px;
+                padding: 5px;
+                background: #FBFCFD;
+            }
+            #demo p, #demo ul {
+                padding: 0;
+                margin: 0;
+            }
+            #demo ul, #demo ol, #demo li {
+                list-style: none;
+            }
+
+            ul.imgList {
+            }
+            ul.imgList li {
+                margin-top: 10px;
+            }
+        </style>
+        <link href="css/jquery.artZoom.css" rel="stylesheet" type="text/css">
+        <script src="js/jquery-1.4.4.min.js"></script>
+        <script src="js/jquery.artZoom.js"></script>
+        <script>
+            jQuery(function($) {
+                $('.artZoom').artZoom({
+                    path : './images', // 设置artZoom图片文件夹路径
+                    preload : true, // 设置是否提前缓存视野内的大图片
+                    blur : true, // 设置加载大图是否有模糊变清晰的效果
+                    left : '向左旋转', // 左旋转按钮文字
+                    right : '向右旋转', // 右旋转按钮文字
+                    source : '查看原图', // 查看原图按钮文字
+                    maxWidth : 600 //图片所能展示出的最大(包含边框)
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="demo">
+            <ul class="imgList">
+                <li>
+                    <a href="http://www.planeart.cn/demo/artZoom/_demo/01.jpg" rel="http://www.planeart.cn/demo/artZoom/_demo/01.jpg"><img class="artZoom" src="http://www.planeart.cn/demo/artZoom/_demo/01m.jpg" /></a>
+                </li>
+                <li>
+                    <img class="artZoom" src="http://www.planeart.cn/demo/artZoom/_demo/03m.jpg" data-artZoom-show="http://www.planeart.cn/demo/artZoom/_demo/03.jpg" data-artZoom-source="http://www.planeart.cn/demo/artZoom/_demo/03m.jpg" />
+                </li>
+                <li>
+                    <a href="http://www.planeart.cn/demo/artZoom/_demo/04.jpg" data-artZoom-source="http://www.planeart.cn/demo/artZoom/_demo/04.jpg"> <img class="artZoom" src="http://www.planeart.cn/demo/artZoom/_demo/04m.jpg" data-artZoom-source="http://www.planeart.cn/demo/artZoom/_demo/01m.jpg" /> </a>
+                </li>
+                <li>
+                    <a href="http://www.planeart.cn/demo/artZoom/_demo/05.jpg" rel="http://www.planeart.cn/demo/artZoom/_demo/05.jpg"><img class="artZoom" src="http://www.planeart.cn/demo/artZoom/_demo/05m.jpg" /></a>
+                </li>
+            </ul>
+            <p>
+                <img class="artZoom" src="http://www.planeart.cn/demo/artZoom/_demo/min.jpg" data-artZoom-show="http://www.planeart.cn/demo/artZoom/_demo/big.jpg" data-artZoom-source="http://www.planeart.cn/demo/artZoom/_demo/big.jpg" />
+            </p>
+        </div>
+    </body>
+</html>
