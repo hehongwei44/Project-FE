@@ -1,0 +1,356 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Giva Labs - iButton Example Page | Giva</title>
+
+	<link type="text/css" href="./css/docs.css" rel="stylesheet" media="all" />
+	<link type="text/css" href="./css/jquery.ibutton.css" rel="stylesheet" media="all" />
+
+	<!---// load jQuery from the GoogleAPIs CDN //--->
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script type="text/javascript" src="./lib/jquery.ibutton.js"></script>
+  <script type="text/javascript" src="./lib/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="./lib/jquery.metadata.js"></script>
+
+	<style type="text/css">
+		h4, h5 {
+			margin-bottom: 0;
+		}
+		
+		.examples pre {
+			margin-top: 0;
+		}
+		
+		label.label {
+			display: block;
+			width: 120px;
+			float: left;
+			padding-top: 5px;
+			font-weight: bold;
+			height: 30px;
+		}
+		
+		div.row {
+			margin-top: 10px;
+		}
+		
+		input.button {
+			margin-top: 5px;
+		}
+		
+		/* shows overwriting styles via CSS */
+		#css .ibutton-container {
+			width: 175px;
+		}
+
+		#css .ibutton-container .ibutton-handle {
+			width: 5px;
+		}
+	</style>
+
+	<script type="text/javascript">
+	<!--//
+	function debug(){
+		if( window.console && window.console.log ) console.log(arguments);
+	}
+
+	// on DOM ready
+	$(document).ready(function (){
+		$(".group").iButton({
+			  init: function (){
+				debug("init", arguments);
+			}
+			, change: function (){
+				debug("change", arguments);
+			}
+			, click: function (){
+				debug("click", arguments);
+			}
+			, disable: function (){
+				debug("disable", arguments);
+			}
+			, destroy: function (){
+				debug("destroy", arguments);
+			}
+		});
+
+		$("#radio_allowRadioUncheck :radio").iButton({allowRadioUncheck: true});
+
+		$("#ex11")
+			// attach the iButton behavior
+			.iButton({
+			   labelOn: "Yes"
+			 , labelOff: "No"
+			 , change: function ($input){
+					// update the text based on the status of the checkbox
+					$("#send-email").html($input.is(":checked") ? "Yes, send me more e-mail!" : "Ugh... no more e-mail already!");
+				}
+			})
+			// trigger the change event (to update the text)
+			.trigger("change");
+	});
+	//-->
+	</script>
+</head>
+
+<body>
+
+<h1>
+	Giva Labs - iButton Example Page
+</h1>
+
+<p>
+	The examples below show off various features of the iButton widget and provide
+	you with the source code to duplicate the functionality on your own web page.
+	We also recommend you sample the keyboard compatibility by tabbing through
+	the elements and use the spacebar to toggle checbox elements and the arrow
+	keys to select the radio elements.
+</p>
+
+<div class="examples">
+
+<h4>Simple Checkboxes</h4>
+
+<p>
+	This shows off the most simple form of the iButton. The buttons below are based purely
+	on the attributes of the checkbox elements.
+</p>
+
+<div id="simple" class="group">
+  <div class="row">
+    <label class="label" for="ex01">Default Off</label>
+    <input type="checkbox" id="ex01" />
+  </div>
+
+  <div class="row">
+    <label class="label" for="ex02">Default On</label>
+    <input type="checkbox" id="ex02" checked="checked" />
+  </div>
+</div>
+
+<h5>Sample Code</h5>
+<pre><code class="html">&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function (){
+  $(":checkbox").iButton();
+});
+&lt;/script&gt;</code></pre>
+
+<h4>Using Metadata</h4>
+
+<p>
+	You can also utilize the <a href="http://plugins.jquery.com/project/metadata">jQuery Metadata Plug-in</a>
+	to change the options on each element individually:
+</p>
+
+<div id="metadata" class="group">
+  <div class="row">
+    <label class="label" for="ex03">Yes/no label</label>
+    <input type="checkbox" id="ex03" class="{labelOn: 'Yes', labelOff: 'No'}" />
+  </div>
+
+  <div class="row">
+    <label class="label" for="ex04">True/false label</label>
+    <input type="checkbox" id="ex04" class="{labelOn: 'True', labelOff: 'False', easing: 'easeOutBounce', duration: 500}" />
+		(with easeOutBounce easing animation)
+  </div>
+</div>
+
+<h5>Sample Code</h5>
+<pre><code class="html">&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function (){
+  $(":checkbox").iButton();
+});
+&lt;/script&gt;
+
+&lt;div class="row"&gt;
+  &lt;label class="label" for="ex03"&gt;Yes/no label&lt;/label&gt;
+  &lt;input type="checkbox" id="ex03" class="{labelOn: 'Yes', labelOff: 'No'}" /&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;label class="label" for="ex04"&gt;True/false label&lt;/label&gt;
+  &lt;input type="checkbox" id="ex04" class="{labelOn: 'True', labelOff: 'False', easing: 'easeOutBounce', duration: 500}" /&gt;
+  (with easeOutBounce easing animation)
+&lt;/div&gt;
+</code></pre>
+
+<h4>API Examples</h4>
+
+<p>
+	The iButton plug-in API methods are also easy to use. The API allows you to do things such as 
+	changing the value of the element, disabling the element and remove the iButton widget to 
+	restore the checkbox to it's original HTML.
+</p>
+
+<div id="api" class="group">
+  <div class="row">
+    <label class="label" for="ex05">Enable/Disable</label>
+    <input type="checkbox" id="ex05" disabled="true" />
+		<input type="button" value="Disable/Enable Button" class="button" onclick="$('#ex05').iButton('disable')" />
+  </div>
+
+  <div class="row">
+    <label class="label" for="ex06">Destroy/Create</label>
+    <input type="checkbox" id="ex06" />
+		<input type="button" value="Destroy/Create Button" class="button" onclick="$('#ex06').iButton('destroy')" />
+  </div>
+</div>
+
+<h5>Sample Code</h5>
+<pre><code class="html">&lt;script type=&quot;text/javascript&quot;&gt;
+// toggle button's enable/disabled status
+$("#ex05").iButton("disable");
+
+// destroy an iButton widget
+$("#ex06").iButton("destroy");
+&lt;/script&gt;</code></pre>
+
+<h4>Radio Button Example</h4>
+
+<p>
+	Below is an example of attaching the iButton behavior to a group of radio buttons. Only one 
+	of the options can be checked at a time. While this UI construct works best for checkbox
+	elements (since the state is either true or false) radio buttons can be handle if you want
+	the user to be able to select only one option from a list.
+</p>
+
+<div id="radio" class="group">
+  <div class="row">
+    <label class="label" for="ex07-1">Option 1</label>
+    <input type="radio" name="ex-radio" id="ex07-1" />
+  </div>
+
+  <div class="row">
+    <label class="label" for="ex07-2">Option 2</label>
+    <input type="radio" name="ex-radio" id="ex07-2" />
+  </div>
+
+  <div class="row">
+    <label class="label" for="ex07-3">Option 3</label>
+    <input type="radio" name="ex-radio" id="ex07-3" />
+  </div>
+</div>
+
+<h5>Sample Code</h5>
+<pre><code class="html">&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function (){
+  $(":radio").iButton();
+});
+&lt;/script&gt;</code></pre>
+
+<h4>Radio Button Example (w/ Radio Uncheck Allowed)</h4>
+
+<p>
+	Below is an example of attaching the iButton behavior to a group of radio buttons. Only one 
+	of the options can be checked at a time. While this UI construct works best for checkbox
+	elements (since the state is either true or false) radio buttons can be handle if you want
+	the user to be able to select only one option from a list.
+</p>
+
+<div id="radio_allowRadioUncheck">
+  <div class="row">
+    <label class="label" for="ex08-1">Option 1</label>
+    <input type="radio" name="ex-radio-allowRadioUncheck" id="ex08-1" />
+  </div>
+
+  <div class="row">
+    <label class="label" for="ex08-2">Option 2</label>
+    <input type="radio" name="ex-radio-allowRadioUncheck" id="ex08-2" />
+  </div>
+
+  <div class="row">
+    <label class="label" for="ex08-3">Option 3</label>
+    <input type="radio" name="ex-radio-allowRadioUncheck" id="ex08-3" />
+  </div>
+</div>
+
+<h5>Sample Code</h5>
+<pre><code class="html">&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function (){
+  $("#radio_allowRadioUncheck :radio").iButton({allowRadioUncheck: true});
+});
+&lt;/script&gt;</code></pre>
+
+<h4>Size Button via CSS</h4>
+
+<p>
+	You can also use CSS to control the look and feel of the iButton. Below we've used
+	CSS to make a wide button with a narrow handle.
+</p>
+
+<div id="css" class="group">
+  <div class="row">
+    <label class="label" for="ex09">Wide button</label>
+    <input type="checkbox" id="ex09" />
+  </div>
+</div>
+
+<h5>Sample Code</h5>
+<pre><code class="html">&lt;style type=&quot;text/css&quot;&gt;
+#css .ibutton-container {
+  width: 175px;
+}
+
+#css .ibutton-container .ibutton-handle {
+  width: 5px;
+}
+&lt;/style&gt;</code></pre>
+
+<h4>Custom Labels of Various Sizes</h4>
+
+<p>
+	You can also use long and short labels paired together.
+</p>
+
+<div id="long-labels" class="group">
+  <div class="row">
+    <label class="label" for="ex10">Long labels</label>
+    <input type="checkbox" id="ex10" checked="checked" class="{labelOn: 'A really, really long label', labelOff: 'Tiny'}" />
+  </div>
+</div>
+
+<h5>Sample Code</h5>
+<pre><code class="html">&lt;script type=&quot;text/javascript&quot;&gt;
+$("#ex10").iButton({
+    labelOn: "A really, really long label"
+  , labelOff: "Tiny"
+});
+&lt;/script&gt;</code></pre>
+
+<h4>Using Events</h4>
+
+<p>
+	Events allow you to expand the functionality of the plug-in by performing additional
+	tasks when certain events are fired. Below the <em>change</em> event is used to
+	update text based on the value of the checkbox.
+</p>
+
+<div id="events">
+  <div class="row">
+    <label class="label" for="ex11">Send e-mail</label>
+    <input type="checkbox" id="ex11" />
+		<span id="send-email"></span>
+  </div>
+</div>
+
+<h5>Sample Code</h5>
+<pre><code class="html">&lt;script type=&quot;text/javascript&quot;&gt;
+$("#ex11")
+  // attach the iButton behavior
+  .iButton({
+     labelOn: "Yes"
+   , labelOff: "No"
+   , change: function ($input){
+      // update the text based on the status of the checkbox
+      $("#send-email").html($input.is(":checked") ? "Yes, send me more e-mail!" : "Ugh... no more e-mail already!");
+    }
+  })
+  // trigger the change event (to update the text)
+  .trigger("change");
+&lt;/script&gt;</code></pre>
+
+
+</body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>Giva Labs - iButton jQuery Plug-in | Giva</title>
+
+        <link type="text/css" href="./css/docs.css" rel="stylesheet" media="all" />
+        <link type="text/css" href="./css/jquery.ibutton.css" rel="stylesheet" media="all" />
+
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="./lib/jquery.ibutton.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#current_rev").html("v" + $.iButton.version);
+                $("#iButton").iButton();
+            });
+
+        </script>
+    </head>
+
+    <body>
+
+        <h1 class="secttl">Giva Labs</h1>
+        <h2 class="sectag">iButton jQuery Plug-in <span id="current_rev"></span></h2>
+
+        <h3 id="overview">Overview</h3>
+        <p>
+            The iButton jQuery plug-in emulates the checkbox functionality found
+            on the iPhone. This plug-in was inspired by several other plug-ins&#8212;such
+            as <a href="http://tdreyno.github.com/iphone-style-checkboxes/" target="_blank">Thomas Reynolds'
+            iphone-style-checkboxes</a>. However, this plug-in attempts to combine the best
+            features of all of the various iPhone checkbox-style plug-ins and then add the
+            functionality that we felt was still missing.
+        </p>
+
+        <h3 id="requirements">Requirements</h3>
+        <p>
+            In order to use the iButton plug-in, you need the following:
+        </p>
+        <ul class="bullet">
+            <li class="bullet">
+                jQuery v1.2.6 (or higher)*
+            </li>
+            <li class="bullet">
+                jquery.ibutton.js Plug-in
+            </li>
+        </ul>
+        <p>
+            Optionally, you may also want to use:
+        </p>
+        <ul class="bullet">
+            <li class="bullet">
+                <a href="http://plugins.jquery.com/project/metadata">jQuery Metadata Plug-in</a>
+                &#8212;
+                The use of the Metadata plug-in allows you to define the options for your buttons
+                within the class attribute of the form element.
+            </li>
+            <li class="bullet">
+                <a href="http://plugins.jquery.com/project/Easing">jQuery Easing Plug-in</a>
+                &#8212;
+                The Easing Plug-in expands the options for easing in the animation of the sliding
+                button.
+            </li>
+        </ul>
+        <blockquote>
+            * This plug-in may work with older versions of jQuery in the 1.2 family. If you try
+            using this with an older version of jQuery, you will need to include the
+            jquery.dimensions.js plug-in (as of jQuery v1.2.6 the jquery.dimensions.js
+            plug-in is included in the jQuery core.)
+        </blockquote>
+
+        <h3 id="features">Features</h3>
+
+        <ul>
+            <li>
+                Works with checkboxes or radio elements
+            </li>
+            <li>
+                Full keyboard support
+                &#8212;
+                use the [TAB] key to move from field to field and use
+                the spacebar to toggle the status of the iButton (or use the arrow keys for
+                radio buttons)
+            </li>
+            <li>
+                Custom event handlers
+            </li>
+            <li>
+                Detach iButton behavior from the element
+            </li>
+            <li>
+                Metadata support
+                &#8212;
+                when used with the <a href="http://plugins.jquery.com/project/metadata">jQuery Metadata Plug-in</a>,
+                you can define the properties for your button completely within the class attribute of your
+                input elements
+            </li>
+            <li>
+                Enable/disable drag support
+                &#8212;
+                while the dragging behavior is intuitive on touch-based devices, it's not always be the best
+                or expected UI behavior and may cause some mouse users problems (NOTE: In order to help
+                differentiate between an intended mouse click or an actual drag event, we're developed
+                the clickOffset option. If the time (in milliseconds) is under this value (120ms by default)
+                it's assumed the user was attempting to click the button and not drag the handle.)
+            </li>
+            <li>
+                Enable/disable animation
+            </li>
+            <li>
+                Single sprite image
+                &#8212;
+                easily change the look of your button by just replacing the image
+                sprite
+            </li>
+            <li>
+                Customizable labels
+                &#8212;
+                use any labels you want for your buttons
+            </li>
+            <li>
+                Support for disabled buttons
+            </li>
+            <li>
+                Easing support for animations
+            </li>
+            <li>
+                iPhone support
+            </li>
+        </ul>
+
+        <h3 id="usage">Usage</h3>
+
+        <p>
+            To convert your checkbox (or radio) elements into iButton widgets, just invoke
+            the jQuery plug-in using the following syntax:
+        </p>
+        <pre><code class="js">$(&quot;:checkbox&quot;).iButton(<em>[options]</em>);</code></pre>        
+        
+	
+
+
+        <p>
+            You can use any selector that will target checkboxes or radio elements on your page.
+        </p>
+
+        <p>
+            Optionally, you can target a form object (or any non-input element) to convert
+            all checkbox and radio elements contained in the element to an iButton:
+        </p>
+        <pre><code class="js">$(&quot;form&quot;).iButton(<em>[options]</em>);</code></pre>        
+        
+
+ <h4 id="arguments">Arguments</h4>
+        <dl>
+            <dt>
+                options
+            </dt>
+            <dd>
+                <p>
+                    This argument is <em><strong>optional</strong></em> and allows you to customize the
+                    settings used for each instance of the plug-in. For a list of all available options,
+                    see the <a href="#options">Options</a> section.
+                </p>
+            </dd>
+        </dl>
+
+        <p>
+            Now that we have a reference to the widget, we can invoke any of the public API calls.
+        </p>
+
+        <h4 id="methods">Public API</h4>
+        <dl class="methods">
+            <dt>
+                $("#id").iButton("toggle", <em>value</em>)
+            </dt>
+            <dd>
+                <p>
+                    Use the toggle() method to set the checked status of your input element. The value
+                    argument is an optional boolean value that allows you to set the checked status to
+                    either true or false. If the value argument is not supplied, the checked attribute
+                    of your input element will be toggled from true to false (or vice versa.)
+                </p>
+            </dd>
+            <dt>
+                $("#id").iButton("disable")
+            </dt>
+            <dd>
+                <p>
+                    Use the disable() method to disable your button. This prevents the user being able to
+                    interactive with the button. It allows disables the actual checkbox/radio element, and
+                    disabled values are not submitted to the server on a form POST/GET operation.
+                </p>
+            </dd>
+            <dt>
+                $("#id").iButton("destroy")
+            </dt>
+            <dd>
+                <p>
+                    Destroys the iButton widget. This restores the original checkbox/radio element
+                    in the DOM.
+                </p>
+            </dd>
+            <dt>
+                $("#id").iButton("repaint")
+            </dt>
+            <dd>
+                <p>
+                    This will repaint the button to match it's current checked status. This should only
+                    be called if the checked attribute of the element has changed in some way out of your
+                    control to synchronize the skin's state with the actual checkbox value. The correct
+                    method of synchronizing the skin w/the element is to trigger the input's "change" event
+                    after any manual update to it's value.
+                </p>
+            </dd>
+            <dt>
+                $("#id").iButton("object")
+            </dt>
+            <dd>
+                <p>
+                    Returns a reference to the internal $.iButton object. This is for advanced usage only.
+                    Examine the source code for uses of the $.iButton object.
+                </p>
+            </dd>
+        </dl>
+
+        <h4 id="options">Options</h4>
+        <p>
+            There are a number of options available for customizing the look and feel of the iButton widget.
+        </p>
+        <pre><code class="js">{
+         duration: 200                           // the speed of the animation
+       , easing: "swing"                         // the easing animation to use
+       , labelOn: "ON"                           // the text to show when toggled on
+       , labelOff: "OFF"                         // the text to show when toggled off
+       , resizeHandle: "auto"                    // determines if handle should be resized
+       , resizeContainer: "auto"                 // determines if container should be resized
+       , enableDrag: true                        // determines if we allow dragging
+       , enableFx: true                          // determines if we show animation
+       , allowRadioUncheck: false                // determine if a radio button should be able to 
+                                                 // be unchecked
+       , clickOffset: 120                        // if millseconds between a mousedown & mouseup event this 
+                                                 // value, then considered a mouse click
+
+       // define the class statements
+       , className:         ""                   // an additional class name to attach to the main container
+       , classContainer:    "ibutton-container"
+       , classDisabled:     "ibutton-disabled"
+       , classFocus:        "ibutton-focus"
+       , classLabelOn:      "ibutton-label-on"
+       , classLabelOff:     "ibutton-label-off"
+       , classHandle:       "ibutton-handle"
+       , classHandleMiddle: "ibutton-handle-middle"
+       , classHandleRight:  "ibutton-handle-right"
+       , classHandleActive: "ibutton-active-handle"
+       , classPaddingLeft:  "ibutton-padding-left"
+       , classPaddingRight: "ibutton-padding-right"
+
+       // event handlers
+       , init: null                              // callback that occurs when a iButton is initialized
+       , change: null                            // callback that occurs when the button state is changed
+       , click: null                             // callback that occurs when the button is clicked
+       , disable: null                           // callback that occurs when the button is disabled/enabled
+       , destroy: null                           // callback that occurs when the button is destroyed
+}</code></pre>                
+
+ <h3 id="getting_started">Getting Started</h3>
+        <p>
+            The first thing we need to do is to load the required JavaScript libraries and the CSS stylesheet used by the widget:
+        </p>
+        <pre><code class="html">&lt;!---// load jQuery and the jQuery iButton Plug-in //---&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;./lib/jquery.ibutton.js&quot;&gt;&lt;/script&gt;
+
+&lt;!---// load the iButton CSS stylesheet //---&gt;
+&lt;link type=&quot;text/css&quot; href=&quot;./css/jquery.ibutton.css&quot; rel=&quot;stylesheet&quot; media=&quot;all&quot; /&gt;</code></pre>                
+
+
+
+        <p>
+            Before you can invoke an instance of the iButton widget, you must have one or more checkbox or radio elements on your page.
+        </p>
+        <pre><code class="html">&lt;p&gt;
+  &lt;label for="iButton"&gt;
+    E-mail notifications
+  &lt;/label&gt;
+  &lt;input type="checkbox" id="iButton" value="true" /&gt;
+&lt;/p&gt;</code></pre>        
+        
+
+
+
+        <p>
+            The next step is to actually create an instance of the iButton widget. You want to make
+            sure to initialize the widget after all the necessary DOM elements are available, which
+            makes the document.ready event a great place to initialize the widget.
+        </p>
+        <pre><code class="html">&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function (){
+  $("#iButton").iButton();
+});
+&lt;/script&gt;</code></pre>
+        <p>
+            Now let us take a look at what the code above produced.
+        </p>
+        <h3 id="example">Example</h3>
+
+        <p>
+            <label for="iButton" style="float: left; display: block; width: 140px; padding-top: 5px; cursor: pointer;"> E-mail notifications </label>
+            <input type="checkbox" id="iButton" value="true" />
+        </p>
+        <!--// end example code //-->
+
+        <p>
+            To change the checked status of the button you can:
+        </p>
+
+        <ul>
+            <li>
+                Click on the button
+            </li>
+            <li>
+                Drag the button handle to the left/right (releasing the handle after the midway point
+                will snap the button to the on/off state.)
+            </li>
+            <li>
+                Click on the element's label tag (example: click on the "E-mail notification" text)
+            </li>
+            <li>
+                Use the keyboard (example: click on the word "Example" [to set the focus above the
+                button] then use the [TAB] to place the button in focus and last press the [SPACEBAR]
+                to toggle the status.)
+            </li>
+            <li>
+
+            </li>
+        </ul>
+
+        <p>
+            For more examples, see the <a href="ibutton_example.htm">Giva Labs - iButton Example Page</a> page.
+        </p>
+
+        <h3 id="support">Support</h3>
+        <p>
+            This source code is provided as-is. At this time Giva is not offering direct support for this product.
+            If you are in need of assistance,  post your question to one of the
+            <a href="http://docs.jquery.com/Discussion">jQuery Mailing Lists</a>. Members of the Giva development
+            team actively participate on the jQuery Mailing lists, so if we see your question we will try our
+            best to respond.
+        </p>
+
+        <h3 id="license">License</h3>
+        <pre>Copyright 2011 Giva, Inc. (<a href="http://www.givainc.com/labs/">http://www.givainc.com/labs/</a>) 
+
+Licensed under the Apache License, Version 2.0 (the "License"); 
+you may not use this file except in compliance with the License. 
+You may obtain a copy of the License at 
+	<a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">http://www.apache.org/licenses/LICENSE-2.0</a> 
+
+Unless required by applicable law or agreed to in writing, software 
+distributed under the License is distributed on an "AS IS" BASIS, 
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+See the License for the specific language governing permissions and 
+limitations under the License.</pre>                
+
+ <h3 id="revision"> Revisions </h3>
+        <dl class="revisions">
+            <dt>
+                v1.0.03 (2011-07-26)
+            </dt>
+            <dd>
+                <ul>
+                    <li>
+                        Fixed compatibility issues with jQuery v1.6.2
+                    </li>
+                    <li>
+                        Added className option for adding an additional class name to the main container&#8212;which is
+                        useful for adding alternative styles to the button
+                    </li>
+                    <li>
+                        Revised image sprite to be better organized (handles are now grouped together)
+                    </li>
+                    <li>
+                        Updated CSS to reflect changes to image sprite
+                    </li>
+                    <li>
+                        Fixed bug where iButton behavior could be attached multiple times if code attempts to re-initialize
+                        on the same element
+                    </li>
+                </ul>
+            </dd>
+            <dt>
+                v1.0.01 (2009-09-04)
+            </dt>
+            <dd>
+                <ul>
+                    <li>
+                        Fixed mouseup event handler so change event is only fired if the value is
+                        actually changed (it no longer fires if the handle isn't dragged past halfway)
+                    </li>
+                </ul>
+            </dd>
+            <dt>
+                v1.0.00 (2009-09-02)
+            </dt>
+            <dd>
+                <ul>
+                    <li>
+                        Initial release
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+
+    </body>
+
+</html>

@@ -372,10 +372,10 @@
         <td>否</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>60</td>
+        <td>/jquery.ibutton</td>
+        <td>模拟苹果风格的按钮</td>
+        <td>否</td>
     </tr>
     <tr>
         <td></td>
