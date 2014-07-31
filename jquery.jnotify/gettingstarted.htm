@@ -1,0 +1,360 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>Giva Labs - jNotify jQuery Plug-in | Giva</title>
+
+        <link type="text/css" href="./css/docs.css" rel="stylesheet" media="all" />
+        <link type="text/css" href="./css/jquery.jnotify.css" rel="stylesheet" title="default" media="all" />
+        <link type="text/css" href="./css/jquery.jnotify-alt.css" rel="alternate stylesheet" title="alt" media="all" />
+
+        <!---// load jQuery from the GoogleAPIs CDN //--->
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="./lib/jquery.jnotify.min.js"></script>
+
+        <script type="text/javascript">
+            <!--//
+            // on DOM ready
+            $(document).ready(function() {
+                $("#current_rev").html("v" + $.jnotify.version);
+                $("a.example").bind("click", function(e) {
+                    // prevent default behavior
+                    e.preventDefault();
+
+                    var $ex = $($(this).attr("href")), code = $.trim($ex.text());
+
+                    // execute the sample code
+                    $.globalEval(code);
+                });
+
+                // style switcher
+                $("button.css_switcher").click(function() {
+                    switchCSS(this.title);
+                });
+            });
+
+            function switchCSS(style) {
+                var bFound = false, bMatch, style = style.toLowerCase();
+                $("link[title]").each(function(i) {
+                    this.disabled = true;
+
+                    if(this.title.toLowerCase() == style) {
+                        this.disabled = false;
+                        bFound = true;
+                    }
+                });
+
+                if(!bFound)
+                    $("link[title='default']")[0].disabled = false;
+            }
+
+            //-->
+        </script>
+
+        <style type="text/css">
+            a.example {
+                margin-left: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1 class="secttl">Giva Labs </h1>
+        <h2 class="sectag">jNotify jQuery Plug-in <span id="current_rev"></span></h2>
+
+        <h3 id="overview">Overview</h3>
+        <p>
+            The jQuery jNotify plug-in is an unobtrusive notification system for web-based applications.
+            Use jNotify to inform users when specific actions have completed on your site&#8211;such as
+            when an AJAX operation complete.
+        </p>
+
+        <p>
+            The jNotify plug-in is designed to replace code where you may have previously used the
+            JavaScript alert() function to provide feedback to the user. The alert() function has
+            two significant UI issues:
+        </p>
+
+        <ul>
+            <li>
+                It is very obtrusive&#8211;users must take action (click "Ok") to remove the message or before
+                you can interact with other elements on the page. While sometimes you want the user to acknowledge
+                an action, often you just want to bring something to their attention without requiring them
+                to take additional action.
+            </li>
+            <li>
+                You can not use rich-text&#8211;messages are limited to plain text only. Sometimes you want to provide
+                rich-text features, such as links or images, in your notifications.
+            </li>
+        </ul>
+
+        <p>
+            The jNotify plug-in provides a light-weight (3KB minified) solution to all of these problems.
+        </p>
+
+        <h3 id="requirements">Requirements</h3>
+        <p>
+            In order to use the jNotify plug-in, you need the following:
+        </p>
+        <ul class="bullet">
+            <li class="bullet">
+                jQuery v1.2.6 (or higher)*
+            </li>
+            <li class="bullet">
+                jquery.jnotify.js Plug-in
+            </li>
+        </ul>
+        <blockquote>
+            *
+            This plug-in may work with older versions of jQuery in the 1.2 family. If you try using this with an older version of jQuery, you will need to include the jquery.dimensions.js plug-in (as of jQuery v1.2.6 the jquery.dimensions.js
+            plug-in is included in the jQuery core.)
+        </blockquote>
+
+        <h3 id="usage">Usage</h3>
+
+        <p>
+            You can invoke a new notification using the following syntax:
+        </p>
+        <pre><code class="js">$.jnotify(message, <em>[options]</em>);
+$.jnotify(message, delay);
+$.jnotify(message, sticky);
+$.jnotify(message, type, <em>[delay/sticky]</em>);
+</code></pre>                        
+        
+
+ <h4 id="arguments">Arguments</h4>
+        <dl>
+            <dt>
+                options
+            </dt>
+            <dd>
+                <p>
+                    This argument is <em><strong>optional</strong></em> and allows you to customize the settings used for
+                    each instance of the plug-in. For a list of all available options, see the <a href="#options">Options</a> section.
+                </p>
+            </dd>
+            <dt>
+                delay
+            </dt>
+            <dd>
+                <p>
+                    If the second argument is a number, then this is the same as setting the "delay" <a href="#options">option</a>.
+                </p>
+            </dd>
+            <dt>
+                sticky
+            </dt>
+            <dd>
+                <p>
+                    If the second argument is either true or false, then this is the same as setting the "sticky" <a href="#options">option</a>.
+                </p>
+            </dd>
+            <dt>
+                type
+            </dt>
+            <dd>
+                <p>
+                    If the second is a string, then this is the same as setting the "type" <a href="#options">option</a>.
+                </p>
+            </dd>
+            <dt>
+                delay/sticky
+            </dt>
+            <dd>
+                <p>
+                    If the second is a string, then you can supply an optional third argument which specifies either the delay speed (a number)
+                    or if the notification is to be considered "sticky" (a boolean.).
+                </p>
+            </dd>
+        </dl>
+
+        <h4 id="methods">Public API</h4>
+        <dl class="methods">
+            <dt>
+                $.jnotify.setup(options)
+            </dt>
+            <dd>
+                <p>
+                    Sets the default options to use for all jNotify notifications.
+                </p>
+            </dd>
+            <dt>
+                $.jnotify.pause()
+            </dt>
+            <dd>
+                <p>
+                    Pauses any current non-sticky notifications from being removed from the queue.
+                </p>
+            </dd>
+            <dt>
+                $.jnotify.resume()
+            </dt>
+            <dd>
+                <p>
+                    Resumes the notification queue if it has previously been paused.
+                </p>
+            </dd>
+        </dl>
+
+        <h4 id="options">Options</h4>
+        <p>
+            There are a number of options available for customizing the look and feel of the jNotify widget.
+        </p>
+        <pre><code class="js">{
+  // define core settings
+    type: ""                                  // if a type is specified, then an additional class of classNotification 
+                                              // + type is created for each notification
+  , delay: 2000                               // the default time to show each notification (in milliseconds)
+  , sticky: false                             // determines if the message should be considered "sticky" (user 
+                                              // must manually close notification)
+  , closeLabel: "&amp;times;"                     // the HTML to use for the "Close" link
+  , showClose: true                           // determines if the "Close" link should be shown if notification is also sticky
+  , fadeSpeed: 1000                           // the speed to fade messages out (in milliseconds)
+  , slideSpeed: 250                           // the speed used to slide messages out (in milliseconds)
+  
+  // define the class statements
+  , classContainer: "jnotify-container"       // className to use for the outer most container--this is where all the 
+                                              // notifications appear
+  , classNotification: "jnotify-notification" // className of the individual notification containers
+  , classBackground: "jnotify-background"     // className of the background layer for each notification container
+  , classClose: "jnotify-close"               // className to use for the "Close" link
+  , classMessage: "jnotify-message"           // className to use for the actual notification text container--this is 
+                                              // where the message is actually written
+
+  // event handlers
+  , init: null                                // callback that occurs when the main jnotify container is created
+  , create: null                              // callback that occurs when when the note is created (occurs just before 
+                                              // appearing in DOM)
+  , beforeRemove: null                        // callback that occurs when before the notification starts to fade away
+  , remove: null                              // callback that occurs when notification is removed
+  , transition: null                          // allows you to overwrite how the transitions between messages are handled
+                                              // receives the following arguments:
+                                              //   container - jQuery object containing the notification
+                                              //   message   - jQuery object of the actual message
+                                              //   count     - the number of items left in queue
+                                              //   callback  - a function you must execute once your transition has executed
+                                              //   options   - the options used for this jnotify instance
+}</code></pre>                                
+
+
+ <h3 id="getting_started">Getting Started</h3>
+        <p>
+            The first thing we need to do is to load the required CSS stylesheet and the JavaScript libraries used by the widget:
+        </p>
+        <pre><code class="html">&lt;!---// load the jNotify CSS stylesheet //---&gt;
+&lt;link type=&quot;text/css&quot; href=&quot;./css/jquery.jnotify.css&quot; rel=&quot;stylesheet&quot; media=&quot;all&quot; /&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;./lib/jquery.jnotify.js&quot;&gt;&lt;/script&gt;</code></pre>                                
+
+
+
+
+
+        <p>
+            Once you've added the jNotify plug-in to your HTML page, all you need to do is to invoke the $.jnotify() method whenever you want
+            to display a message to the user.
+        </p>
+
+        <h3 id="example">Examples</h3>
+        <div style="margin-top: 14px;">
+            <a href="#example-1" class="example">[Run]</a>
+            <code id="example-1" class="html">
+                $.jnotify("This is a default notification.");
+            </code>
+        </div>
+
+        <div>
+            <a href="#example-2" class="example">[Run]</a>
+            <code id="example-2" class="html">
+                $.jnotify("This is a notification with a 5 second delay.", 5000);
+            </code>
+        </div>
+
+        <div>
+            <a href="#example-3" class="example">[Run]</a>
+            <code id="example-3" class="html">
+                $.jnotify("This is a sticky notification.", true);
+            </code>
+        </div>
+
+        <div>
+            <a href="#example-4" class="example">[Run]</a>
+            <code id="example-4" class="html">
+                $.jnotify("This is an \"warning\" notification.", "warning");
+            </code>
+        </div>
+
+        <div>
+            <a href="#example-5" class="example">[Run]</a>
+            <code id="example-5" class="html">
+                $.jnotify("This is an \"error\" notification.", "error");
+            </code>
+        </div>
+
+        <div>
+            <a href="#example-6" class="example">[Run]</a>
+            <code id="example-6" class="html">
+                $.jnotify("This is a sticky \"error\" notification.", "error", true);
+            </code>
+        </div>
+
+        <div>
+            <a href="#example-7" class="example">[Run]</a>
+            <code id="example-7" class="html">
+                $.jnotify("This notification shows an alert() when the notification is removed.", {remove: function (){ alert('removed!');}});
+            </code>
+        </div>
+
+        <p>
+            The plug-in has been designed to use CSS to all formatting and layout of the notification system. Try clicking the buttons below to see
+            how easily you can change the default styles just by changing the CSS.
+        </p>
+
+        <p>
+            <button title="default" class="css_switcher">
+                Default CSS
+            </button>
+            <button title="alt" class="css_switcher">
+                Alternative CSS
+            </button>
+        </p>
+
+        <h3 id="support">Support</h3>
+        <p>
+            This source code is provided as-is. At this time Giva is not offering direct support for this product. If you are in need of assistance,  post your question to one of the <a href="http://docs.jquery.com/Discussion">jQuery Mailing Lists</a>. Members of the Giva development team actively participate on the jQuery Mailing lists, so if we see your question we will try our best to respond.
+        </p>
+
+        <h3 id="license">License</h3>
+        <pre>Copyright 2010 Giva, Inc. (<a href="http://www.givainc.com/labs/">http://www.givainc.com/labs/</a>) 
+
+Licensed under the Apache License, Version 2.0 (the "License"); 
+you may not use this file except in compliance with the License. 
+You may obtain a copy of the License at 
+	<a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">http://www.apache.org/licenses/LICENSE-2.0</a> 
+
+Unless required by applicable law or agreed to in writing, software 
+distributed under the License is distributed on an "AS IS" BASIS, 
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+See the License for the specific language governing permissions and 
+limitations under the License.</pre>                                
+
+ <h3 id="revision"> Revisions </h3>
+        <dl class="revisions">
+            <dt>
+                v1.1.00 (2010-09-30)
+            </dt>
+            <dd>
+                <ul>
+                    <li>
+                        Initial release
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+
+    </body>
+
+</html>
