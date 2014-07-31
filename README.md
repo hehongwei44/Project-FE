@@ -354,10 +354,10 @@
         <td>否</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>57</td>
+        <td>/jquery.chosen</td>
+        <td>select美化工具</td>
+        <td>否</td>
     </tr>
     <tr>
         <td></td>
