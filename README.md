@@ -384,10 +384,10 @@
         <td>否</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>62</td>
+        <td>/selectToUISlider</td>
+        <td>jquery ui slider</td>
+        <td>否</td>
     </tr>
     <tr>
         <td></td>
