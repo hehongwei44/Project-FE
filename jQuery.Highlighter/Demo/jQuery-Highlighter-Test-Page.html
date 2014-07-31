@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../jquery.js"></script>
+    <!--<script type="text/javascript" src="jquery.highlighter-1.0.0.js"></script>-->
+    <script type="text/javascript" src="jquery.editinplace.js-2.2.0.min.js"></script>
+    <script type="text/javascript" src="../jquery.highlighter-1.0.0.min.js"></script>
+    <title>jQuery Highlighter Test Page</title>
+    <style type="text/css">
+    	ul li h3 {
+    		font-size: medium;
+    	}
+    	ul li div, ul li h3 span {
+    		font-size: small;
+    	}
+    </style>
+    
+    <script type="text/javascript">
+		$(function(){
+			//$("#textarea_Source").val($("#div_Test").html());
+		
+			$("body > div > ul > li > div").editInPlace({
+				field_type: "textarea",
+				value_required: true,
+				textarea_rows: 12,
+				textarea_cols: 100,
+				callback: function(targetID, newText, originalText){
+					return newText;
+				}
+			});
+		
+		    $("#form_Search").submit(function(){
+		        var inputKeyWords = $("#input_KeyWords");
+		        var kewWords = $.trim(inputKeyWords.val());
+		        inputKeyWords.val(kewWords);
+		        if(kewWords.length < 1)
+		        {
+		            alert("请输入您要搜索的关键字！！！！");
+		            inputKeyWords.focus();
+		            return false;
+		    	}
+
+		        $("body > div > ul > li > h3 > a, body > div > ul > li > div").highlight(kewWords, {needUnhighlight: true});
+		        
+		        return false;
+		    });
+		    
+		    $("#input_CancelHighlight").click(function(){
+		    	$("body > div > ul > li > h3 > a, body > div > ul > li > div").unhighlight();
+		    });
+		});
+    </script>
+</head>
+<body>
+	<form id="form_Search" action="" style="margin-left: auto; margin-right: auto; width: 90%; text-align: center;" autocomplete="off">
+		<input id="input_KeyWords" style="width: 480px; height: 24px; line-height: 24px; vertical-align: middle; font-size: 18px; padding-left: 6px; padding-right: 10px;" />
+		<input type="submit" style="height: 28px; vertical-align: middle;" value="搜索关键字"/>
+		<input id="input_CancelHighlight" type="button" style="height: 28px; vertical-align: middle;" value="取消高亮显示"/>
+	</form>
+
+	<div style="margin-left: auto; margin-right: auto; margin-top: 20px; width: 90%;">
+		<ul>
+			<li>
+				<h3><a href="http://jquery.com/">jQuery: The Write Less, Do More, JavaScript Library</a></h3>
+				<div>A fast, concise, library that simplifies how to traverse HTML documents, handle events, perform animations, and add AJAX.</div>
+			</li>
+			<li>
+				<h3><a href="topic.html?topicId=174060">河南教育厅发紧急通知要学生去富士康顶岗实习</a>&nbsp;&nbsp;<span>- 共有 4 篇文档 - 2010年10月11日</span></h3>
+				<div id="div_Test">"两岸三地"&amp;大学富士康调研组在北京发布的富士康调查系列报告。图片来源中国青年报  突然的实习  在9月17日之前河南电视广播大学新闻班的学生李生(化名)没想到他会跟富士康有什么关系。  "17日学校开了全校动员大会号召我们2006级和2009级几个班的学生去深圳富士康实习。紧接着学校派班主任到各个班级动员。"他说"学校说我们班40个人都必须去不去的话没有毕业证。" 如果学习电子工程等方向的学生去实习倒没有什么但让李生感到奇怪的是"我们学的是新闻学跟富士康的生产不搭界。"再者今年年初新闻专业的学生已经实习过了大部分同学在报社电视台等新闻单位实习。  据中国青年报记者了解河南省的中职高职学校几乎都对学生发出了类似的动员和号召有些学校到富士康顶岗的学生已经出发。李生说他新乡的同学已经去深圳富士康实习。  李生的班主任告诉记者这次突然的实习源自河南省教育厅的一份文件。  红头文件  中国青年报记者拿到了这份文件《河南省教育厅办公室关于组织中等职业学校学生赴富士康科技集团顶岗实习有关事宜的紧急通知》(下简称《通知》)。这份9月6日教育系统内部下发的教电〔2010〕89号通知中说"富士康科技集团是世界500强企业其落户河南对我省产业结构调整扩大就业将起到积极的促进作用""各单位主要领导要亲自过问亲自部署亲自落实分管领导要深入一线具体指导跟踪问效。"  《通知》表示"要坚持自愿的原则""要合理安排教学计划对因顶岗实习而影响的课程进度可以调整到周末或假期予以补足保证教学计划如期完成""要尽量组织电工电子计算机信息工程等工科类相关专业学生整班整建制地参加顶岗实习"。《通知》说9月10日之前各地各学校组织的以现二年级学生为主的顶岗实习学生仍按原计划进行组织输送。9月10日至9月20日各地各学校原则上只组织动员现三年级学生(即各校已自行安排的顶岗实习生)参加顶岗实习以保证富士康集团正式落户河南年内批量投产后有充足的高素质员工队伍。  当地建筑工程学校的一位老师告诉中国青年报记者教育厅的通知要求得比较急9月6日的通知9月9日和10日已走了一批学生。  "我们学校准备去300多人采用自愿报名的形式。"他说学生一直在待命教育厅让9月11日晚上6时出发但不赶巧那天是周六没法集合学生最后作罢。  他告诉记者在富士康实习学生的基本工资是每月1200元包吃包住8小时工作制加班有加班费。  "</div>
+			</li>
+			<li>
+				<h3><a href="topic.html?topicId=174119">凤凰代课教师正名之路</a>&nbsp;&nbsp;<span>- 共有 1 篇文档 - 2010年10月11日</span></h3>
+				<div>"我们于8月22日再次去湖南省教育厅凤凰县教育局领导两次来接我们8月28日我们的事终于得到了解决我们终于有了希望他们不但把'非法办学'的帽子摘掉而且还要补足我们从2003年到现在的代课工资差额"吴文忠告诉《新民周刊》记者。  记者贺莉丹  2010年9月1日湖南省湘西土家族苗族自治州凤凰县禾库镇。代课教师吴文忠执教的大塘小学门口二年级三年级的37个孩子端坐在唯一一间约20平方米的"教室"中书声琅琅。热闹的新学期又开始了。  "这学期比上学期还多了10个孩子"吴文忠说这位憨厚内向的代课教师的语气充满骄傲。大塘小学就设在吴文忠的家里迄今已经办了有12年吴文忠也是大塘小学唯一的老师兼任校长。  对于在乡村苗寨小学中执教多年的吴文忠而言未来有了希望。  今年4月7日《新民周刊》报道了在凤凰县腊尔山深处的禾库镇任教多年的代课教师被凤凰县教育局定性为"非法办学"这一事件。该报道刊发后不久凤凰县政府启动了一次对该县禾库镇6位任教至今的代课教师的专项调查。此番由主管教育的该县副县长高湘文直接牵头的调查让这些代课教师得到正名他们的"非法办学"的帽子终于被摘掉。  他们是代课教师不是"非法办学"  "我们于8月22日再次去湖南省教育厅凤凰县教育局领导两次来接我们8月28日我们的事终于得到了解决我们终于有了希望他们不但把'非法办学'的帽子摘掉而且还要补足我们从2003年到现在的代课工资差额"吴文忠告诉《新民周刊》记者。  而早在2008年8月10日由凤凰县政府办以及该县教育局劳动局信访局组成的"凤凰县人民政府调查组"出具的一份"凤凰县非法办学教师统计表"称该县"非法办学教师"有39人其"工资来源"一项中注明为"自收自支"。吴艺伟龙玉福吴文忠石杰华欧正金吴妹女这6位凤凰县禾库学区坚守任教至今的代课教师均在该名单之列。  当地教育主管部门这一"非法办学"的定性成为这些将青春贡献给乡村教育事业的代课教师们人生中的"黑锅"不堪负荷。因为他们自认所从事的代课教师工作从来没有过变化。  "我们感到"彻底寒心了"在乡村执教29年的代课教师九龙寨小学校长吴艺伟获悉此事后对记者这么感叹。  所有的代课教师都认为"名分"是最为重要的。"在很长的时间里我们只知道兢兢业业工作多做点成绩出来。我们总认为我们自己争取表现优秀他们会看得到"凤凰县禾库镇代课教师早齐小学校长龙玉福说。  支持这批禾库镇代课教师教学酬劳的</div>
+			</li>
+		</ul>
+	</div>
+	<!--<textarea id="textarea_Source" style="width: 90%; height: 470px;"></textarea>-->
+</body>
+</html>
