@@ -378,10 +378,10 @@
         <td>否</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>61</td>
+        <td>/jquery.jnotify</td>
+        <td>信息提示插件</td>
+        <td>否</td>
     </tr>
     <tr>
         <td></td>
