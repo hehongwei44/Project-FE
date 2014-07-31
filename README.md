@@ -360,6 +360,36 @@
         <td>否</td>
     </tr>
     <tr>
+        <td>58</td>
+        <td>/jquery.fancybox</td>
+        <td>jquery.fancybox</td>
+        <td>否</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
         <td></td>
         <td></td>
         <td></td>
