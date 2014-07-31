@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>rikrikrik.com  -  jQuery autosave plug-in</title>
+
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/global.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/jquery.autosave.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('form *').autosave();
+		});
+	</script>
+</head>
+<body>
+
+<div id="ctr" class="clear">
+	<div id="ctr_inner" class="maxi clear">
+		<div id="hdr">
+			<h1><a href="http://rikrikrik.com/"><strong><span class="hide">rikrikrik.com</span></strong></a></h1>
+			<p>&mdash; the home of <strong>Rik&nbsp;Lomas</strong>, a web developer and technology writer, specialising in HTML, CSS and JavaScript. <a href="/about/">More about me &raquo;</a></p>
+						<h3>jQuery plug-ins</h3>
+			<ul>
+				<li><a href="/jquery/quicksearch/">quicksearch</a></li>
+				<li><a href="/jquery/magicpreview/">magicpreview</a></li>
+				<li><a href="/jquery/autosave">autosave</a></li>
+				<li><a href="/jquery/pager">pager</a></li>
+				<li><a href="/jquery/shortkeys">shortkeys</a></li>
+			</ul>
+					</div>
+		<div id="main" class="plugins clear">
+<div id="jquerypage">
+	<div id="content">
+						<div class="post clear" id="post-50">
+				<h2><a href="http://rikrikrik.com/jquery/autosave/" rel="bookmark" title="Permanent Link to jQuery autosave plug-in">jQuery autosave plug-in</a></h2>
+				<ul>
+<li><a href="#whatitdoes">What it does</a></li>
+<li><a href="#examples">Examples</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#options">Options</a></li>
+<li><a href="#download">Download</a></li>
+</ul>
+<h3 id="whatitdoes">What it does</h3>
+<p>Autosave is designed to save the progress of forms by saving the fields to cookies so you won&#8217;t lose anything should anything go wrong</p>
+<p>The plug-in saves the form fields at certain intervals (the default is every 10 seconds) and whenever you leave the page.</p>
+<p>The plug-in was written with work-intensive forms in mind, such as a blog article writing form.</p>
+<h3 id="examples">Examples</h3>
+<p>To try this example, fill in some of the form fields and leave the page &ndash; <a href="http://rikrikrik.com/jquery/autosave/">clicking here will do</a>. When you come back, your precious work will have been lost as the form fields will be blank, but you can click the &#8220;Restore form&#8221; button to magically rescue your work.</p>
+<p><button class="autosave">Save form</button> <button class="autosave_restore">Restore form</button> <a href="#" class="autosave_removecookies">Delete related cookies</a> <span class="autosave_saving">Saving&#8230;</span></p>
+<form action="/jquery/autosave/" method="post">
+<p>			<fieldset></p>
+<ul>
+<li>
+						<label for="select1">Select</label></p>
+<select name="select1" id="select1">
+							<option value="1">Option 1</option><br />
+							<option value="2" selected="selected">Option 2</option></p>
+<p>							<option value="3">Option 3</option><br />
+						</select>
+</li>
+<li>
+						<label for="inputtext">Input text</label></p>
+<input type="text" name="inputtext" value="" id="inputtext" size="30" />
+					</li>
+<li>
+						<label for="inputradio">Input radios</label></p>
+<input type="radio" name="inputradio" value="1" />
+<input type="radio" name="inputradio" value="2" checked="checked" />
+<input type="radio" name="inputradio" value="3" />
+					</li>
+<li>
+						<label for="textarea">Textarea</label></p>
+<p>						<textarea name="textarea" rows="12" cols="40" id="textarea"></textarea>
+					</li>
+<li>
+<input type="submit" name="submit" value="Submit" /></li>
+</ul>
+<p>			</fieldset><br />
+		</form>
+<p>The example uses following code:</p>
+<p><code>
+<pre>
+$('form *').autosave();
+</pre>
+<p></code></p>
+<h3 id="usage">Usage</h3>
+<p><code>
+<pre>
+$(form_fields).autosave(options);
+</pre>
+<p></code></p>
+<p>As the plug-in will only work on certain elements, you can select all elements and the plug-in will still work, e.g. $(&#8217;<strong>form#the_form *</strong>&#8216;).autosave();</p>
+<p>By default, the class for saving the form is &#8220;<strong>autosave</strong>&#8220;, the restore class is &#8220;<strong>autosave_restore</strong>&#8221; and the remove all related cookies class is &#8220;<strong>autosave_removecookies</strong>&#8220;. So if you attach the class &#8220;autosave&#8221; to any link or button, it will save automatically.</p>
+<p>The &#8220;Saving&#8221; notifier will show on any &#8220;<strong>autosave_saving</strong>&#8221; class</p>
+<p><strong>The plug-in requires <a href="http://www.stilbuero.de/2006/09/17/cookie-plugin-for-jquery/">Klaus Hartl&#8217;s jQuery Cookie plug-in</a> to work.</strong></p>
+<h3 id="options">Options</h3>
+<p>Here&#8217;s an example of how to use options:</p>
+<p><code>
+<pre>
+$('textarea').autosave({
+  'interval': 20000,
+  'unique': 'articleadd'
+});
+</pre>
+<p></code></p>
+<p>And here are the options:</p>
+<dl>
+<dt>autosave</dt>
+<dd>The jQuery expression that will handle save triggers.</dd>
+<dd class="default">default: &#8216;.autosave&#8217;</dd>
+<dt>restore</dt>
+<dd>The jQuery expression that will handle restore triggers.</dd>
+<dd class="default">default: &#8216;.autosave_restore&#8217;</dd>
+<dt>removeCookies</dt>
+<dd>The jQuery expression that will handle triggers to remove all cookies related to the autosave plug-in.</dd>
+<dd class="default">default: &#8216;.autosave_removecookies&#8217;</dd>
+<dt>saving</dt>
+<dd>The jQuery expression that show when save is complete.</dd>
+<dd class="default">default: &#8216;.autosave_saving&#8217;</dd>
+<dt>interval</dt>
+<dd>The interval that autosave will save to cookies in milliseconds.</dd>
+<dd class="default">default: 10000</dd>
+<dt>unique</dt>
+<dd>If you&#8217;re using autosave on multiple pages within one site, assign a unique string to differentiate between pages, e.g. on a blog add page, use something like &#8216;blogaddpage&#8217;.</dd>
+<dd class="default">default: &#8221;, takes a string</dd>
+<dt>onBeforeSave</dt>
+<dd>A function to be called before saving.</dd>
+<dd class="default">takes a function</dd>
+<dt>onAfterSave</dt>
+<dd>A function to be called after saving.</dd>
+<dd class="default">takes a function</dd>
+<dt>onBeforeRestore</dt>
+<dd>A function to be called before restoring.</dd>
+<dd class="default">takes a function</dd>
+<dt>onAfterRestore</dt>
+<dd>A function to be called after restoring.</dd>
+<dd class="default">takes a function</dd>
+<dt>cookieCharMaxSize</dt>
+<dd>The amount of characters for each cookie for text inputs and textareas. This isn&#8217;t the maximum you can save per text input, the maximum is browser-dependent.</dd>
+<dd class="default">default: 2000</dd>
+<dt>cookieExpiryLength</dt>
+<dd>The length in days the cookie will last</dd>
+<dd class="default">default: 1</dd>
+</dl>
+<h3 id="download">Download</h3>
+<p>The plug-in requires <a href="http://www.stilbuero.de/2006/09/17/cookie-plugin-for-jquery/">Klaus Hartl&#8217;s jQuery Cookie plug-in</a> to work.</p>
+<ul>
+<li><a href="/js/jquery.autosave.js">Full-fat Javascript</a> (5.1k)</li>
+<li><a href="/js/jquery.autosave.pack.js">Packed version</a> (2.7k)</li>
+<li><a href="/js/jquery.autosave.pack.js">Packed version with cookies plug-in</a> (3.4k)</li>
+<li><a href="/js/jquery.autosave.txt">Text version</a></li>
+</ul>
+			</div>
+				</div>
+</div>
+
+		</div>
+	</div>
+</div>
+
+
+<div id="ftr" class="clear">
+	<div>
+	<p>&copy; Rik Lomas 2006-2008 all rights reserved.</p>
+	<p>No part may be reproduced without the written permission of the copyright owner, unless otherwise stated</p>
+	</div>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-159733-6");
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>

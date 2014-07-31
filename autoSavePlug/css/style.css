@@ -1,0 +1,367 @@
+/*
+ Theme Name: rikrikrik
+ Theme URI: http://rikrikrik.com/
+ Description: rikrikrik.com
+ Version: 1.0
+ Author: Rik Lomas
+ */
+
+body {
+    font-size: 76%;
+    color: #333;
+    background: #333;
+    line-height: 1.5;
+}
+body, input, button, textarea {
+    font-family: Arial, sans-serif;
+}
+input, button, textarea {
+    font-size: 100%;
+}
+body {
+    margin: 0;
+    padding: 0; /* background: url(images/slice-grey-top.gif) 0 0px no-repeat; */
+}
+#ctr {
+    padding: 30px 10px 40px 30px;
+    background: #fff;
+    border-top: 10px solid #F34105;
+}
+#ctr_inner {
+    width: 780px;
+    background: url(images/bg.gif) 140px 0 repeat-y;
+}
+#ctr_inner.maxi {
+    width: 780px;
+}
+#hdr {
+    float: left;
+    width: 120px;
+    margin: 0 20px 0 0;
+    font-size: 93%;
+}
+#main {
+    background: url(images/bg.gif) 400px 0 repeat-y;
+    float: right;
+    width: 640px;
+}
+#main.plugins {
+    background: none;
+}
+#page, #jquerypage {
+    float: left;
+    width: 360px;
+    padding: 0 20px;
+    overflow: hidden;
+}
+#jquerypage {
+    width: 580px;
+    border-right: 0;
+}
+#side {
+    float: left;
+    width: 180px;
+    padding-left: 20px;
+}
+#ftr {
+    color: #fff;
+    padding: 20px 30px;
+}
+#hdr h1 {
+    border-bottom: 1px solid #eee;
+    padding: 1em 0 0.7em 0;
+    margin: 0;
+}
+#hdr h1 a, #hdr h1 a strong {
+    background: url(images/logo.png) top left no-repeat;
+    display: block;
+    width: 110px;
+    height: 110px;
+    border-bottom: 1px solid #fff;
+}
+#hdr h1 span {
+    display: none;
+}
+h2, h2 a, h2 a:hover {
+    color: #F34105;
+    text-decoration: none;
+}
+h2 a:hover {
+    text-decoration: underline;
+}
+a {
+    color: #005BD8;
+}
+a:hover {
+    color: #005BD8;
+}
+a img {
+    border: none;
+}
+.hr {
+    border-bottom: 1px solid #eee;
+}
+.hr hr {
+    display: none;
+}
+.clear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clear {
+    display: inline-block;
+}
+/* Hides from IE-mac \*/
+* html .clear {
+    height: 1%;
+}
+.clear {
+    display: block;
+}/* End hide from IE-mac */
+.wp-caption img {
+    text-align: center;
+    border: 5px solid #eee;
+}
+.wp-caption-text {
+    margin: 0;
+    font-size: 93%;
+    color: #666;
+    border-bottom: 1px solid #eee;
+    text-align: right;
+    padding: 0 5px;
+}
+ul.meta {
+    padding: 0;
+    margin: 0;
+    color: #666;
+}
+ul.meta li {
+    border-top: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+}
+ul.meta li.first {
+    border: 0;
+}
+ul.meta li span {
+    float: right;
+    display: block;
+    width: 240px;
+}
+ul.meta li span.title {
+    float: left;
+    display: block;
+    width: 110px;
+    color: #999;
+}
+#side {
+    margin-top: 0.5em;
+}
+#side h3, #hdr h3 {
+    font-size: 100%;
+}
+#side ul, #hdr ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #999;
+}
+#side li:before, #hdr li:before {
+    content: "\00BB  \0020";
+}
+#ftr p {
+    margin: 0;
+    padding: 0;
+    font-size: 93%;
+}
+.commentlist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #eee;
+}
+.commentlist li {
+    border-bottom: 1px solid #eee;
+    padding: 1em 0 0.5em 0;
+}
+.commentlist .avatar {
+    float: left;
+    width: 50px;
+}
+.commentlist .comment {
+    float: right;
+    width: 300px;
+}
+.commentlist .commentdate {
+    font-size: 93%;
+}
+.commentlist .commentdate, .commentlist .commentdate a {
+    color: #999;
+    text-decoration: none;
+}
+.commentlist .commentdate a:hover {
+    text-decoration: underline;
+}
+form label {
+    display: block;
+}
+form label span {
+    color: #666;
+    font-size: 93%;
+}
+form textarea {
+    width: 100%;
+}
+form fieldset {
+    border: 10px solid #f7f7f7;
+    background: #fff;
+    padding: 20px;
+    margin: 0;
+}
+form ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+form li {
+    margin: 0 0 1em 0;
+}
+.entry ul {
+    padding: 0 1em 0 2em;
+}
+.entry ul li {
+    padding: 0.5em 0;
+}
+.navigation {
+    border-top: 1px solid #eee;
+    margin-top: 1em;
+    padding: 0.5em 0 1em 0;
+}
+.n_older {
+    float: left;
+}
+.n_newer {
+    float: right;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+thead th {
+    background: #333;
+    color: #fff;
+}
+table th, table td {
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px;
+    font-size: 100%;
+}
+.odd, .r1 {
+    background: #fff;
+}
+.even, .r2 {
+    background: #f7f7f7;
+}
+.r3 {
+    background: #ebebeb;
+}
+pre {
+    font-family: 'Lucida Console', monospace;
+    font-size: 100%;
+    padding: 10px 20px;
+    font-weight: bold;
+    background: #f7f7f7;
+}
+dt {
+    margin-top: 10px;
+    font-weight: bold;
+}
+dd {
+    margin: 0;
+}
+dd.default {
+    font-size: 93%;
+    font-weight: bold;
+    color: #777;
+}
+dl .new {
+    color: #f34105;
+    text-transform: uppercase;
+    font-size: 85%;
+    margin-left: 3px;
+}
+form.quicksearch {
+    padding: 10px;
+    background: #f7f7f7;
+}
+form.quicksearch label {
+    display: inline;
+}
+form.quicksearch input {
+    margin-left: 5px;
+    width: 300px;
+}
+form.quicksearch img {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.autosave_saving {
+    font-weight: bold;
+    color: #f34105;
+    margin-left: 3px;
+    display: none;
+}
+.pager_examples {
+    border: 1px solid #999;
+    margin: 10px 0;
+}
+.pager_examples p {
+    padding: 5px;
+    margin: 0;
+}
+.pager_examples .nav {
+    background: #eee;
+    border-top: 1px solid #999;
+    padding: 5px;
+}
+.pager_examples .nav#nav4 {
+    border-top: 0;
+    border-bottom: 1px solid #999;
+}
+.pager_examples .nav a {
+    padding: 0 5px;
+}
+.pager_examples .nav a.highlight {
+    color: #000;
+    font-weight: bold;
+}
+.mp_box {
+    background: #f7f7f7;
+}
+.mp_box .preview {
+    float: right;
+    width: 260px;
+    background: #f7f7f7;
+    padding: 10px 10px 10px 0;
+}
+.mp_box .preview h2 {
+    margin: 0.5em 0;
+    padding: 0;
+    color: #333;
+}
+.mp_box .preview p {
+    margin: 0.5em 0;
+    padding: 0;
+}
+.mp_box .preview p span {
+    font-size: 93%;
+    color: #666;
+}
+.mp_form {
+    width: 300px;
+    float: left;
+}
