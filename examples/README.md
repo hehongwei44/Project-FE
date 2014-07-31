@@ -40,4 +40,9 @@
         <td>/example.html</td>
         <td>仿微博信息展示效果</td>
     </tr>
+    <tr>
+        <td>8</td>
+        <td>/css-buttons.html</td>
+        <td>css3按钮</td>
+    </tr>
 </table>
