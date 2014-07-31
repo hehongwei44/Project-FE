@@ -366,10 +366,10 @@
         <td>否</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>59</td>
+        <td>/jQuery.Highlighter</td>
+        <td>查找高亮</td>
+        <td>否</td>
     </tr>
     <tr>
         <td></td>
