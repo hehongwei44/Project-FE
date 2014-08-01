@@ -398,7 +398,7 @@
     <tr>
         <td>64</td>
         <td>/baiduMapDemo</td>
-        <td>百度地图插件</td>
+        <td>百度地图示例</td>
         <td>否</td>
     </tr>
 </table>
