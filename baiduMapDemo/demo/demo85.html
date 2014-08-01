@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+        #l-map{height:100%;width:78%;float:left;border-right:2px solid #bcbcbc;}
+        #r-result{height:100%;width:20%;float:left;}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=p43McQHnALcKGiuRKmvHGwZs"></script>
+    <title>按不同策略的公交换乘查询</title>
+</head>
+<body>
+<div id="l-map"></div>
+<div id="r-result"></div>
+</body>
+</html>
+<script type="text/javascript">
+
+    // 百度地图API功能
+    var map = new BMap.Map("l-map");            // 创建Map实例
+    map.centerAndZoom(new BMap.Point(116.404, 39.915), 12);
+    var transit = new BMap.TransitRoute(map, {
+        renderOptions: {map: map,panel:"r-result"},
+        policy:BMAP_TRANSIT_POLICY_AVOID_SUBWAYS   //不乘地铁
+        //BMAP_TRANSIT_POLICY_LEAST_TIME	最少时间。
+        //BMAP_TRANSIT_POLICY_LEAST_TRANSFER	最少换乘。
+        //BMAP_TRANSIT_POLICY_LEAST_WALKING	最少步行。
+        //BMAP_TRANSIT_POLICY_AVOID_SUBWAYS	不乘地铁。(自 1.2 新增)
+    });
+    transit.search("王府井", "西单");
+</script>

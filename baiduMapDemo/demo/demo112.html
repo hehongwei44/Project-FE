@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+        #panorama {margin-right: 300px;height: 100%;overflow: hidden;}
+        #svInfoText {border-left:1px dotted #999;height:100%;width:295px;position:absolute;top:0px;right:0px;font-size:16px;}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=p43McQHnALcKGiuRKmvHGwZs"></script>
+    <title>全景事件</title>
+</head>
+<body>
+<div id="panorama"></div>
+<div id="svInfoText"></div>
+</body>
+</html>
+
+<script type="text/javascript">
+    var panorama = new BMap.Panorama('panorama');
+    panorama.setPosition(new BMap.Point(120.31, 31.58));
+    panorama.addEventListener('position_changed', function(e){ //全景位置改变事件
+        panoramaCallBack(e);
+    });
+    panorama.addEventListener('pov_changed', function(e){ //全景视角改变事件
+        panoramaCallBack(e);
+    });
+    function panoramaCallBack(e){ //事件回调函数
+        if (e.type == 'onpov_changed') {
+            document.getElementById('svInfoText').innerHTML="全景视角为：<br/>"+"水平视角："+panorama.getPov().heading+"<br/>垂直视角："+panorama.getPov().pitch;
+        }
+        else if (e.type=='onposition_changed')
+        {
+            document.getElementById('svInfoText').innerHTML="全景位置点为："+panorama.getPosition().lng+","+panorama.getPosition().lat;
+        }
+    }
+
+</script>

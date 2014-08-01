@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body, html,#allmap {width: 100%;height: 100%;overflow: hidden;}
+        #l-map{height:100%;width:78%;float:left;border-right:2px solid #bcbcbc;}
+        #r-result{height:100%;width:20%;float:left;}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=p43McQHnALcKGiuRKmvHGwZs"></script>
+    <title>检索用户静态数据</title>
+</head>
+<body>
+<div id="l-map"></div>
+<div id="r-result">
+    <input id="type1" type="radio" name="type" value="single" /><label for="type1">精准查找</label>
+    <input id="type2" type="radio" name="type" value="more" checked="checked" /><label for="type2">模糊查找</label><br />
+    <input id="show1" type="radio" name="show" value="" checked="checked" /><label for="show1">仅查找到的内容</label>
+    <input id="show2" type="radio" name="show" value="all"/><label for="show2">显示所有内容</label><br />
+    <input id="keyword" type="text" style="width:150px;" value="酒店"/>
+    <input type="button" value="搜索" onclick="search('type','show','keyword')"/>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+
+    // 百度地图API功能
+    //  标注点数组
+    var BASEDATA = [
+        {title:"奥亚酒店",content:"北苑路169号",point:"116.422792|40.009471",isOpen:1,icon:{w:21,h:21,l:115,t:46,x:1,lb:10}},
+        {title:"珀丽酒店",content:"将台西路8号",point:"116.484289|39.97936",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}},
+        {title:"贵国酒店",content:"左家庄1号",point:"116.454494|39.964011",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}},
+        {title:"科通酒店",content:"民族园路8号院2号楼",point:"116.394601|39.987925",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}},
+        {title:"将台酒店",content:"酒仙桥路甲12号",point:"116.496024|39.976864",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}},
+        {title:"成宏酒店",content:"北四环东路惠新东桥西北侧",point:"116.429445|39.995392",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}},
+        {title:"华商酒店",content:"延静西里2号",point:"116.488962|39.921939",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}},
+        {title:"标华酒店",content:"北京市 朝阳区红庙路柴家湾1号",point:"116.489284|39.92104",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}},
+        {title:"万程酒店",content:"天坛路89号",point:"116.411762|39.89457",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}},
+        {title:"黎昌酒店",content:"永定门外彭庄乙58号",point:"116.393532|39.876272",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}},
+        {title:"北京图书馆",content:"北京市海淀区白石桥路39号",point:"116.329593|39.952398",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}},
+        {title:"海淀图书馆",content:"丹棱街16西门",point:"116.315551|39.984388",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}},
+        {title:"北京图书馆",content:"北京市西城区文津街附近",point:"116.391713|39.929007",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}},
+        {title:"首都图书馆",content:"东三环南路88号",point:"116.469899|39.87684",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}},
+        {title:"国家图书馆",content:"中关村南大街33号",point:"116.331292|39.949031",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}},
+        {title:"崇文区图书馆",content:"北京市崇文区花市大街113号（乐天玛特超市旁）的敕建火德真君庙内",point:"116.427671|39.903568",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}},
+        {title:"朝阳区图书馆",content:"北京市朝阳区朝外小庄金台里17号",point:"116.47766|39.922295",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}},
+        {title:"宣武区图书馆",content:"教子胡同8号",point:"116.374561|39.894302",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}},
+        {title:"东城区图书馆",content:"交道口东大街85号",point:"116.41927|39.9474",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}},
+        {title:"西城区图书馆",content:"北京市西城区后广平胡同26号",point:"116.368099|39.942332",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+    ]
+
+    //创建和初始化地图函数：
+    function initMap(){
+        window.map = new BMap.Map("l-map");
+        map.centerAndZoom(new BMap.Point(116.412318,39.887037),12);
+        map.enableScrollWheelZoom();
+        map.addControl(new BMap.NavigationControl());
+        window.searchClass = new SearchClass();
+        searchClass.setData(BASEDATA)
+        var dd = searchClass.search({k:"title",d:"图书馆",t:"more",s:""});//t:{single|more},s{all|!all}
+        addMarker(dd);//向地图中添加marker
+    }
+    window.search = function(name_t,name_s,id_d){
+        var t_o = document.getElementsByName(name_t);
+        var s_o = document.getElementsByName(name_s);
+        var s_v,t_v,d_v = document.getElementById(id_d).value;
+        for(var i = 0; i < t_o.length; i++){
+            if(t_o[i].checked){
+                t_v = t_o[i].value;
+            }
+        }
+        for(var i = 0; i < s_o.length; i++){
+            if(s_o[i].checked){
+                s_v = s_o[i].value;
+            }
+        }
+        searchClass.trim(t_v) == "" && (t_v = "single");
+        var dd = searchClass.search({k:"title",d:d_v,t:t_v,s:s_v});
+        addMarker(dd);//向地图中添加marker
+    }
+
+    //创建marker
+    window.addMarker = function (data){
+        map.clearOverlays();
+        for(var i=0;i<data.length;i++){
+            var json = data[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+            var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+            var iw = createInfoWindow(i);
+            var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+            marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                borderColor:"#808080",
+                color:"#333",
+                cursor:"pointer"
+            });
+
+            (function(){
+                var _json = json;
+                var _iw = createInfoWindow(_json);
+                var _marker = marker;
+                _marker.addEventListener("click",function(){
+                    this.openInfoWindow(_iw);
+                });
+                _iw.addEventListener("open",function(){
+                    _marker.getLabel().hide();
+                })
+                _iw.addEventListener("close",function(){
+                    _marker.getLabel().show();
+                })
+                label.addEventListener("click",function(){
+                    _marker.openInfoWindow(_iw);
+                })
+                if(!!json.isOpen){
+                    label.hide();
+                    _marker.openInfoWindow(_iw);
+                }
+            })()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(json){
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("fox.gif", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowAnchor:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+
+    function SearchClass(data){
+        this.datas = data;
+    }
+    // rule = {k:"title",d:"酒店",s:"all",t:"single"}=>t{single:(key=?),more:(key like[%?%])}//t:{single|more},s{all|!all}
+    SearchClass.prototype.search = function(rule){
+        if(this.datas == null){alert("数据不存在!");return false;}
+        if(this.trim(rule) == "" || this.trim(rule.d) == "" || this.trim(rule.k) == "" || this.trim(rule.t) == ""){alert("请指定要搜索内容!");return false;}
+        var reval = [];
+        var datas = this.datas;
+        var len = datas.length;
+        var me = this;
+        var ruleReg = new RegExp(this.trim(rule.d));
+        var hasOpen = false;
+
+        var addData = function(data,isOpen){
+            // 第一条数据打开信息窗口
+            if(isOpen && !hasOpen){
+                hasOpen = true;
+                data.isOpen = 1;
+            }else{
+                data.isOpen = 0;
+            }
+            reval.push(data);
+        }
+        var getData = function(data,key){
+            var ks = me.trim(key).split(/\./);
+            var i = null,s = "data";
+            if(ks.length == 0){
+                return data;
+            }else{
+                for(var i = 0; i < ks.length; i++){
+                    s += '["' + ks[i] + '"]';
+                }
+                return eval(s);
+            }
+        }
+        for(var cnt = 0; cnt < len; cnt++){
+            var data = datas[cnt];
+            var d = getData(data,rule.k);
+            if(rule.t == "single" && rule.d == d){
+                addData(data,true);
+            }else if(rule.t != "single" && ruleReg.test(d)){
+                addData(data,true);
+            }else if(rule.s == "all"){
+                addData(data,false);
+            }
+        }
+        return reval;
+    }
+    SearchClass.prototype.setData = function(data){
+        this.datas = data;
+    }
+    SearchClass.prototype.trim = function(str){
+        if(str == null){str = "";}else{ str = str.toString();}
+        return str.replace(/(^[\s\t\xa0\u3000]+)|([\u3000\xa0\s\t]+$)/g, "");
+    }
+
+    initMap();//创建和初始化地图
+</script>

@@ -1,0 +1,65 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=p43McQHnALcKGiuRKmvHGwZs"></script>
+
+    <!--加载鼠标绘制工具-->
+    <script type="text/javascript" src="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.js"></script>
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.css" />
+
+    <title>圆形区域搜索用户数据</title>
+</head>
+<body>
+<div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");          // 创建地图实例
+    var point = new BMap.Point(116.403694,39.927552);  // 创建点坐标
+    map.centerAndZoom(point, 15);                 // 初始化地图，设置中心点坐标和地图级别
+    map.enableScrollWheelZoom();
+    map.addControl(new BMap.NavigationControl());  //添加默认缩放平移控件
+
+    var options = {
+        renderOptions: {
+            map: map
+        },
+        onSearchComplete: function(results){
+        }
+    };
+    var localSearch = new BMap.LocalSearch(map,options);
+
+    var drawingManager = new BMapLib.DrawingManager(map, {
+        isOpen: true, //是否开启绘制模式
+        enableDrawingTool: true, //是否显示工具栏
+        drawingToolOptions: {
+            anchor: BMAP_ANCHOR_TOP_RIGHT, //位置
+            offset: new BMap.Size(5, 5), //偏离值
+            scale: 0.8, //工具栏缩放比例
+            drawingModes : [
+                BMAP_DRAWING_CIRCLE
+            ]
+        }
+    });
+    drawingManager.setDrawingMode(BMAP_DRAWING_CIRCLE);
+    var circle = null;
+    drawingManager.addEventListener('circlecomplete', function(e) {
+        circle = e;
+        var radius= parseInt(e.getRadius());
+        var center= e.getCenter();
+        drawingManager.close();
+        localSearch.searchNearby('火车票代售点', center,radius,{customData:{databoxId:15611}});});
+    window.onload = function() {
+        var circle = new BMap.Circle(point,2000,{fillColor:"blue", strokeWeight: 1 ,fillOpacity: 0.3, strokeOpacity: 0.3});
+        map.addOverlay(circle);
+        localSearch.searchNearby('火车票代售点', point,2000,{customData:{databoxId:15611}});}
+
+
+
+</script>

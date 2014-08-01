@@ -1,0 +1,135 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+        #l-map{height:100%;width:78%;float:left;border-right:2px solid #bcbcbc;}
+        #r-result{height:100%;width:20%;float:left;}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=p43McQHnALcKGiuRKmvHGwZs"></script>
+    <title>自定义公交换乘的数据接口</title>
+</head>
+<body>
+<div id="l-map"></div>
+<div id="r-result"></div>
+</body>
+</html>
+<script type="text/javascript">
+
+    // 百度地图API功能
+    var map = new BMap.Map("l-map");            // 创建Map实例
+    map.centerAndZoom(new BMap.Point(116.404, 39.915), 12);
+
+    var transit = new BMap.TransitRoute("北京市");
+    transit.setSearchCompleteCallback(function(results){
+        if (transit.getStatus() == BMAP_STATUS_SUCCESS){
+            for (var index = 0; index < results.getNumPlans(); index++){
+                var showElement = document.createElement("div");
+                var callDLFunc = drawLine(map,results,index,showElement);
+                showElement.style.lineHeight = "20px";
+                showElement.onclick=callDLFunc;
+                showElement.innerHTML = (index + 1) + ". " + results.getPlan(index).getDescription();
+                document.getElementById("r-result").appendChild(showElement);
+                if(index == 0){showElement.onclick();}
+            }
+        }
+    })
+    transit.search("魏公村", "百度大厦");
+    var lastSetBackObj = null;
+    function drawLine(aMap,results,index,obj){
+        return function(){
+            var opacity = 0.45;
+            var planObj = results.getPlan(index);
+            var bounds = new Array();
+            var addMarkerFun = function(point,imgType,index,title){
+                var url;
+                var width;
+                var height
+                var myIcon;
+                // imgType:1的场合，为起点和终点的图；2的场合为过程的图形
+                if(imgType == 1){
+                    url = "http://map.baidu.com/image/dest_markers.png";
+                    width = 42;
+                    height = 34;
+                    myIcon = new BMap.Icon(url,new BMap.Size(width, height),{offset: new BMap.Size(14, 32),imageOffset: new BMap.Size(0, 0 - index * height)});
+                }else{
+                    url = "http://map.baidu.com/image/trans_icons.png";
+                    width = 22;
+                    height = 25;
+                    var d = 25;
+                    var cha = 0;
+                    var jia = 0
+                    if(index == 2){
+                        d = 21;
+                        cha = 5;
+                        jia = 1;
+                    }
+                    myIcon = new BMap.Icon(url,new BMap.Size(width, d),{offset: new BMap.Size(10, (11 + jia)),imageOffset: new BMap.Size(0, 0 - index * height - cha)});
+                }
+
+                var marker = new BMap.Marker(point, {icon: myIcon});
+                if(title != null && title != ""){
+                    marker.setTitle(title);
+                }
+                // 起点和终点放在最上面
+                if(imgType == 1){
+                    marker.setTop(true);
+                }
+                aMap.addOverlay(marker);
+            }
+            var addPoints = function(points){
+                for(var i = 0; i < points.length; i++){
+                    bounds.push(points[i]);
+                }
+
+            }
+
+            // 清空覆盖物
+            aMap.clearOverlays();
+
+            // 绘制驾车步行线路
+            for (var i = 0; i < planObj.getNumRoutes(); i ++){
+                var route = planObj.getRoute(i);
+                if (route.getDistance(false) > 0){
+                    // 步行线路有可能为0
+                    aMap.addOverlay(new BMap.Polyline(route.getPath(), {strokeStyle:"dashed",strokeColor: "#30a208",strokeOpacity:0.75,strokeWeight:4,enableMassClear:true}));
+                }
+            }
+            // 绘制公交线路
+            for (i = 0; i < planObj.getNumLines(); i ++){
+                var line = planObj.getLine(i);
+                addPoints(line.getPath());
+                // 公交
+                if(line.type == BMAP_LINE_TYPE_BUS){
+                    // 上车
+                    addMarkerFun(line.getGetOnStop().point,2,2,line.getGetOnStop().title);
+                    // 下车
+                    addMarkerFun(line.getGetOffStop().point,2,2,line.getGetOffStop().title);
+
+                    // 地铁
+                }else if(line.type == BMAP_LINE_TYPE_SUBWAY){
+                    // 上车
+                    addMarkerFun(line.getGetOnStop().point,2,3,line.getGetOnStop().title);
+                    // 下车
+                    addMarkerFun(line.getGetOffStop().point,2,3,line.getGetOffStop().title);
+                }
+                aMap.addOverlay(new BMap.Polyline(line.getPath(), {strokeColor: "#0030ff",strokeOpacity:opacity,strokeWeight:6,enableMassClear:true}));
+            }
+
+            aMap.setViewport(bounds);
+
+            // 终点
+            addMarkerFun(results.getEnd().point,1,1);
+            // 开始点
+            addMarkerFun(results.getStart().point,1,0);
+
+            // 设置文字背景色
+            if(lastSetBackObj != null){
+                lastSetBackObj.style.backgroundColor = "#fff";
+            }
+            obj.style.backgroundColor = "#f0f0f0";
+            lastSetBackObj = obj;
+        }
+    }
+</script>

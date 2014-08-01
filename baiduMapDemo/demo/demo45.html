@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body, html{width: 100%;height: 100%;overflow: hidden;margin:0;}
+        #allmap {margin-right:200px;height: 100%;overflow: hidden;}
+        #control{position:absolute;width:200px;top:0px;right:0px;}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=p43McQHnALcKGiuRKmvHGwZs"></script>
+    <title>开启线的编辑功能</title>
+</head>
+<body>
+<div id="allmap"></div>
+<div id="control">
+    <div style="padding:5px;font-size:12px;line-height:18px;">
+        使用javacript api<b>1.4</b>的版本，开启编辑后会一直显示可编辑的点。
+    </div>
+    <button onclick = "ply.enableEditing()">开启编辑功能</button>
+    <button onclick = "ply.disableEditing()">关闭编辑功能</button>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    map.centerAndZoom(new BMap.Point(116.403765, 39.914850), 7);
+    map.enableScrollWheelZoom();
+
+    var ply;
+    function getBoundary(){
+        var bdary = new BMap.Boundary();
+        bdary.get("怀柔区", function(rs){       //获取行政区域
+            map.clearOverlays();        //清除地图覆盖物
+            var count = rs.boundaries.length; //行政区域的点有多少个
+            for(var i = 0; i < count; i++){
+                console.log(rs.boundaries[i].length);
+                ply = new BMap.Polygon(rs.boundaries[i], {strokeWeight: 2, strokeColor: "#ff0000"}); //建立多边形覆盖物
+                map.addOverlay(ply);  //添加覆盖物
+                map.setViewport(ply.getPath());    //调整视野
+            }
+            ply.enableEditing();  //开启线编辑功能
+        });
+    }
+
+    setTimeout(function(){
+        getBoundary();
+    }, 500);
+</script>
+

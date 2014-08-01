@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+        #l-map{height:100%;width:78%;float:left;border-right:2px solid #bcbcbc;}
+        #r-result{height:100%;width:20%;float:left;}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=p43McQHnALcKGiuRKmvHGwZs"></script>
+    <title>获取公交换乘的数据接口</title>
+</head>
+<body>
+<div id="l-map"></div>
+<div id="r-result"></div>
+</body>
+</html>
+<script type="text/javascript">
+
+    // 百度地图API功能
+    var map = new BMap.Map("l-map");            // 创建Map实例
+    map.centerAndZoom(new BMap.Point(116.404, 39.915), 12);
+
+    var transit = new BMap.TransitRoute("北京市");
+    transit.setSearchCompleteCallback(function(results){
+        if (transit.getStatus() == BMAP_STATUS_SUCCESS){
+            var firstPlan = results.getPlan(0);
+            // 绘制步行线路
+            for (var i = 0; i < firstPlan.getNumRoutes(); i ++){
+                var walk = firstPlan.getRoute(i);
+                if (walk.getDistance(false) > 0){
+                    // 步行线路有可能为0
+                    map.addOverlay(new BMap.Polyline(walk.getPath(), {lineColor: "green"}));
+                }
+            }
+            // 绘制公交线路
+            for (i = 0; i < firstPlan.getNumLines(); i ++){
+                var line = firstPlan.getLine(i);
+                map.addOverlay(new BMap.Polyline(line.getPath()));
+            }
+            // 输出方案信息
+            var s = [];
+            for (i = 0; i < results.getNumPlans(); i ++){
+                s.push((i + 1) + ". " + results.getPlan(i).getDescription());
+            }
+            document.getElementById("r-result").innerHTML = s.join("<br/>");
+        }
+    })
+    transit.search("中关村", "国贸桥");
+</script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=p43McQHnALcKGiuRKmvHGwZs"></script>
+    <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/changeMore.js"></script>
+    <title>批量坐标转换</title>
+</head>
+<body>
+<div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    map.centerAndZoom(new BMap.Point(116.404, 39.915), 15);
+    var i;
+    var markers = [];
+    map.addEventListener("click",function(e){
+        alert(e.point.lng + "," + e.point.lat);
+    });
+    //注意：百度和谷歌的经纬度坐标顺序是相反的。
+    var points = [new BMap.Point(116.3786889372559,39.90762965106183),
+        new BMap.Point(116.38632786853032,39.90795884517671),
+        new BMap.Point(116.39534009082035,39.907432133833574),
+        new BMap.Point(116.40624058825688,39.90789300648029),
+        new BMap.Point(116.41413701159672,39.90795884517671)
+    ];
+    function callback(xyResults){
+        var xyResult = null;
+        for(var index in xyResults){
+            xyResult = xyResults[index];
+            if(xyResult.error != 0){continue;}//出错就直接返回;
+            var point = new BMap.Point(xyResult.x, xyResult.y);
+            var marker = new BMap.Marker(point);
+            map.addOverlay(marker);
+            map.setCenter(point);// 由于写了这句，每一个被设置的点都是中心点的过程
+        }
+    }
+
+    setTimeout(function(){
+        BMap.Convertor.transMore(points,2,callback);        //一秒之后开始进行坐标转换。参数2，表示是从GCJ-02坐标到百度坐标。参数0，表示是从GPS到百度坐标
+    }, 1000);
+</script>

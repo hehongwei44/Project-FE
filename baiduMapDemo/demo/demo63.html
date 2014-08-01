@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=p43McQHnALcKGiuRKmvHGwZs"></script>
+    <title>添加清华校园微观图</title>
+</head>
+<body>
+<div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+
+    // 百度地图API功能
+    var tileLayer = new BMap.TileLayer({isTransparentPng: true});
+    tileLayer.getTilesUrl = function(tileCoord, zoom) {
+        var x = tileCoord.x;
+        var y = tileCoord.y;
+        return 'tiles/' + zoom + '/tile' + x + '_' + y + '.png';  //根据当前坐标，选取合适的瓦片图
+    }
+    var map = new BMap.Map('allmap');
+    map.addTileLayer(tileLayer);
+    map.addControl(new BMap.NavigationControl());
+    map.centerAndZoom(new BMap.Point(116.332782, 40.007978), 16);
+
+
+    var copyCtrl = new BMap.CopyrightControl({anchor: BMAP_ANCHOR_BOTTOM_RIGHT});
+    copyCtrl.addCopyright({id: 1, content: "版权说明：清华校园图片取自互联网"});
+    map.addControl(copyCtrl);
+</script>

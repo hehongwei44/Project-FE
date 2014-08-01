@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+        #l-map{height:100%;width:78%;float:left;border-right:2px solid #bcbcbc;}
+        #r-result{height:100%;width:20%;float:left;}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=p43McQHnALcKGiuRKmvHGwZs"></script>
+    <title>根据起终点经纬度查询公交换乘</title>
+</head>
+<body>
+<div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");            // 创建Map实例
+    map.centerAndZoom(new BMap.Point(116.404, 39.915), 12);
+    var p1 = new BMap.Point(116.301934,39.977552);
+    var p2 = new BMap.Point(116.508328,39.919141);
+    var transit = new BMap.TransitRoute(map, {
+        renderOptions: {map: map}
+    });
+    transit.search(p1, p2);
+</script>

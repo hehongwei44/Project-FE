@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body, html,#panorama {width: 100%;height: 100%;overflow: hidden;margin:0;}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=p43McQHnALcKGiuRKmvHGwZs"></script>
+    <title>全景图旋转示例</title>
+</head>
+<body>
+<div id="panorama"></div>
+</body>
+</html>
+
+<script type="text/javascript">
+    var panorama = new BMap.Panorama('panorama');
+    panorama.setId('0100010000130501122416015Z1');
+    var count,heading=0;
+    intervalId = setInterval(function(){
+        count++;
+        heading += 10;
+        if(heading > 360)
+        {
+            heading -= 360;
+        }
+
+        panorama.setPov({heading:heading,pitch : 0});//不断调整水平方向
+        if(count == 100){
+            starttime = (new Date()).valueOf();
+
+        }
+        if(count == 600)
+        {
+            endtime =  (new Date()).valueOf();
+            var deltatime = endtime - starttime;
+            clearInterval(intervalId);
+        }
+    },500);
+
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=p43McQHnALcKGiuRKmvHGwZs"></script>
+    <title>添加带分割线的右键菜单</title>
+</head>
+<body>
+<div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    var point = new BMap.Point(116.404, 39.915);
+    map.centerAndZoom(point,15);
+    var menu = new BMap.ContextMenu();
+    var txtMenuItem = [
+        {
+            text:'放大',
+            callback:function(){map.zoomIn()}
+        },
+        {
+            text:'缩小',
+            callback:function(){map.zoomOut()}
+        },
+        {
+            text:'放置到最大级',
+            callback:function(){map.setZoom(18)}
+        },
+        {
+            text:'查看全国',
+            callback:function(){map.setZoom(4)}
+        }
+    ];
+
+
+    for(var i=0; i < txtMenuItem.length; i++){
+        menu.addItem(new BMap.MenuItem(txtMenuItem[i].text,txtMenuItem[i].callback,100));
+        if(i==1){
+            menu.addSeparator();
+        }
+    }
+    map.addContextMenu(menu);
+</script>

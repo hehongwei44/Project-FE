@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=p43McQHnALcKGiuRKmvHGwZs"></script>
+    <title>添加热区</title>
+</head>
+<body>
+<div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    var point = new BMap.Point(116.404, 39.915);    // 创建点坐标
+    map.centerAndZoom(point,15);                    // 初始化地图,设置中心点坐标和地图级别。
+
+    //在天安门添加一个热区,鼠标放在地图天安门上，会出现提示文字
+    var hotSpot = new BMap.Hotspot(point, {text: "我爱北京天安门!", minZoom: 8, maxZoom: 18});
+    map.addHotspot(hotSpot);
+
+    //在王府井地铁处，再添加一个热区
+    var point2 = new BMap.Point(116.41787,39.914391);
+    var hotSpot2 = new BMap.Hotspot(point2, {text: "王府井地铁"});
+    map.addHotspot(hotSpot2);
+</script>
