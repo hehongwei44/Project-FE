@@ -516,10 +516,10 @@
         <td>否</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>84</td>
+        <td>/手机屏幕放大镜效果</td>
+        <td>手机屏幕放大镜效果</td>
+        <td>否</td>
     </tr>
     <tr>
         <td></td>
