@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery控制文本框输入密码时有短暂的显示过程</title>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/iPass.packed.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){	
+	// to enable iPass plugin
+	$("input[type=password]").iPass();
+	
+	// for the demo
+	$("button").click(function() {
+		alert("Password: "+$("#demo2").val());
+	})
+});
+</script>
+<link href="css/lanrenzhijia.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="headerBox">
+  <h1>iPass jQuery plugin preview</h1>
+</div>
+<div class="loginBox">
+  <h1>Please login</h1>
+  <div class="inputBox">
+    <label for="demo1">Username</label>
+    <input id="demo1" name="demo1" type="text" value="" />
+  </div>
+  <div class="inputBox">
+    <label for="demo2">Password</label>
+    <input id="demo2" name="demo2" type="password" value="" />
+  </div>
+  <button>show password</button>
+</div>
+</body>
+</html>
