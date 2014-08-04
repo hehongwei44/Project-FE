@@ -408,107 +408,102 @@
         <td>是</td>
     </tr>
     <tr>
-        <tr>66</tr>
-        <tr>/effect</tr>
-        <tr>jquery特效</tr>
-        <tr>否</tr>
+        <td>66</td>
+        <td>/effect</td>
+        <td>jquery特效</td>
+        <td>否</td>
     </tr>
     <tr>
-        <tr>67</tr>
-        <tr>/jquery hover显示图片详细介绍</tr>
-        <tr>jquery hover显示图片详细介绍</tr>
-        <tr>否</tr>
+        <td>67</td>
+        <td>/jquery hover显示图片详细介绍</td>
+        <td>jquery hover显示图片详细介绍</td>
+        <td>否</td>
     </tr>
     <tr>
-        <tr>68</tr>
-        <tr>/jquery+css模糊图片局部清晰效果</tr>
-        <tr>jquery+css模糊图片局部清晰效果</tr>
-        <tr>否</tr>
+        <td>68</td>
+        <td>/jquery+css模糊图片局部清晰效果</td>
+        <td>jquery+css模糊图片局部清晰效果</td>
+        <td>否</td>
     </tr>
     <tr>
-        <tr>69</tr>
-        <tr>/jquery垂直向上逐条滚动新闻列表</tr>
-        <tr>jquery垂直向上逐条滚动新闻列表</tr>
-        <tr>否</tr>
+        <td>69</td>
+        <td>/jquery垂直向上逐条滚动新闻列表</td>
+        <td>jquery垂直向上逐条滚动新闻列表</td>
+        <td>否</td>
     </tr>
     <tr>
-        <tr>70</tr>
-        <tr>/jQuery磁性透明图层跟随鼠标移动图片特效</tr>
-        <tr>jQuery磁性透明图层跟随鼠标移动图片特效</tr>
-        <tr>jQuery磁性透明图层跟随鼠标移动图片特效</tr>
+        <td>70</td>
+        <td>/jQuery磁性透明图层跟随鼠标移动图片特效</td>
+        <td>jQuery磁性透明图层跟随鼠标移动图片特效</td>
+        <td>jQuery磁性透明图层跟随鼠标移动图片特效</td>
     </tr>
     <tr>
-        <tr>71</tr>
-        <tr>/jquery移动重叠滑块</tr>
-        <tr>jquery移动重叠滑块</tr>
-        <tr>否</tr>
+        <td>71</td>
+        <td>/jquery移动重叠滑块</td>
+        <td>jquery移动重叠滑块</td>
+        <td>否</td>
     </tr>
     <tr>
-        <tr>72</tr>
-        <tr>/简单易用的图片文字滚动插件</tr>
-        <tr>简单易用的图片文字滚动插件</tr>
-        <tr>否</tr>
+        <td>72</td>
+        <td>/简单易用的图片文字滚动插件</td>
+        <td>简单易用的图片文字滚动插件</td>
+        <td>否</td>
     </tr>
     <tr>
-        <tr>73</tr>
-        <tr>/jquery控制文本框输入密码时有短暂的显示过程</tr>
-        <tr>jquery控制文本框输入密码时有短暂的显示过程</tr>
-        <tr>否</tr>
+        <td>73</td>
+        <td>/jquery控制文本框输入密码时有短暂的显示过程</td>
+        <td>jquery控制文本框输入密码时有短暂的显示过程</td>
+        <td>否</td>
     </tr>
     <tr>
-        <tr>74</tr>
-        <tr>/jquery点击弹出登陆窗口</tr>
-        <tr>jquery点击弹出登陆窗口</tr>
-        <tr>否</tr>
+        <td>74</td>
+        <td>/jquery点击弹出登陆窗口</td>
+        <td>jquery点击弹出登陆窗口</td>
+        <td>否</td>
     </tr>
     <tr>
-        <tr>75</tr>
-        <tr>/jquery模拟微博向下不断滚动特效</tr>
-        <tr>jquery模拟微博向下不断滚动特效</tr>
-        <tr>否</tr>
+        <td>75</td>
+        <td>/jquery模拟微博向下不断滚动特效</td>
+        <td>jquery模拟微博向下不断滚动特效</td>
+        <td>否</td>
     </tr>
     <tr>
-        <tr>76</tr>
-        <tr>/jquery实现表单搜索利器</tr>
-        <tr>jquery实现表单搜索利器</tr>
-        <tr>否</tr>
+        <td>76</td>
+        <td>/jquery实现表单搜索利器</td>
+        <td>jquery实现表单搜索利器</td>
+        <td>否</td>
     </tr>
     <tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
-    <tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-    </tr>
+    
 </table>
 ps:带字段"是"表示项目中使用到的，要求掌握使用，带"否"的表示可能将来会使用，建议大家研究研究。
 
