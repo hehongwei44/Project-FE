@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>jquery搜索表单过滤效果</title>
+<link href="css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+<script> 
+(function ($) {
+  // custom css expression for a case-insensitive contains()
+  jQuery.expr[':'].Contains = function(a,i,m){
+      return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
+  };
+ 
+  function filterList(header, list) { 
+  // header is any element, list is an unordered list
+    // create and add the filter form to the header
+    var form = $("<form>").attr({"class":"filterform","action":"#"}),
+        input = $("<input>").attr({"class":"filterinput","type":"text"});
+    $(form).append(input).appendTo(header);
+ 
+    $(input)
+      .change( function () {
+        var filter = $(this).val();
+        if(filter) {
+ 	  
+		  $matches = $(list).find('a:Contains(' + filter + ')').parent();
+		  $('li', list).not($matches).slideUp();
+		  $matches.slideDown();
+		    
+        } else {
+          $(list).find("li").slideDown();
+        }
+        return false;
+      })
+    .keyup( function () {
+        // fire the above change event after every letter
+        $(this).change();
+    });
+  } 
+  //ondomready
+  $(function () {
+    filterList($("#form"), $("#list"));
+  });
+}(jQuery));
+</script>
+</head>
+<body>
+<noscript>
+<div id="noscript">You need JavaScript enabled to view most of the demos!</div></noscript>
+<div id="lanrenzhijia">
+<div id="wrap">
+<div class="product-head"> 
+  <h1>Product Search</h1> 
+    <div id="form"></div>
+    <div class="clear"></div>
+</div>
+  <ul id="list"> 
+		<li><img src="images/apple.png" width="30" height="30" align="absmiddle"/> <a href="#/Apple/">Apple</a></li> 
+		<li><img src="images/acorn_squash.png" width="30" height="30" align="absmiddle"/> <a href="#/Squash/">Acorn Squash</a></li> 
+		<li><img src="images/broccoli.png" width="30" height="30" align="absmiddle"/> <a href="#/Broccoli/">Broccoli</a></li> 
+		<li><img src="images/carrot.png" width="30" height="30" align="absmiddle"/> <a href="#/Carrot/">Carrot</a></li> 
+		<li><img src="images/celery.png" width="30" height="30" align="absmiddle"/> <a href="#/Celery/">Celery</a></li> 
+		<li><img src="images/lettuce.png" width="30" height="30" align="absmiddle"/> <a href="#/Lettuce/">Lettuce</a></li> 
+		<li><img src="images/mushroom.png" width="30" height="30" align="absmiddle"/> <a href="#/Mushroom/">Mushroom</a></li> 
+		<li><img src="images/onion.png" width="30" height="30" align="absmiddle"/> <a href="#/Onion/">Onion</a></li> 
+		<li><img src="images/potato.png" width="30" height="30" align="absmiddle"/> <a href="#/Potato/">Potato</a></li> 
+		<li><img src="images/pumpkin.png" width="30" height="30" align="absmiddle"/> <a href="#/Pumpkin/">Pumpkin</a></li> 
+		<li><img src="images/radish.png" width="30" height="30" align="absmiddle"/> <a href="#/Radish/">Radish</a></li> 
+	    <li><img src="images/squash.png" width="30" height="30" align="absmiddle"/> <a href="#/Squash/">Squash</a></li> 
+    	<li><img src="images/strawberry.png" width="30" height="30" align="absmiddle"/> <a href="#/strawberry/">Strawberry</a></li> 
+        <li><img src="images/sugar_snap.png" width="30" height="30" align="absmiddle"/> <a href="#/SugarSnaps/">Sugar Snaps</a></li>
+        <li><img src="images/tomato.png" width="30" height="30" align="absmiddle"/> <a href="#/tomato/">Tomato</a></li>         
+	</ul> 
+</div> 
+</div>
+</body>
+</html>
