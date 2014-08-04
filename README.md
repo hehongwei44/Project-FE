@@ -486,10 +486,10 @@
         <td>否</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>79</td>
+        <td>/jquery实现的图片滑动并带有放大镜效果代码</td>
+        <td>jquery实现的图片滑动并带有放大镜效果代码</td>
+        <td>否</td>
     </tr>
     <tr>
         <td></td>

@@ -1,0 +1,127 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family:"Trebuchet MS", "Myriad Pro", Arial, sans-serif;
+	font-size:12px;
+	background:#ccc url(../1images/bg.jpg) repeat top left;
+	color:#000;
+	
+}
+h1{
+	font-size:56px;
+}
+h2{
+	font-size:14px;
+	padding:0px 0px 5px 0px;
+	margin-top:10px;
+}
+.line{
+	width:100%;
+	height:1px;
+	background:#fff;
+	border-top:1px solid #fff;
+	margin:10px 0px;
+}
+p.intro{
+	font-weight:bold;
+	
+}
+a{
+	color:#333;
+	
+	font-weight:bold;
+	text-decoration:none;
+}
+a:hover{
+	color:#000;
+	text-shadow:none;
+
+}
+p{
+	padding:5px 0px;
+}
+.wrapper{
+	width:960px;
+	margin:20px auto;
+}
+.item{
+	float:left;
+	width:100%;
+	clear:both;
+	margin:10px 0px;
+}
+.thumb_wrapper{
+	width:310px;
+	position:relative;
+	float:left;
+	margin:20px 40px 0px 0px;
+}
+.thumb_wrapper a.prev,
+.thumb_wrapper a.next{
+	width:30px;
+	height:30px;
+	position:absolute;
+	top:50%;
+	margin-top:-15px;
+	outline:none;
+	cursor:pointer;
+}
+.thumb_wrapper a.prev{
+	left:0px;
+	background:transparent url(../images/fancy_nav_left.png) no-repeat top left;
+}
+.thumb_wrapper a.next{
+	right:0px;
+	background:transparent url(../images/fancy_nav_right.png) no-repeat top left;
+}
+.thumb_wrapper span{
+	display:block;
+	text-align:center;
+	font-size:11px;
+	font-style:italic;
+	margin-top:3px;
+}
+.thumb{
+	margin-left:40px;
+	width:230px;
+	height:230px;
+	overflow:hidden;
+	-moz-box-shadow:1px 1px 3px #555;
+	-webkit-box-shadow:1px 1px 3px #555;
+	box-shadow:1px 1px 3px #555;
+}
+.thumb ul{
+	list-style:none;
+	width:800px;
+	height:107px;
+}
+.thumb ul li{
+	float:left;
+}
+.thumb ul li a img{
+	border:5px solid #fff;
+}
+.description{
+	width:600px;
+	float:right;
+}
+.clear{
+	clear:both;
+}
+.footer{
+	text-align:center;
+	width:100%;
+	color:#fff;
+	padding:20px 0px;
+	clear:both;
+	background:#000;
+	margin-top:30px;
+}
+.clear-both{clear:both}
+/* clearfix */
+.clearfix:after{content:'.';display:block;clear:both;visibility:hidden;line-height:0;height:0;}
+.clearfix{display:inline-block;}
+html[xmlns] .clearfix{display:block;}
+* html .clearfix{height:1%;}
