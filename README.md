@@ -492,10 +492,10 @@
         <td>否</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>80</td>
+        <td>/jquery实现人物头像跟随鼠标转动效果</td>
+        <td>jquery实现人物头像跟随鼠标转动效果</td>
+        <td>否</td>
     </tr>
     <tr>
         <td></td>

@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery实现人物头像跟随鼠标转动效果</title>
+<link rel="stylesheet" type="text/css" href="css/lanrenzhijia.css" media="screen">
+<link rel="stylesheet" type="text/css" href="css/team.css" media="screen">
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/lateral-eye.js"></script>
+<script type="text/javascript" src="js/jquerytools.js"></script>
+<script type="text/javascript" src="js/jquery.jkey-1.1.js"></script>
+<script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
+</head>
+<body>
+<div id="wrapper" class="wrapslide1 lateralSlide ">
+  <div class="container">
+    <h1 class="page-title">A passionate team</h1>
+    <ul class="the-team clearfix">
+      <li>
+        <figure id="eye_andor_baranyi" class="eye">Andor</figure>
+        <strong class="tooltip">Andor Baranyi<small>Development</small></strong> <strong class="name">Andor</strong> </li>
+      <li>
+        <figure id="eye_angela_borsan" class="eye">Angela</figure>
+        <strong class="tooltip">Angela Bor&#537;an<small>Finance</small></strong> <strong class="name">Angela</strong> </li>
+      <li>
+        <figure id="eye_attila_szasz" class="eye">Attila</figure>
+        <strong class="tooltip">Attila Szász<small>Development</small></strong> <strong class="name">Attila</strong> </li>
+      <li>
+        <figure id="eye_bogdan_haifa" class="eye">Bogdan</figure>
+        <strong class="tooltip">Bogdan Haifa<small>Development</small></strong> <strong class="name">Bogdan</strong> </li>
+      <li>
+        <figure id="eye_bogdan_sala" class="eye">Bogdan</figure>
+        <strong class="tooltip">Bogdan Sala<small>Development</small></strong> <strong class="name">Bogdan</strong> </li>
+      <li>
+        <figure id="eye_bogdan_stanescu" class="eye">Bogdan</figure>
+        <strong class="tooltip">Bogdan St&#259;nescu<small>Development</small></strong> <strong class="name">Bogdan</strong> </li>
+      <li>
+        <figure id="eye_bogus" class="eye">Bogus</figure>
+        <strong class="tooltip">Bogus<small>Special Projects</small></strong> <strong class="name">Bogus</strong> </li>
+      <li>
+        <figure id="eye_botond_raduly" class="eye">Botond</figure>
+        <strong class="tooltip">Botond Raduly<small>Development</small></strong> <strong class="name">Botond</strong> </li>
+      <li>
+        <figure id="eye_calin_tritean" class="eye">C&#259;lin</figure>
+        <strong class="tooltip">C&#259;lin Tritean<small>Development</small></strong> <strong class="name">C&#259;lin</strong> </li>
+      <li>
+        <figure id="eye_ciprian_herman" class="eye">Ciprian</figure>
+        <strong class="tooltip">Ciprian Herman<small>Development</small></strong> <strong class="name">Ciprian</strong> </li>
+      <li>
+        <figure id="eye_ciprian_morar" class="eye">Ciprian</figure>
+        <strong class="tooltip">Ciprian Morar<small>Leadership</small></strong> <strong class="name">Ciprian</strong> </li>
+      <!-- <li>
+
+<figure id="eye_cristian_ban" class="eye">Cristian</figure>
+<strong class="tooltip">Cristian Ban<small>Development</small></strong>
+<strong class="name">Cristian</strong>
+
+</li> -->
+      <!--
+<li>
+
+<figure id="eye_cristian_buda" class="eye">Cristian</figure>
+<strong class="tooltip">Cristian Buda<small>Development</small></strong>
+<strong class="name">Cristian</strong>
+
+</li>
+-->
+      <li>
+        <figure id="eye_cristian_cojita" class="eye">Cristian</figure>
+        <strong class="tooltip">Cristian Coji&#539;&#259;<small>Development</small></strong> <strong class="name">Cristian</strong> </li>
+      <li>
+        <figure id="eye_mesaros" class="eye">Cristian</figure>
+        <strong class="tooltip">Cristian Mesaros<small>Development</small></strong> <strong class="name">Cristian</strong> </li>
+      <li>
+        <figure id="eye_cristian_zdrobe" class="eye">Cristian</figure>
+        <strong class="tooltip">Cristian Zdrobe<small>Development</small></strong> <strong class="name">Cristian</strong> </li>
+      <li>
+        <figure id="eye_cristina_moldovan" class="eye">Cristina</figure>
+        <strong class="tooltip">Cristina Moldovan<small>QA</small></strong> <strong class="name">Cristina</strong> </li>
+      <li>
+        <figure id="eye_csaba_tekse" class="eye">Csaba</figure>
+        <strong class="tooltip">Csaba Tekse<small>Development</small></strong> <strong class="name">Csaba</strong> </li>
+      <!--
+<li>
+
+<figure id="eye_daniel_cosman" class="eye">Daniel</figure>
+<strong class="tooltip">Daniel Cosman<small>QA</small></strong>
+<strong class="name">Daniel</strong>
+
+</li>
+-->
+      <!-- <li>
+
+<figure id="eye_daniel_zaremba" class="eye">Daniel</figure>
+<strong class="tooltip">Daniel Zaremba<small>Development</small></strong>
+<strong class="name">Daniel</strong>
+
+</li> -->
+      <!-- 			<li>
+
+<figure id="eye_daria_petru" class="eye">Daria</figure>
+<strong class="tooltip">Daria Nadina Petru<small>Management</small></strong>
+<strong class="name">Daria</strong>
+
+</li> -->
+      <li>
+        <figure id="eye_dory_ciceu" class="eye">Doru</figure>
+        <strong class="tooltip">Doru Ciceu<small>Development</small></strong> <strong class="name">Doru</strong> </li>
+      <li>
+        <figure id="eye_dragos_bucevschi" class="eye">Drago&#537;</figure>
+        <strong class="tooltip">Drago&#537; Bucevschi<small>Development</small></strong> <strong class="name">Drago&#537;</strong> </li>
+      <li>
+        <figure id="eye_erika_lacatus" class="eye">Erika</figure>
+        <strong class="tooltip">Erika L&#259;c&#259;tu&#351;<small>QA</small></strong> <strong class="name">Erika</strong> </li>
+      <li>
+        <figure id="eye_filip_chereches" class="eye">Filip</figure>
+        <strong class="tooltip">Filip Chereche&#537;-To&#537;a<small>Leadership</small></strong> <strong class="name">Filip</strong> </li>
+      <li>
+        <figure id="eye_gabriel_lacatus" class="eye">Gabriel</figure>
+        <strong class="tooltip">Gabriel L&#259;c&#259;tu&#351;<small>Development</small></strong> <strong class="name">Gabriel</strong> </li>
+      <li>
+        <figure id="eye_ildiko_soos" class="eye">Ildikó</figure>
+        <strong class="tooltip">Ildikó Soós<small>Development</small></strong> <strong class="name">Ildikó</strong> </li>
+      <li>
+        <figure id="eye_istvan_takacss" class="eye">István</figure>
+        <strong class="tooltip">István Takács<small>Development</small></strong> <strong class="name">István</strong> </li>
+      <li>
+        <figure id="eye_jozsi" class="eye">Jozsi</figure>
+        <strong class="tooltip">József Gergely<small>Development</small></strong> <strong class="name">Jozsi</strong> </li>
+      <li>
+        <figure id="eye_lavinia_mendrea" class="eye">Lavinia</figure>
+        <strong class="tooltip">Lavinia Mendrea<small>Development</small></strong> <strong class="name">Lavinia</strong> </li>
+      <li>
+        <figure id="eye_levente_horvath" class="eye">Levente</figure>
+        <strong class="tooltip">Levente Horváth<small>Development</small></strong> <strong class="name">Levente</strong> </li>
+      <li>
+        <figure id="eye_liviu_pogar" class="eye">Liviu</figure>
+        <strong class="tooltip">Liviu Pogar<small>QA</small></strong> <strong class="name">Liviu</strong> </li>
+      <li>
+        <figure id="eye_marc" class="eye">Marc</figure>
+        <strong class="tooltip">Marc Abrudan<small>Development</small></strong> <strong class="name">Marc</strong> </li>
+      <li>
+        <figure id="eye_maximilian_marele" class="eye">Maximilian</figure>
+        <strong class="tooltip">Maximilian Marele<small>Design</small></strong> <strong class="name">Maximilian</strong> </li>
+      <li>
+        <figure id="eye_mihai_potcoava" class="eye">Mihai</figure>
+        <strong class="tooltip">Mihai Potcoav&#259;<small>Development</small></strong> <strong class="name">Mihai</strong> </li>
+      <li>
+        <figure id="eye_mihai_savu" class="eye">Mihai</figure>
+        <strong class="tooltip">Mihai Savu<small>Development</small></strong> <strong class="name">Mihai</strong> </li>
+      <li>
+        <figure id="eye_mircea_baicu" class="eye">Mircea</figure>
+        <strong class="tooltip">Mircea Baicu<small>Development</small></strong> <strong class="name">Mircea</strong> </li>
+      <li>
+        <figure id="eye_mircea_dragoi" class="eye">Mircea</figure>
+        <strong class="tooltip">Mircea Dr&#259;goi<small>Design</small></strong> <strong class="name">Mircea</strong> </li>
+      <li>
+        <figure id="eye_paul_abrudan" class="eye">Paul</figure>
+        <strong class="tooltip">Paul Abrudan<small>Development</small></strong> <strong class="name">Paul</strong> </li>
+      <li>
+        <figure id="eye_radu_lucaciu" class="eye">Radu</figure>
+        <strong class="tooltip">Radu Lucaciu<small>Development</small></strong> <strong class="name">Radu</strong> </li>
+      <li>
+        <figure id="eye_radu_pantea" class="eye">Radu</figure>
+        <strong class="tooltip">Radu Pantea<small>QA</small></strong> <strong class="name">Radu</strong> </li>
+      <li>
+        <figure id="eye_sebastian_morar" class="eye">Sebastian</figure>
+        <strong class="tooltip">Sebastian Morar<small>Development</small></strong> <strong class="name">Sebastian</strong> </li>
+      <li>
+        <figure id="eye_stefan_balan" class="eye">&#536;tefan</figure>
+        <strong class="tooltip">&#536;tefan B&#259;lan<small>Design</small></strong> <strong class="name">&#536;tefan</strong> </li>
+      <li>
+        <figure id="eye_tibor_fazakas" class="eye">Tibor</figure>
+        <strong class="tooltip">Tibor Fazakas<small>QA</small></strong> <strong class="name">Tibor</strong> </li>
+      <li>
+        <figure id="eye_timi" class="eye">Timi</figure>
+        <strong class="tooltip">Timi Fagadar<small>Development</small></strong> <strong class="name">Timi</strong> </li>
+      <li>
+        <figure id="eye_tudor_galanopulos" class="eye">Tudor</figure>
+        <strong class="tooltip">Tudor Galanopulos<small>Development</small></strong> <strong class="name">Tudor</strong> </li>
+      <li>
+        <figure id="eye_victor_stegaru" class="eye">Victor</figure>
+        <strong class="tooltip">Victor Stegaru<small>Development</small></strong> <strong class="name">Victor</strong> </li>
+      <li>
+        <figure id="eye_viorel_dram" class="eye">Viorel</figure>
+        <strong class="tooltip">Viorel Dram<small>Development</small></strong> <strong class="name">Viorel</strong> </li>
+      <li>
+        <figure id="eye_zsolt_borbely" class="eye">Zsolt</figure>
+        <strong class="tooltip">Zsolt Borbely<small>Development</small></strong> <strong class="name">Zsolt</strong> </li>
+      <li>
+        <figure id="eye_you" class="eye">You?</figure>
+        <strong class="tooltip"><a href="http://www.16sucai.com/">Join us!</a><small>We have great coffee!</small></strong> <strong class="name">You?</strong> </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

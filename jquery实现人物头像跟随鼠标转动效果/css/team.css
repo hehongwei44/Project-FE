@@ -1,0 +1,286 @@
+/**
+ * LATERAL team sylesheet
+ */
+ /* 代码整理：懒人之家 www.lanrenzhijia.com  转载请注明出处 */
+.the-team {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	width: 927px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #dfdfdf #dfdfdf #9b9c9e;
+	overflow: hidden;
+	box-shadow: 0 1px 0 #cdcec1;
+	-moz-box-shadow: 0 1px 0 #cdcec1;
+	-webkit-box-shadow: 0 1px 0 #cdcec1;
+}
+.the-team li {
+	background: #fff;
+	float: left;
+	border: solid 1px #dfdfdf;
+	padding: 8px;
+	margin: -1px;
+	width: 87px;
+	height: 115px;
+}
+.the-team li .name {
+	color: #4D5B71;
+	font-size: 12px;
+	display: block;
+	padding: 7px 0 0 0;
+}
+.the-team li.you {
+	background-image: url(http://s3.amazonaws.com/lateralstatic/images/you-arrow.png) 0 0;
+	text-indent: -9999px;
+	height: 138px;
+}
+.the-team li.weHire {
+	text-align: center;
+}
+.the-team li.weHire a {
+	text-decoration: none;
+}
+.the-team li.weHire a:hover em {
+	color: #000;
+}
+.the-team li.weHire strong {
+	padding-top: 2px;
+	font-size: 11px;
+}
+.the-team li.weHire em {
+	display: block;
+}
+.tooltip {
+	display: none;
+	background: url(img/bg-tooltip.png) no-repeat 0 0;
+	color: #fff;
+	font-size: 13px;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+	height: 48px;
+	width: 150px;
+	margin: -16px 0 0 35px;
+	padding: 10px 0 0 10px;
+}
+.tooltip small {
+	display: block;
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: normal;
+}
+.tooltip a {
+	color:#fff!important;
+}
+	/*.tooltip.bottom{background:url(http://s3.amazonaws.com/lateralstatic/images/tooltip/black_arrow_btm.png) no-repeat 0 0; padding:15px 15px 7px 15px;}*/
+
+	
+				
+.the-team [id*="eye"] {
+ width: 86px;
+height: 86px;
+ text-indent: -9999px;
+ background-repeat:  no-repeat;
+ cursor: pointer;
+}
+ /* 代码整理：懒人之家 www.lanrenzhijia.com  转载请注明出处 */
+/* define base image */
+#eye_adrian_gut {
+	background-image: url(img/team/comp_adrian.jpg);
+}
+#eye_angela_borsan {
+	background-image: url(img/team/comp_angela.jpg);
+}
+#eye_attila_vajda {
+	background-image: url(img/team/comp_attila.jpg);
+}
+#eye_bogdan_stanescu {
+	background-image: url(img/team/comp_bogdan.jpg);
+}
+#eye_botond_raduly {
+	background-image: url(img/team/comp_boti.jpg);
+}
+#eye_calin_tritean {
+	background-image: url(img/team/comp_calin.jpg);
+}
+#eye_ciprian_morar {
+	background-image: url(img/team/comp_ciprian.jpg);
+}
+#eye_cristian_ban {
+	background-image: url(img/team/comp_cristib.jpg);
+}
+#eye_cristian_buda {
+	background-image: url(img/team/comp_cristi.jpg);
+}
+#eye_cristian_cojita {
+	background-image: url(img/team/comp_cristic.jpg);
+}
+#eye_cristian_zdrobe {
+	background-image: url(img/team/comp_cristiz.jpg);
+}
+#eye_cristina_moldovan {
+	background-image: url(img/team/comp_cristina.jpg);
+}
+#eye_csaba_tekse {
+	background-image: url(img/team/comp_csabat.jpg);
+}
+#eye_daniel_zaremba {
+	background-image: url(img/team/comp_dani.jpg);
+}
+#eye_daniel_cosman {
+	background-image: url(img/team/comp_danic.jpg);
+}
+#eye_daria_petru {
+	background-image: url(img/team/comp_daria.jpg);
+}
+#eye_dory_ciceu {
+	background-image: url(img/team/doru_ciceu.jpg);
+}
+#eye_dragos_bucevschi {
+	background-image: url(img/team/comp_dragos.jpg);
+}
+#eye_erika_lacatus {
+	background-image: url(img/team/comp_erika.jpg);
+}
+#eye_filip_chereches {
+	background-image: url(img/team/comp_filip.jpg);
+}
+#eye_gabriel_lacatus {
+	background-image: url(img/team/comp_gabi.jpg);
+}
+#eye_ildiko_soos {
+	background-image: url(img/team/comp_ildi.jpg);
+}
+#eye_istvan_takacss {
+	background-image: url(img/team/comp_istvan.jpg);
+}
+#eye_lavinia_mendrea {
+	background-image: url(img/team/comp_lavinia.jpg);
+}
+#eye_levente_horvath {
+	background-image: url(img/team/comp_levente.jpg);
+}
+#eye_maximilian_marele {
+	background-image: url(img/team/comp_max.jpg);
+}
+#eye_mihai_potcoava {
+	background-image: url(img/team/comp_mihaip.jpg);
+}
+#eye_mihai_savu {
+	background-image: url(img/team/comp_mihai.jpg);
+}
+#eye_mircea_baicu {
+	background-image: url(img/team/comp_mircea.jpg);
+}
+#eye_mircea_dragoi {
+	background-image: url(img/team/comp_mircea-d.jpg);
+}
+#eye_oana_calugar {
+	background-image: url(img/team/comp_oana.jpg);
+}
+#eye_paul_abrudan {
+	background-image: url(img/team/comp_paul.jpg);
+}
+#eye_radu_lucaciu {
+	background-image: url(img/team/comp_radu.jpg);
+}
+#eye_radu_pantea {
+	background-image: url(img/team/comp_radup.jpg);
+}
+#eye_sebastian_morar {
+	background-image: url(img/team/comp_sebi.jpg);
+}
+#eye_stefan_balan {
+	background-image: url(img/team/comp_stefan.jpg);
+}
+#eye_tibor_fazakas {
+	background-image: url(img/team/comp_tibi.jpg);
+}
+#eye_tudor_galanopulos {
+	background-image: url(img/team/comp_tudor.jpg);
+}
+#eye_victor_stegaru {
+	background-image: url(img/team/comp_victor.jpg);
+}
+#eye_viorel_dram {
+	background-image: url(img/team/comp_vio.jpg);
+}
+#eye_zsolt_borbely {
+	background-image: url(img/team/comp_zsolt.jpg);
+}
+#eye_bogus {
+	background-image: url(img/team/comp_bogus.jpg);
+}
+#eye_you {
+	background-image: url(img/team/comp_you.jpg);
+}
+#eye_attila_szasz {
+	background-image: url(img/team/attila_szasz.jpg);
+}
+#eye_bogdan_haifa {
+	background-image: url(img/team/bogdan_haifa.jpg);
+}
+#eye_sandor_kovacs {
+	background-image: url(img/team/sandor_kovacs.jpg);
+}
+#eye_lucian_bakos {
+	background-image: url(img/team/lucian_bakos.jpg);
+}
+#eye_andor_baranyi {
+	background-image: url(img/team/comp_andor.jpg);
+}
+#eye_ciprian_herman {
+	background-image: url(img/team/comp_ciprian_herman.jpg);
+}
+#eye_alex_cosma {
+	background-image: url(img/team/comp_alex_cosma.jpg);
+}
+#eye_marc {
+	background-image: url(img/team/comp_marc.jpg);
+}
+#eye_liviu_pogar {
+	background-image: url(img/team/comp_liviu.jpg);
+}
+#eye_bogdan_sala {
+	background-image: url(img/team/comp_bogdan_sala.jpg);
+}
+#eye_timi {
+	background-image: url(img/team/comp_timi.jpg);
+}
+#eye_jozsi {
+	background-image: url(img/team/comp_jozsi.jpg);
+}
+#eye_mesaros {
+	background-image: url(img/team/cristian_mesaros.jpg);
+}
+/* define image positions */
+.eye_v {
+	background-position: -860px 0;
+}
+.eye_sv {
+	background-position: -774px 0;
+}
+.eye_s {
+	background-position: -688px 0;
+}
+.eye_se {
+	background-position: -602px 0;
+}
+.eye_e {
+	background-position: -258px 0;
+}
+.eye_n {
+	background-position: -430px 0;
+}
+.eye_ne {
+	background-position: -344px 0;
+}
+.eye_nv {
+	background-position: -516px 0;
+}
+.eye_cc {
+	background-position: -86px 0;
+}
+.eye_c1 {
+	background-position: 0 0;
+}
+ /* 代码整理：懒人之家 www.lanrenzhijia.com  转载请注明出处 */
