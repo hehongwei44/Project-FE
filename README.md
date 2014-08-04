@@ -438,6 +438,36 @@
         <tr>jQuery磁性透明图层跟随鼠标移动图片特效</tr>
     </tr>
     <tr>
+        <tr>71</tr>
+        <tr>/jquery移动重叠滑块</tr>
+        <tr>jquery移动重叠滑块</tr>
+        <tr>否</tr>
+    </tr>
+    <tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+    </tr>
+    <tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+    </tr>
+    <tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+    </tr>
+    <tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+    </tr>
+    <tr>
         <tr></tr>
         <tr></tr>
         <tr></tr>

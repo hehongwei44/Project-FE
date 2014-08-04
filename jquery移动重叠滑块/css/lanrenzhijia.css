@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* 代码整理：懒人之家 lanrenzhijia.com */
+body {
+	font-family:Lucida Sans, Lucida Sans Unicode, Arial, Sans-Serif;
+	font-size:13px;
+	color:#222;
+	margin:0;
+	padding-top:20px;
+}
+p {
+	margin:20px;
+	padding:0;
+}
+.demoheader {
+	background-color:#000;
+	color:#fff;
+	padding:10px;
+	margin:0 0 20px;
+	overflow:hidden;
+}
+.demoheader img, .demoheader div {
+	float:left;
+}
+.demoheader div {
+	margin:10px 0 0 20px;
+}
+.demoheader a {
+	color:#78c0ff;
+}
+#container {
+	width:960px;
+	margin:0px auto;
+	position:relative;
+	list-style:none;
+}
+#container li {
+	width:150px;
+	height:100px;
+	position:absolute;
+	top:0;
+	left:0;
+	text-align:center;
+	border:solid 1px #aaa;
+	cursor:pointer;
+	-moz-box-shadow: 0px 0px 3px #888;
+	-webkit-box-shadow: 0px 0px 3px #888;
+	box-shadow: 0px 0px 3px #888;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	background:#e0e0e0 url(bkg.png) repeat-x scroll left top;
+}
+#container li a {
+	color:#222;
+	text-decoration:none;
+}
+#container li.current {
+	border:solid 1px #888;
+	background:#f0f0f0 url(bkg-current.png) repeat-x scroll left top;
+	cursor:default;
+}
+#container li.current a {
+	color:#0010a9;
+	text-decoration:underline;
+}
+/* 代码整理：懒人之家 lanrenzhijia.com */
