@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery磁性透明图层跟随鼠标移动图片特效</title>
+<link href="css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+</head>
+<body>
+<div class="boxBor"></div>
+<div class="lanrenzhijia">
+	<div class="box"><a href="http://www.lanrenzhijia.com/"></a><img width="100" height="100" src="images/girl.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.lanrenzhijia.com/"></a><img width="100" height="100" src="images/girl2.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.lanrenzhijia.com/"></a><img width="100" height="100" src="images/girl3.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.lanrenzhijia.com/"></a><img width="100" height="100" src="images/girl4.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.lanrenzhijia.com/"></a><img width="100" height="100" src="images/girl5.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.lanrenzhijia.com/"></a><img width="100" height="100" src="images/girl.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.lanrenzhijia.com/"></a><img width="100" height="100" src="images/girl2.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.lanrenzhijia.com/"></a><img width="100" height="100" src="images/girl3.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.lanrenzhijia.com/"></a><img width="100" height="100" src="images/girl4.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.lanrenzhijia.com/"></a><img width="100" height="100" src="images/girl5.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.lanrenzhijia.com/"></a><img width="100" height="100" src="images/girl.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.lanrenzhijia.com/"></a><img width="100" height="100" src="images/girl2.jpg" alt="" /></div>
+</div>
+<script type="text/javascript">
+$(function(){
+	$('.box').bind('mouseover',function(){
+		var oPosition=$(this).position();
+		var oThis=$(this);		
+		$('.boxBor').queue('fnHide');		
+		if($(".boxBor").attr('deta-switch')!=='true'){
+			$(".boxBor").attr('deta-switch','true');
+			$(".boxBor").css({
+				width:'100%',
+				height:$(window).height(),
+				left:'0px',
+				top:'0px',
+				opacity:0,
+				display:'block'
+			})
+		}
+		$(".boxBor").stop(false,false).animate({
+			opacity:0.8,
+			left:oPosition.left+10,
+			top:oPosition.top+10,
+			width:oThis.width(),
+			height:oThis.height()
+		},250)
+	});
+})
+</script>
+</body>
+</html>
