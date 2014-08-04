@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>jquery模拟微博向下不断滚动特效</title>
+<link href="css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.2.6.js" type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8" src="js/lanrenzhijia.js"></script>
+</head>
+<body>
+<div id="sidebar">
+  <ul class="spy">
+    <li> <a href="http://www.lanrenzhijia.com" title="View round"><img width="70" height="70" src="images/1.png" title="" /></a>
+      <h5><a href="#" title="View round">round</a></h5>
+      <p class="info">Nov 29th 2008 by <a href="#" title="Visit neue's userpage.">neue</a></p>
+      <p class='rating none'>Not Rated</p>
+      <p class="tags"></p>
+    </li>
+    <li> <a href="#" title="View reflet"><img width="70" height="70" src="images/2.png" title="" /></a>
+      <h5><a href="http://www.lanrenzhijia.com" title="View reflet">reflet</a></h5>
+      <p class="info">Nov 29th 2008 by <a href="#" title="Visit neue's userpage.">neue</a></p>
+      <p class='rating none'>Not Rated</p>
+      <p class="tags"><a href="#" title='Find more images tagged Tactile'>Tactile</a></p>
+    </li>
+    <li> <a href="#" title="View Kate Moross Little Big Planet"><img width="70" height="70" src="images/3.png" title="" /></a>
+      <h5><a href="http://www.lanrenzhijia.com" title="View Kate Moross Little Big Planet">Kate Moross Little Big Planet</a></h5>
+      <p class="info">Nov 29th 2008 by <a href="#" title="Visit neue's userpage.">neue</a></p>
+      <p class='rating four'>Four Stars</p>
+      <p class="tags"><a href="http://www.lanrenzhijia.com" title='Find more images tagged Kate Moross'>Kate Moross</a></p>
+    </li>
+    <li> <a href="#" title="View Untitled"><img width="70" height="70" src="images/4.png" title="" /></a>
+      <h5><a href="http://www.lanrenzhijia.com" title="View Untitled">Untitled</a></h5>
+      <p class="info">Nov 29th 2008 by <a href="#" title="Visit mike1052's userpage.">mike1052</a></p>
+      <p class='rating none'>Not Rated</p>
+      <p class="tags"></p>
+    </li>
+    <li> <a href="http://www.lanrenzhijia.com" title="View My Tutorial's Library"><img width="70" height="70" src="images/5.png" title="" /></a>
+      <h5><a href="#" title="View My Tutorial's Library">My Tutorial's Library</a></h5>
+      <p class="info">Nov 29th 2008 by <a href="#" title="Visit FrancescoOnAir's userpage.">FrancescoOnAir</a></p>
+      <p class='rating five'>Five Stars</p>
+      <p class="tags"></p>
+    </li>
+    <li> <a href="#" title="View Sandy &mdash; your free personal email assistant - Log in"><img width="70" height="70" src="images/6.png" title="" /></a>
+      <h5><a href="#" title="View Sandy &mdash; your free personal email assistant - Log in">Sandy &mdash; your free</a></h5>
+      <p class="info">Nov 29th 2008 by <a href="#" title="Visit John Doe's userpage.">John Doe</a></p>
+      <p class='rating none'>Not Rated</p>
+      <p class="tags"><a href="#" title='Find more images tagged Blue'>Blue</a> <a href="#" title='Find more images tagged I Want Sandy'>I Want Sandy</a></p>
+    </li>
+    <li> <a href="#" title="View Sandy &mdash; your free personal email assistant - Log in"><img width="70" height="70" src="images/7.png" title="" /></a>
+      <h5><a href="#" title="View Sandy &mdash; your free personal email assistant - Log in">Sandy &mdash; your free</a></h5>
+      <p class="info">Nov 29th 2008 by <a href="#" title="Visit John Doe's userpage.">John Doe</a></p>
+      <p class='rating none'>Not Rated</p>
+      <p class="tags"><a href="#" title='Find more images tagged Blue'>Blue</a> <a href="#" title='Find more images tagged I Want Sandy'>I Want Sandy</a></p>
+    </li>
+    <li> <a href="#" title="View Sandy &mdash; your free personal email assistant"><img width="70" height="70" src="images/8.png" title="" /></a>
+      <h5><a href="http://www.lanrenzhijia.com" title="View Sandy &mdash; your free personal email assistant">Sandy &mdash; your free</a></h5>
+      <p class="info">Nov 29th 2008 by <a href="#" title="Visit John Doe's userpage.">John Doe</a></p>
+      <p class='rating none'>Not Rated</p>
+      <p class="tags"><a href="#" title='Find more images tagged Blue'>Blue</a> <a href="#" title='Find more images tagged Homepage'>Homepage</a></p>
+    </li>
+    <li> <a href="#" title="View Values of n Blog"><img width="70" height="70" src="images/9.png" title="" /></a>
+      <h5><a href="#" title="View Values of n Blog">Values of n Blog</a></h5>
+      <p class="info">Nov 29th 2008 by <a href="#" title="Visit John Doe's userpage.">John Doe</a></p>
+      <p class='rating none'>Not Rated</p>
+      <p class="tags"><a href="#" title='Find more images tagged Brown'>Brown</a> <a href="#" title='Find more images tagged Blogs'>Blogs</a></p>
+    </li>
+    <li> <a href="#" title="View why values of n"><img width="70" height="70" src="images/10.png" title="" /></a>
+      <h5><a href="#" title="View why values of n">why values of n</a></h5>
+      <p class="info">Nov 29th 2008 by <a href="#" title="Visit John Doe's userpage.">John Doe</a></p>
+      <p class='rating none'>Not Rated</p>
+      <p class="tags"><a href="#" title='Find more images tagged Brown'>Brown</a> <a href="#" title='Find more images tagged Values of N'>Values of N</a></p>
+    </li>
+    <li> <a href="#" title="View values of n"><img width="70" height="70" src="images/11.png" title="" /></a>
+      <h5><a href="http://www.lanrenzhijia.com" title="View values of n">values of n</a></h5>
+      <p class="info">Nov 29th 2008 by <a href="#" title="Visit John Doe's userpage.">John Doe</a></p>
+      <p class='rating none'>Not Rated</p>
+      <p class="tags"><a href="#" title='Find more images tagged Brown'>Brown</a> <a href="#" title='Find more images tagged Homepage'>Homepage</a></p>
+    </li>
+    <li> <a href="#" title="View stikkit privacy policy"><img width="70" height="70" src="images/12.png" title="" /></a>
+      <h5><a href="#" title="View stikkit privacy policy">stikkit privacy policy</a></h5>
+      <p class="info">Nov 29th 2008 by <a href="#" title="Visit John Doe's userpage.">John Doe</a></p>
+      <p class='rating none'>Not Rated</p>
+      <p class="tags"><a href="#" title='Find more images tagged Yellow'>Yellow</a> <a href="#" title='Find more images tagged Blue'>Blue</a></p>
+    </li>
+    <li> <a href="http://www.lanrenzhijia.com" title="View stikkit: the stikkit api"><img width="70" height="70" src="images/13.png" title="" /></a>
+      <h5><a href="http://www.lanrenzhijia.com" title="View stikkit: the stikkit api">stikkit: the stikkit api</a></h5>
+      <p class="info">Nov 29th 2008 by <a href="#" title="Visit John Doe's userpage.">John Doe</a></p>
+      <p class='rating none'>Not Rated</p>
+      <p class="tags"><a href="#" title='Find more images tagged Yellow'>Yellow</a> <a href="#" title='Find more images tagged Blue'>Blue</a></p>
+    </li>
+  </ul>
+</div>
+</body>
+</html>

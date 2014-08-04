@@ -456,16 +456,16 @@
         <tr>否</tr>
     </tr>
     <tr>
-        <tr>73</tr>
+        <tr>74</tr>
         <tr>/jquery点击弹出登陆窗口</tr>
         <tr>jquery点击弹出登陆窗口</tr>
         <tr>否</tr>
     </tr>
     <tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
+        <tr>75</tr>
+        <tr>/jquery模拟微博向下不断滚动特效</tr>
+        <tr>jquery模拟微博向下不断滚动特效</tr>
+        <tr>否</tr>
     </tr>
     <tr>
         <tr></tr>
