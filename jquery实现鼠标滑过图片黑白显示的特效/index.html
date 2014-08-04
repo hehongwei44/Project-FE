@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery实现鼠标滑过图片黑白显示的特效</title>
+<link href="css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$("ul.gallery li").hover(function() { //On hover...
+		
+		var thumbOver = $(this).find("img").attr("src"); //Get image url and assign it to 'thumbOver'
+		
+		//Set a background image(thumbOver) on the &lt;a&gt; tag 
+		$(this).find("a.thumb").css({'background' : 'url(' + thumbOver + ') no-repeat center bottom'});
+		//Fade the image to 0 
+		$(this).find("span").stop().fadeTo('normal', 0 , function() {
+			$(this).hide() //Hide the image after fade
+		}); 
+	} , function() { //on hover out...
+		//Fade the image to 1 
+		$(this).find("span").stop().fadeTo('normal', 1).show();
+	});
+
+});
+</script>
+</head>
+<body>
+<ul class="gallery">
+	<li>
+		<a href="#" class="thumb"><span><img src="images/sushiand.gif" alt="" /></span></a>
+		<h2><a href="#">Sushi &amp; Robots</a></h2>
+	</li>
+	<li>
+		<a href="#" class="thumb"><span><img src="images/garysrea.gif" alt="" /></span></a>
+		<h2><a href="#">Gary's Life</a></h2>
+	</li>
+	<li>
+		<a href="#" class="thumb"><span><img src="images/cubescri.gif" alt="" /></span></a>
+		<h2><a href="#">Cube Scripts</a></h2>
+	</li>
+	<li>
+		<a href="#" class="thumb"><span><img src="images/ryankeis.gif" alt="" /></span></a>
+		<h2><a href="#">Ryan Keiser</a></h2>
+	</li>
+	<li>
+		<a href="#" class="thumb"><span><img src="images/ricardog.gif" alt="" /></span></a>
+		<h2><a href="#">Ricardo Gimenes</a></h2>
+	</li>
+	<li>
+		<a href="#" class="thumb"><span><img src="images/foodteas.gif" alt="" /></span></a>
+		<h2><a href="#">Food Tease</a></h2>
+	</li>
+	<li>
+		<a href="#" class="thumb"><span><img src="images/lemonsta.gif" alt="" /></span></a>
+		<h2><a href="#">Lemon Stand</a></h2>
+	</li>
+	<li>
+		<a href="#" class="thumb"><span><img src="images/heyindy_.gif" alt="" /></span></a>
+		<h2><a href="#">Hey Indy</a></h2>
+	</li>
+	<li>
+		<a href="#" class="thumb"><span><img src="images/ngenwork.gif" alt="" /></span></a>
+		<h2><a href="#">nGen Works</a></h2>
+	</li>
+</ul>
+
+</body>
+</html>

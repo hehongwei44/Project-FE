@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* 代码整理：懒人之家 */
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font: normal 12px Verdana, Arial, Helvetica, sans-serif;
+	background: #fff;
+	position: relative;
+}
+h1 {
+	text-align: center;
+	font-weight: normal;
+	font-size: 2.5em;
+}
+h1 small {
+	display: block;
+	font-size: 0.7em;
+	color: #999;
+}
+img {
+	border: none;
+}
+ul.gallery {
+	width: 708px;
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+}
+ul.gallery li {
+	float: left;
+	margin: 10px;
+	padding: 0;
+	text-align: center;
+	border: 1px solid #ccc;
+	-moz-border-radius: 3px; /*--CSS3 Rounded Corners--*/
+	-khtml-border-radius: 3px; /*--CSS3 Rounded Corners--*/
+	-webkit-border-radius: 3px; /*--CSS3 Rounded Corners--*/
+	display: inline; /*--Gimp Fix aka IE6 Fix--*/
+}
+ul.gallery li a.thumb {
+	width: 204px;
+	height: 182px;
+	padding: 5px;
+	border-bottom: 1px solid #ccc;
+	cursor: pointer;
+}
+ul.gallery li span { /*--Used to crop image--*/
+	width: 204px;
+	height: 182px;
+	overflow: hidden;
+	display: block;
+}
+ul.gallery li a.thumb:hover {
+	background: #333;
+}
+ul.gallery li h2 {
+	font-size: 1em;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 10px;
+	background: #f0f0f0;
+	border-top: 1px solid #fff; /*--Subtle bevel effect--*/
+}
+ul.gallery li a {
+	text-decoration: none;
+	color: #777;
+	display: block;
+}
