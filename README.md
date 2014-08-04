@@ -481,9 +481,9 @@
     </tr>
     <tr>
         <td>78</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>/jquery实现的图片裁剪插件</td>
+        <td>jquery实现的图片裁剪插件</td>
+        <td>否</td>
     </tr>
     <tr>
         <td></td>
