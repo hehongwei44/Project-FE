@@ -401,6 +401,48 @@
         <td>百度地图示例</td>
         <td>否</td>
     </tr>
+    <tr>
+        <td>65</td>
+        <td>/placeholder</td>
+        <td>原创占位符插件</td>
+        <td>是</td>
+    </tr>
+    <tr>
+        <tr>66</tr>
+        <tr>/effect</tr>
+        <tr>jquery特效</tr>
+        <tr>否</tr>
+    </tr>
+    <tr>
+        <tr>67</tr>
+        <tr>/jquery hover显示图片详细介绍</tr>
+        <tr>jquery hover显示图片详细介绍</tr>
+        <tr>否</tr>
+    </tr>
+    <tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+    </tr>
+    <tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+    </tr>
+    <tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+    </tr>
+    <tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+    </tr>
 </table>
 ps:带字段"是"表示项目中使用到的，要求掌握使用，带"否"的表示可能将来会使用，建议大家研究研究。
 
