@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* 代码整理：懒人之家 */
+
+* {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+a, img {
+	border:0;
+}
+body {
+	font:12px/180% Arial, Helvetica, sans-serif, "宋体";
+}
+/* caselist */
+.caselist {
+	width:474px;
+	margin:30px auto;
+}
+.caselist li {
+	width:227px;
+	height:227px;
+	float:left;
+	margin:0 10px 15px 0;
+	position:relative;
+	overflow:hidden;
+}
+.tagImg1 {
+	width:226px;
+	height:226px;
+	display:block;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.tagImg1 img {
+	width:226px;
+	height:226px;
+}
+.tagImg2 {
+	width:59px;
+	height:59px;
+	display:block;
+	float:left;
+	margin:0 10px 0 0;
+}
+.tagImg2 img {
+	width:59px;
+	height:59px;
+}
+.tagDiv1 {
+	background:#F4F4F4;
+	border:1px solid #E7E7E7;
+	padding:10px;
+	width:205px;
+	height:205px;
+	position:absolute;
+	left:0px;
+	top:226px;
+	z-index:2;
+}
+.tagDiv1 h3 {
+	margin:0px;
+	font-size:12px;
+	color:#000;
+	line-height:16px;
+}
+.tagP1 {
+	margin:5px 0 0;
+	color:#666;
+}
+.tagP2 {
+	line-height:22px;
+	clear:both;
+	color:#666;
+	padding:5px 0 0;
+	height:115px;
+	overflow:hidden;
+}
+.tagP3 {
+	height:25px;
+}
+.tagP3 a {
+	background:url("../images/jz_sprite-btn.png") no-repeat;
+	color:#2A5077;
+	display:inline-block;
+	height:25px;
+	line-height:25px;
+	margin-left:10px;
+	text-align:center;
+	width:89px;
+	text-decoration:none;
+}
