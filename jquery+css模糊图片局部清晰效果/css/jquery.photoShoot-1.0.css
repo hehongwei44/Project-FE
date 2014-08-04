@@ -1,0 +1,31 @@
+/* 代码整理：懒人之家 */
+.container{
+	overflow:hidden;
+	cursor:url(../images/blank.cur),default;
+	position:relative;
+}
+
+.container.googleChrome{
+	cursor: url(../images/blank_google_chrome.cur),default;
+}
+
+.overlay{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:black;
+}
+
+.viewFinder{
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.blur{
+	position:absolute;
+	top:0;
+	left:0;
+}

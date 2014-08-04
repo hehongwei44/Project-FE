@@ -1,0 +1,101 @@
+/* 代码整理：懒人之家 */
+body,h1,h2,h3,p,quote,small,form,input,ul,li,ol,label{
+	/* Simple page reset */
+	margin:0;
+	padding:0;
+}
+
+body{
+	/* Setting default text color, background and a font stack */
+	color:#fcfcfc;
+	font-size:0.825em;
+	background-color: #011d2e;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+
+#main{
+	/* This div is converted to a photoShoot stage by the Photo Shoot plug-in */
+	margin:0 auto;
+	width:960px;
+	height:600px;
+}
+
+.shot{
+	/* These contain a scaled down version of the background image: */
+	
+	border:3px solid #FCFCFC;
+	float:right;
+	position:relative;
+	margin-left:10px;
+	overflow:hidden;
+	
+	/* Adding a CSS3 shadow below the shots: */
+	
+	-moz-box-shadow:0 0 2px black;
+	-webkit-box-shadow:0 0 2px black;
+	box-shadow:0 0 2px black;
+}
+
+.shot img{
+	display:block;
+}
+
+.album{
+	/* This div holds the shots */
+	bottom:50px;
+	height:110px;
+	overflow:hidden;
+	position:absolute;
+	right:20px;
+	width:490px;
+}
+
+.album .slide{
+	/* The slide div is contained in album  */
+	width:700px;
+	height:110px;
+	position:relative;
+	left:-210px;
+}
+
+/* The styles below are only necessary for the styling of the demo page: */
+
+h1{
+	background-color:#022f4a;
+	border:1px solid #011d2e;
+	
+	font-size:1.5em;
+	font-weight:normal;
+	padding:15px;
+	position:absolute;
+	right:0;
+	text-align:center;
+	z-index:20;
+}
+
+a, a:visited {
+	color:#0196e3;
+	text-decoration:none;
+	outline:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+p.tutInfo{
+	/* The tutorial info on the bottom of the page */
+	padding:10px 0;
+	text-align:center;
+	position:fixed;
+	bottom:0px;
+	background-color:#011D2E;
+	border-top:1px solid #011d2e;
+
+	width:100%;
+}
+
+h1,h2,p.tutInfo{
+	font-family:"Myriad Pro",Arial,Helvetica,sans-serif;
+}
