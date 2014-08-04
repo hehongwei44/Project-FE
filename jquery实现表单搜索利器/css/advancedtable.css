@@ -1,0 +1,131 @@
+table.datagrid {
+	border:1px solid #DDDDDD;
+	border-collapse:collapse;
+}
+ul {
+	border:0;
+	margin:0;
+	padding:0;
+}
+.tableInfo {
+	float: left;
+	margin-top: 5px;
+}
+.advancedtable tbody td {
+	border-bottom:1px solid #DDD;
+	padding: 3px 0px;
+}
+.advancedtable thead th {
+	font-family:Georgia, "Times New Roman", "Bitstream Charter", Times, serif;
+	font-size:14px;
+	font-style:italic;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-variant:normal;
+	font-weight:bold;
+	background: #E5E5E5;
+	border-top:1px solid #BBB;
+	border-bottom:1px solid #BBB;
+	padding: 2px 5px;
+	color: #444;
+}
+/** 代码整理：懒人之家 **/
+.tablePerPage {
+	float: right;
+}
+.tablePerPage span {
+	float: left;
+	margin-top: 5px;
+}
+.tablePerPage ul {
+	float: right;
+}
+.tablePerPage li {
+	border:0;
+	margin:0;
+	padding:0;
+	font-size:11px;
+	list-style:none;
+	float: left;
+}
+.tablePerPage a {
+	border-right:solid 1px #BBB;
+	margin-right:2px;
+}
+.tablePerPage .previous-off, .tablePerPage .next-off {
+	color:#888888;
+	display:block;
+	float:left;
+	font-weight:bold;
+	padding:3px 4px;
+}
+.tablePerPage .next a, .tablePerPage previous a {
+	border:none;
+	font-weight:bold;
+}
+.tablePerPage .active {
+	font-weight:bold;
+	color: #FFF;
+}
+.tablePerPage a:link, .tablePerPage a:visited {
+	color:#333;
+	display:block;
+	float:left;
+	padding:3px 6px;
+	text-decoration:underline;
+}
+.tablePerPage a:hover {
+	text-decoration:none;
+}
+/** PAGE SELECTOR **/
+.tableNavigation {
+	float:right;
+	margin-left: 50px;
+}
+.tableNavigation span {
+	float: left;
+	margin-top: 3px;
+}
+.tableNavigation ul {
+	float: right;
+}
+.tableNavigation li {
+	border:0;
+	margin:0;
+	padding:0;
+	font-size:11px;
+	list-style:none;
+	float: left;
+}
+.tableNavigation a {
+	border:solid 1px #BBB;
+	margin-right:2px;
+	color:#999;
+}
+.tableNavigation .active a {
+	color:#000;
+	font-weight:bold;
+	border:solid 1px #000;
+}
+.tableNavigation a:link, .tableNavigation a:visited {
+	display:block;
+	float:left;
+	padding:3px 6px;
+	text-decoration:none;
+}
+.tableNavigation a:hover {
+	color: #333;
+}
+tfoot td {
+	background-color:#E5E5E5;
+	background-repeat:repeat-x;
+	color:#000000;
+	font-size:11px;
+	padding:0.6em;
+}
+.odd td {
+	background-color: #EEE;
+}
+.even td {
+	background-color: #FDFDFD;
+}

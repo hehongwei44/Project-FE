@@ -1,0 +1,266 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>jquery实现表单搜索利器</title>
+<script src="js/jquery.js" type="text/javascript" language="javascript"></script>
+<script src="js/advancedtable.js" type="text/javascript" language="javascript"></script>
+<script language="javascript" type="text/javascript">
+	$().ready(function() {
+		$("#searchtable").show();
+		$("#table1").advancedtable({searchField: "#search", loadElement: "#loader", searchCaseSensitive: false, ascImage: "images/up.png", descImage: "images/down.png"});
+	});
+</script>
+<link href="css/lanrenzhijia.css" rel="stylesheet" type="text/css" />
+<link href="css/advancedtable.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="topbanner">
+  <div class="content"> Advanced Table Example</div>
+</div>
+<div id="wrapper">
+  <div id="maincontent">
+    <div class="half left">
+      <table width="100%" class="normal" id="searchtable" border="0" cellspacing="4" cellpadding="0" style="display:none;">
+        <tr>
+          <td width="27%"><input name="search" type="text" id="search" style="display:none;" /></td>
+          <td width="73%"><div id="loader" style="display:none;"><img src="images/loader.gif" alt="Laoder" /></div></td>
+        </tr>
+      </table>
+      <table width="100%" id="table1" class="advancedtable" border="0" cellspacing="0" cellpadding="0">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Place</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Gabrielle</td>
+            <td>Antwerp</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>gabstein </td>
+            <td>Brussels</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>galaphile </td>
+            <td>Netherlands</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>habbofoxs </td>
+            <td>Gierle</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>HabboPlaza </td>
+            <td>Turnhout</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>habbotop </td>
+            <td>Mechelen</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>habfanforum</td>
+            <td>Lier</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>ibiza </td>
+            <td>Luik</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>ibo </td>
+            <td>Lichtaart</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>kabanna </td>
+            <td>Kasterlee</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>Kaboutermans </td>
+            <td>Lille</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Kaduna </td>
+            <td>Parijs</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>Kaitjuhh</td>
+            <td>Amsterdam</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>labes </td>
+            <td>België</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>lachendepaul </td>
+            <td>Ibiza</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>Ladasyroste </td>
+            <td>Eindhoven</td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>M3NN0 </td>
+            <td>Tongerlo</td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>m4rw </td>
+            <td>Tongeren</td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td>nadorcity </td>
+            <td>Oostende</td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>nafets </td>
+            <td>Duinkerke</td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td>NakkieBV </td>
+            <td>Olen</td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>Nalo4ever </td>
+            <td>Herentals</td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td>Nalutjuh </td>
+            <td>Turnhout</td>
+          </tr>
+          <tr>
+            <td>24</td>
+            <td>obelix71 </td>
+            <td>Geel</td>
+          </tr>
+          <tr>
+            <td>25</td>
+            <td>obin5 </td>
+            <td>Rotterdam</td>
+          </tr>
+          <tr>
+            <td>26</td>
+            <td>habbotop </td>
+            <td>Heverlee</td>
+          </tr>
+          <tr>
+            <td>27</td>
+            <td>habfanforum</td>
+            <td>Lokeren</td>
+          </tr>
+          <tr>
+            <td>28</td>
+            <td>ocanon </td>
+            <td>Gent</td>
+          </tr>
+          <tr>
+            <td>29</td>
+            <td>ochulof </td>
+            <td>Brussel</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>octavian </td>
+            <td>Diest</td>
+          </tr>
+          <tr>
+            <td>31</td>
+            <td>p1n0 </td>
+            <td>Deinze</td>
+          </tr>
+          <tr>
+            <td>32</td>
+            <td>paashaas57 </td>
+            <td>Beerse</td>
+          </tr>
+          <tr>
+            <td>33</td>
+            <td>Paflo </td>
+            <td>Ekeren</td>
+          </tr>
+          <tr>
+            <td>34</td>
+            <td>PageMaker </td>
+            <td>Antwerp</td>
+          </tr>
+          <tr>
+            <td>35</td>
+            <td>R33mCoo </td>
+            <td>Voer</td>
+          </tr>
+          <tr>
+            <td>36</td>
+            <td>raafej </td>
+            <td>Lorem</td>
+          </tr>
+          <tr>
+            <td>37</td>
+            <td>raama </td>
+            <td>Ipsum</td>
+          </tr>
+          <tr>
+            <td>38</td>
+            <td>rabobank </td>
+            <td>Mol</td>
+          </tr>
+          <tr>
+            <td>39</td>
+            <td>saaiber </td>
+            <td>Duffel</td>
+          </tr>
+          <tr>
+            <td>40</td>
+            <td>saartje87 </td>
+            <td>Merksplas</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="half right">
+      <h2>Features</h2>
+      <ul class="overview">
+        <li>Live searchable table</li>
+        <li>Paged tables</li>
+        <li>Select an element as loader</li>
+        <li>Super fast</li>
+        <li>Search only in column X</li>
+        <li>Choose how many rows per page</li>
+        <li>Show to search case sensitive or not</li>
+        <li>1 line of code to active the plugin</li>
+        <li>Cross browser</li>
+        <li>Sorting columns</li>
+        <li>Load data from CSV file</li>
+        <li>Alternating row colors</li>
+      </ul>
+      <p>&nbsp;</p>
+    </div>
+    <div class="spacer">
+      <!-- SPACER -->
+    </div>
+  </div>
+</div>
+</body>
+</html>
