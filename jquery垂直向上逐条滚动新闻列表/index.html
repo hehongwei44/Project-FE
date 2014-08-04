@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery垂直向上逐条滚动新闻列表</title>
+<link rel="stylesheet" href="css/lanrenzhijia.css" type="text/css" media="screen" />
+<script src="js/jquery-latest.pack.js" type="text/javascript"></script>
+<script src="js/jcarousellite_1.0.1c4.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+	$(".newsticker-jcarousellite").jCarouselLite({
+		vertical: true,
+		hoverPause:true,
+		visible: 3,
+		auto:500,
+		speed:1500
+	});
+});
+</script>
+</head>
+<body>
+<div id="newsticker-demo">
+<div class="title">Latest News</div>
+<div class="newsticker-jcarousellite">
+  <ul>
+    <li>
+      <div class="thumbnail"> <img src="images/1.jpg"> </div>
+      <div class="info"> <a href="http://www.lanrenzhijia.com">The Knight and the Lady</a> <span class="cat">Category: Illustrations</span> </div>
+      <div class="clear"></div>
+    </li>
+    <li>
+      <div class="thumbnail"> <img src="images/2.jpg"> </div>
+      <div class="info"> <a href="http://www.lanrenzhijia.com">The Family of Colors</a> <span class="cat">Category: Creatures</span> </div>
+      <div class="clear"></div>
+    </li>
+    <li>
+      <div class="thumbnail"> <img src="images/3.jpg"> </div>
+      <div class="info"> <a href="http://www.lanrenzhijia.com">Teddy Bear and MacBook</a> <span class="cat">Category: Photos</span> </div>
+      <div class="clear"></div>
+    </li>
+    <li>
+      <div class="thumbnail"> <img src="images/4.jpg"> </div>
+      <div class="info"> <a href="http://www.lanrenzhijia.com">Rainbow Butterfly</a> <span class="cat">Category: Abstract art</span> </div>
+      <div class="clear"></div>
+    </li>
+    <li>
+      <div class="thumbnail"> <img src="images/5.jpg"> </div>
+      <div class="info"> <a href="http://www.lanrenzhijia.com">Space Travel</a> <span class="cat">Category: Abstract art</span> </div>
+      <div class="clear"></div>
+    </li>
+    <li>
+      <div class="thumbnail"> <img src="images/6.jpg"> </div>
+      <div class="info"> <a href="http://www.lanrenzhijia.com">The Traveling Tree</a> <span class="cat">Category: Creatures</span> </div>
+      <div class="clear"></div>
+    </li>
+  </ul>
+</div>
+</div>
+</body>
+</html>
