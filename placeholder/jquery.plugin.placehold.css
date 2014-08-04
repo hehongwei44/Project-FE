@@ -1,0 +1,12 @@
+label.input_tip {
+	display:inline-block;
+	font-size: 12px;
+	line-height: 16px;
+	color: #aaa;
+	cursor: text;
+	*display:inline;
+	*zoom:1;
+}
+label.input_tip_focus{
+	color: #ddd;	
+}

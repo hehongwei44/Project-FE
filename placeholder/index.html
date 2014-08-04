@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>index</title>
+		<link type="text/css" rel="stylesheet" href="jquery.plugin.placehold.css" />
+		<script type="text/javascript" src="jquery-1.7.2.js"></script>
+		<script type="text/javascript" src="jquery.plugin.placehold.js"></script>
+		<script type="text/javascript">
+			jQuery(function() {
+				new $.placehold($("#test1"), {
+					placeholder_text : "请输入您的姓名"
+				});
+
+				new $.placehold($("#test2"), {
+					placeholder_text : "请输入您的密码"
+				});
+
+				new $.placehold($("#test3"), {
+					placeholder_text : "请输入内容"
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<h2>用法见实例</h2>
+		<input id="test1" type="text" name="user_search" placeholder="请输入姓名"/>
+		<br/>
+		<br/>
+		<input id="test2" type="password" name="user_search" placeholder="请输入密码" />
+		<br/>
+		<br/>
+		<textarea id="test3" placeholder="请输入内容"></textarea>						
+	</body>
+</html>
