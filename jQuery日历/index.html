@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>支持添加事件jQuery日历</title>
+<link rel="stylesheet" href="style/documentation.css" type="text/css" />
+<link rel="stylesheet" href="style/jalendar.css" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script><!--jQuery-->
+<script type="text/javascript" src="js/jalendar.js"></script>
+<script type="text/javascript">
+$(function () {
+    $('#myId').jalendar({
+        customDay: '2017/12/01',  // Format: Year/Month/Day
+        color: '#ed145a', // Unlimited Colors
+        lang: 'EN' // Format: English — 'EN', Türkçe — 'TR'
+    });
+    $('#myId2').jalendar({
+        customDay: '2016/02/29',
+        color: '#023447',
+        lang: 'ES'
+    });
+    $('#myId3').jalendar();
+});
+</script>
+
+</head>
+
+<body>
+    
+<article>
+
+    <div id="myId" class="jalendar">
+        <div class="added-event" data-date="14/12/2017" data-time="Tüm Gün" data-title="WWDC 13 on San Francisco, LA"></div>
+        <div class="added-event" data-date="16/12/2017" data-time="20:45" data-title="Tarkan İstanbul Concert on Harbiye Açık Hava Tiyatrosu"></div>
+        <div class="added-event" data-date="17/12/2017" data-time="21:00" data-title="CodeCanyon İstanbul Meeting on Starbucks, Kadıköy"></div>
+        <div class="added-event" data-date="17/12/2017" data-time="22:00" data-title="Front-End Design and Javascript Conferance on Haliç Kongre Merkezi"></div>
+        <div class="added-event" data-date="17/12/2017" data-time="22:00" data-title="Lorem ipsum dolor sit amet"></div>
+    </div>
+
+<div id="myId2" class="jalendar"></div>
+    
+<div id="myId3" class="jalendar mid">
+    <div class="added-event" data-date="9/8/2013" data-time="Tüm Gün" data-title="WWDC 13 on San Francisco, LA"></div>
+    <div class="added-event" data-date="16/8/2013" data-time="20:45" data-title="Tarkan İstanbul Concert on Harbiye Açık Hava Tiyatrosu"></div>
+    <div class="added-event" data-date="17/8/2013" data-time="21:00" data-title="CodeCanyon İstanbul Meeting on Starbucks, Kadıköy"></div>
+    <div class="added-event" data-date="17/8/2013" data-time="22:00" data-title="Front-End Design and Javascript Conferance on Haliç Kongre Merkezi"></div>
+    <div class="added-event" data-date="17/12/2017" data-time="22:00" data-title="Lorem ipsum dolor sit amet"></div>
+</div>
+</article>
+<div style="text-align:center;clear:both">
+<p>适用浏览器：FireFox、Chrome、Safari、Opera、傲游、搜狗. 不支持IE8、360、世界之窗。</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>
