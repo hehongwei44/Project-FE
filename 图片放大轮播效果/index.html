@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>jQuery图像缩放工具插件Zoomer - 站长素材</title>
+<link href="http://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet" type="text/css" media="all" />
+<link href="css/site.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body class="gridlock">
+
+<style>
+  .zoomer_wrapper { border: 1px solid #ddd; border-radius: 3px; height: 500px; margin: 10px 0; overflow: hidden; width: 100%; }
+  .zoomer.dark_zoomer img { box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+</style>
+<div id="pronto">
+<article class="project_details lab_details">
+
+	<div class="bordered_bottom project_info">
+		<div class="row">
+			<div class="desktop-8 tablet-6 mobile-3">
+				<h5>Demo</h5>
+				<div class="zoomer_wrapper zoomer_basic">
+					<img src="images/nasa-bw-2.jpg" />
+					<img src="images/nasa-bw-1.jpg" />
+					<img src="images/nasa-bw-3.jpg" />
+				</div>
+				<script src="js/site.js"></script>
+				<link rel="stylesheet" href="css/jquery.fs.zoomer.css" type="text/css" media="all" />
+				<script src="js/jquery.fs.zoomer.js"></script>
+				<script>
+  	$(document).ready(function() {
+      $(".zoomer_basic").zoomer();
+      
+      $(".zoomer_custom").zoomer({
+        controls: {
+          	zoomIn: ".zoomer_custom_zoom_in",
+          	zoomOut: ".zoomer_custom_zoom_out"
+		},
+        customClass: "dark_zoomer",
+        increment: 0.03,
+	    interval: 0.1,
+        marginMax: 50
+      });
+      
+      $(window).on("snap", function() {
+        	$(".zoomer-element").zoomer("resize");
+      });
+		
+    	$(window).one("pronto.load", function() {
+          	$(".zoomer-element").zoomer("destroy");
+          $(window).off("rubberband");
+    	});
+	});
+</script>
+			</div>
+		</div>
+	</div>
+</div>
+<div style="text-align:center;clear:both">
+<p>适用浏览器：FireFox、Chrome、Safari、Opera、傲游、搜狗. 不支持IE8、360、世界之窗。</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+
+</html>
