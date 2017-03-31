@@ -521,22 +521,21 @@
         <td>手机屏幕放大镜效果</td>
         <td>否</td>
     </tr>
-    
     <tr>
-        <td>85</td>
-        <td>/图片放大轮播效果</td>
-        <td>图片放大轮播效果</td>
-        <td>否</td>
+	<td>85</td>
+	<td>图片放大轮播效果</td>
+	<td>图片放大轮播效果</td>
+	<td>否</td>
     </tr>
     <tr>
         <td>86</td>
-        <td>/3d图片切换</td>
+        <td>3d图片切换</td>
         <td>3d图片切换</td>
         <td>否</td>
     </tr>
     <tr>
         <td>87</td>
-        <td>/仿QQ抖动效果</td>
+        <td>仿QQ抖动效果</td>
         <td>仿QQ抖动效果</td>
         <td>否</td>
     </tr> 
